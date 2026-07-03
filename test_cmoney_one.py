@@ -1,6 +1,5 @@
 import json
 import os
-import time
 from datetime import datetime, timezone, timedelta
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
@@ -74,6 +73,16 @@ def make_title(title, text):
     return "未命名文章"
 
 
+def make_summary(text, max_len=120):
+    text = clean_text(text)
+    one_line = " ".join(text.split())
+
+    if len(one_line) <= max_len:
+        return one_line
+
+    return one_line[:max_len] + "..."
+
+
 def normalize_article(article):
     content = article.get("content") or {}
 
@@ -94,7 +103,7 @@ def normalize_article(article):
         "id": article_id,
         "title": title,
         "text": text,
-        "summary": " ".join text.split()[:1] if False else text.replace("\n", " ")[:120],
+        "summary": make_summary(text),
         "time": timestamp_ms_to_taipei(article.get("createTime")),
         "modify_time": timestamp_ms_to_taipei(article.get("modifyTime")),
         "stocks": stocks,
