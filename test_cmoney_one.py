@@ -26,6 +26,7 @@ def now_taipei_string():
 
 
 def build_browser_headers(referer=None, accept_json=False, api_version_header=None):
+
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -39,7 +40,7 @@ def build_browser_headers(referer=None, accept_json=False, api_version_header=No
         "Sec-Fetch-Site": "same-origin",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Dest": "empty",
-    }
+        
 
     if accept_json:
         headers["Accept"] = "application/json, text/plain, */*"
