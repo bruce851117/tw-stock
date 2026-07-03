@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>台股概念股新聞 Dashboard</title>
   <style>
     body {
@@ -18,171 +18,101 @@
       padding: 24px 32px;
     }
 
-    header h1 {
+    h1 {
       margin: 0;
       font-size: 28px;
-      font-weight: 800;
     }
 
     main {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 32px 40px;
+      padding: 24px 32px;
     }
 
-    .summary {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-
-    .summary-card {
+    .card {
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
     }
 
-    .summary-card .label {
+    .label {
       color: #6b7280;
       font-size: 13px;
       margin-bottom: 6px;
     }
 
-    .summary-card .value {
+    .value {
       font-size: 18px;
       font-weight: 800;
-    }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
-      align-items: center;
-    }
-
-    input,
-    select {
-      background: white;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 14px;
-      color: #111827;
-    }
-
-    input {
-      min-width: 360px;
     }
 
     .concept-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 18px;
+      margin-top: 20px;
     }
 
     .concept-block {
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 18px;
+      padding: 18px;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-    }
-
-    .concept-header {
-      padding: 16px 18px 12px;
-      border-bottom: 1px solid #f3f4f6;
     }
 
     .concept-title {
       font-size: 21px;
       font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .concept-category {
-      font-size: 13px;
-      color: #6b7280;
-    }
-
-    .news-list {
-      padding: 4px 18px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      margin-bottom: 8px;
     }
 
     .news-item {
-      border-bottom: 1px solid #f3f4f6;
-      padding: 10px 0;
-    }
-
-    .news-item:last-child {
-      border-bottom: none;
-    }
-
-    .news-title {
-      font-size: 15px;
-      line-height: 1.55;
-      font-weight: 650;
-      color: #111827;
-      text-decoration: none;
-    }
-
-    .news-title:hover {
-      color: #2563eb;
-      text-decoration: underline;
-    }
-
-    .news-meta {
-      margin-top: 5px;
-      font-size: 12px;
-      color: #6b7280;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .empty-news {
-      padding: 20px 18px;
-      color: #9ca3af;
-      font-size: 14px;
-    }
-
-    .error-box {
-      background: #fff1f2;
-      border: 1px solid #fecdd3;
-      color: #9f1239;
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 20px;
+      border-top: 1px solid #f3f4f6;
+      padding-top: 10px;
+      margin-top: 10px;
       line-height: 1.6;
-      font-size: 14px;
     }
 
-    footer {
-      text-align: center;
+    .meta {
       color: #6b7280;
-      font-size: 13px;
-      padding: 24px;
+      font-size: 12px;
+      margin-top: 4px;
     }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>台股概念股新聞 Dashboard</h1>
+  </header>
 
-    @media (max-width: 768px) {
-      header {
-        padding: 20px;
-      }
+  <main>
+    <section class="card">
+      <div class="label">最後更新</div>
+      <div class="value" id="updatedAt">載入中...</div>
+    </section>
 
-      main {
-        padding: 18px;
-      }
+    <section class="concept-grid">
+      <article class="concept-block">
+        <div class="concept-title">ASIC</div>
+        <div class="news-item">
+          ASIC 供應鏈題材升溫，市場關注雲端大廠自研晶片趨勢
+          <div class="meta">Sample ｜ 2026/07/03 10:20</div>
+        </div>
+      </article>
 
-      input {
-        min-width: 100%;
-      }
+      <article class="concept-block">
+        <div class="concept-title">TPU</div>
+        <div class="news-item">
+          TPU 題材延續熱度，市場聚焦 Google AI 加速器供應鏈
+          <div class="meta">Sample ｜ 2026/07/03 09:15</div>
+        </div>
+      </article>
 
+      <article class="concept-block">
+        <div class="concept-title">CoWoS</div>
+        <div class="news-item">
+          CoWoS 產能持續受市場關注，AI 晶片封裝需求維持高檔
