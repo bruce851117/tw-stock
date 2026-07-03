@@ -13,7 +13,7 @@ CONCEPT_ID = "C50919"
 CONCEPT_NAME = "ASIC"
 
 SOURCE_URL = f"https://www.cmoney.tw/forum/concept/{CONCEPT_ID}"
-BASE_API_URL = f"https://www.cmoney.tw/api/mach/api/Article/StockCategory/{CONCEPT_ID}/Hottest"
+API_URL = f"https://www.cmoney.tw/api/mach/api/Article/StockCategory/{CONCEPT_ID}/Hottest?fetch=10&startWeight=0"
 
 OUTPUT_PATH = "data/test_asic_articles.json"
 ERROR_PATH = "data/test_asic_error.json"
@@ -25,13 +25,12 @@ def now_taipei_string():
     return datetime.now(TAIPEI_TZ).strftime("%Y-%m-%d %H:%M:%S")
 
 
-def build_browser_headers(referer=None, accept_json=False, api_version_header=None):
-
+def build_headers(referer=None, accept_json=False):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/126.0.0.0 Safari/537.36"
+            "Chrome/146.0.0.0 Safari/537.36"
         ),
         "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
         "Cache-Control": "no-cache",
@@ -40,11 +39,16 @@ def build_browser_headers(referer=None, accept_json=False, api_version_header=No
         "Sec-Fetch-Site": "same-origin",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Dest": "empty",
-        
+        "x-version": "2.0",
+        "cmoneyapi-trace-context": (
+            '{"device":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+            'AppleWebKit/537.36 (KHTML, like Gecko) '
+            'Chrome/146.0.0.0 Safari/537.36"}'
+        ),
+    }
 
     if accept_json:
         headers["Accept"] = "application/json, text/plain, */*"
-        headers["Content-Type"] = "application/json;charset=UTF-8"
     else:
         headers["Accept"] = (
             "text/html,application/xhtml+xml,application/xml;q=0.9,"
@@ -53,10 +57,6 @@ def build_browser_headers(referer=None, accept_json=False, api_version_header=No
 
     if referer:
         headers["Referer"] = referer
-
-    if api_version_header:
-        header_name, header_value = api_version_header
-        headers[header_name] = header_value
 
     return headers
 
@@ -81,84 +81,6 @@ def request_text(opener, url, headers):
         return decode_response_body(response, raw)
 
 
-def try_fetch_api(opener):
-    api_urls = [
-        f"{BASE_API_URL}?fetch=10&startWeight=0",
-        f"{BASE_API_URL}?api-version=2.0&fetch=10&startWeight=0",
-        f"{BASE_API_URL}?fetch=10&startWeight=0&api-version=2.0",
-        f"{BASE_API_URL}?api-version=1.0&fetch=10&startWeight=0",
-        f"{BASE_API_URL}?fetch=10&startWeight=0&api-version=1.0",
-    ]
-
-    version_headers = [
-        None,
-        ("api-version", "2.0"),
-        ("Api-Version", "2.0"),
-        ("x-api-version", "2.0"),
-        ("X-Api-Version", "2.0"),
-        ("api-version", "1.0"),
-        ("x-api-version", "1.0"),
-    ]
-
-    errors = []
-
-    for api_url in api_urls:
-        for version_header in version_headers:
-            try:
-                print("Trying API:")
-                print(f"  url = {api_url}")
-                print(f"  version_header = {version_header}")
-
-                text = request_text(
-                    opener,
-                    api_url,
-                    build_browser_headers(
-                        referer=SOURCE_URL,
-                        accept_json=True,
-                        api_version_header=version_header,
-                    ),
-                )
-
-                data = json.loads(text)
-
-                if isinstance(data, dict) and "articles" in data:
-                    print("API success")
-                    return api_url, version_header, data
-
-                errors.append({
-                    "url": api_url,
-                    "version_header": version_header,
-                    "error": "Response JSON does not contain articles",
-                    "body": text[:500],
-                })
-
-            except HTTPError as e:
-                body = ""
-                try:
-                    body = e.read().decode("utf-8", errors="replace")
-                except Exception:
-                    body = ""
-
-                errors.append({
-                    "url": api_url,
-                    "version_header": version_header,
-                    "error": f"HTTP {e.code}",
-                    "body": body[:500],
-                })
-
-            except Exception as e:
-                errors.append({
-                    "url": api_url,
-                    "version_header": version_header,
-                    "error": repr(e),
-                    "body": "",
-                })
-
-            time.sleep(0.2)
-
-    raise RuntimeError(json.dumps(errors, ensure_ascii=False, indent=2))
-
-
 def fetch_json_with_session():
     cookie_jar = http.cookiejar.CookieJar()
     opener = build_opener(HTTPCookieProcessor(cookie_jar))
@@ -169,7 +91,7 @@ def fetch_json_with_session():
         request_text(
             opener,
             SOURCE_URL,
-            build_browser_headers(
+            build_headers(
                 referer="https://www.cmoney.tw/",
                 accept_json=False,
             ),
@@ -179,7 +101,18 @@ def fetch_json_with_session():
 
     time.sleep(1)
 
-    return try_fetch_api(opener)
+    print(f"Fetching API: {API_URL}")
+
+    text = request_text(
+        opener,
+        API_URL,
+        build_headers(
+            referer=SOURCE_URL,
+            accept_json=True,
+        ),
+    )
+
+    return json.loads(text)
 
 
 def timestamp_ms_to_taipei(ms):
@@ -262,16 +195,17 @@ def normalize_article(article):
     }
 
 
-def save_error(message):
+def save_error(error_type, message):
     os.makedirs("data", exist_ok=True)
 
     output = {
         "concept_id": CONCEPT_ID,
         "concept_name": CONCEPT_NAME,
         "source_url": SOURCE_URL,
-        "base_api_url": BASE_API_URL,
+        "api_url": API_URL,
         "fetched_at": now_taipei_string(),
         "success": False,
+        "error_type": error_type,
         "message": message,
     }
 
@@ -285,10 +219,32 @@ def main():
     os.makedirs("data", exist_ok=True)
 
     try:
-        success_api_url, success_version_header, data = fetch_json_with_session()
+        data = fetch_json_with_session()
+
+    except HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            body = ""
+
+        message = f"HTTP error: {e.code}. Body: {body[:1000]}"
+        save_error("HTTPError", message)
+        raise RuntimeError(message) from e
+
+    except URLError as e:
+        message = f"URL error: {e}"
+        save_error("URLError", message)
+        raise RuntimeError(message) from e
+
+    except json.JSONDecodeError as e:
+        message = f"JSON decode error: {e}"
+        save_error("JSONDecodeError", message)
+        raise RuntimeError(message) from e
+
     except Exception as e:
         message = str(e)
-        save_error(message)
+        save_error("Exception", message)
         raise RuntimeError(message) from e
 
     raw_articles = data.get("articles") or []
@@ -312,8 +268,7 @@ def main():
         "concept_id": CONCEPT_ID,
         "concept_name": CONCEPT_NAME,
         "source_url": SOURCE_URL,
-        "api_url": success_api_url,
-        "api_version_header": success_version_header,
+        "api_url": API_URL,
         "fetched_at": now_taipei_string(),
         "success": True,
         "article_count": len(articles),
@@ -327,8 +282,6 @@ def main():
 
     print(f"Saved: {OUTPUT_PATH}")
     print(f"Articles: {len(articles)}")
-    print(f"Success API URL: {success_api_url}")
-    print(f"Success version header: {success_version_header}")
 
 
 if __name__ == "__main__":
