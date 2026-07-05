@@ -30,6 +30,11 @@ TIME_WINDOW_HOURS = 48       # 只處理近 N 小時的文章
 BATCH_SIZE = 18              # 每次送 Gemini 的文章數
 SLEEP_BETWEEN_CALLS = 4.0    # 批次間隔秒數（避開免費版 RPM 上限）
 TEXT_EXCERPT_LEN = 200       # 送給 Gemini 的內文擷取長度
+MAX_RETRIES = 4              # 暫時性錯誤（429/500/503）重試次數
+RETRY_BASE_DELAY = 3.0       # 重試退避基準秒數（指數成長）
+
+# 這些 HTTP 狀態碼視為暫時性、值得重試（過載 / 限流 / 伺服器暫時錯誤）
+RETRYABLE_STATUS = {429, 500, 503}
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 GEMINI_ENDPOINT = (
@@ -95,6 +100,49 @@ def chunked(seq, size):
         yield seq[i:i + size]
 
 
+def post_gemini_with_retry(api_key, body):
+    """對 Gemini 發 POST，遇到暫時性錯誤（429/500/503/連線錯誤）會退避重試。"""
+    req = urllib.request.Request(
+        f"{GEMINI_ENDPOINT}?key={api_key}",
+        data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    last_err = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            last_err = e
+            if e.code in RETRYABLE_STATUS and attempt < MAX_RETRIES:
+                delay = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+                print(
+                    f"[RETRY] Gemini HTTP {e.code}，第 {attempt}/{MAX_RETRIES} 次，"
+                    f"{delay:.0f}s 後重試",
+                    flush=True,
+                )
+                time.sleep(delay)
+                continue
+            raise
+        except (urllib.error.URLError, TimeoutError) as e:
+            last_err = e
+            if attempt < MAX_RETRIES:
+                delay = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+                print(
+                    f"[RETRY] Gemini 連線錯誤（{e}），第 {attempt}/{MAX_RETRIES} 次，"
+                    f"{delay:.0f}s 後重試",
+                    flush=True,
+                )
+                time.sleep(delay)
+                continue
+            raise
+
+    if last_err:
+        raise last_err
+
+
 def call_gemini(api_key, payload_articles):
     """送一批文章給 Gemini，回傳 [{id, point}, ...]。"""
     compact = [
@@ -118,15 +166,7 @@ def call_gemini(api_key, payload_articles):
         },
     }
 
-    req = urllib.request.Request(
-        f"{GEMINI_ENDPOINT}?key={api_key}",
-        data=json.dumps(body).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
+    result = post_gemini_with_retry(api_key, body)
 
     try:
         text = result["candidates"][0]["content"]["parts"][0]["text"]
