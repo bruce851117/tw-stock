@@ -67,6 +67,12 @@
     .concept-title {
       font-size: 21px;
       font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .concept-meta {
+      color: #6b7280;
+      font-size: 12px;
       margin-bottom: 8px;
     }
 
@@ -77,10 +83,45 @@
       line-height: 1.6;
     }
 
+    .news-point {
+      font-weight: 600;
+    }
+
+    .news-title {
+      font-size: 13px;
+      color: #374151;
+      margin-top: 2px;
+    }
+
+    .news-title a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .news-title a:hover {
+      text-decoration: underline;
+    }
+
     .meta {
       color: #6b7280;
       font-size: 12px;
       margin-top: 4px;
+    }
+
+    .empty {
+      color: #9ca3af;
+      font-size: 14px;
+      padding-top: 10px;
+    }
+
+    .stock-tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 11px;
+      margin-right: 4px;
     }
   </style>
 </head>
@@ -95,24 +136,65 @@
       <div class="value" id="updatedAt">載入中...</div>
     </section>
 
-    <section class="concept-grid">
-      <article class="concept-block">
-        <div class="concept-title">ASIC</div>
-        <div class="news-item">
-          ASIC 供應鏈題材升溫，市場關注雲端大廠自研晶片趨勢
-          <div class="meta">Sample ｜ 2026/07/03 10:20</div>
-        </div>
-      </article>
+    <section class="concept-grid" id="conceptGrid"></section>
+  </main>
 
-      <article class="concept-block">
-        <div class="concept-title">TPU</div>
-        <div class="news-item">
-          TPU 題材延續熱度，市場聚焦 Google AI 加速器供應鏈
-          <div class="meta">Sample ｜ 2026/07/03 09:15</div>
-        </div>
-      </article>
+  <script>
+    function escapeHtml(str) {
+      return (str || "").replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
 
-      <article class="concept-block">
-        <div class="concept-title">CoWoS</div>
-        <div class="news-item">
-          CoWoS 產能持續受市場關注，AI 晶片封裝需求維持高檔
+    function renderNewsItem(item) {
+      var stocks = (item.stocks || [])
+        .map(function (s) { return '<span class="stock-tag">' + escapeHtml(s) + "</span>"; })
+        .join("");
+
+      var titleHtml = escapeHtml(item.title);
+      if (item.url) {
+        titleHtml = '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + titleHtml + "</a>";
+      }
+
+      return (
+        '<div class="news-item">' +
+          '<div class="news-point">' + escapeHtml(item.point) + "</div>" +
+          '<div class="news-title">' + titleHtml + "</div>" +
+          '<div class="meta">' + stocks + escapeHtml(item.time || "") + "</div>" +
+        "</div>"
+      );
+    }
+
+    function renderConcept(concept) {
+      var news = concept.news || [];
+      var body;
+      if (news.length === 0) {
+        body = '<div class="empty">近期沒有重要新聞</div>';
+      } else {
+        body = news.map(renderNewsItem).join("");
+      }
+
+      return (
+        '<article class="concept-block">' +
+          '<div class="concept-title">' + escapeHtml(concept.concept_name) + "</div>" +
+          '<div class="concept-meta">' + escapeHtml(concept.category || "") + "</div>" +
+          body +
+        "</article>"
+      );
+    }
+
+    fetch("data/concept_news.json?" + Date.now())
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        document.getElementById("updatedAt").textContent =
+          (data.updated_at || "") + "（近 " + (data.time_window_hours || "?") + "h ｜ " + (data.model || "") + "）";
+
+        var grid = document.getElementById("conceptGrid");
+        grid.innerHTML = (data.concepts || []).map(renderConcept).join("");
+      })
+      .catch(function (err) {
+        document.getElementById("updatedAt").textContent = "載入失敗：" + err;
+      });
+  </script>
+</body>
+</html>

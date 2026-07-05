@@ -1,0 +1,61 @@
+name: Crawl CMoney and Filter News
+
+on:
+  workflow_dispatch:
+  # schedule 之後要每天自動跑再打開（先擱置，改用 Cloudflare 或這裡擇一）
+  # schedule:
+  #   - cron: "0 0 * * *"   # UTC 00:00 = 台北 08:00
+
+permissions:
+  contents: write
+
+jobs:
+  crawl-and-filter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Crawl CMoney
+        run: python crawl_cmoney.py
+
+      - name: Filter news with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python filter_news.py
+
+      - name: Show output
+        run: |
+          echo "==== data/concept_news.json ===="
+          if [ -f data/concept_news.json ]; then
+            wc -c data/concept_news.json
+            cat data/concept_news.json
+          else
+            echo "data/concept_news.json does not exist"
+          fi
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/*.json data/concept_news.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "update CMoney concept news"
+            git push
+          fi
