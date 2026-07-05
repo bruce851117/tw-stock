@@ -27,9 +27,9 @@ TAIPEI_TZ = timezone(timedelta(hours=8))
 
 # --- 可調參數 ---
 TIME_WINDOW_HOURS = 48       # 只處理近 N 小時的文章
-BATCH_SIZE = 18              # 每次送 Gemini 的文章數
+BATCH_SIZE = 10              # 每次送 Gemini 的文章數（送完整內文，批次調小）
 SLEEP_BETWEEN_CALLS = 4.0    # 批次間隔秒數（避開免費版 RPM 上限）
-TEXT_EXCERPT_LEN = 200       # 送給 Gemini 的內文擷取長度
+TEXT_MAX_LEN = 4000          # 送給 Gemini 的內文長度上限（幾乎等於完整內文，僅防極端長文）
 MAX_RETRIES = 4              # 暫時性錯誤（429/500/503）重試次數
 RETRY_BASE_DELAY = 3.0       # 重試退避基準秒數（指數成長）
 
@@ -42,18 +42,24 @@ GEMINI_ENDPOINT = (
     f"{GEMINI_MODEL}:generateContent"
 )
 
-PROMPT_INSTRUCTION = """你是台股討論區的新聞篩選助理。以下是同一個概念股討論區的多篇貼文（JSON 陣列）。
+PROMPT_INSTRUCTION = """你是台股概念股討論區的新聞篩選助理。以下是同一個概念股討論區的多篇貼文（JSON 陣列，text 為完整內文）。
 
-請幫我「剔除廢文、只保留有資訊價值的貼文」。
+請嚴格篩選，「只保留」符合下列其中一種的貼文：
+1. 有完整分析邏輯：有前因後果、有推理論述或數據支撐的分析（不是只喊「會漲/會跌」，而是有講為什麼）。
+2. 產業面消息資訊：產業趨勢、供應鏈動態、公司營運/財報/法人動作、政策法規、國際大廠或客戶動態等實質資訊。
 
-判斷標準：
-- 保留：具體事件、財報/營收、法人或大戶動作、產業趨勢、公司新聞、有數據或有論述的分析。
-- 剔除：純心情抒發、問候閒聊、貼圖、單純喊單/報明牌、無內容的洗版、重複資訊、廣告或拉群。
+「必須剔除」以下類型（就算被概念標籤帶到也要剔除）：
+- 純心情抒發、抱怨、問候閒聊、貼圖、迷因。
+- 單純喊單、報明牌、無論述地說買/賣或目標價。
+- 沒有分析的籌碼流水帳、單句評論、洗版、重複資訊。
+- 廣告、拉群、招收會員、導流。
 
-對於「保留」的每一篇，請產生一句 30 字內的中文重點摘要（point），聚焦這篇在講什麼事。
+寧可嚴一點：如果一篇沒有實質分析、也沒有產業資訊，就剔除。
+
+對於「保留」的每一篇，請閱讀完整內文後，寫一段 100 字以內的繁體中文摘要（summary），濃縮這篇的分析重點或產業資訊，讓讀者不用點進原文就能掌握重點。
 
 只回傳一個 JSON 陣列，每個元素格式為：
-{"id": "<原文 id>", "point": "<一句話重點>"}
+{"id": "<原文 id>", "summary": "<100字內摘要>"}
 被剔除的貼文請不要出現在結果中。除了 JSON 陣列外不要輸出任何其他文字。"""
 
 
@@ -144,12 +150,12 @@ def post_gemini_with_retry(api_key, body):
 
 
 def call_gemini(api_key, payload_articles):
-    """送一批文章給 Gemini，回傳 [{id, point}, ...]。"""
+    """送一批文章給 Gemini，回傳 [{id, summary}, ...]。"""
     compact = [
         {
             "id": a.get("id"),
             "title": a.get("title", ""),
-            "text": (a.get("text", "") or "")[:TEXT_EXCERPT_LEN],
+            "text": (a.get("text", "") or "")[:TEXT_MAX_LEN],
         }
         for a in payload_articles
     ]
@@ -197,7 +203,7 @@ def filter_concept(api_key, raw):
     )
 
     by_id = {str(a.get("id")): a for a in recent}
-    kept_points = {}  # id -> point
+    kept_summaries = {}  # id -> summary
 
     for batch_no, batch in enumerate(chunked(recent, BATCH_SIZE), start=1):
         print(f"[{concept_name}] Gemini batch {batch_no}（{len(batch)} 篇）", flush=True)
@@ -212,9 +218,9 @@ def filter_concept(api_key, raw):
 
         for item in results:
             aid = str(item.get("id", "")).strip()
-            point = str(item.get("point", "")).strip()
-            if aid in by_id and point:
-                kept_points[aid] = point
+            summary = str(item.get("summary", "")).strip()
+            if aid in by_id and summary:
+                kept_summaries[aid] = summary
 
         time.sleep(SLEEP_BETWEEN_CALLS)
 
@@ -222,11 +228,11 @@ def filter_concept(api_key, raw):
     news = []
     for a in recent:
         aid = str(a.get("id"))
-        if aid in kept_points:
+        if aid in kept_summaries:
             news.append({
                 "time": a.get("time", ""),
                 "title": a.get("title", ""),
-                "point": kept_points[aid],
+                "summary": kept_summaries[aid],
                 "stocks": a.get("stocks", []),
                 "url": a.get("url", ""),
             })

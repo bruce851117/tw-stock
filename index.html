@@ -83,8 +83,9 @@
       line-height: 1.6;
     }
 
-    .news-point {
+    .news-summary {
       font-weight: 600;
+      line-height: 1.7;
     }
 
     .news-title {
@@ -158,7 +159,7 @@
 
       return (
         '<div class="news-item">' +
-          '<div class="news-point">' + escapeHtml(item.point) + "</div>" +
+          '<div class="news-summary">' + escapeHtml(item.summary) + "</div>" +
           '<div class="news-title">' + titleHtml + "</div>" +
           '<div class="meta">' + stocks + escapeHtml(item.time || "") + "</div>" +
         "</div>"
