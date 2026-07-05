@@ -38,7 +38,7 @@ RATELIMIT_DELAY = 30.0       # 429（額度/速率）退避秒數（每分鐘額
 # 這些 HTTP 狀態碼視為暫時性、值得重試（過載 / 限流 / 伺服器暫時錯誤）
 RETRYABLE_STATUS = {429, 500, 503}
 
-GEMINI_MODEL = "gemini-2.5-flash-lite"
+GEMINI_MODEL = "gemini-3.1-flash-lite"
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_MODEL}:generateContent"
