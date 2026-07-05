@@ -1,33 +1,161 @@
-[
-  {
-    "concept_id": "asic",
-    "concept_name": "ASIC",
-    "importance": "S",
-    "category": "AI / 半導體",
-    "news": [
-      {
-        "time": "2026-07-03 10:20",
-        "title": "ASIC供應鏈題材升溫，市場關注雲端大廠自研晶片趨勢",
-        "source": "Sample",
-        "url": ""
-      },
-      {
-        "time": "2026-07-02 14:35",
-        "title": "客製化晶片需求增加，IC設計與先進製程供應鏈受關注",
-        "source": "Sample",
-        "url": ""
-      }
-    ]
-  },
-  {
-    "concept_id": "tpu",
-    "concept_name": "TPU",
-    "importance": "S",
-    "category": "AI / 半導體",
-    "news": [
-      {
-        "time": "2026-07-03 09:15",
-        "title": "TPU題材延續熱度，市場聚焦Google AI加速器供應鏈",
-        "source": "Sample",
-        "url": ""
-      }
+{
+  "updated_at": "2026-07-05 17:58:49",
+  "time_window_hours": 48,
+  "model": "gemini-2.5-flash-lite",
+  "concepts": [
+    {
+      "concept_id": "C50919",
+      "concept_name": "ASIC",
+      "category": "AI / 半導體",
+      "note": "AI 客製化晶片，受惠雲端大廠自研加速器趨勢",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50919",
+      "news": [
+        {
+          "time": "2026-07-05 14:01",
+          "title": "台股週漲2208點！內資撐盤市值破152兆元",
+          "point": "台股本週大漲2208點，市值破152兆元，塑膠類股表現亮眼。",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "2454",
+            "3712"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180411655"
+        },
+        {
+          "time": "2026-07-05 14:48",
+          "title": "【矽統 2363】營收衝高，品質跟得上嗎？",
+          "point": "矽統營收衝高，但品質是否能跟上值得關注。",
+          "stocks": [
+            "2363"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180412037"
+        },
+        {
+          "time": "2026-07-05 13:06",
+          "title": "準備迎接生技展 無人機也準備起飛立院通過",
+          "point": "生技展即將登場，無人機產業也因立院通過法案準備起飛。",
+          "stocks": [
+            "6561",
+            "5347",
+            "3661",
+            "2352",
+            "2065"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180411228"
+        },
+        {
+          "time": "2026-07-05 12:49",
+          "title": "聯發科股價布林通道，進入壓縮待變",
+          "point": "聯發科股價進入布林通道壓縮期，季線將助漲股價。",
+          "stocks": [
+            "2454"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180411093"
+        },
+        {
+          "time": "2026-07-04 15:09",
+          "title": "創意🦉  持有四年多  平常心  報酬率近1000%",
+          "point": "分享持有創意四年報酬近千%經驗，並提及信驊、世芯。",
+          "stocks": [
+            "3443",
+            "5274",
+            "3661",
+            "2330",
+            "2454"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180404184"
+        },
+        {
+          "time": "2026-07-04 13:22",
+          "title": "雞湯本人來提這週精測籌碼，不只981在調節喔。",
+          "point": "分析精測籌碼，千張大戶與00981a減碼，但對股價不一定不利。",
+          "stocks": [
+            "6510",
+            "2404",
+            "2645",
+            "3443"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180403345"
+        },
+        {
+          "time": "2026-07-04 16:36",
+          "title": "Meta出租AI算力，AI泡沫來了？還是另一商業模式的開始？",
+          "point": "Meta評估出租AI算力引發市場擔憂，但德銀、大摩解讀為變現模式。",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "4979",
+            "3661",
+            "3035"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180404818"
+        },
+        {
+          "time": "2026-07-04 22:28",
+          "title": "大戶跑光了？",
+          "point": "安國股價回檔，但千張大戶持股佔比增加，主力則持續賣超。",
+          "stocks": [
+            "8054",
+            "6462"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180407154"
+        },
+        {
+          "time": "2026-07-04 14:27",
+          "title": "何申堂到底是怎麼漲的有夠離譜的，智原能跟上不知道多好",
+          "point": "質疑何申堂漲勢離譜，並期待智原能跟上。",
+          "stocks": [
+            "3035"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180403815"
+        },
+        {
+          "time": "2026-07-04 20:07",
+          "title": "#亞馬遜首次公開自研終端晶片布局 #近期郭姓分析師新聞印證 #AI ASIC 需...",
+          "point": "亞馬遜自研終端晶片布局，AI ASIC需求擴大，AI Agent時代來臨。",
+          "stocks": [
+            "3661"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180406270"
+        },
+        {
+          "time": "2026-07-04 18:31",
+          "title": "2363矽統 收盤價,週籌碼變化7/3日止: 散戶大幅增加持股(增/減%)5.0...",
+          "point": "矽統籌碼變化：散戶大幅增加持股，大戶減少庫存。",
+          "stocks": [
+            "2363"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180405635"
+        },
+        {
+          "time": "2026-07-04 08:10",
+          "title": "台積電先進封裝外溢效應最大受益者—智原 隨著人工智慧（AI）與高效能運算（HPC...",
+          "point": "智原為台積電先進封裝外溢效應受益者，AI與HPC應用帶動成長。",
+          "stocks": [
+            "3035"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180400807"
+        },
+        {
+          "time": "2026-07-04 05:36",
+          "title": "SemiAnalysis在社群平台X貼文指出，Google下一代TPU（代號Hu...",
+          "point": "Google新TPU將採英特爾封裝，智原有望受惠於與Intel、聯電合作。",
+          "stocks": [
+            "3035"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180400292"
+        },
+        {
+          "time": "2026-07-03 21:08",
+          "title": "借券又回補1352張--剩下14755--直接跳過萬5來到萬4",
+          "point": "借券回補1352張，籌碼變化影響股價。",
+          "stocks": [
+            "3035"
+          ],
+          "url": "https://www.cmoney.tw/forum/article/180397161"
+        }
+      ]
+    }
+  ]
+}
