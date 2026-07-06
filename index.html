@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>台股概念股新聞 Dashboard</title>
+  <title>台股新聞 Dashboard</title>
 
   <style>
     :root {
@@ -45,6 +45,39 @@
       max-width: 1480px;
       margin: 0 auto;
       padding: 24px 32px 48px;
+    }
+
+    .source-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .source-tab {
+      border: 1px solid var(--border);
+      background: white;
+      color: #374151;
+      border-radius: 16px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: var(--shadow);
+      transition: all 0.15s ease;
+    }
+
+    .source-tab:hover {
+      background: #eef2ff;
+      color: #3730a3;
+    }
+
+    .source-tab.active {
+      background: #111827;
+      border-color: #111827;
+      color: white;
     }
 
     .top-bar {
@@ -300,12 +333,24 @@
       color: #6b7280;
     }
 
-    .empty {
-      color: #9ca3af;
+    .empty,
+    .source-empty {
+      color: #6b7280;
       font-size: 14px;
       padding: 18px;
       background: #f9fafb;
       border-radius: 14px;
+      line-height: 1.7;
+    }
+
+    .source-empty a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .source-empty a:hover {
+      text-decoration: underline;
     }
 
     .no-result {
@@ -376,10 +421,15 @@
 
 <body>
   <header>
-    <h1>台股概念股新聞 Dashboard</h1>
+    <h1>台股新聞 Dashboard</h1>
   </header>
 
   <main>
+    <section class="source-tabs">
+      <button class="source-tab active" data-source="cmoney">CMoney 概念股</button>
+      <button class="source-tab" data-source="gooaye">股癌筆記</button>
+    </section>
+
     <section class="top-bar">
       <div class="info-card">
         <div class="label">最後更新</div>
@@ -389,7 +439,7 @@
       <div class="stats" id="statsArea"></div>
     </section>
 
-    <section class="toolbar">
+    <section class="toolbar" id="toolbar">
       <div class="search-row">
         <input
           id="searchInput"
@@ -409,10 +459,12 @@
   </main>
 
   <script>
+    let activeSource = "cmoney";
     let rawData = null;
     let allConcepts = [];
     let activeConcept = "全部";
     let onlyWithNews = true;
+    let gooayeData = null;
 
     function escapeHtml(str) {
       return String(str || "").replace(/[&<>"']/g, function (c) {
@@ -426,24 +478,85 @@
       });
     }
 
+    function makeLinkHtml(url, title) {
+      const safeTitle = escapeHtml(title || "未命名文章");
+
+      if (!url) {
+        return safeTitle;
+      }
+
+      return (
+        '<a class="article-link" href="' +
+        escapeHtml(url) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        safeTitle +
+        "</a>"
+      );
+    }
+
+    function normalizeGooayeData(data) {
+      if (!data) {
+        return [];
+      }
+
+      if (Array.isArray(data)) {
+        return data;
+      }
+
+      if (Array.isArray(data.articles)) {
+        return data.articles;
+      }
+
+      if (Array.isArray(data.news)) {
+        return data.news;
+      }
+
+      if (Array.isArray(data.items)) {
+        return data.items;
+      }
+
+      if (Array.isArray(data.notes)) {
+        return data.notes;
+      }
+
+      return [];
+    }
+
     function renderStats(data) {
       const statsArea = document.getElementById("statsArea");
 
-      const conceptCount = data.concept_count || allConcepts.length;
-      const articleCount = data.global_unique_article_count || 0;
-      const timeWindow = data.time_window_hours || "?";
-      const model = data.model || "";
+      if (activeSource === "cmoney") {
+        const conceptCount = data.concept_count || allConcepts.length;
+        const articleCount = data.global_unique_article_count || 0;
+        const timeWindow = data.time_window_hours || "?";
+        const model = data.model || "";
 
-      statsArea.innerHTML = `
-        <div class="stat-pill">概念數：${escapeHtml(conceptCount)}</div>
-        <div class="stat-pill">文章數：${escapeHtml(articleCount)}</div>
-        <div class="stat-pill">資料範圍：近 ${escapeHtml(timeWindow)}h</div>
-        <div class="stat-pill">模型：${escapeHtml(model)}</div>
-      `;
+        statsArea.innerHTML =
+          '<div class="stat-pill">概念數：' + escapeHtml(conceptCount) + "</div>" +
+          '<div class="stat-pill">文章數：' + escapeHtml(articleCount) + "</div>" +
+          '<div class="stat-pill">資料範圍：近 ' + escapeHtml(timeWindow) + "h</div>" +
+          '<div class="stat-pill">模型：' + escapeHtml(model) + "</div>";
+
+        return;
+      }
+
+      const articles = normalizeGooayeData(data);
+      const updatedAt = data && data.updated_at ? data.updated_at : "";
+      const sourceName = data && data.source_name ? data.source_name : "股癌筆記";
+
+      statsArea.innerHTML =
+        '<div class="stat-pill">來源：' + escapeHtml(sourceName) + "</div>" +
+        '<div class="stat-pill">文章數：' + escapeHtml(articles.length) + "</div>" +
+        '<div class="stat-pill">更新時間：' + escapeHtml(updatedAt || "尚未建立") + "</div>";
     }
 
     function renderTabs() {
       const tabs = document.getElementById("tabs");
+
+      if (activeSource !== "cmoney") {
+        tabs.innerHTML = "";
+        return;
+      }
 
       const conceptNames = [
         "全部",
@@ -457,11 +570,15 @@
       tabs.innerHTML = conceptNames.map(function (conceptName) {
         const activeClass = conceptName === activeConcept ? " active" : "";
 
-        return `
-          <button class="tab${activeClass}" data-concept="${escapeHtml(conceptName)}">
-            ${escapeHtml(conceptName)}
-          </button>
-        `;
+        return (
+          '<button class="tab' +
+          activeClass +
+          '" data-concept="' +
+          escapeHtml(conceptName) +
+          '">' +
+          escapeHtml(conceptName) +
+          "</button>"
+        );
       }).join("");
 
       document.querySelectorAll(".tab").forEach(function (button) {
@@ -473,38 +590,26 @@
       });
     }
 
-    function renderNewsItem(item) {
+    function renderCmoneyNewsItem(item) {
       const summary = item.summary || "";
       const title = item.title || "未命名文章";
       const url = item.url || "";
       const time = item.time || "";
+      const titleHtml = makeLinkHtml(url, title);
 
-      let titleHtml = escapeHtml(title);
-
-      if (url) {
-        titleHtml =
-          '<a class="article-link" href="' +
-          escapeHtml(url) +
-          '" target="_blank" rel="noopener noreferrer">' +
-          escapeHtml(title) +
-          '</a>';
-      }
-
-      return `
-        <article class="news-item">
-          <div class="news-summary">
-            ${escapeHtml(summary)}
-          </div>
-
-          <div class="news-title">
-            ${titleHtml}
-          </div>
-
-          <div class="news-meta">
-            <span class="time-text">${escapeHtml(time)}</span>
-          </div>
-        </article>
-      `;
+      return (
+        '<article class="news-item">' +
+          '<div class="news-summary">' +
+            escapeHtml(summary) +
+          "</div>" +
+          '<div class="news-title">' +
+            titleHtml +
+          "</div>" +
+          '<div class="news-meta">' +
+            '<span class="time-text">' + escapeHtml(time) + "</span>" +
+          "</div>" +
+        "</article>"
+      );
     }
 
     function renderConcept(concept) {
@@ -512,32 +617,30 @@
       const newsCount = news.length;
 
       const body = newsCount === 0
-        ? `<div class="empty">近期沒有重要新聞</div>`
-        : `<div class="news-grid">${news.map(renderNewsItem).join("")}</div>`;
+        ? '<div class="empty">近期沒有重要新聞</div>'
+        : '<div class="news-grid">' + news.map(renderCmoneyNewsItem).join("") + "</div>";
 
-      return `
-        <section class="concept-block">
-          <div class="concept-header">
-            <div class="concept-title-wrap">
-              <div class="concept-title">
-                ${escapeHtml(concept.concept_name || "")}
-              </div>
-              <div class="concept-meta">
-                ${escapeHtml(concept.category || "未分類")}
-                ${concept.note ? "｜" + escapeHtml(concept.note) : ""}
-              </div>
-            </div>
-
-            <div class="concept-count">
-              ${newsCount} 則
-            </div>
-          </div>
-
-          <div class="news-area">
-            ${body}
-          </div>
-        </section>
-      `;
+      return (
+        '<section class="concept-block">' +
+          '<div class="concept-header">' +
+            '<div class="concept-title-wrap">' +
+              '<div class="concept-title">' +
+                escapeHtml(concept.concept_name || "") +
+              "</div>" +
+              '<div class="concept-meta">' +
+                escapeHtml(concept.category || "未分類") +
+                (concept.note ? "｜" + escapeHtml(concept.note) : "") +
+              "</div>" +
+            "</div>" +
+            '<div class="concept-count">' +
+              newsCount +
+              " 則</div>" +
+          "</div>" +
+          '<div class="news-area">' +
+            body +
+          "</div>" +
+        "</section>"
+      );
     }
 
     function filterConcepts() {
@@ -578,21 +681,109 @@
 
     function renderConcepts() {
       const conceptList = document.getElementById("conceptList");
+
+      if (activeSource === "gooaye") {
+        renderGooaye();
+        return;
+      }
+
       const filtered = filterConcepts();
 
       if (filtered.length === 0) {
-        conceptList.innerHTML = `
-          <div class="no-result">
-            沒有符合條件的概念或新聞
-          </div>
-        `;
+        conceptList.innerHTML =
+          '<div class="no-result">沒有符合條件的概念或新聞</div>';
         return;
       }
 
       conceptList.innerHTML = filtered.map(renderConcept).join("");
     }
 
-    async function loadData() {
+    function renderGooaye() {
+      const conceptList = document.getElementById("conceptList");
+      const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+      const articles = normalizeGooayeData(gooayeData);
+
+      if (!gooayeData) {
+        conceptList.innerHTML =
+          '<section class="concept-block">' +
+            '<div class="concept-header">' +
+              '<div class="concept-title-wrap">' +
+                '<div class="concept-title">股癌筆記</div>' +
+                '<div class="concept-meta">資料尚未建立｜目前先預留 data/gooaye_news.json</div>' +
+              "</div>" +
+              '<div class="concept-count">0 則</div>' +
+            "</div>" +
+            '<div class="news-area">' +
+              '<div class="source-empty">' +
+                '目前尚未找到 <b>data/gooaye_news.json</b>。<br />' +
+                '我看得到原始網站頁面：' +
+                '<a href="https://socialworkerdaily.com/index/invest/notes-of-gooaye/" target="_blank" rel="noopener noreferrer">股癌 podcast 心得筆記</a>。<br />' +
+                '下一步需要新增 crawler 或手動整理 JSON，格式可以用 articles / news / items / notes 任一陣列。' +
+              "</div>" +
+            "</div>" +
+          "</section>";
+
+        return;
+      }
+
+      let filtered = articles;
+
+      if (keyword) {
+        filtered = articles.filter(function (item) {
+          const searchableText = [
+            item.title,
+            item.summary,
+            item.content,
+            item.time,
+            item.date,
+            item.url
+          ].join(" ").toLowerCase();
+
+          return searchableText.includes(keyword);
+        });
+      }
+
+      const body = filtered.length === 0
+        ? '<div class="empty">沒有符合條件的股癌筆記</div>'
+        : '<div class="news-grid">' + filtered.map(renderGooayeItem).join("") + "</div>";
+
+      conceptList.innerHTML =
+        '<section class="concept-block">' +
+          '<div class="concept-header">' +
+            '<div class="concept-title-wrap">' +
+              '<div class="concept-title">股癌筆記</div>' +
+              '<div class="concept-meta">socialworkerdaily｜股癌 podcast 心得筆記</div>' +
+            "</div>" +
+            '<div class="concept-count">' + filtered.length + " 則</div>" +
+          "</div>" +
+          '<div class="news-area">' +
+            body +
+          "</div>" +
+        "</section>";
+    }
+
+    function renderGooayeItem(item) {
+      const title = item.title || item.name || "未命名筆記";
+      const summary = item.summary || item.description || item.content || "";
+      const url = item.url || item.link || "";
+      const time = item.time || item.date || "";
+
+      return (
+        '<article class="news-item">' +
+          '<div class="news-summary">' +
+            escapeHtml(summary) +
+          "</div>" +
+          '<div class="news-title">' +
+            makeLinkHtml(url, title) +
+          "</div>" +
+          '<div class="news-meta">' +
+            '<span class="time-text">' + escapeHtml(time) + "</span>" +
+          "</div>" +
+        "</article>"
+      );
+    }
+
+    async function loadCmoneyData() {
       const response = await fetch("data/concept_news.json?" + Date.now());
       const data = await response.json();
 
@@ -607,7 +798,71 @@
       renderConcepts();
     }
 
-    document.getElementById("searchInput").addEventListener("input", renderConcepts);
+    async function loadGooayeData() {
+      document.getElementById("updatedAt").textContent = "股癌筆記｜載入中...";
+
+      try {
+        const response = await fetch("data/gooaye_news.json?" + Date.now());
+
+        if (!response.ok) {
+          gooayeData = null;
+          document.getElementById("updatedAt").textContent = "股癌筆記｜資料尚未建立";
+          renderStats(null);
+          renderTabs();
+          renderGooaye();
+          return;
+        }
+
+        const data = await response.json();
+        gooayeData = data;
+
+        document.getElementById("updatedAt").textContent =
+          (data.updated_at || "") || "股癌筆記";
+
+        renderStats(data);
+        renderTabs();
+        renderGooaye();
+      } catch (err) {
+        gooayeData = null;
+        document.getElementById("updatedAt").textContent = "股癌筆記｜資料尚未建立";
+        renderStats(null);
+        renderTabs();
+        renderGooaye();
+      }
+    }
+
+    function switchSource(source) {
+      activeSource = source;
+      activeConcept = "全部";
+
+      document.querySelectorAll(".source-tab").forEach(function (button) {
+        button.classList.toggle("active", button.getAttribute("data-source") === source);
+      });
+
+      document.getElementById("searchInput").value = "";
+
+      if (source === "cmoney") {
+        document.getElementById("onlyNewsButton").style.display = "";
+        loadCmoneyData();
+      } else {
+        document.getElementById("onlyNewsButton").style.display = "none";
+        loadGooayeData();
+      }
+    }
+
+    document.querySelectorAll(".source-tab").forEach(function (button) {
+      button.addEventListener("click", function () {
+        switchSource(this.getAttribute("data-source"));
+      });
+    });
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+      if (activeSource === "cmoney") {
+        renderConcepts();
+      } else {
+        renderGooaye();
+      }
+    });
 
     document.getElementById("onlyNewsButton").addEventListener("click", function () {
       onlyWithNews = !onlyWithNews;
@@ -616,7 +871,7 @@
       renderConcepts();
     });
 
-    loadData().catch(function (err) {
+    loadCmoneyData().catch(function (err) {
       document.getElementById("updatedAt").textContent = "載入失敗：" + err;
     });
   </script>
