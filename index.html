@@ -415,6 +415,7 @@
     let activeConcept = "全部";
     let onlyWithNews = true;
 
+
     function escapeHtml(str) {
       return String(str || "").replace(/[&<>"']/g, function (c) {
         return {
@@ -426,6 +427,7 @@
         }[c];
       });
     }
+
 
     function renderStats(data) {
       const statsArea = document.getElementById("statsArea");
