@@ -76,6 +76,35 @@ def clean_text(text):
 
     return "\n".join(lines).strip()
 
+def cut_content_before_thoughts(content):
+    if not content:
+        return ""
+
+    markers = [
+        "二、心得感想",
+        "二、 心得感想",
+        "二、心得",
+        "貳、心得感想",
+        "貳、 心得感想",
+        "貳、心得",
+        "二. 心得感想",
+        "二、心得感想：",
+        "貳、心得感想："
+    ]
+
+    cut_positions = []
+
+    for marker in markers:
+        index = content.find(marker)
+
+        if index >= 0:
+            cut_positions.append(index)
+
+    if not cut_positions:
+        return content.strip()
+
+    cut_index = min(cut_positions)
+    return content[:cut_index].strip()
 
 def get_meta_content(soup, property_name=None, name=None):
     tag = None
@@ -319,6 +348,7 @@ def fetch_episode_detail(item):
     modified_raw = get_meta_content(soup, property_name="article:modified_time")
 
     content = extract_article_content(soup)
+    content = cut_content_before_thoughts(content)
 
     return {
         "episode": episode,
