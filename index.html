@@ -474,14 +474,14 @@
 
     function renderNewsItem(item) {
       const summary = item.summary || "";
-      const title = item.title || "查看原文";
+      const title = item.title || "未命名文章";
       const url = item.url || "";
       const time = item.time || "";
 
-      const linkHtml = url
+      const titleHtml = url
         ? `
-          ${escapeHtml(url)}
-            查看原文：${escapeHtml(title)}
+          " target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(title)}
           </a>
         `
         : escapeHtml(title);
@@ -493,7 +493,7 @@
           </div>
 
           <div class="news-title">
-            ${linkHtml}
+            ${titleHtml}
           </div>
 
           <div class="news-meta">
