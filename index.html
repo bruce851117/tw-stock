@@ -100,6 +100,9 @@
       padding: 14px;
       box-shadow: var(--shadow);
       margin-bottom: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
 
     .search-row {
@@ -228,20 +231,20 @@
 
     .news-area {
       padding: 16px 18px 18px;
-      max-height: 620px;
-      overflow-y: auto;
+      max-height: none;
+      overflow: visible;
     }
 
     .news-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 12px;
     }
 
     .news-item {
       border: 1px solid #eef2f7;
       border-radius: 16px;
-      padding: 13px 14px;
+      padding: 14px 15px;
       background: #ffffff;
       transition: all 0.15s ease;
     }
@@ -255,33 +258,32 @@
     .news-summary {
       font-size: 15px;
       font-weight: 750;
-      line-height: 1.65;
+      line-height: 1.72;
       color: #111827;
-
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      white-space: normal;
+      overflow: visible;
+      word-break: break-word;
     }
 
     .news-title {
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 13px;
-      line-height: 1.45;
+      line-height: 1.5;
       color: #4b5563;
-
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      white-space: normal;
+      overflow: visible;
+      word-break: break-word;
     }
 
-    .news-title a {
+    .article-link {
+      display: inline-block;
       color: var(--blue);
       text-decoration: none;
+      font-weight: 700;
+      word-break: break-word;
     }
 
-    .news-title a:hover {
+    .article-link:hover {
       text-decoration: underline;
     }
 
@@ -290,24 +292,13 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       color: var(--muted);
       font-size: 12px;
     }
 
-    .stock-tag {
-      display: inline-block;
-      background: var(--indigo-soft);
-      color: #4338ca;
-      border-radius: 7px;
-      padding: 2px 7px;
-      font-size: 11px;
-      line-height: 1.5;
-    }
-
     .time-text {
       color: #6b7280;
-      margin-left: 2px;
     }
 
     .empty {
@@ -331,6 +322,10 @@
     @media (max-width: 900px) {
       header {
         padding: 20px;
+      }
+
+      header h1 {
+        font-size: 23px;
       }
 
       main {
@@ -357,6 +352,25 @@
       .concept-count {
         align-self: flex-start;
       }
+
+      .news-area {
+        max-height: none;
+        overflow-y: visible;
+        padding: 14px;
+      }
+
+      .news-item {
+        padding: 14px 15px;
+      }
+
+      .news-summary {
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .toolbar {
+        position: static;
+      }
     }
   </style>
 </head>
@@ -382,7 +396,7 @@
           id="searchInput"
           class="search-input"
           type="text"
-          placeholder="搜尋概念、股票代號、股票名稱、新聞內容..."
+          placeholder="搜尋概念、新聞內容、標題..."
         />
         <button id="onlyNewsButton" class="toggle-button active">
           只看有新聞
@@ -398,7 +412,7 @@
   <script>
     let rawData = null;
     let allConcepts = [];
-    let activeConcept  = "全部";
+    let activeConcept = "全部";
     let onlyWithNews = true;
 
     function escapeHtml(str) {
@@ -411,10 +425,6 @@
           "'": "&#39;"
         }[c];
       });
-    }
-
-    function getNewsCount(concept) {
-      return Array.isArray(concept.news) ? concept.news.length : 0;
     }
 
     function renderStats(data) {
@@ -438,11 +448,14 @@
 
       const conceptNames = [
         "全部",
-        ...allConcepts.map(item => item.concept_name).filter(Boolean)
+        ...allConcepts
+          .map(item => item.concept_name)
+          .filter(Boolean)
       ];
 
       tabs.innerHTML = conceptNames.map(conceptName => {
         const activeClass = conceptName === activeConcept ? " active" : "";
+
         return `
           <button class="tab${activeClass}" data-concept="${escapeHtml(conceptName)}">
             ${escapeHtml(conceptName)}
@@ -460,26 +473,18 @@
     }
 
     function renderNewsItem(item) {
-      const stocks = (item.stocks || [])
-        .map(function (s) {
-          return `<span class="stock-tag">${escapeHtml(s)}</span>`;
-        })
-        .join("");
-
-      let titleHtml = escapeHtml(item.title || "");
-      if (item.url) {
-        titleHtml = `
-          ${escapeHtml(item.url)}
-            ${titleHtml}
-          </a>
-        `;
-      }
-
-      const stockName = item.stock_name && item.stock_code
-        ? `${item.stock_name}（${item.stock_code}）`
-        : "";
-
       const summary = item.summary || "";
+      const title = item.title || "查看原文";
+      const url = item.url || "";
+      const time = item.time || "";
+
+      const linkHtml = url
+        ? `
+          ${escapeHtml(url)}
+            查看原文：${escapeHtml(title)}
+          </a>
+        `
+        : escapeHtml(title);
 
       return `
         <article class="news-item">
@@ -488,12 +493,11 @@
           </div>
 
           <div class="news-title">
-            ${stockName ? escapeHtml(stockName) + "｜" : ""}${titleHtml}
+            ${linkHtml}
           </div>
 
           <div class="news-meta">
-            ${stocks}
-            <span class="time-text">${escapeHtml(item.time || "")}</span>
+            <span class="time-text">${escapeHtml(time)}</span>
           </div>
         </article>
       `;
@@ -511,7 +515,9 @@
         <section class="concept-block">
           <div class="concept-header">
             <div class="concept-title-wrap">
-              <div class="concept-title">${escapeHtml(concept.concept_name || "")}</div>
+              <div class="concept-title">
+                ${escapeHtml(concept.concept_name || "")}
+              </div>
               <div class="concept-meta">
                 ${escapeHtml(concept.category || "未分類")}
                 ${concept.note ? "｜" + escapeHtml(concept.note) : ""}
@@ -556,9 +562,7 @@
           ...news.map(item => [
             item.title,
             item.summary,
-            item.stock_name,
-            item.stock_code,
-            ...(item.stocks || [])
+            item.time
           ].join(" "))
         ].join(" ").toLowerCase();
 
