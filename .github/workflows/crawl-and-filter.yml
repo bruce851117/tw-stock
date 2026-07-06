@@ -6,16 +6,22 @@ on:
   # schedule:
   #   - cron: "0 0 * * *"   # UTC 00:00 = 台北 08:00
 
-
 permissions:
   contents: write
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   crawl-and-filter:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -63,3 +69,15 @@ jobs:
             git commit -m "update CMoney concept news"
             git push
           fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
