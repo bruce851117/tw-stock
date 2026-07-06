@@ -537,6 +537,11 @@ def main():
     concepts = load_json(CONCEPTS_PATH)
     output_concepts = []
 
+    # 全域文章去重：
+    # 同一篇 article id 如果出現在多個 concept，
+    # 只保留在 concepts.json 順序中第一個出現的 concept。
+    global_seen_article_ids = set()
+
     for concept in concepts:
         concept_id = concept.get("concept_id")
         concept_name = concept.get("name", concept_id)
@@ -553,6 +558,7 @@ def main():
                 "raw_count": 0,
                 "recent_count": 0,
                 "kept_count": 0,
+                "dedup_removed_count": 0,
                 "news": [],
             })
             continue
@@ -566,6 +572,36 @@ def main():
         raw["source_url"] = raw.get("source_url") or concept.get("url", "")
 
         result = filter_concept(api_key, raw)
+
+        original_news = result.get("news", [])
+        deduped_news = []
+        dedup_removed_count = 0
+
+        for item in original_news:
+            article_id = str(item.get("id", "")).strip()
+
+            if not article_id:
+                deduped_news.append(item)
+                continue
+
+            if article_id in global_seen_article_ids:
+                dedup_removed_count += 1
+                continue
+
+            global_seen_article_ids.add(article_id)
+            deduped_news.append(item)
+
+        if dedup_removed_count > 0:
+            print(
+                f"Global dedupe removed {dedup_removed_count} duplicate article(s) from {concept_name}",
+                flush=True,
+            )
+
+        result["news"] = deduped_news
+        result["kept_count_before_global_dedupe"] = result.get("kept_count", len(original_news))
+        result["dedup_removed_count"] = dedup_removed_count
+        result["kept_count"] = len(deduped_news)
+
         output_concepts.append(result)
 
     output = {
@@ -574,20 +610,28 @@ def main():
         "time_window_hours": TIME_WINDOW_HOURS,
         "model": GEMINI_MODEL,
         "concept_count": len(output_concepts),
+        "global_unique_article_count": len(global_seen_article_ids),
         "concepts": output_concepts,
     }
 
     save_json(OUTPUT_PATH, output)
 
     total_recent = sum(c.get("recent_count", 0) for c in output_concepts)
+    total_kept_before_global_dedupe = sum(
+        c.get("kept_count_before_global_dedupe", c.get("kept_count", 0))
+        for c in output_concepts
+    )
+    total_dedup_removed = sum(c.get("dedup_removed_count", 0) for c in output_concepts)
     total_kept = sum(c.get("kept_count", 0) for c in output_concepts)
 
     print("\n=== Done ===", flush=True)
     print(f"Concepts: {len(output_concepts)}", flush=True)
     print(f"Recent articles: {total_recent}", flush=True)
-    print(f"Kept articles: {total_kept}", flush=True)
+    print(f"Kept before global dedupe: {total_kept_before_global_dedupe}", flush=True)
+    print(f"Global dedupe removed: {total_dedup_removed}", flush=True)
+    print(f"Final kept articles: {total_kept}", flush=True)
+    print(f"Global unique article ids: {len(global_seen_article_ids)}", flush=True)
     print(f"Saved: {OUTPUT_PATH}", flush=True)
-
 
 if __name__ == "__main__":
     main()
