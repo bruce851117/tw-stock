@@ -67,33 +67,49 @@ def sha256_text(value):
 
 
 def extract_json_object(text):
-    """
-    Gemini 有時會包 ```json ... ```，這裡做容錯解析。
-    """
     if not text:
         raise ValueError("Empty Gemini response text")
 
     text = text.strip()
 
-    # 移除 markdown code fence
-    text = re.sub(r"^```json\s*", "", text)
-    text = re.sub(r"^```\s*", "", text)
-    text = re.sub(r"\s*```$", "", text)
-    text = text.strip()
+    if text.startswith("```json"):
+        text = text[len("```json"):].strip()
+
+    if text.startswith("```"):
+        text = text[len("```"):].strip()
+
+    if text.endswith("```"):
+        text = text[:-len("```")].strip()
 
     try:
-        return json.loads(text)
+        parsed = json.loads(text)
+        if isinstance(parsed, dict):
+            return parsed
     except Exception:
         pass
 
-    # 從文字中找第一個 JSON object
-    start = text.find("{")
-    end = text.rfind("}")
+    decoder = json.JSONDecoder()
 
-    if start == -1 or end == -1 or end <= start:
-        raise ValueError("No JSON object found in Gemini response")
+    positions = []
+    for index, char in enumerate(text):
+        if char == "{":
+            positions.append(index)
 
-    return json.loads(text[start:end + 1])
+    for start in positions:
+        try:
+            parsed, end = decoder.raw_decode(text[start:])
+            if isinstance(parsed, dict):
+                return parsed
+        except Exception:
+            continue
+
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    bad_path = DATA_DIR / "gooaye_bad_gemini_response.txt"
+
+    with open(bad_path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+    raise ValueError("No valid JSON object found in Gemini response. Saved to " + str(bad_path))
 
 
 def build_prompt(episode_item):
@@ -343,15 +359,60 @@ def main():
             continue
 
         print(f"EP{episode}: summarize with Gemini ({reason})", flush=True)
-
-        prompt = build_prompt(item)
-        result = call_gemini(prompt)
-        normalized = normalize_summary_result(result, item)
-
-        history_episodes[str(episode)] = normalized
-        summarized_count += 1
-
-        time.sleep(REQUEST_SLEEP_SECONDS)
+        
+                try:
+                    prompt = build_prompt(item)
+                    result = call_gemini(prompt)
+                    normalized = normalize_summary_result(result, item)
+        
+                    history_episodes[str(episode)] = normalized
+                    summarized_count += 1
+        
+                except Exception as exc:
+                    print(f"EP{episode}: Gemini summarize failed: {exc}", flush=True)
+        
+                    content = clean_text(item.get("content", ""))
+                    fallback_summary = content[:1200]
+        
+                    if len(content) > 1200:
+                        fallback_summary = fallback_summary + "..."
+        
+                    history_episodes[str(episode)] = {
+                        "episode": int(episode),
+                        "title": item.get("title", ""),
+                        "url": item.get("url", ""),
+                        "published_at": item.get("published_at", ""),
+                        "modified_at": item.get("modified_at", ""),
+                        "summary": fallback_summary,
+                        "key_points": [],
+                        "market_topics": [],
+                        "mentioned_stocks": [],
+                        "risk_notes": [
+                            "本集 Gemini 整理失敗，暫時顯示原文前段。"
+                        ],
+                        "personal_trade_note": "",
+                        "content_hash": sha256_text(content),
+                        "content_length": len(content),
+                        "summarized_at": now_taipei_string(),
+                        "model": GEMINI_MODEL,
+                        "error": str(exc),
+                    }
+        
+                    skipped_count += 1
+        
+                history["source_name"] = SOURCE_NAME
+                history["source_url"] = SOURCE_URL
+                history["updated_at"] = now_taipei_string()
+                history["latest_range_url"] = raw_data.get("latest_range_url", "")
+                history["latest_episodes"] = raw_data.get("latest_episodes", [])
+                history["model"] = GEMINI_MODEL
+        
+                interim_display_output = make_display_json(raw_data, history)
+        
+                save_json(HISTORY_PATH, history)
+                save_json(DISPLAY_OUTPUT_PATH, interim_display_output)
+        
+                time.sleep(REQUEST_SLEEP_SECONDS)
 
     history["source_name"] = SOURCE_NAME
     history["source_url"] = SOURCE_URL
