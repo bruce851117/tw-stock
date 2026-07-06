@@ -14,7 +14,6 @@
       --border: #e5e7eb;
       --blue: #2563eb;
       --blue-soft: #eff6ff;
-      --indigo-soft: #eef2ff;
       --shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
     }
 
@@ -415,7 +414,6 @@
     let activeConcept = "全部";
     let onlyWithNews = true;
 
-
     function escapeHtml(str) {
       return String(str || "").replace(/[&<>"']/g, function (c) {
         return {
@@ -427,7 +425,6 @@
         }[c];
       });
     }
-
 
     function renderStats(data) {
       const statsArea = document.getElementById("statsArea");
@@ -481,11 +478,7 @@
       const time = item.time || "";
 
       const titleHtml = url
-        ? `
-          " target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(title)}
-          </a>
-        `
+        ? `${escapeHtml(url)}${escapeHtml(title)}</a>`
         : escapeHtml(title);
 
       return `
