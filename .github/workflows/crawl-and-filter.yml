@@ -55,6 +55,12 @@ jobs:
       - name: Crawl Gooaye notes
         run: python crawl_gooaye.py
 
+      - name: Summarize Gooaye notes with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.1-flash-lite
+        run: python summarize_gooaye.py
+
       - name: Show CMoney output
         run: |
           echo "==== data/concept_news.json ===="
@@ -75,6 +81,15 @@ jobs:
             echo
           else
             echo "data/gooaye_latest_raw.json does not exist"
+          fi
+
+          echo "==== data/gooaye_history.json ===="
+          if [ -f data/gooaye_history.json ]; then
+            wc -c data/gooaye_history.json
+            head -c 3000 data/gooaye_history.json
+            echo
+          else
+            echo "data/gooaye_history.json does not exist"
           fi
 
           echo "==== data/gooaye_news.json ===="
