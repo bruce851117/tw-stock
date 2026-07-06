@@ -1,7 +1,6 @@
 import hashlib
 import json
 import os
-import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -20,12 +19,8 @@ DISPLAY_OUTPUT_PATH = DATA_DIR / "gooaye_news.json"
 SOURCE_NAME = "股癌筆記"
 SOURCE_URL = "https://socialworkerdaily.com/index/invest/notes-of-gooaye/"
 
-# 你之後可以從 GitHub Secrets / Variables 改模型
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
-
-# 避免單集內容太長導致成本過高，先限制送進 Gemini 的文字長度
 MAX_CONTENT_CHARS = int(os.getenv("GOOAYE_MAX_CONTENT_CHARS", "60000"))
-
 REQUEST_SLEEP_SECONDS = 1.0
 
 
@@ -56,8 +51,12 @@ def clean_text(value):
         return ""
 
     text = str(value)
-    text = text.replace("\r\n", "\n").replace("\r", "\n")
-    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = text.replace("\r\n", "\n")
+    text = text.replace("\r", "\n")
+
+    while "\n\n\n" in text:
+        text = text.replace("\n\n\n", "\n\n")
+
     return text.strip()
 
 
@@ -124,18 +123,20 @@ def build_prompt(episode_item):
         content = content[:MAX_CONTENT_CHARS] + "\n\n[內容過長，已截斷]"
 
     prompt = f"""
-你是一位專業台股、總體經濟、產業趨勢研究助理。請整理以下「股癌筆記」文章，輸出必須是繁體中文，並且只輸出 JSON，不要輸出 Markdown，不要加註解。
+你是一位專業台股、總體經濟、產業趨勢研究助理。請整理以下「股癌筆記」文章。
 
-整理目標：
-1. 幫我把本集對台股、市場、產業、個股有用的資訊整理出來。
-2. 不要逐字摘要全文，要抓市場重點。
-3. 若內容只是閒聊、金句、生活段落，可以簡短帶過或忽略。
-4. 若提到股票，請盡量保留股票名稱與代號；若沒有明確代號，可只寫名稱。
-5. 若提到產業族群，例如 IC設計、被動元件、主動元件、台積電、載板、矽晶圓、功率元件等，請整理成 market_topics。
-6. 不要加入你自己的投資建議，不要說買進、賣出、目標價，除非原文有明確提到。
-7. 若原文有操作紀錄，請標為 personal_trade_note，不要視為推薦。
+請務必遵守：
+1. 只輸出 JSON。
+2. 不要輸出 Markdown。
+3. 不要輸出任何 JSON 以外的說明文字。
+4. 使用繁體中文。
+5. 不要加入你自己的投資建議。
+6. 如果原文有作者個人操作紀錄，請放在 personal_trade_note，不要視為推薦。
+7. 如果提到股票，請盡量保留股票名稱與代號。
+8. 如果沒有明確代號，code 請放空字串。
 
-請嚴格輸出以下 JSON 格式：
+請輸出這個 JSON 結構：
+
 {{
   "episode": {episode},
   "title": "",
@@ -151,7 +152,7 @@ def build_prompt(episode_item):
     {{
       "topic": "族群或主題名稱",
       "summary": "該主題重點",
-      "sentiment": "positive/neutral/negative/mixed/unknown"
+      "sentiment": "positive"
     }}
   ],
   "mentioned_stocks": [
@@ -188,8 +189,10 @@ def call_gemini(prompt):
         raise RuntimeError("Missing GEMINI_API_KEY")
 
     api_url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent?key={api_key}"
+        "https://generativelanguage.googleapis.com/v1beta/models/"
+        + GEMINI_MODEL
+        + ":generateContent?key="
+        + api_key
     )
 
     payload = {
@@ -197,8 +200,10 @@ def call_gemini(prompt):
             {
                 "role": "user",
                 "parts": [
-                    {"text": prompt}
-                ],
+                    {
+                        "text": prompt
+                    }
+                ]
             }
         ],
         "generationConfig": {
@@ -206,15 +211,18 @@ def call_gemini(prompt):
             "topP": 0.8,
             "topK": 40,
             "maxOutputTokens": 4096,
-            "responseMimeType": "application/json",
-        },
+            "responseMimeType": "application/json"
+        }
     }
 
     response = requests.post(api_url, json=payload, timeout=120)
 
     if not response.ok:
         raise RuntimeError(
-            f"Gemini API failed: status={response.status_code}, body={response.text[:1000]}"
+            "Gemini API failed: status="
+            + str(response.status_code)
+            + ", body="
+            + response.text[:1000]
         )
 
     data = response.json()
@@ -222,9 +230,17 @@ def call_gemini(prompt):
     try:
         text = data["candidates"][0]["content"]["parts"][0]["text"]
     except Exception as exc:
-        raise RuntimeError(f"Unexpected Gemini response: {json.dumps(data, ensure_ascii=False)[:1000]}") from exc
+        short = json.dumps(data, ensure_ascii=False)[:1000]
+        raise RuntimeError("Unexpected Gemini response: " + short) from exc
 
     return extract_json_object(text)
+
+
+def list_or_empty(value):
+    if isinstance(value, list):
+        return value
+
+    return []
 
 
 def normalize_summary_result(result, episode_item):
@@ -235,10 +251,8 @@ def normalize_summary_result(result, episode_item):
     modified_at = episode_item.get("modified_at", "")
     content = clean_text(episode_item.get("content", ""))
 
-    result = result or {}
-
-    def list_or_empty(value):
-        return value if isinstance(value, list) else []
+    if not isinstance(result, dict):
+        result = {}
 
     normalized = {
         "episode": int(result.get("episode") or episode),
@@ -255,10 +269,40 @@ def normalize_summary_result(result, episode_item):
         "content_hash": sha256_text(content),
         "content_length": len(content),
         "summarized_at": now_taipei_string(),
-        "model": GEMINI_MODEL,
+        "model": GEMINI_MODEL
     }
 
     return normalized
+
+
+def make_fallback_summary(episode_item, error_message):
+    episode = episode_item.get("episode")
+    content = clean_text(episode_item.get("content", ""))
+    fallback_summary = content[:1200]
+
+    if len(content) > 1200:
+        fallback_summary = fallback_summary + "..."
+
+    return {
+        "episode": int(episode),
+        "title": episode_item.get("title", ""),
+        "url": episode_item.get("url", ""),
+        "published_at": episode_item.get("published_at", ""),
+        "modified_at": episode_item.get("modified_at", ""),
+        "summary": fallback_summary,
+        "key_points": [],
+        "market_topics": [],
+        "mentioned_stocks": [],
+        "risk_notes": [
+            "本集 Gemini 整理失敗，暫時顯示原文前段。"
+        ],
+        "personal_trade_note": "",
+        "content_hash": sha256_text(content),
+        "content_length": len(content),
+        "summarized_at": now_taipei_string(),
+        "model": GEMINI_MODEL,
+        "error": str(error_message)
+    }
 
 
 def needs_summarize(episode_item, history_episodes):
@@ -283,14 +327,17 @@ def make_display_json(raw_data, history):
     articles = []
 
     for item in raw_data.get("episodes", []):
-        episode = str(item.get("episode"))
-        saved = history_episodes.get(episode, {})
+        episode_key = str(item.get("episode"))
+        saved = history_episodes.get(episode_key, {})
 
-        # 理論上 summarize 後都會有 saved；若沒有，就 fallback 到 raw preview。
         summary = saved.get("summary")
+
         if not summary:
             content = clean_text(item.get("content", ""))
-            summary = content[:800] + ("..." if len(content) > 800 else "")
+            summary = content[:800]
+
+            if len(content) > 800:
+                summary = summary + "..."
 
         articles.append({
             "episode": item.get("episode"),
@@ -306,7 +353,7 @@ def make_display_json(raw_data, history):
             "risk_notes": saved.get("risk_notes", []),
             "personal_trade_note": saved.get("personal_trade_note", ""),
             "model": saved.get("model", ""),
-            "summarized_at": saved.get("summarized_at", ""),
+            "summarized_at": saved.get("summarized_at", "")
         })
 
     return {
@@ -315,105 +362,30 @@ def make_display_json(raw_data, history):
         "latest_range_url": raw_data.get("latest_range_url", ""),
         "updated_at": now_taipei_string(),
         "article_count": len(articles),
-        "articles": articles,
+        "articles": articles
     }
 
 
-def main():
-    raw_data = read_json(RAW_INPUT_PATH, None)
+def ensure_history_shape(history):
+    if not isinstance(history, dict):
+        history = {}
 
-    if not raw_data:
-        raise RuntimeError(f"Missing raw input: {RAW_INPUT_PATH}")
-
-    history = read_json(HISTORY_PATH, {
-        "source_name": SOURCE_NAME,
-        "source_url": SOURCE_URL,
-        "updated_at": "",
-        "episodes": {},
-    })
-
-    if "episodes" not in history or not isinstance(history["episodes"], dict):
+    if "episodes" not in history:
         history["episodes"] = {}
 
-    history_episodes = history["episodes"]
-    raw_episodes = raw_data.get("episodes", [])
+    if not isinstance(history["episodes"], dict):
+        history["episodes"] = {}
 
-    if not raw_episodes:
-        raise RuntimeError("No episodes found in gooaye raw data")
+    if "source_name" not in history:
+        history["source_name"] = SOURCE_NAME
 
-    print("==== Gooaye summarize check ====", flush=True)
-    print(f"Latest episodes: {raw_data.get('latest_episodes')}", flush=True)
-    print(f"Raw changed flag: {raw_data.get('changed')}", flush=True)
-    print(f"Model: {GEMINI_MODEL}", flush=True)
+    if "source_url" not in history:
+        history["source_url"] = SOURCE_URL
 
-    summarized_count = 0
-    skipped_count = 0
+    return history
 
-    for item in raw_episodes:
-        episode = item.get("episode")
-        need, reason = needs_summarize(item, history_episodes)
 
-        if not need:
-            print(f"EP{episode}: skip Gemini ({reason})", flush=True)
-            skipped_count += 1
-            continue
-
-        print(f"EP{episode}: summarize with Gemini ({reason})", flush=True)
-        
-                try:
-                    prompt = build_prompt(item)
-                    result = call_gemini(prompt)
-                    normalized = normalize_summary_result(result, item)
-        
-                    history_episodes[str(episode)] = normalized
-                    summarized_count += 1
-        
-                except Exception as exc:
-                    print(f"EP{episode}: Gemini summarize failed: {exc}", flush=True)
-        
-                    content = clean_text(item.get("content", ""))
-                    fallback_summary = content[:1200]
-        
-                    if len(content) > 1200:
-                        fallback_summary = fallback_summary + "..."
-        
-                    history_episodes[str(episode)] = {
-                        "episode": int(episode),
-                        "title": item.get("title", ""),
-                        "url": item.get("url", ""),
-                        "published_at": item.get("published_at", ""),
-                        "modified_at": item.get("modified_at", ""),
-                        "summary": fallback_summary,
-                        "key_points": [],
-                        "market_topics": [],
-                        "mentioned_stocks": [],
-                        "risk_notes": [
-                            "本集 Gemini 整理失敗，暫時顯示原文前段。"
-                        ],
-                        "personal_trade_note": "",
-                        "content_hash": sha256_text(content),
-                        "content_length": len(content),
-                        "summarized_at": now_taipei_string(),
-                        "model": GEMINI_MODEL,
-                        "error": str(exc),
-                    }
-        
-                    skipped_count += 1
-        
-                history["source_name"] = SOURCE_NAME
-                history["source_url"] = SOURCE_URL
-                history["updated_at"] = now_taipei_string()
-                history["latest_range_url"] = raw_data.get("latest_range_url", "")
-                history["latest_episodes"] = raw_data.get("latest_episodes", [])
-                history["model"] = GEMINI_MODEL
-        
-                interim_display_output = make_display_json(raw_data, history)
-        
-                save_json(HISTORY_PATH, history)
-                save_json(DISPLAY_OUTPUT_PATH, interim_display_output)
-        
-                time.sleep(REQUEST_SLEEP_SECONDS)
-
+def save_history_and_display(raw_data, history):
     history["source_name"] = SOURCE_NAME
     history["source_url"] = SOURCE_URL
     history["updated_at"] = now_taipei_string()
@@ -426,11 +398,80 @@ def main():
     save_json(HISTORY_PATH, history)
     save_json(DISPLAY_OUTPUT_PATH, display_output)
 
+
+def main():
+    raw_data = read_json(RAW_INPUT_PATH, None)
+
+    if not raw_data:
+        raise RuntimeError("Missing raw input: " + str(RAW_INPUT_PATH))
+
+    history = read_json(
+        HISTORY_PATH,
+        {
+            "source_name": SOURCE_NAME,
+            "source_url": SOURCE_URL,
+            "updated_at": "",
+            "episodes": {}
+        }
+    )
+
+    history = ensure_history_shape(history)
+    history_episodes = history["episodes"]
+
+    raw_episodes = raw_data.get("episodes", [])
+
+    if not raw_episodes:
+        raise RuntimeError("No episodes found in gooaye raw data")
+
+    print("==== Gooaye summarize check ====", flush=True)
+    print("Latest episodes: " + str(raw_data.get("latest_episodes")), flush=True)
+    print("Raw changed flag: " + str(raw_data.get("changed")), flush=True)
+    print("Model: " + GEMINI_MODEL, flush=True)
+
+    summarized_count = 0
+    skipped_count = 0
+    failed_count = 0
+
+    for item in raw_episodes:
+        episode = item.get("episode")
+        need, reason = needs_summarize(item, history_episodes)
+
+        if not need:
+            print("EP" + str(episode) + ": skip Gemini (" + reason + ")", flush=True)
+            skipped_count = skipped_count + 1
+            continue
+
+        print("EP" + str(episode) + ": summarize with Gemini (" + reason + ")", flush=True)
+
+        try:
+            prompt = build_prompt(item)
+            result = call_gemini(prompt)
+            normalized = normalize_summary_result(result, item)
+
+            history_episodes[str(episode)] = normalized
+            summarized_count = summarized_count + 1
+
+            print("EP" + str(episode) + ": Gemini summarize success", flush=True)
+
+        except Exception as exc:
+            print("EP" + str(episode) + ": Gemini summarize failed: " + str(exc), flush=True)
+
+            fallback = make_fallback_summary(item, exc)
+            history_episodes[str(episode)] = fallback
+            failed_count = failed_count + 1
+
+        save_history_and_display(raw_data, history)
+
+        time.sleep(REQUEST_SLEEP_SECONDS)
+
+    save_history_and_display(raw_data, history)
+
     print("==== Gooaye summarize result ====", flush=True)
-    print(f"Summarized: {summarized_count}", flush=True)
-    print(f"Skipped: {skipped_count}", flush=True)
-    print(f"Saved: {HISTORY_PATH}", flush=True)
-    print(f"Saved: {DISPLAY_OUTPUT_PATH}", flush=True)
+    print("Summarized: " + str(summarized_count), flush=True)
+    print("Skipped: " + str(skipped_count), flush=True)
+    print("Failed fallback: " + str(failed_count), flush=True)
+    print("Saved: " + str(HISTORY_PATH), flush=True)
+    print("Saved: " + str(DISPLAY_OUTPUT_PATH), flush=True)
 
 
 if __name__ == "__main__":
