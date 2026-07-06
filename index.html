@@ -478,7 +478,7 @@
       const time = item.time || "";
 
       const titleHtml = url
-        ? `${escapeHtml(url)}${escapeHtml(title)}</a>`
+        ? `" target="_blank" rel="noopener noreferrer">${escapeHtml(title)}</a>`
         : escapeHtml(title);
 
       return `
