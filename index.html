@@ -353,6 +353,101 @@
       text-decoration: underline;
     }
 
+    .gooaye-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .gooaye-row {
+      width: 100%;
+      border: 1px solid #eef2f7;
+      border-radius: 18px;
+      padding: 16px 18px;
+      background: #ffffff;
+      transition: all 0.15s ease;
+    }
+
+    .gooaye-row:hover {
+      border-color: #c7d2fe;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .gooaye-row-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .gooaye-title {
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    .gooaye-time {
+      flex-shrink: 0;
+      color: #6b7280;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: right;
+      max-width: 210px;
+    }
+
+    .gooaye-section {
+      margin-top: 10px;
+    }
+
+    .gooaye-section-title {
+      font-size: 12px;
+      font-weight: 900;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .gooaye-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .topic-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .stock-tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .gooaye-summary {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.75;
+      color: #111827;
+      white-space: normal;
+      overflow: visible;
+      word-break: break-word;
+    }
+
     .no-result {
       background: white;
       border: 1px solid var(--border);
@@ -414,6 +509,15 @@
 
       .toolbar {
         position: static;
+      }
+
+      .gooaye-row-header {
+        flex-direction: column;
+      }
+
+      .gooaye-time {
+        text-align: left;
+        max-width: none;
       }
     }
   </style>
@@ -716,9 +820,8 @@
             '<div class="news-area">' +
               '<div class="source-empty">' +
                 '目前尚未找到 <b>data/gooaye_news.json</b>。<br />' +
-                '我看得到原始網站頁面：' +
-                '<a href="https://socialworkerdaily.com/index/invest/notes-of-gooaye/" target="_blank" rel="noopener noreferrer">股癌 podcast 心得筆記</a>。<br />' +
-                '下一步需要新增 crawler 或手動整理 JSON，格式可以用 articles / news / items / notes 任一陣列。' +
+                '原始網站：' +
+                '<a href="https://socialworkerdaily.com/index/invest/notes-of-gooaye/" target="_blank" rel="noopener noreferrer">股癌 podcast 心得筆記</a>' +
               "</div>" +
             "</div>" +
           "</section>";
@@ -730,13 +833,49 @@
 
       if (keyword) {
         filtered = articles.filter(function (item) {
+          const marketTopics = Array.isArray(item.market_topics)
+            ? item.market_topics.map(function (topic) {
+                if (typeof topic === "string") {
+                  return topic;
+                }
+
+                return [
+                  topic.topic,
+                  topic.summary,
+                  topic.sentiment
+                ].join(" ");
+              }).join(" ")
+            : "";
+
+          const mentionedStocks = Array.isArray(item.mentioned_stocks)
+            ? item.mentioned_stocks.map(function (stock) {
+                if (typeof stock === "string") {
+                  return stock;
+                }
+
+                return [
+                  stock.name,
+                  stock.code,
+                  stock.reason
+                ].join(" ");
+              }).join(" ")
+            : "";
+
+          const stocks = Array.isArray(item.stocks)
+            ? item.stocks.join(" ")
+            : "";
+
           const searchableText = [
+            item.episode,
             item.title,
             item.summary,
-            item.content,
             item.time,
             item.date,
-            item.url
+            item.published_at,
+            item.url,
+            marketTopics,
+            mentionedStocks,
+            stocks
           ].join(" ").toLowerCase();
 
           return searchableText.includes(keyword);
@@ -745,14 +884,14 @@
 
       const body = filtered.length === 0
         ? '<div class="empty">沒有符合條件的股癌筆記</div>'
-        : '<div class="news-grid">' + filtered.map(renderGooayeItem).join("") + "</div>";
+        : '<div class="gooaye-list">' + filtered.map(renderGooayeItem).join("") + "</div>";
 
       conceptList.innerHTML =
         '<section class="concept-block">' +
           '<div class="concept-header">' +
             '<div class="concept-title-wrap">' +
               '<div class="concept-title">股癌筆記</div>' +
-              '<div class="concept-meta">socialworkerdaily｜股癌 podcast 心得筆記</div>' +
+              '<div class="concept-meta">socialworkerdaily｜股癌 podcast 心得筆記｜一集一列</div>' +
             "</div>" +
             '<div class="concept-count">' + filtered.length + " 則</div>" +
           "</div>" +
@@ -763,23 +902,129 @@
     }
 
     function renderGooayeItem(item) {
+      const episode = item.episode || "";
       const title = item.title || item.name || "未命名筆記";
-      const summary = item.summary || item.description || item.content || "";
+      const summary = item.summary || "";
       const url = item.url || item.link || "";
-      const time = item.time || item.date || "";
+      const time = item.published_at || item.time || item.date || "";
+
+      const marketTopics = Array.isArray(item.market_topics)
+        ? item.market_topics
+        : [];
+
+      const mentionedStocks = Array.isArray(item.mentioned_stocks)
+        ? item.mentioned_stocks
+        : [];
+
+      const fallbackStocks = Array.isArray(item.stocks)
+        ? item.stocks
+        : [];
+
+      const episodePrefix = episode ? "EP" + escapeHtml(episode) + "｜" : "";
 
       return (
-        '<article class="news-item">' +
-          '<div class="news-summary">' +
-            escapeHtml(summary) +
+        '<article class="gooaye-row">' +
+          '<div class="gooaye-row-header">' +
+            '<div class="gooaye-title">' +
+              episodePrefix +
+              makeLinkHtml(url, title) +
+            "</div>" +
+            '<div class="gooaye-time">' +
+              escapeHtml(time) +
+            "</div>" +
           "</div>" +
-          '<div class="news-title">' +
-            makeLinkHtml(url, title) +
-          "</div>" +
-          '<div class="news-meta">' +
-            '<span class="time-text">' + escapeHtml(time) + "</span>" +
+          renderMarketTopics(marketTopics) +
+          renderGooayeStocks(mentionedStocks, fallbackStocks) +
+          '<div class="gooaye-section">' +
+            '<div class="gooaye-section-title">Gemini Summary</div>' +
+            '<div class="gooaye-summary">' +
+              escapeHtml(summary) +
+            "</div>" +
           "</div>" +
         "</article>"
+      );
+    }
+
+    function renderMarketTopics(marketTopics) {
+      if (!Array.isArray(marketTopics) || marketTopics.length === 0) {
+        return "";
+      }
+
+      const tags = marketTopics.map(function (topic) {
+        if (typeof topic === "string") {
+          return '<span class="topic-tag">' + escapeHtml(topic) + "</span>";
+        }
+
+        const topicName = topic.topic || "";
+        const summary = topic.summary || "";
+
+        let label = topicName;
+
+        if (summary) {
+          label = label + "：" + summary;
+        }
+
+        return '<span class="topic-tag">' + escapeHtml(label) + "</span>";
+      }).join("");
+
+      return (
+        '<div class="gooaye-section">' +
+          '<div class="gooaye-section-title">Market Topics</div>' +
+          '<div class="gooaye-tags">' +
+            tags +
+          "</div>" +
+        "</div>"
+      );
+    }
+
+    function renderGooayeStocks(mentionedStocks, fallbackStocks) {
+      let tags = [];
+
+      if (Array.isArray(mentionedStocks) && mentionedStocks.length > 0) {
+        tags = mentionedStocks.map(function (stock) {
+          if (typeof stock === "string") {
+            return stock;
+          }
+
+          const name = stock.name || "";
+          const code = stock.code || "";
+          const reason = stock.reason || "";
+
+          let label = name;
+
+          if (code) {
+            label = label + "（" + code + "）";
+          }
+
+          if (reason) {
+            label = label + "：" + reason;
+          }
+
+          return label;
+        });
+      } else if (Array.isArray(fallbackStocks) && fallbackStocks.length > 0) {
+        tags = fallbackStocks.map(function (stock) {
+          return String(stock || "");
+        });
+      }
+
+      tags = tags.filter(Boolean);
+
+      if (tags.length === 0) {
+        return "";
+      }
+
+      const html = tags.map(function (label) {
+        return '<span class="stock-tag">' + escapeHtml(label) + "</span>";
+      }).join("");
+
+      return (
+        '<div class="gooaye-section">' +
+          '<div class="gooaye-section-title">Stocks</div>' +
+          '<div class="gooaye-tags">' +
+            html +
+          "</div>" +
+        "</div>"
       );
     }
 
