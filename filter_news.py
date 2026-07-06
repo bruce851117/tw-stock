@@ -1,13 +1,14 @@
 """
-新聞過濾 / 整理層
+台股概念股新聞過濾 / 整理層
 
 流程：
-  1. 讀 data/concepts.json 與 data/raw/<concept_id>.json
-  2. 本機預過濾：只留最近 TIME_WINDOW_HOURS 小時內的文章（省 token、避開每日上限）
-  3. 分批送 Gemini 2.5 Flash-Lite：剔除廢文，保留重要文章並產生「一句話重點」
-  4. 輸出 data/concept_news.json 給 index.html 顯示
+- 讀 data/concepts.json 與 data/raw/<concept_id>.json
+- 本機預過濾：只留最近 TIME_WINDOW_HOURS 小時內的文章
+- 分批送 Gemini：剔除廢文，保留有完整分析邏輯或產業/公司消息的文章
+- Gemini 必須讀完整內文後摘要
+- 摘要格式：先指出股票名稱與代號，再說明文章中的重點邏輯，以及對該公司的受益/不利影響
+- 輸出 data/concept_news.json 給 index.html 顯示
 
-Gemini 只做「留/丟 + 一句重點」，不做評分。
 需要環境變數 GEMINI_API_KEY。
 """
 
@@ -25,17 +26,21 @@ OUTPUT_PATH = "data/concept_news.json"
 
 TAIPEI_TZ = timezone(timedelta(hours=8))
 
-# --- 可調參數 ---
-TIME_WINDOW_HOURS = 48       # 只處理近 N 小時的文章
-BATCH_SIZE = 15              # 每次送 Gemini 的文章數（批次越大請求越少，越省免費額度）
-SLEEP_BETWEEN_CALLS = 6.0    # 批次間隔秒數（避開免費版每分鐘上限）
-TEXT_MAX_LEN = 4000          # 送給 Gemini 的內文長度上限（幾乎等於完整內文，僅防極端長文）
-SUMMARY_MAX_CHARS = 100      # 摘要硬上限（超過就截斷，保險用）
-MAX_RETRIES = 5              # 暫時性錯誤（429/500/503）重試次數
-RETRY_BASE_DELAY = 4.0       # 503/連線錯誤退避基準秒數（指數成長）
-RATELIMIT_DELAY = 30.0       # 429（額度/速率）退避秒數（每分鐘額度約 60s 回補，乘以次數）
+# 可調參數
+TIME_WINDOW_HOURS = 48
+BATCH_SIZE = 15
+SLEEP_BETWEEN_CALLS = 6.0
 
-# 這些 HTTP 狀態碼視為暫時性、值得重試（過載 / 限流 / 伺服器暫時錯誤）
+# 這裡提高到 12000，確保 Gemini 盡量讀完整內文。
+# 只有極端長文才截斷，避免 prompt 爆掉。
+TEXT_MAX_LEN = 12000
+
+SUMMARY_TARGET_CHARS = 90
+SUMMARY_MAX_CHARS = 110
+
+MAX_RETRIES = 5
+RETRY_BASE_DELAY = 4.0
+RATELIMIT_DELAY = 30.0
 RETRYABLE_STATUS = {429, 500, 503}
 
 GEMINI_MODEL = "gemini-3.1-flash-lite"
@@ -44,37 +49,103 @@ GEMINI_ENDPOINT = (
     f"{GEMINI_MODEL}:generateContent"
 )
 
-PROMPT_INSTRUCTION = """你是台股概念股討論區的新聞篩選助理。以下是同一個概念股討論區的多篇貼文（JSON 陣列，text 為完整內文）。
 
-請嚴格篩選，「只保留」符合下列其中一種的貼文：
-1. 有完整分析邏輯：有前因後果、有推理論述或數據支撐的分析（不是只喊「會漲/會跌」，而是有講為什麼）。
-2. 產業面消息資訊：產業趨勢、供應鏈動態、公司營運/財報/法人動作、政策法規、國際大廠或客戶動態等實質資訊。
+PROMPT_INSTRUCTION = """
+你是台股概念股討論區的新聞篩選助理。
 
-「必須剔除」以下類型（就算被概念標籤帶到也要剔除）：
-- 純心情抒發、抱怨、問候閒聊、貼圖、迷因。
-- 投資心法、心得、心路歷程、勵志雞湯、人生感悟（沒有針對特定公司或產業的具體分析）。
-- 單純喊單、報明牌、無論述地說買/賣或目標價。
-- 沒有分析的籌碼流水帳、單句評論、洗版、重複資訊。
-- 廣告、拉群、招收會員、導流。
+以下是同一個概念股討論區的多篇貼文，JSON 陣列中：
+- id 為原文 id
+- title 為原文標題
+- text 為完整內文
+- stocks 為原文標記到的股票代號
+- concept_name 為概念股名稱
+- concept_note 為此概念與產業鏈的說明
 
-寧可嚴一點：如果一篇沒有針對特定公司/產業的實質分析、也沒有產業消息，就剔除。
+你的任務是：
+1. 閱讀每篇貼文的完整內文 text。
+2. 嚴格判斷是否值得保留。
+3. 對保留的文章產生一段 80～100 個中文字左右的繁體中文摘要。
 
-對於「保留」的每一篇，請閱讀完整內文後，寫一段繁體中文摘要（summary），濃縮這篇的分析重點或產業資訊，讓讀者不用點進原文就能掌握重點。
-摘要「目標 80 字、最多不可超過 100 字」，而且必須是**完整的句子、以句號結尾**，絕對不可以寫到一半就中斷。寧可少寫幾句，也要把話講完整。
+【保留條件】
+只保留符合以下條件之一，且能連到明確公司或明確產業鏈受益/受害邏輯的貼文：
 
-只回傳一個 JSON 陣列，每個元素格式為：
-{"id": "<原文 id>", "summary": "<100字內摘要>"}
-被剔除的貼文請不要出現在結果中。除了 JSON 陣列外不要輸出任何其他文字。"""
+A. 有完整分析邏輯：
+- 有前因後果
+- 有推理、數據、供應鏈關係、客戶關係、產品規格、產能、報價、財報、法人動作等支撐
+- 不是只有喊漲、喊跌、加油、看多、看空
+
+B. 有產業面或公司面實質消息：
+- 產業趨勢
+- 供應鏈動態
+- 公司營運、財報、接單、產能、產品、客戶、法說、法人動作
+- 政策法規
+- 國際大廠動態
+- AI、半導體、伺服器、封裝、記憶體、電力、散熱、PCB 等產業鏈實質資訊
+
+【必須剔除】
+以下類型一律剔除，不要出現在結果中：
+
+1. 純心情抒發、抱怨、問候、閒聊、貼圖、迷因。
+2. 投資心法、心得、勵志雞湯、人生感悟。
+3. 單純喊單、報明牌，沒有解釋為什麼。
+4. 沒有分析的籌碼流水帳。
+5. 廣告、拉群、導流、招收會員。
+6. 單純大盤或市場價格描述，例如：
+   - 台股本週強勢反彈
+   - 加權指數上漲幾點
+   - 外資賣超、內資承接
+   - 傳產類股領漲、電子股量縮整理
+   - 類股輪動撐盤
+   這種若沒有進一步連到明確公司、產業供需、營運或獲利邏輯，必須剔除。
+7. 只有市場氣氛、指數漲跌、類股輪動，沒有說明哪家公司因何受益或受害者，必須剔除。
+
+【摘要格式要求】
+對於保留文章，summary 必須符合以下格式：
+
+- 開頭先寫「股票名稱（代號）：」
+- 接著摘要該股票在這篇文章中的重點。
+- 必須包含「因為...所以...」的邏輯：
+  例如因為某產品需求增加、某客戶拉貨、某規格升級、某產業趨勢、某公司供應鏈地位，因此這家公司可能受益；
+  或因為價格下跌、需求轉弱、成本上升、競爭加劇，因此對這家公司不利。
+- 若文章涉及多檔股票，請選出文章中最核心、最直接受影響的一檔或兩檔股票來摘要。
+- 摘要目標 80～100 個中文字，最多不可超過 110 個中文字。
+- 摘要必須是完整句子，必須以句號結尾。
+- 不可以用「...」或「……」結尾。
+- 不可以寫到一半中斷。
+- 不要加入原文沒有的推測，不要自行腦補。
+
+【輸出格式】
+只回傳 JSON array。
+每個元素格式如下：
+
+{
+  "id": "<原文 id>",
+  "stock_name": "<股票名稱，若可判斷>",
+  "stock_code": "<股票代號，若可判斷>",
+  "summary": "<80～100字摘要，完整句子，以句號結尾>"
+}
+
+被剔除的貼文不要出現在結果中。
+除了 JSON array，不要輸出任何其他文字。
+"""
 
 
 def now_taipei():
     return datetime.now(TAIPEI_TZ)
 
 
+def now_taipei_string():
+    return now_taipei().strftime("%Y-%m-%d %H:%M:%S")
+
+
 def parse_article_time(time_str):
-    """把 '2026-07-03 14:25' 解析成帶台北時區的 datetime；失敗回 None。"""
+    """
+    把 '2026-07-03 14:25' 解析成帶台北時區的 datetime。
+    失敗回 None。
+    """
     if not time_str:
         return None
+
     try:
         dt = datetime.strptime(time_str, "%Y-%m-%d %H:%M")
         return dt.replace(tzinfo=TAIPEI_TZ)
@@ -89,19 +160,25 @@ def load_json(path):
 
 def save_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def prefilter_recent(articles):
-    """本機預過濾：只留近 TIME_WINDOW_HOURS 小時內的文章。"""
+    """
+    本機預過濾：只留近 TIME_WINDOW_HOURS 小時內的文章。
+    無法解析時間的先保留，交給 Gemini 判斷。
+    """
     cutoff = now_taipei() - timedelta(hours=TIME_WINDOW_HOURS)
     kept = []
-    for a in articles:
-        dt = parse_article_time(a.get("time"))
+
+    for article in articles:
+        dt = parse_article_time(article.get("time"))
+
         if dt is None or dt >= cutoff:
-            # 無法解析時間的先保留，交給 Gemini 判斷
-            kept.append(a)
+            kept.append(article)
+
     return kept
 
 
@@ -110,177 +187,350 @@ def chunked(seq, size):
         yield seq[i:i + size]
 
 
-def tidy_summary(summary):
-    """把摘要壓在 SUMMARY_MAX_CHARS 字內；超過時回退到最近的標點收尾，不切在字中間。"""
-    summary = summary.strip()
+def extract_json_array(text):
+    """
+    Gemini 有時會包 markdown 或多輸出文字。
+    這裡只抽出第一個 JSON array。
+    """
+    text = str(text or "").strip()
+    text = text.replace("```json", "").replace("```", "").strip()
+
+    start = text.find("[")
+    end = text.rfind("]")
+
+    if start == -1 or end == -1 or end <= start:
+        raise ValueError("Gemini response does not contain JSON array")
+
+    return json.loads(text[start:end + 1])
+
+
+def trim_summary_to_complete_sentence(summary):
+    """
+    保險：若 Gemini 回傳過長，回退到最近標點。
+    不使用 ...，避免網頁看起來像被截斷。
+    """
+    summary = str(summary or "").strip()
+    summary = summary.replace("...", "")
+    summary = summary.replace("……", "")
+    summary = " ".join(summary.split())
+
+    if not summary:
+        return ""
+
     if len(summary) <= SUMMARY_MAX_CHARS:
+        if not summary.endswith(("。", "！", "？")):
+            summary += "。"
         return summary
 
-    head = summary[:SUMMARY_MAX_CHARS]
+    # 優先找 70～110 字之間最後一個標點
+    punctuation = ["。", "！", "？", "；"]
+    best_pos = -1
 
-    # 優先在句末標點收尾
-    for puncts in ("。！？!?", "，、；,;"):
-        pos = max((head.rfind(p) for p in puncts), default=-1)
-        # 至少要保留一半內容，避免砍太短
-        if pos >= SUMMARY_MAX_CHARS // 2:
-            end = head[:pos + 1]
-            # 逗號類結尾補上刪節號表示未完
-            return end if end[-1] in "。！？!?" else end.rstrip("，、；,;") + "…"
+    upper = min(len(summary), SUMMARY_MAX_CHARS)
 
-    return head.rstrip() + "…"
+    for i in range(0, upper):
+        if summary[i] in punctuation:
+            best_pos = i
+
+    if best_pos >= 60:
+        trimmed = summary[:best_pos + 1].strip()
+        return trimmed
+
+    # 如果沒有合適標點，最多截到上限並補句號
+    trimmed = summary[:SUMMARY_MAX_CHARS].strip()
+    trimmed = trimmed.rstrip("，、；：,. ")
+
+    if not trimmed.endswith(("。", "！", "？")):
+        trimmed += "。"
+
+    return trimmed
+
+
+def is_retryable_http_error(error):
+    if isinstance(error, urllib.error.HTTPError):
+        return error.code in RETRYABLE_STATUS
+
+    return False
 
 
 def post_gemini_with_retry(api_key, body):
-    """對 Gemini 發 POST，遇到暫時性錯誤（429/500/503/連線錯誤）會退避重試。"""
-    req = urllib.request.Request(
-        f"{GEMINI_ENDPOINT}?key={api_key}",
-        data=json.dumps(body).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
+    """
+    對 Gemini 發 POST。
+    遇到 429 / 500 / 503 或連線錯誤時退避重試。
+    """
+    url = f"{GEMINI_ENDPOINT}?key={api_key}"
 
-    last_err = None
+    last_error = None
+
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            with urllib.request.urlopen(req, timeout=120) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            last_err = e
-            if e.code in RETRYABLE_STATUS and attempt < MAX_RETRIES:
-                if e.code == 429:
-                    # 額度/速率限制：等久一點讓每分鐘額度回補
-                    delay = RATELIMIT_DELAY * attempt
-                else:
-                    # 503/500 過載：指數退避
-                    delay = RETRY_BASE_DELAY * (2 ** (attempt - 1))
-                print(
-                    f"[RETRY] Gemini HTTP {e.code}，第 {attempt}/{MAX_RETRIES} 次，"
-                    f"{delay:.0f}s 後重試",
-                    flush=True,
-                )
-                time.sleep(delay)
-                continue
-            raise
-        except (urllib.error.URLError, TimeoutError) as e:
-            last_err = e
-            if attempt < MAX_RETRIES:
-                delay = RETRY_BASE_DELAY * (2 ** (attempt - 1))
-                print(
-                    f"[RETRY] Gemini 連線錯誤（{e}），第 {attempt}/{MAX_RETRIES} 次，"
-                    f"{delay:.0f}s 後重試",
-                    flush=True,
-                )
-                time.sleep(delay)
-                continue
-            raise
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(body).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
 
-    if last_err:
-        raise last_err
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                raw = resp.read().decode("utf-8")
+                return json.loads(raw)
+
+        except urllib.error.HTTPError as e:
+            last_error = e
+            body_text = ""
+
+            try:
+                body_text = e.read().decode("utf-8")[:1000]
+            except Exception:
+                body_text = ""
+
+            print(
+                f"[Gemini HTTPError] attempt={attempt}/{MAX_RETRIES}, "
+                f"status={e.code}, body={body_text}",
+                flush=True,
+            )
+
+            if e.code == 429:
+                sleep_seconds = RATELIMIT_DELAY * attempt
+            elif e.code in RETRYABLE_STATUS:
+                sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+            else:
+                raise
+
+        except Exception as e:
+            last_error = e
+            print(
+                f"[Gemini Error] attempt={attempt}/{MAX_RETRIES}, error={repr(e)}",
+                flush=True,
+            )
+            sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+
+        if attempt < MAX_RETRIES:
+            print(f"Sleep {sleep_seconds:.1f}s before retry...", flush=True)
+            time.sleep(sleep_seconds)
+
+    raise RuntimeError(f"Gemini request failed after retries: {repr(last_error)}")
+
+
+def parse_gemini_text_response(response_json):
+    """
+    從 Gemini generateContent response 取出文字。
+    """
+    candidates = response_json.get("candidates") or []
+
+    if not candidates:
+        raise ValueError("Gemini response has no candidates")
+
+    content = candidates[0].get("content") or {}
+    parts = content.get("parts") or []
+
+    if not parts:
+        raise ValueError("Gemini response has no parts")
+
+    text_parts = []
+
+    for part in parts:
+        if "text" in part:
+            text_parts.append(part["text"])
+
+    text = "\n".join(text_parts).strip()
+
+    if not text:
+        raise ValueError("Gemini response text is empty")
+
+    return text
 
 
 def call_gemini(api_key, payload_articles):
-    """送一批文章給 Gemini，回傳 [{id, summary}, ...]。"""
-    compact = [
-        {
-            "id": a.get("id"),
-            "title": a.get("title", ""),
-            "text": (a.get("text", "") or "")[:TEXT_MAX_LEN],
-        }
-        for a in payload_articles
+    """
+    送一批文章給 Gemini，回傳：
+    [
+      {
+        "id": "...",
+        "stock_name": "...",
+        "stock_code": "...",
+        "summary": "..."
+      }
     ]
+    """
+    compact = []
 
-    prompt = PROMPT_INSTRUCTION + "\n\n貼文資料：\n" + json.dumps(
-        compact, ensure_ascii=False
-    )
+    for article in payload_articles:
+        full_text = article.get("text", "") or ""
+
+        compact.append({
+            "id": article.get("id"),
+            "title": article.get("title", ""),
+            "stocks": article.get("stocks", []),
+            "time": article.get("time", ""),
+            "full_text": full_text[:TEXT_MAX_LEN],
+        })
 
     body = {
-        "contents": [{"parts": [{"text": prompt}]}],
+        "contents": [
+            {
+                "role": "user",
+                "parts": [
+                    {
+                        "text": PROMPT_INSTRUCTION + "\n\n貼文資料：\n" + json.dumps(compact, ensure_ascii=False)
+                    }
+                ],
+            }
+        ],
         "generationConfig": {
-            "temperature": 0.2,
+            "temperature": 0.1,
             "responseMimeType": "application/json",
         },
     }
 
-    result = post_gemini_with_retry(api_key, body)
-
-    try:
-        text = result["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError):
-        print(f"[WARN] Unexpected Gemini response: {json.dumps(result)[:500]}", flush=True)
-        return []
-
-    try:
-        parsed = json.loads(text)
-    except json.JSONDecodeError:
-        print(f"[WARN] Gemini did not return valid JSON: {text[:300]}", flush=True)
-        return []
+    response_json = post_gemini_with_retry(api_key, body)
+    response_text = parse_gemini_text_response(response_json)
+    parsed = extract_json_array(response_text)
 
     if not isinstance(parsed, list):
-        return []
-    return parsed
+        raise ValueError("Gemini parsed result is not a list")
+
+    cleaned = []
+
+    for item in parsed:
+        if not isinstance(item, dict):
+            continue
+
+        article_id = str(item.get("id", "")).strip()
+        summary = trim_summary_to_complete_sentence(item.get("summary", ""))
+
+        if not article_id or not summary:
+            continue
+
+        cleaned.append({
+            "id": article_id,
+            "stock_name": str(item.get("stock_name", "") or "").strip(),
+            "stock_code": str(item.get("stock_code", "") or "").strip(),
+            "summary": summary,
+        })
+
+    return cleaned
 
 
 def filter_concept(api_key, raw):
     concept_id = raw.get("concept_id")
     concept_name = raw.get("concept_name", concept_id)
+    category = raw.get("category", "")
+    note = raw.get("note", "")
+    source_url = raw.get("source_url", "")
     articles = raw.get("articles", [])
 
-    recent = prefilter_recent(articles)
+    recent_articles = prefilter_recent(articles)
+
     print(
-        f"[{concept_name}] 原始 {len(articles)} → 近{TIME_WINDOW_HOURS}h {len(recent)} 篇",
+        f"\n=== Filter {concept_name} ({concept_id}) === "
+        f"raw={len(articles)}, recent={len(recent_articles)}",
         flush=True,
     )
 
-    by_id = {str(a.get("id")): a for a in recent}
-    kept_summaries = {}  # id -> summary
+    if not recent_articles:
+        return {
+            "concept_id": concept_id,
+            "concept_name": concept_name,
+            "category": category,
+            "note": note,
+            "source_url": source_url,
+            "raw_count": len(articles),
+            "recent_count": 0,
+            "kept_count": 0,
+            "news": [],
+        }
 
-    for batch_no, batch in enumerate(chunked(recent, BATCH_SIZE), start=1):
-        print(f"[{concept_name}] Gemini batch {batch_no}（{len(batch)} 篇）", flush=True)
+    article_by_id = {
+        str(article.get("id", "")).strip(): article
+        for article in recent_articles
+        if str(article.get("id", "")).strip()
+    }
+
+    kept_news = []
+
+    for batch_no, batch in enumerate(chunked(recent_articles, BATCH_SIZE), start=1):
+        print(
+            f"Gemini batch {batch_no}: {concept_name}, articles={len(batch)}",
+            flush=True,
+        )
+
+        # 把概念背景補進每篇文章，讓 Gemini 知道該概念的產業定位
+        payload_batch = []
+
+        for article in batch:
+            cloned = dict(article)
+            cloned["concept_name"] = concept_name
+            cloned["concept_note"] = note
+            payload_batch.append(cloned)
+
         try:
-            results = call_gemini(api_key, batch)
-        except urllib.error.HTTPError as e:
-            print(f"[ERROR] Gemini HTTP {e.code}: {e.read().decode('utf-8')[:300]}", flush=True)
-            results = []
+            gemini_results = call_gemini(api_key, payload_batch)
         except Exception as e:
-            print(f"[ERROR] Gemini call failed: {e}", flush=True)
-            results = []
+            print(f"[ERROR] Gemini failed for {concept_name} batch {batch_no}: {e}", flush=True)
+            gemini_results = []
 
-        for item in results:
-            aid = str(item.get("id", "")).strip()
-            summary = str(item.get("summary", "")).strip()
-            if aid in by_id and summary:
-                summary = tidy_summary(summary)
-                kept_summaries[aid] = summary
+        for result in gemini_results:
+            article_id = str(result.get("id", "")).strip()
+            original = article_by_id.get(article_id)
+
+            if not original:
+                continue
+
+            summary = result.get("summary", "")
+
+            news_item = {
+                "id": article_id,
+                "title": original.get("title", ""),
+                "summary": summary,
+                "stock_name": result.get("stock_name", ""),
+                "stock_code": result.get("stock_code", ""),
+                "time": original.get("time", ""),
+                "stocks": original.get("stocks", []),
+                "comment_count": original.get("comment_count", 0),
+                "like_count": original.get("like_count", 0),
+                "collected_count": original.get("collected_count", 0),
+                "url": original.get("url", ""),
+            }
+
+            kept_news.append(news_item)
 
         time.sleep(SLEEP_BETWEEN_CALLS)
 
-    # 依原始順序組出留下來的新聞
-    news = []
-    for a in recent:
-        aid = str(a.get("id"))
-        if aid in kept_summaries:
-            news.append({
-                "time": a.get("time", ""),
-                "title": a.get("title", ""),
-                "summary": kept_summaries[aid],
-                "stocks": a.get("stocks", []),
-                "url": a.get("url", ""),
-            })
+    # 去重
+    seen_ids = set()
+    unique_news = []
 
-    print(f"[{concept_name}] 保留 {len(news)} 篇重要新聞", flush=True)
+    for item in kept_news:
+        if item["id"] in seen_ids:
+            continue
+
+        seen_ids.add(item["id"])
+        unique_news.append(item)
+
+    unique_news.sort(key=lambda x: x.get("time", ""), reverse=True)
+
+    print(
+        f"Kept {len(unique_news)} / recent {len(recent_articles)} for {concept_name}",
+        flush=True,
+    )
 
     return {
         "concept_id": concept_id,
         "concept_name": concept_name,
-        "category": raw.get("category", ""),
-        "note": raw.get("note", ""),
-        "source_url": raw.get("source_url", ""),
-        "news": news,
+        "category": category,
+        "note": note,
+        "source_url": source_url,
+        "raw_count": len(articles),
+        "recent_count": len(recent_articles),
+        "kept_count": len(unique_news),
+        "news": unique_news,
     }
 
 
 def main():
     api_key = os.environ.get("GEMINI_API_KEY")
+
     if not api_key:
         raise SystemExit("缺少環境變數 GEMINI_API_KEY")
 
@@ -288,24 +538,55 @@ def main():
     output_concepts = []
 
     for concept in concepts:
-        concept_id = concept["concept_id"]
-        raw_path = os.path.join(RAW_DIR, f"{concept_id}.json")
+        concept_id = concept.get("concept_id")
+        concept_name = concept.get("name", concept_id)
+        raw_path = f"{RAW_DIR}/{concept_id}.json"
+
         if not os.path.exists(raw_path):
-            print(f"[SKIP] 找不到 {raw_path}，請先執行 crawl_cmoney.py", flush=True)
+            print(f"[WARN] Raw file not found: {raw_path}", flush=True)
+            output_concepts.append({
+                "concept_id": concept_id,
+                "concept_name": concept_name,
+                "category": concept.get("category", ""),
+                "note": concept.get("note", ""),
+                "source_url": concept.get("url", ""),
+                "raw_count": 0,
+                "recent_count": 0,
+                "kept_count": 0,
+                "news": [],
+            })
             continue
 
         raw = load_json(raw_path)
-        output_concepts.append(filter_concept(api_key, raw))
+
+        # 若 raw 裡缺欄位，用 concepts.json 補
+        raw["concept_name"] = raw.get("concept_name") or concept_name
+        raw["category"] = raw.get("category") or concept.get("category", "")
+        raw["note"] = raw.get("note") or concept.get("note", "")
+        raw["source_url"] = raw.get("source_url") or concept.get("url", "")
+
+        result = filter_concept(api_key, raw)
+        output_concepts.append(result)
 
     output = {
-        "updated_at": now_taipei().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now_taipei_string(),
+        "timezone": "Asia/Taipei",
         "time_window_hours": TIME_WINDOW_HOURS,
         "model": GEMINI_MODEL,
+        "concept_count": len(output_concepts),
         "concepts": output_concepts,
     }
 
     save_json(OUTPUT_PATH, output)
-    print(f"\nSaved: {OUTPUT_PATH}", flush=True)
+
+    total_recent = sum(c.get("recent_count", 0) for c in output_concepts)
+    total_kept = sum(c.get("kept_count", 0) for c in output_concepts)
+
+    print("\n=== Done ===", flush=True)
+    print(f"Concepts: {len(output_concepts)}", flush=True)
+    print(f"Recent articles: {total_recent}", flush=True)
+    print(f"Kept articles: {total_kept}", flush=True)
+    print(f"Saved: {OUTPUT_PATH}", flush=True)
 
 
 if __name__ == "__main__":
