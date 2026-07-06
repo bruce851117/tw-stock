@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 專案除錯輸出（Gemini 回傳無法解析時的暫存）
+data/gooaye_bad_gemini_response.txt

@@ -23,6 +23,12 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 MAX_CONTENT_CHARS = int(os.getenv("GOOAYE_MAX_CONTENT_CHARS", "60000"))
 REQUEST_SLEEP_SECONDS = 1.0
 
+# 暫時性錯誤重試設定（與 filter_news 一致）
+MAX_RETRIES = 5
+RETRY_BASE_DELAY = 4.0
+RATELIMIT_DELAY = 30.0
+RETRYABLE_STATUS = {429, 500, 503}
+
 
 def now_taipei_string():
     return datetime.now(TAIPEI_TZ).strftime("%Y-%m-%d %H:%M:%S")
@@ -135,6 +141,7 @@ def build_prompt(episode_item):
 6. 如果原文有作者個人操作紀錄，請放在 personal_trade_note，不要視為推薦。
 7. 如果提到股票，請盡量保留股票名稱與代號。
 8. 如果沒有明確代號，code 請放空字串。
+9. 只整理原文實際提到的內容，不要加入原文沒有的推論、評價或預測，嚴禁無中生有。
 
 請輸出這個 JSON 結構：
 
@@ -216,14 +223,54 @@ def call_gemini(prompt):
         }
     }
 
-    response = requests.post(api_url, json=payload, timeout=120)
+    # 遇到 429 / 500 / 503 或連線錯誤時退避重試，避免暫時性錯誤讓整集掉進 fallback。
+    response = None
+    last_error = None
 
-    if not response.ok:
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = requests.post(api_url, json=payload, timeout=120)
+        except requests.RequestException as exc:
+            last_error = exc
+            sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+            print(
+                f"[Gemini Error] attempt={attempt}/{MAX_RETRIES}, error={repr(exc)}",
+                flush=True,
+            )
+            if attempt < MAX_RETRIES:
+                time.sleep(sleep_seconds)
+            continue
+
+        if response.ok:
+            break
+
+        status = response.status_code
+
+        if status in RETRYABLE_STATUS and attempt < MAX_RETRIES:
+            if status == 429:
+                sleep_seconds = RATELIMIT_DELAY * attempt
+            else:
+                sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
+
+            print(
+                f"[Gemini HTTP {status}] attempt={attempt}/{MAX_RETRIES}, "
+                f"sleep {sleep_seconds:.1f}s，body={response.text[:300]}",
+                flush=True,
+            )
+            time.sleep(sleep_seconds)
+            continue
+
+        # 不可重試的錯誤，直接失敗
         raise RuntimeError(
             "Gemini API failed: status="
-            + str(response.status_code)
+            + str(status)
             + ", body="
             + response.text[:1000]
+        )
+
+    if response is None or not response.ok:
+        raise RuntimeError(
+            "Gemini API failed after retries: " + repr(last_error or (response.text[:500] if response else "no response"))
         )
 
     data = response.json()
@@ -316,6 +363,11 @@ def needs_summarize(episode_item, history_episodes):
 
     if not saved.get("summary"):
         return True, "missing_summary"
+
+    # 上次是 Gemini 失敗的 fallback（只有原文預覽），下次要重新嘗試，
+    # 否則暫時性失敗會永久卡在原文預覽。
+    if saved.get("error"):
+        return True, "retry_prev_failed"
 
     if saved.get("content_hash") != content_hash:
         return True, "content_changed"
