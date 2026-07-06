@@ -140,13 +140,36 @@ jobs:
             git push origin main
           fi
 
+      - name: Build clean Pages site
+        run: |
+          rm -rf _site
+          mkdir -p _site/data
+
+          cp index.html _site/index.html
+          touch _site/.nojekyll
+
+          if [ -f data/concept_news.json ]; then
+            cp data/concept_news.json _site/data/concept_news.json
+          fi
+
+          if [ -f data/gooaye_news.json ]; then
+            cp data/gooaye_news.json _site/data/gooaye_news.json
+          fi
+
+          if [ -f data/gooaye_history.json ]; then
+            cp data/gooaye_history.json _site/data/gooaye_history.json
+          fi
+
+          echo "==== _site files ===="
+          find _site -maxdepth 3 -type f -print
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "."
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment
