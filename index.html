@@ -398,7 +398,7 @@
   <script>
     let rawData = null;
     let allConcepts = [];
-    let activeCategory = "全部";
+    let activeConcept  = "全部";
     let onlyWithNews = true;
 
     function escapeHtml(str) {
@@ -436,29 +436,23 @@
     function renderTabs() {
       const tabs = document.getElementById("tabs");
 
-      const categories = [
+      const conceptNames = [
         "全部",
-        ...Array.from(
-          new Set(
-            allConcepts
-              .map(item => item.category || "未分類")
-              .filter(Boolean)
-          )
-        ).sort()
+        ...allConcepts.map(item => item.concept_name).filter(Boolean)
       ];
 
-      tabs.innerHTML = categories.map(category => {
-        const activeClass = category === activeCategory ? " active" : "";
+      tabs.innerHTML = conceptNames.map(conceptName => {
+        const activeClass = conceptName === activeConcept ? " active" : "";
         return `
-          <button class="tab${activeClass}" data-category="${escapeHtml(category)}">
-            ${escapeHtml(category)}
+          <button class="tab${activeClass}" data-concept="${escapeHtml(conceptName)}">
+            ${escapeHtml(conceptName)}
           </button>
         `;
       }).join("");
 
       document.querySelectorAll(".tab").forEach(button => {
         button.addEventListener("click", function () {
-          activeCategory = this.getAttribute("data-category");
+          activeConcept = this.getAttribute("data-concept");
           renderTabs();
           renderConcepts();
         });
@@ -547,7 +541,7 @@
           return false;
         }
 
-        if (activeCategory !== "全部" && (concept.category || "未分類") !== activeCategory) {
+        if (activeConcept !== "全部" && concept.concept_name !== activeConcept) {
           return false;
         }
 
