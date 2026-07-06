@@ -19,10 +19,6 @@ jobs:
   crawl-and-filter:
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -101,7 +97,7 @@ jobs:
             echo "data/gooaye_news.json does not exist"
           fi
 
-      - name: Commit generated data
+      - name: Commit generated data to main
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -136,11 +132,11 @@ jobs:
             echo "Pull latest remote main before pushing..."
             git pull --rebase --autostash origin main
 
-            echo "Push generated data..."
+            echo "Push generated data to main..."
             git push origin main
           fi
 
-      - name: Build clean Pages site
+      - name: Build clean static site
         run: |
           rm -rf _site
           mkdir -p _site/data
@@ -163,14 +159,25 @@ jobs:
           echo "==== _site files ===="
           find _site -maxdepth 3 -type f -print
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Deploy _site to gh-pages branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/gh-pages
+          mkdir -p /tmp/gh-pages
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: "_site"
+          cp -R _site/. /tmp/gh-pages/
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+          cd /tmp/gh-pages
+
+          git init
+          git checkout -b gh-pages
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git commit -m "deploy pages"
+
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          git push --force origin gh-pages
