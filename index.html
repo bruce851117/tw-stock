@@ -448,11 +448,13 @@
       const conceptNames = [
         "全部",
         ...allConcepts
-          .map(item => item.concept_name)
+          .map(function (item) {
+            return item.concept_name;
+          })
           .filter(Boolean)
       ];
 
-      tabs.innerHTML = conceptNames.map(conceptName => {
+      tabs.innerHTML = conceptNames.map(function (conceptName) {
         const activeClass = conceptName === activeConcept ? " active" : "";
 
         return `
@@ -462,7 +464,7 @@
         `;
       }).join("");
 
-      document.querySelectorAll(".tab").forEach(button => {
+      document.querySelectorAll(".tab").forEach(function (button) {
         button.addEventListener("click", function () {
           activeConcept = this.getAttribute("data-concept");
           renderTabs();
@@ -477,9 +479,16 @@
       const url = item.url || "";
       const time = item.time || "";
 
-      const titleHtml = url
-        ? `" target="_blank" rel="noopener noreferrer">${escapeHtml(title)}</a>`
-        : escapeHtml(title);
+      let titleHtml = escapeHtml(title);
+
+      if (url) {
+        titleHtml =
+          '<a class="article-link" href="' +
+          escapeHtml(url) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(title) +
+          '</a>';
+      }
 
       return `
         <article class="news-item">
@@ -534,7 +543,7 @@
     function filterConcepts() {
       const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
 
-      return allConcepts.filter(concept => {
+      return allConcepts.filter(function (concept) {
         const news = Array.isArray(concept.news) ? concept.news : [];
         const newsCount = news.length;
 
@@ -554,11 +563,13 @@
           concept.concept_name,
           concept.category,
           concept.note,
-          ...news.map(item => [
-            item.title,
-            item.summary,
-            item.time
-          ].join(" "))
+          ...news.map(function (item) {
+            return [
+              item.title,
+              item.summary,
+              item.time
+            ].join(" ");
+          })
         ].join(" ").toLowerCase();
 
         return searchableText.includes(keyword);
