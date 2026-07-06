@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: crawl-cmoney-main
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -106,7 +106,27 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add data/raw/*.json data/concept_news.json data/gooaye_*.json 2>/dev/null || true
+          git add data/raw || true
+
+          if [ -f data/concept_news.json ]; then
+            git add data/concept_news.json
+          fi
+
+          if [ -f data/gooaye_latest_raw.json ]; then
+            git add data/gooaye_latest_raw.json
+          fi
+
+          if [ -f data/gooaye_state.json ]; then
+            git add data/gooaye_state.json
+          fi
+
+          if [ -f data/gooaye_history.json ]; then
+            git add data/gooaye_history.json
+          fi
+
+          if [ -f data/gooaye_news.json ]; then
+            git add data/gooaye_news.json
+          fi
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
