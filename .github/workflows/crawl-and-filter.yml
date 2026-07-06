@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: crawl-cmoney-main
   cancel-in-progress: false
 
 jobs:
@@ -26,6 +26,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git pull --rebase origin main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,7 +41,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install playwright
+          pip install playwright requests beautifulsoup4
           python -m playwright install --with-deps chromium
 
       - name: Crawl CMoney
@@ -46,14 +52,38 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python filter_news.py
 
-      - name: Show output
+      - name: Crawl Gooaye notes
+        run: python crawl_gooaye.py
+
+      - name: Show CMoney output
         run: |
           echo "==== data/concept_news.json ===="
           if [ -f data/concept_news.json ]; then
             wc -c data/concept_news.json
-            cat data/concept_news.json
+            head -c 3000 data/concept_news.json
+            echo
           else
             echo "data/concept_news.json does not exist"
+          fi
+
+      - name: Show Gooaye output
+        run: |
+          echo "==== data/gooaye_latest_raw.json ===="
+          if [ -f data/gooaye_latest_raw.json ]; then
+            wc -c data/gooaye_latest_raw.json
+            head -c 3000 data/gooaye_latest_raw.json
+            echo
+          else
+            echo "data/gooaye_latest_raw.json does not exist"
+          fi
+
+          echo "==== data/gooaye_news.json ===="
+          if [ -f data/gooaye_news.json ]; then
+            wc -c data/gooaye_news.json
+            head -c 3000 data/gooaye_news.json
+            echo
+          else
+            echo "data/gooaye_news.json does not exist"
           fi
 
       - name: Commit generated data
@@ -61,13 +91,18 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add data/raw/*.json data/concept_news.json 2>/dev/null || true
+          git add data/raw/*.json data/concept_news.json data/gooaye_*.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "update CMoney concept news"
-            git push
+            git commit -m "update CMoney and Gooaye news"
+
+            echo "Pull latest remote main before pushing..."
+            git pull --rebase --autostash origin main
+
+            echo "Push generated data..."
+            git push origin main
           fi
 
       - name: Setup Pages
