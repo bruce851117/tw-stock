@@ -29,6 +29,49 @@ RETRY_BASE_DELAY = 4.0
 RATELIMIT_DELAY = 30.0
 RETRYABLE_STATUS = {429, 500, 503}
 
+# 多把 Gemini 金鑰輪替：主 key 的 429（額度爆）累積太多次就自動換備用 key。
+QUOTA_STRIKES_BEFORE_SWITCH = 2
+
+_gemini_keys = []
+_gemini_key_index = 0
+
+
+def init_gemini_keys():
+    """從環境變數載入主要與備用金鑰（依序），回傳有效金鑰清單。"""
+    global _gemini_keys, _gemini_key_index
+
+    candidates = [
+        os.getenv("GEMINI_API_KEY", ""),
+        os.getenv("GEMINI_API_KEY_BACKUP", ""),
+    ]
+
+    _gemini_keys = [key.strip() for key in candidates if key and key.strip()]
+    _gemini_key_index = 0
+
+    return _gemini_keys
+
+
+def current_gemini_key():
+    if not _gemini_keys:
+        return ""
+    return _gemini_keys[_gemini_key_index]
+
+
+def switch_gemini_key():
+    """切換到下一把金鑰；成功回 True，已無備用可切回 False。"""
+    global _gemini_key_index
+
+    if _gemini_key_index + 1 < len(_gemini_keys):
+        _gemini_key_index += 1
+        print(
+            "[KEY SWITCH] 目前金鑰額度用盡，改用備用金鑰 "
+            f"#{_gemini_key_index + 1}/{len(_gemini_keys)}",
+            flush=True,
+        )
+        return True
+
+    return False
+
 
 def now_taipei_string():
     return datetime.now(TAIPEI_TZ).strftime("%Y-%m-%d %H:%M:%S")
@@ -191,17 +234,8 @@ modified_at: {modified_at}
 
 
 def call_gemini(prompt):
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-
-    if not api_key:
+    if not current_gemini_key():
         raise RuntimeError("Missing GEMINI_API_KEY")
-
-    api_url = (
-        "https://generativelanguage.googleapis.com/v1beta/models/"
-        + GEMINI_MODEL
-        + ":generateContent?key="
-        + api_key
-    )
 
     payload = {
         "contents": [
@@ -224,10 +258,22 @@ def call_gemini(prompt):
     }
 
     # 遇到 429 / 500 / 503 或連線錯誤時退避重試，避免暫時性錯誤讓整集掉進 fallback。
+    # 429（額度爆）累積太多次就自動換備用金鑰並立即重試。
     response = None
     last_error = None
+    quota_strikes = 0
+    attempt = 0
 
-    for attempt in range(1, MAX_RETRIES + 1):
+    while attempt < MAX_RETRIES:
+        attempt += 1
+
+        api_url = (
+            "https://generativelanguage.googleapis.com/v1beta/models/"
+            + GEMINI_MODEL
+            + ":generateContent?key="
+            + current_gemini_key()
+        )
+
         try:
             response = requests.post(api_url, json=payload, timeout=120)
         except requests.RequestException as exc:
@@ -248,6 +294,14 @@ def call_gemini(prompt):
 
         if status in RETRYABLE_STATUS and attempt < MAX_RETRIES:
             if status == 429:
+                quota_strikes += 1
+
+                # 額度爆掉太多次 → 換備用金鑰，換成功就立即重試（不等長退避）
+                if quota_strikes >= QUOTA_STRIKES_BEFORE_SWITCH and switch_gemini_key():
+                    quota_strikes = 0
+                    attempt = 0
+                    continue
+
                 sleep_seconds = RATELIMIT_DELAY * attempt
             else:
                 sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
@@ -453,6 +507,13 @@ def save_history_and_display(raw_data, history):
 
 
 def main():
+    keys = init_gemini_keys()
+
+    if not keys:
+        raise RuntimeError("缺少環境變數 GEMINI_API_KEY（可另設 GEMINI_API_KEY_BACKUP 作備援）")
+
+    print("Loaded " + str(len(keys)) + " Gemini API key(s).", flush=True)
+
     raw_data = read_json(RAW_INPUT_PATH, None)
 
     if not raw_data:

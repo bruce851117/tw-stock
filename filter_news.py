@@ -43,6 +43,51 @@ RETRY_BASE_DELAY = 4.0
 RATELIMIT_DELAY = 30.0
 RETRYABLE_STATUS = {429, 500, 503}
 
+# 多把 Gemini 金鑰輪替：主 key 的 429（額度爆）累積太多次就自動換備用 key。
+# 免費版每日上限約 500 requests/天/模型，備用 key 有獨立額度。
+QUOTA_STRIKES_BEFORE_SWITCH = 2
+
+_gemini_keys = []
+_gemini_key_index = 0
+
+
+def init_gemini_keys():
+    """從環境變數載入主要與備用金鑰（依序），回傳有效金鑰清單。"""
+    global _gemini_keys, _gemini_key_index
+
+    candidates = [
+        os.environ.get("GEMINI_API_KEY", ""),
+        os.environ.get("GEMINI_API_KEY_BACKUP", ""),
+    ]
+
+    _gemini_keys = [key.strip() for key in candidates if key and key.strip()]
+    _gemini_key_index = 0
+
+    return _gemini_keys
+
+
+def current_gemini_key():
+    if not _gemini_keys:
+        return ""
+    return _gemini_keys[_gemini_key_index]
+
+
+def switch_gemini_key():
+    """切換到下一把金鑰；成功回 True，已無備用可切回 False。"""
+    global _gemini_key_index
+
+    if _gemini_key_index + 1 < len(_gemini_keys):
+        _gemini_key_index += 1
+        print(
+            f"[KEY SWITCH] 目前金鑰額度用盡，改用備用金鑰 "
+            f"#{_gemini_key_index + 1}/{len(_gemini_keys)}",
+            flush=True,
+        )
+        return True
+
+    return False
+
+
 GEMINI_MODEL = "gemini-3.1-flash-lite"
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
@@ -254,19 +299,22 @@ def is_retryable_http_error(error):
     return False
 
 
-def post_gemini_with_retry(api_key, body):
+def post_gemini_with_retry(body):
     """
-    對 Gemini 發 POST。
-    遇到 429 / 500 / 503 或連線錯誤時退避重試。
+    對 Gemini 發 POST（使用目前金鑰）。
+    遇到 429 / 500 / 503 或連線錯誤時退避重試；
+    429（額度爆）累積太多次就自動換備用金鑰並立即重試。
     """
-    url = f"{GEMINI_ENDPOINT}?key={api_key}"
-
     last_error = None
+    quota_strikes = 0
+    attempt = 0
 
-    for attempt in range(1, MAX_RETRIES + 1):
+    while attempt < MAX_RETRIES:
+        attempt += 1
+
         try:
             req = urllib.request.Request(
-                url,
+                f"{GEMINI_ENDPOINT}?key={current_gemini_key()}",
                 data=json.dumps(body).encode("utf-8"),
                 headers={"Content-Type": "application/json"},
                 method="POST",
@@ -292,6 +340,14 @@ def post_gemini_with_retry(api_key, body):
             )
 
             if e.code == 429:
+                quota_strikes += 1
+
+                # 額度爆掉太多次 → 換備用金鑰，換成功就立即重試（不等長退避）
+                if quota_strikes >= QUOTA_STRIKES_BEFORE_SWITCH and switch_gemini_key():
+                    quota_strikes = 0
+                    attempt = 0
+                    continue
+
                 sleep_seconds = RATELIMIT_DELAY * attempt
             elif e.code in RETRYABLE_STATUS:
                 sleep_seconds = RETRY_BASE_DELAY * (2 ** (attempt - 1))
@@ -309,6 +365,8 @@ def post_gemini_with_retry(api_key, body):
         if attempt < MAX_RETRIES:
             print(f"Sleep {sleep_seconds:.1f}s before retry...", flush=True)
             time.sleep(sleep_seconds)
+
+    raise RuntimeError(f"Gemini request failed after retries: {repr(last_error)}")
 
     raise RuntimeError(f"Gemini request failed after retries: {repr(last_error)}")
 
@@ -342,7 +400,7 @@ def parse_gemini_text_response(response_json):
     return text
 
 
-def call_gemini(api_key, payload_articles):
+def call_gemini(payload_articles):
     """
     送一批文章給 Gemini，回傳：
     [
@@ -384,7 +442,7 @@ def call_gemini(api_key, payload_articles):
         },
     }
 
-    response_json = post_gemini_with_retry(api_key, body)
+    response_json = post_gemini_with_retry(body)
     response_text = parse_gemini_text_response(response_json)
     parsed = extract_json_array(response_text)
 
@@ -413,7 +471,7 @@ def call_gemini(api_key, payload_articles):
     return cleaned
 
 
-def filter_concept(api_key, raw):
+def filter_concept(raw):
     concept_id = raw.get("concept_id")
     concept_name = raw.get("concept_name", concept_id)
     category = raw.get("category", "")
@@ -466,7 +524,7 @@ def filter_concept(api_key, raw):
             payload_batch.append(cloned)
 
         try:
-            gemini_results = call_gemini(api_key, payload_batch)
+            gemini_results = call_gemini(payload_batch)
         except Exception as e:
             print(f"[ERROR] Gemini failed for {concept_name} batch {batch_no}: {e}", flush=True)
             gemini_results = []
@@ -530,10 +588,12 @@ def filter_concept(api_key, raw):
 
 
 def main():
-    api_key = os.environ.get("GEMINI_API_KEY")
+    keys = init_gemini_keys()
 
-    if not api_key:
-        raise SystemExit("缺少環境變數 GEMINI_API_KEY")
+    if not keys:
+        raise SystemExit("缺少環境變數 GEMINI_API_KEY（可另設 GEMINI_API_KEY_BACKUP 作備援）")
+
+    print(f"Loaded {len(keys)} Gemini API key(s).", flush=True)
 
     concepts = load_json(CONCEPTS_PATH)
     output_concepts = []
@@ -572,7 +632,7 @@ def main():
         raw["note"] = raw.get("note") or concept.get("note", "")
         raw["source_url"] = raw.get("source_url") or concept.get("url", "")
 
-        result = filter_concept(api_key, raw)
+        result = filter_concept(raw)
 
         original_news = result.get("news", [])
         deduped_news = []

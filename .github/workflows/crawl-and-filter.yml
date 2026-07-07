@@ -46,6 +46,7 @@ jobs:
       - name: Filter news with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_BACKUP: ${{ secrets.GEMINI_API_KEY_BACKUP }}
         run: python filter_news.py
 
       - name: Crawl Gooaye notes
@@ -54,6 +55,7 @@ jobs:
       - name: Summarize Gooaye notes with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_BACKUP: ${{ secrets.GEMINI_API_KEY_BACKUP }}
           GEMINI_MODEL: gemini-3.1-flash-lite
         run: python summarize_gooaye.py
 
