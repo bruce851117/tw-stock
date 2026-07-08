@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-08 05:20:25",
+  "updated_at": "2026-07-09 05:20:16",
   "episodes": {
     "675": {
       "episode": 675,
@@ -323,16 +323,78 @@
       "content_length": 2064,
       "summarized_at": "2026-07-06 17:11:43",
       "model": "gemini-3.1-flash-lite"
+    },
+    "677": {
+      "episode": 677,
+      "title": "股癌筆記EP677 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-677/",
+      "published_at": "2026-07-08 23:49:31",
+      "modified_at": "2026-07-08 23:49:38",
+      "summary": "本集節目討論台股盤勢與市場心態。目前台股呈現中小股震盪與族群輪動，市場對於AI產業的短期雜音（如研發遞延）反應過度，導致浮額較多的個股出現修正。作者認為AI大趨勢未變，建議投資人應關注能容納大資金的強勢族群，如CCL、晶圓與封測，並提醒投資人需審慎評估槓桿風險，避免因追求短期報酬而陷入負債地獄。此外，強調投資應避免當預言家，應根據市場實際狀況進行應對。",
+      "key_points": [
+        "台股目前處於族群輪動階段，中小股震盪可能源於市場降槓桿行為。",
+        "AI產業短期研發遞延屬雜音，不影響長線趨勢，市場對負面消息反應過度反映了浮額過多的現象。",
+        "投資人應關注能容納大資金的強勢族群（CCL、晶圓、封測），並審慎評估槓桿比例，避免過度槓桿導致的系統性風險。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI產業鏈",
+          "summary": "市場高度交易研發階段項目，對於短期研發遞延（如正交背板製造困難）反應敏感，但長線趨勢未變。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "中小股震盪，市場出現降槓桿跡象，資金在不同族群間輪動。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "CCL",
+          "code": "",
+          "reason": "市場強勢族群，屬於能放大資金的標的。"
+        },
+        {
+          "name": "晶圓",
+          "code": "",
+          "reason": "市場強勢族群，屬於能放大資金的標的。"
+        },
+        {
+          "name": "封測",
+          "code": "",
+          "reason": "市場強勢族群，屬於能放大資金的標的。"
+        },
+        {
+          "name": "功率元件",
+          "code": "",
+          "reason": "市場強勢族群，但市值較小，無法容納大型法人資金。"
+        },
+        {
+          "name": "被動元件",
+          "code": "",
+          "reason": "目前多數進入修正階段，但仍維持在季線之上。"
+        }
+      ],
+      "risk_notes": [
+        "新一代股民過度使用槓桿（四貸同堂、股期、選擇權），若遇跌停可能導致部位被掃出場。",
+        "市場對於AI研發進度過度預期，若未如期量產易引發股價修正。",
+        "若市場出現無族群可操作的情況，需警惕系統性風險。"
+      ],
+      "personal_trade_note": "作者自述目前最大槓桿約為2.5倍（融資開滿），相較於新一代股民的五、六倍以上槓桿，自認屬於保守派投資人。",
+      "content_hash": "20a3cffb84e92d7d36834fee8e90241ef6a51c6ff97f9c000fc2192b9fa6a804",
+      "content_length": 2387,
+      "summarized_at": "2026-07-09 05:20:15",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    677,
     676,
     675,
     674,
-    673,
-    672
+    673
   ],
   "model": "gemini-3.1-flash-lite"
 }
