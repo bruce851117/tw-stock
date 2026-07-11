@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-11 05:18:21",
+  "updated_at": "2026-07-12 05:16:44",
   "episodes": {
     "675": {
       "episode": 675,
@@ -385,16 +385,68 @@
       "content_length": 2387,
       "summarized_at": "2026-07-09 05:20:15",
       "model": "gemini-3.1-flash-lite"
+    },
+    "678": {
+      "episode": 678,
+      "title": "股癌筆記EP678 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-678/",
+      "published_at": "2026-07-11 20:25:11",
+      "modified_at": "2026-07-11 20:38:19",
+      "summary": "本集重點在於市場對颱風假與股市交易的態度轉變，反映出投資人對市場參與度與心態的成熟。盤勢方面，美股輝達與Meta表現強勢，帶動市場對高估值標的的關注。產業焦點集中在漲價循環，包括記憶體、被動元件與功率元件，其中功率元件與封裝廠獲利顯著提升。光通訊領域則出現類股輪動，市場資金轉向Slow-and-Wide相關標的，而矽光子等高估值標的則面臨賣壓。此外，導線架產業出現漲價與交期延長現象。",
+      "key_points": [
+        "市場心態轉變：投資人對颱風假導致休市的看法，從過去的賺錢機會減少，轉變為對交易節奏與生活平衡的理性看待。",
+        "漲價循環效應：記憶體、被動元件與功率元件進入漲價循環，其中功率元件與後段封裝廠在稼動率滿載下，毛利與獲利表現亮眼。",
+        "光通訊類股輪動：市場資金偏好轉向Slow-and-Wide相關標的，矽光子與磷化銦雷射相關標的則相對疲軟，顯示市場對高估值題材的篩選趨於嚴謹。"
+      ],
+      "market_topics": [
+        {
+          "topic": "漲價循環",
+          "summary": "記憶體、被動元件與功率元件均出現漲價趨勢，其中功率元件與後段封裝廠獲利跳升明顯。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "光通訊",
+          "summary": "內部出現類股輪動，資金從矽光子轉向Slow-and-Wide相關標的，市場對高估值題材轉趨保守。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "股價漲回季線，帶動市場情緒。"
+        },
+        {
+          "name": "Meta",
+          "code": "",
+          "reason": "積極擴建伺服器與算力，並證實將出租算力。"
+        },
+        {
+          "name": "ADI",
+          "code": "",
+          "reason": "類比IC大廠發出漲價信，帶動功率元件漲價題材。"
+        }
+      ],
+      "risk_notes": [
+        "記憶體產業雖基本面良好，但因籌碼擁擠，中大型資金配置意願降低。",
+        "高估值標的若要進攻突破，需大盤處於新高位置才有支撐。",
+        "光通訊領域存在類股輪動風險，舊有熱門標的可能面臨資金撤出。"
+      ],
+      "personal_trade_note": "目前鎖定的標的偏向短期內有營收獲利的元件，對於光通訊領域，個人資金與注意力已不在該板塊。",
+      "content_hash": "62f96c4b32767407696d16fb4ede784c05d749e2f98d3adf4079f36c198effd3",
+      "content_length": 2236,
+      "summarized_at": "2026-07-12 05:16:43",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    678,
     677,
     676,
     675,
-    674,
-    673
+    674
   ],
   "model": "gemini-3.1-flash-lite"
 }
