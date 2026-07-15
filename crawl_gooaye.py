@@ -1,4 +1,5 @@
 import json
+import random
 import re
 import time
 from datetime import datetime
@@ -23,6 +24,25 @@ HISTORY_PATH = DATA_DIR / "gooaye_history.json"
 LATEST_N = 5
 MAX_RANGE_PAGES = 20
 REQUEST_SLEEP_SECONDS = 0.4
+REQUEST_CONNECT_TIMEOUT = 15
+REQUEST_READ_TIMEOUT = 60
+REQUEST_MAX_ATTEMPTS = 5
+REQUEST_RETRY_STATUS_CODES = {429, 500, 502, 503, 504}
+
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/126.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
+
+SESSION = requests.Session()
+SESSION.headers.update(DEFAULT_HEADERS)
 
 
 def now_taipei_string():
@@ -30,20 +50,67 @@ def now_taipei_string():
 
 
 def fetch_html(url):
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/126.0.0.0 Safari/537.36"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
-    }
+    """Fetch HTML with retries for temporary HTTP and network failures."""
+    last_error = None
 
-    response = requests.get(url, headers=headers, timeout=30)
-    response.raise_for_status()
-    response.encoding = response.apparent_encoding or "utf-8"
-    return response.text
+    for attempt in range(1, REQUEST_MAX_ATTEMPTS + 1):
+        try:
+            response = SESSION.get(
+                url,
+                timeout=(REQUEST_CONNECT_TIMEOUT, REQUEST_READ_TIMEOUT),
+            )
+
+            if response.status_code in REQUEST_RETRY_STATUS_CODES:
+                last_error = requests.HTTPError(
+                    f"{response.status_code} Server Error for url: {url}",
+                    response=response,
+                )
+
+                if attempt == REQUEST_MAX_ATTEMPTS:
+                    response.raise_for_status()
+
+                retry_after = response.headers.get("Retry-After")
+                if retry_after and retry_after.isdigit():
+                    wait_seconds = min(int(retry_after), 120)
+                else:
+                    wait_seconds = min(5 * (2 ** (attempt - 1)), 60)
+                    wait_seconds += random.uniform(0.5, 2.0)
+
+                print(
+                    f"Temporary HTTP {response.status_code} for {url}; "
+                    f"retry {attempt}/{REQUEST_MAX_ATTEMPTS} in "
+                    f"{wait_seconds:.1f}s",
+                    flush=True,
+                )
+                time.sleep(wait_seconds)
+                continue
+
+            response.raise_for_status()
+            response.encoding = response.apparent_encoding or "utf-8"
+            return response.text
+
+        except (requests.Timeout, requests.ConnectionError) as error:
+            last_error = error
+            if attempt == REQUEST_MAX_ATTEMPTS:
+                break
+
+            wait_seconds = min(5 * (2 ** (attempt - 1)), 60)
+            wait_seconds += random.uniform(0.5, 2.0)
+            print(
+                f"Temporary network error for {url}: {error}; "
+                f"retry {attempt}/{REQUEST_MAX_ATTEMPTS} in "
+                f"{wait_seconds:.1f}s",
+                flush=True,
+            )
+            time.sleep(wait_seconds)
+
+        except requests.RequestException:
+            raise
+
+    raise RuntimeError(
+        f"Failed to fetch {url} after {REQUEST_MAX_ATTEMPTS} attempts: "
+        f"{last_error}"
+    ) from last_error
 
 
 def save_json(path, data):
