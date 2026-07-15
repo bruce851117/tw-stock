@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-15 11:58:04",
+  "updated_at": "2026-07-16 05:18:51",
   "timezone": "Asia/Taipei",
   "time_window_hours": 48,
   "model": "gemini-3.1-flash-lite",
   "concept_count": 25,
-  "global_unique_article_count": 175,
+  "global_unique_article_count": 140,
   "concepts": [
     {
       "concept_id": "C50919",
@@ -12,219 +12,212 @@
       "category": "AI / 半導體",
       "note": "AI 客製化晶片，受惠雲端大廠自研加速器趨勢",
       "source_url": "https://www.cmoney.tw/forum/concept/C50919",
-      "raw_count": 94,
-      "recent_count": 92,
-      "kept_count": 11,
+      "raw_count": 87,
+      "recent_count": 83,
+      "kept_count": 12,
       "news": [
         {
-          "id": "180765950",
-          "title": "難道這就是愛？",
-          "summary": "精測（6510）：公司預計八月產能將翻倍，並已額外租用一個廠房，以提升高階測試板的製造能力。",
-          "stock_name": "精測",
-          "stock_code": "6510",
-          "time": "2026-07-15 10:20",
+          "id": "180786971",
+          "title": "台股飆漲893點，電子權值領軍收復四萬五",
+          "summary": "台股15日受美國6月CPI降溫與美股收紅激勵，加權指數上漲893點，收在45631點，成功收復45000點關卡。電子權值股領漲，台積電收2440元，聯發科收3740元，鴻海收239元，聯電則收漲停價166元。",
+          "stock_name": "台積電、聯發科、鴻海",
+          "stock_code": "2330, 2454, 2317",
+          "time": "2026-07-16 03:03",
           "stocks": [
-            "6510",
-            "6683",
-            "2404",
-            "3443"
+            "TWA00",
+            "2330",
+            "2454",
+            "2317"
           ],
-          "comment_count": 3,
-          "like_count": 4,
+          "comment_count": 0,
+          "like_count": 2,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765950"
+          "url": "https://www.cmoney.tw/forum/article/180786971"
         },
         {
-          "id": "180765463",
-          "title": "年初至今漲幅接近0%，博通的問題不是AI，是市占想像.",
-          "summary": "聯發科（2454）：市場分析指出，若聯發科能瓜分博通在TPU（張量處理單元）領域約20%的市佔率，預估其股價表現將具備成長空間，並對其市佔率擴張潛力進行推論。",
-          "stock_name": "聯發科",
-          "stock_code": "2454",
-          "time": "2026-07-15 10:10",
+          "id": "180785702",
+          "title": "哎呀 傻多韭菜 該賣不賣 現在夜盤大跌 又要擔心明天要跌多少了 營收不如預期就是...",
+          "summary": "世芯-KY（3661）：原文指出該公司近期營收表現不如預期，導致股價出現下跌走勢，並提及股價有回測至3000元價位的可能性。此內容主要針對公司營收數據與股價走勢進行描述，並未提供其他產業鏈或供應鏈相關的詳細分析邏輯。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-16 00:11",
           "stocks": [
-            "2454"
+            "3661"
           ],
-          "comment_count": 2,
+          "comment_count": 1,
           "like_count": 6,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765463"
+          "url": "https://www.cmoney.tw/forum/article/180785702"
         },
         {
-          "id": "180764726",
-          "title": "台積電概念股 水資源 惠民實業 (6971)",
-          "summary": "惠民實業（6971）成立近30年，專注於環保水利工程與循環經濟事業，核心業務涵蓋水利工程、污水處理廠興建及代操作維護。公司在台灣污水處理代操作領域市佔率居冠，累計處理量佔全國21%，每日處理量達128萬CMD，並擁有46。",
-          "stock_name": "惠民實業",
-          "stock_code": "6971",
-          "time": "2026-07-15 09:56",
-          "stocks": [
-            "2330",
-            "2454",
-            "3481",
-            "2327",
-            "2408"
-          ],
-          "comment_count": 1,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764726"
-        },
-        {
-          "id": "180759515",
-          "title": "財報見真章，智原，群創是直下地獄還是上天堂?我看懸了!",
-          "summary": "智原(3035)上半年獲利預估偏低，法人預估全年EPS約3.5元，股價恐難支撐。群聯(8299)受MLC NAND FLASH價格見頂影響，AI產品營收佔比低，後續面臨庫存壓力。",
-          "stock_name": "智原、群聯、群創",
-          "stock_code": "8299, 8299, 3481",
-          "time": "2026-07-15 07:40",
-          "stocks": [
-            "8299",
-            "3035",
-            "3481"
-          ],
-          "comment_count": 4,
-          "like_count": 21,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759515"
-        },
-        {
-          "id": "180758742",
-          "title": "🔥 谷歌漲1.9%背後三條戰線齊開，算力、電力、監管誰說了算？🔥",
-          "summary": "聯發科（2454）：確認拿下部分Google TPU設計案，目標市佔率為15%至20%，市場關注Broadcom供貨份額變化。Google於阿肯色州建設太陽能與儲能設施，顯示AI資本支出帶動電力需求。",
-          "stock_name": "聯發科",
-          "stock_code": "2454",
-          "time": "2026-07-15 06:25",
-          "stocks": [
-            "GOOGL",
-            "AVGO",
-            "2454",
-            "GOOG"
-          ],
-          "comment_count": 1,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758742"
-        },
-        {
-          "id": "180758724",
-          "title": "（美股收盤）美國CPI意外降溫點燃美股！芯片股強勢反彈，IBM暴跌25%拖累道指...",
-          "summary": "美國6月CPI降幅超預期，緩解通膨擔憂，資金回流AI與半導體板塊。IBM因預警第二季利潤低於預期，股價暴跌25%拖累道指。半導體板塊顯著反彈，應用材料與Teradyne漲逾3%，美光科技與泛林集團漲約5%。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:21",
+          "id": "180785538",
+          "title": "半導體設備投資創高，科技股迎基本面檢驗",
+          "summary": "SEMI預測2026年全球半導體製造設備銷售額將達1,659億美元，2028年攀升至2,295億美元，受惠於AI基礎建設、HBM與先進邏輯製程需求。儘管市場波動，Google、Meta、微軟等科技巨頭資本支出仍維持高檔。",
+          "stock_name": "台積電、聯發科、鴻海",
+          "stock_code": "2330, 2454, 2317",
+          "time": "2026-07-16 00:04",
           "stocks": [
             "TWA00",
             "2330",
-            "2303",
-            "3481",
+            "2454",
+            "2317"
+          ],
+          "comment_count": 1,
+          "like_count": 3,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180785538"
+        },
+        {
+          "id": "180784731",
+          "title": "美通膨降溫科技股強彈，台股大漲893點",
+          "summary": "美國6月CPI年增率降至3.5%，低於市場預期，緩解聯準會升息疑慮，帶動全球科技股反彈。台股15日隨之大漲893點，收在45631點。",
+          "stock_name": "台積電、聯發科",
+          "stock_code": "2330、2454",
+          "time": "2026-07-15 23:04",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "2454",
+            "2317"
+          ],
+          "comment_count": 1,
+          "like_count": 7,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180784731"
+        },
+        {
+          "id": "180783733",
+          "title": "今、明兩年的AI基礎建設，將推升GPU、TPU與AI ASIC功耗快速提升，帶動...",
+          "summary": "聯詠（3034）：AI基礎建設推升GPU、TPU與AI ASIC功耗，帶動PMIC需求延伸至AI伺服器、車用及工業應用。法人預估聯詠受惠SoC占比提升、Edge AI影像視覺應用及高階顯示產品組合優化，2026年EPS達。",
+          "stock_name": "聯詠",
+          "stock_code": "3034",
+          "time": "2026-07-15 22:14",
+          "stocks": [
+            "3034"
+          ],
+          "comment_count": 0,
+          "like_count": 9,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180783733"
+        },
+        {
+          "id": "180779847",
+          "title": "美國德州首座「AI工廠」，將Physical AI部署生產",
+          "summary": "美國德州新廠面積約14.8萬平方英尺，將聚焦印刷電路板組裝（PCBA）、表面黏著技術（SMT），以及最終組裝、測試與包裝（FATP）流程。",
+          "stock_name": "台積電、鴻海、聯發科",
+          "stock_code": "2330, 2317, 2454",
+          "time": "2026-07-15 18:44",
+          "stocks": [
+            "2392",
+            "3712",
+            "2330",
+            "2317",
             "2454"
           ],
           "comment_count": 3,
-          "like_count": 23,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758724"
+          "like_count": 15,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180779847"
         },
         {
-          "id": "180755551",
-          "title": "油價回落、美元轉貶，外資才會轉賣為買，台股才能止跌",
-          "summary": "辛耘（3583）：作者因應近期大盤修正，採取加碼辛耘與高技（5439）策略，旨在解救先前短套部位。文中提到智原（3035）近期外資持股未鬆動，有利於高檔整理。",
-          "stock_name": "辛耘",
-          "stock_code": "3583",
-          "time": "2026-07-14 22:41",
+          "id": "180776929",
+          "title": "世芯驚恐的2交易天",
+          "summary": "世芯-KY於7月14日盤中觸及跌停，成交量達2981張，其中3725至3735元價位成交佔比過半，顯示有買盤承接籌碼。7月15日成交量為2537張，收盤價3735元，主力在盤中賣壓下仍維持小紅作收。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-15 15:57",
+          "stocks": [
+            "3661"
+          ],
+          "comment_count": 2,
+          "like_count": 70,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180776929"
+        },
+        {
+          "id": "180776542",
+          "title": "💰💰無人機資金加碼湧入💰💰",
+          "summary": "無人機概念股：行政院長卓榮泰表示，行政院將持續提出第二批國防相關無人機採購條例並爭取預算，呼籲立法院朝野黨團支持此案，以健全台灣軍工產業基礎。",
+          "stock_name": "無人機概念股",
+          "stock_code": "6477",
+          "time": "2026-07-15 15:39",
+          "stocks": [
+            "6477",
+            "2330",
+            "8033",
+            "2454",
+            "5371"
+          ],
+          "comment_count": 1,
+          "like_count": 37,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180776542"
+        },
+        {
+          "id": "180775473",
+          "title": "純個人近日觀盤心得分享： 20260508公司法說（展望 20260512世芯股...",
+          "summary": "世芯-KY（3661）：公司於2026年5月獲AWS認購私募，6月完成GDR定價募資162億元用於備料先進封裝。根據郭明錤報告，世芯取得亞馬遜消費性電子自研晶片後端設計大單，近期股價由5月高點5310元回落至3735元。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-15 14:32",
+          "stocks": [
+            "3661"
+          ],
+          "comment_count": 1,
+          "like_count": 43,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180775473"
+        },
+        {
+          "id": "180773888",
+          "title": "要帶著尊嚴離開！",
+          "summary": "世芯-KY（3661）：原文針對該公司的私募價與GDR定價進行討論。作者認為儘管基本面表現不佳，但基於機會成本的考量，預期今年股價仍有機會超過上述定價，建議投資人無需在低於私募或GDR定價時離場，應保持投資信心。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-15 13:24",
+          "stocks": [
+            "3661"
+          ],
+          "comment_count": 36,
+          "like_count": 128,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180773888"
+        },
+        {
+          "id": "180770499",
+          "title": "韓股槓桿爆倉掀全球震盪，官方設專線救散戶",
+          "summary": "韓國股市因三星電子與SK海力士股價重挫，加上單一股票兩倍槓桿產品引發極端波動，導致KOSPI指數急跌並觸發熔斷。此波動效應蔓延至全球半導體市場，美光、超微等類股走跌，台灣股市的台積電、聯發科與國巨等電子權值股亦面臨高檔震。",
+          "stock_name": "台積電、聯發科、國巨",
+          "stock_code": "2330, 2454, 2327",
+          "time": "2026-07-15 12:02",
           "stocks": [
             "TWA00",
-            "3583",
-            "3035",
             "2330",
-            "00403A"
-          ],
-          "comment_count": 4,
-          "like_count": 105,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180755551"
-        },
-        {
-          "id": "180754976",
-          "title": "07/14 主動式ETF共識｜152檔加碼瘋狂抄底，禾伸堂重挫遭大買",
-          "summary": "主動式ETF資金動向顯示，南電獲7家基金同步加碼，持倉變動率達6.55%。聯發科雖重挫4.31%，仍獲6家基金加碼。禾伸堂股價重挫9.94%，獲4家基金掃貨，單日持倉暴增17.04%。",
-          "stock_name": "南電、聯發科、禾伸堂",
-          "stock_code": "8046, 2454, 3026",
-          "time": "2026-07-14 22:14",
-          "stocks": [
-            "00981A",
-            "3026",
-            "8046",
             "2454",
-            "3037",
-            "3711",
-            "6223",
-            "2383",
-            "6488",
-            "6531",
-            "2345",
-            "3017",
-            "2308",
-            "2327",
-            "1303"
+            "2327"
           ],
-          "comment_count": 3,
-          "like_count": 27,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180754976"
-        },
-        {
-          "id": "180753670",
-          "title": "00981還在砍精測，今天還能收腳，那主力態度很明顯了",
-          "summary": "精測（6510）近期股價受ETF賣壓影響，儘管市場關注其八月產能翻倍、新增廠房及多層高階測試板技術等基本面展望，但因主要持股ETF持續調節，主力態度轉趨保守。",
-          "stock_name": "精測",
-          "stock_code": "6510",
-          "time": "2026-07-14 21:07",
-          "stocks": [
-            "6510",
-            "00981A",
-            "3443",
-            "2645",
-            "6223"
-          ],
-          "comment_count": 6,
-          "like_count": 14,
+          "comment_count": 0,
+          "like_count": 5,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180753670"
+          "url": "https://www.cmoney.tw/forum/article/180770499"
         },
         {
-          "id": "180751975",
-          "title": "與其辯解理性投資，其實是窮人的獨裁判斷？",
-          "summary": "世芯-KY受惠AI需求，股價低於亞馬遜持股與GDR價格。力旺具全球寡佔市場能力。巨有科技上半年受惠AI需求擴大，客戶對高階製程IP整合與量產重視度增加，帶動營收創歷史新高，法人預估全年業績有望成長2至3成，目前積極衝刺4。",
-          "stock_name": "世芯-KY、力旺、巨有科技",
-          "stock_code": "3661, 3529, 8227",
-          "time": "2026-07-14 19:48",
+          "id": "180758876",
+          "title": "洗洗洗,下半年反應明年股價?",
+          "summary": "世芯-KY（3661）：市場討論下半年股價應開始反應明年展望，並提及聯發科與創意等個股表現。針對近期市場出現關於出貨延遲的利空傳聞，文中指出目前僅為六月剛開始出貨階段，尚未完全認列營收，認為現階段市場對營收表現的猜測尚無。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-15 06:40",
           "stocks": [
-            "3661",
-            "3529",
-            "7828",
-            "7822",
-            "8227"
+            "3661"
           ],
-          "comment_count": 16,
-          "like_count": 104,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180751975"
-        },
-        {
-          "id": "180723101",
-          "title": "6月營收創新高",
-          "summary": "凌群（2401）：公司公告六月份營收數據，該月份營收表現創下歷史新高紀錄。",
-          "stock_name": "凌群",
-          "stock_code": "2401",
-          "time": "2026-07-13 22:19",
-          "stocks": [
-            "2401"
-          ],
-          "comment_count": 7,
-          "like_count": 17,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180723101"
+          "comment_count": 2,
+          "like_count": 25,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180758876"
         }
       ],
-      "kept_count_before_global_dedupe": 11,
+      "kept_count_before_global_dedupe": 12,
       "dedup_removed_count": 0
     },
     {
@@ -233,356 +226,241 @@
       "category": "AI / 半導體",
       "note": "Google AI 加速器供應鏈，市場關注度高",
       "source_url": "https://www.cmoney.tw/forum/concept/C50925",
-      "raw_count": 87,
-      "recent_count": 86,
-      "kept_count": 19,
+      "raw_count": 82,
+      "recent_count": 80,
+      "kept_count": 13,
       "news": [
         {
-          "id": "180766296",
-          "title": "坦白說，不要整天哭夭欣興很爛之類的，你覺得爛就賣掉吧，把錢拿去買你覺得會賺更多的...",
-          "summary": "欣興(3037)在PCB、BT、ABF及玻璃載板等領域具長線價值，且為載板族群中EPS最高者。目前外資持股佔比高，隨著籌碼逐漸轉向投信與散戶，外資持股比例下降，有利於未來股價表現。",
-          "stock_name": "欣興",
-          "stock_code": "3037",
-          "time": "2026-07-15 10:27",
-          "stocks": [
-            "3037"
-          ],
-          "comment_count": 7,
-          "like_count": 21,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180766296"
-        },
-        {
-          "id": "180765066",
-          "title": "神山穩穩等待！",
-          "summary": "台積電（2330）開盤位置符合預期，籌碼穩定在2430至2470元區間。目前市場情緒呈現小反轉，但尚未進入發力階段，建議耐心等待，預期明日反轉幅度可能較大。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 10:02",
-          "stocks": [
-            "2330"
-          ],
-          "comment_count": 0,
-          "like_count": 11,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765066"
-        },
-        {
-          "id": "180764522",
-          "title": "果然是熟悉的老旺，估計既5000～6000洗脫皮之後，6000～7000又得再經...",
-          "summary": "旺矽（6223）股價在5000至6000元區間經歷洗盤後，目前進入6000至7000元區間的震盪整理。儘管短期股價波動，但該位置已測試兩次，長期投資者可持續關注7月財報及8月季報表現，維持長線佈局策略。",
-          "stock_name": "旺矽",
-          "stock_code": "6223",
-          "time": "2026-07-15 09:53",
-          "stocks": [
-            "6223"
-          ],
-          "comment_count": 2,
-          "like_count": 15,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764522"
-        },
-        {
-          "id": "180764438",
-          "title": "高開800點大反彈！學長：把握明天關鍵轉折，這幾檔這樣上車！",
-          "summary": "台股受美CPI數據低於預期激勵反彈，但市場關注週四台積電法說會及短線轉折。航運股方面，因川普撤回通行費構想及油價回落，陽明、萬海指標轉強，陽明站穩52.5元、萬海站穩83.5元視為轉強訊號，長榮則觀察除息缺口219元。",
-          "stock_name": "陽明、萬海、長榮",
-          "stock_code": "2609, 2615, 2603",
-          "time": "2026-07-15 09:52",
+          "id": "180787271",
+          "title": "股市最肥美漲段近尾聲？私募基金操盤手示警：AI新故事天天上演「寧可少賺，也要活得...",
+          "summary": "私募基金操盤手示警，台股漲勢可能步入尾聲，建議投資人控管風險。AI題材個股走勢分歧，如健策因輝達修改散熱設計股價腰斬；聯發科則因打入Google TPU供應鏈股價上漲。",
+          "stock_name": "健策、聯發科、台積電",
+          "stock_code": "3653, 2454, 2330",
+          "time": "2026-07-16 04:25",
           "stocks": [
             "TWA00",
+            "3653",
+            "2454",
             "2330",
-            "2615",
-            "2609"
-          ],
-          "comment_count": 1,
-          "like_count": 18,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764438"
-        },
-        {
-          "id": "180764084",
-          "title": "台積電概念股6971 所有人 飆股推薦6971惠民實業飆股",
-          "summary": "惠民實業（6971）成立近30年，專注於環保水利工程與循環經濟，業務涵蓋水利工程興建及代操作維護。公司在污水處理領域具備垂直整合能力，目前在台灣污水廠代操作領域規模最大，累計污水處理量佔全國21%，每日處理量達128萬C。",
-          "stock_name": "惠民實業",
-          "stock_code": "6971",
-          "time": "2026-07-15 09:46",
-          "stocks": [
-            "2330",
-            "2408",
-            "6770",
-            "2327",
-            "3481"
-          ],
-          "comment_count": 2,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764084"
-        },
-        {
-          "id": "180762560",
-          "title": "南電(8046)又創新高！我早就叫你看法人，不是看新聞！",
-          "summary": "南電(8046)近期股價續創歷史新高。儘管市場曾對ABF載板產業釋出降價、需求放緩及AI延後等利空消息，但法人資金持續進駐，顯示資金流向對股價影響大於新聞情緒。",
-          "stock_name": "南電",
-          "stock_code": "8046",
-          "time": "2026-07-15 09:24",
-          "stocks": [
-            "00981A",
-            "00991A",
-            "3037",
-            "4958",
-            "8046"
-          ],
-          "comment_count": 4,
-          "like_count": 46,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180762560"
-        },
-        {
-          "id": "180760539",
-          "title": "☀️ 詹姆士美台盤前早報2026年7月15日（三）",
-          "summary": "美國6月CPI年增率3.5%低於預期，通膨壓力降溫。IBM因第二季業績不如預期且示警企業客戶將資本支出轉向AI伺服器、儲存設備及記憶體，股價暴跌。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 08:44",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "6213",
-            "2618",
-            "2603"
-          ],
-          "comment_count": 0,
-          "like_count": 16,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180760539"
-        },
-        {
-          "id": "180759983",
-          "title": "07/15 台股盤前：費半漲2.54%，台股開盤先看記憶體",
-          "summary": "美國6月CPI年增率降至3.5%，企業資本支出轉向AI伺服器與記憶體，帶動美股費半指數上漲2.54%。SK海力士ADR大漲27.29%，美光與輝達同步走揚。台股開盤聚焦記憶體、AI伺服器及光通訊族群能否站回關鍵支撐。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 08:16",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2408",
-            "2344"
-          ],
-          "comment_count": 6,
-          "like_count": 25,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759983"
-        },
-        {
-          "id": "180759728",
-          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
-          "summary": "台積電（2330）法說會將至，摩根士丹利推演三情境，基本情境預期第三季營收季增10%至15%，全年營收財測調高至年增40%，資本支出560億美元，股價有8成機率上漲。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 07:55",
-          "stocks": [
-            "5483",
-            "2630",
-            "2330",
-            "8033",
-            "3532"
-          ],
-          "comment_count": 18,
-          "like_count": 99,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180759728"
-        },
-        {
-          "id": "180759154",
-          "title": "🔥【重磅訊息觀測站】🔥",
-          "summary": "美國6月CPI年增3.5%優於預期，市場預期聯準會升息時點可能延後。川普政府力捧英特爾並施壓蘋果、輝達等台積電大客戶轉單，地緣政治議題將成台積電法說會焦點。",
-          "stock_name": "台積電、上銀、程泰",
-          "stock_code": "2330, 2049, 1583",
-          "time": "2026-07-15 07:15",
-          "stocks": [
-            "2330",
-            "2049",
-            "4510",
-            "6609",
-            "4526"
-          ],
-          "comment_count": 21,
-          "like_count": 117,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180759154"
-        },
-        {
-          "id": "180759008",
-          "title": "2026.7.15日【艦長日誌】⚓",
-          "summary": "中研院經濟研究所將2026年台灣經濟成長率上修至10.16%。財政部統計上半年總稅收達2.5兆元，其中證交稅創單月新高，上半年證交稅已超過去年全年。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:59",
-          "stocks": [
-            "TWB33",
-            "2330",
-            "2317",
-            "3711",
-            "2887"
-          ],
-          "comment_count": 19,
-          "like_count": 120,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180759008"
-        },
-        {
-          "id": "180758855",
-          "title": "川普全力扶植英特爾 挖台積牆腳 發動國家級搶單大戰",
-          "summary": "川普政府全力扶植英特爾，並施壓蘋果、輝達與SpaceX等大廠採用英特爾晶圓代工服務，意圖提升美國先進晶片製造能力。由於蘋果與輝達均為台積電重要客戶，業界解讀此舉為白宮動用國家之力發動搶單戰。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:38",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2303",
-            "3711",
             "2327"
           ],
           "comment_count": 3,
-          "like_count": 27,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758855"
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180787271"
         },
         {
-          "id": "180758772",
-          "title": "🎯 通膨降溫助攻！費半強彈2.5%🔥科技股重拾動能 📈",
-          "summary": "台積電（2330）：美國6月CPI年增率3.5%低於預期，市場對聯準會升息擔憂降溫，帶動費城半導體指數反彈2.54%。IBM發布獲利預警股價重挫，抵銷部分科技股漲勢。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:29",
+          "id": "180786959",
+          "title": "載板三雄",
+          "summary": "高盛預估ABF載板缺口將由今年8%擴大至2027/2028年的34%與51%，交期拉長至12個月以上。本土法人指出載板三雄6月及第二季營運達成率優於預期，大摩亦表示欣興與南電上半年獲利受惠於稼動率提升與產品組合優化，表現。",
+          "stock_name": "南電、欣興",
+          "stock_code": "8046、3037",
+          "time": "2026-07-16 03:02",
+          "stocks": [
+            "8046",
+            "3037",
+            "3189"
+          ],
+          "comment_count": 0,
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786959"
+        },
+        {
+          "id": "180786755",
+          "title": "科技股震盪反彈，記憶體與晶片大廠財報亮眼",
+          "summary": "台積電（2330）第二季營收年增36%，市場預估淨利有望突破6300億元，受惠先進製程與CoWoS封裝需求，資本支出預估調升至580億美元。",
+          "stock_name": "台積電、南亞科",
+          "stock_code": "2330、2408",
+          "time": "2026-07-16 02:32",
           "stocks": [
             "TWA00",
             "2330",
-            "2408",
-            "3481",
-            "2327"
-          ],
-          "comment_count": 4,
-          "like_count": 64,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758772"
-        },
-        {
-          "id": "180758595",
-          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
-          "summary": "力積電（6770）法說會表示，受惠AI需求強勁，記憶體與成熟製程供需轉緊，7月調升DRAM投片價格約40%至45%，成熟製程代工價格調升10%至15%，預計11月反映於營收。",
-          "stock_name": "力積電",
-          "stock_code": "6770",
-          "time": "2026-07-15 05:59",
-          "stocks": [
-            "2330",
-            "2344",
-            "2492",
-            "5274",
-            "2337"
-          ],
-          "comment_count": 21,
-          "like_count": 99,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180758595"
-        },
-        {
-          "id": "180758569",
-          "title": "7/15 美股收盤重點：通膨降溫，AI股強力反彈！",
-          "summary": "美國6月CPI數據顯示通膨降溫，市場對聯準會降息信心增加，資金回流AI與半導體類股。記憶體股如海力士與美光、AI晶片廠輝達與英特爾、功率半導體廠安森美及德州儀器等皆上漲。AI主流趨勢未變，相關供應鏈後續值得持續觀察。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 05:52",
-          "stocks": [
-            "2330",
-            "3711",
-            "2308",
-            "2301",
-            "3707"
+            "2408"
           ],
           "comment_count": 0,
-          "like_count": 12,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758569"
-        },
-        {
-          "id": "180758567",
-          "title": "7/14日 一路追蹤00981A 直到空頭 第43篇",
-          "summary": "法人籌碼追蹤顯示，00981A近期持續加碼日月光(3711)、南電(8046)與台達電(2308)。其中日月光三個交易日內累積進場資金近16億元，南電則加碼7.1億元，台達電加碼2.4億元，精測(6510)則遭減碼。",
-          "stock_name": "日月光投控",
-          "stock_code": "3711",
-          "time": "2026-07-15 05:51",
-          "stocks": [
-            "2308",
-            "00981A",
-            "3711",
-            "8046",
-            "6510"
-          ],
-          "comment_count": 24,
-          "like_count": 88,
+          "like_count": 4,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758567"
+          "url": "https://www.cmoney.tw/forum/article/180786755"
         },
         {
-          "id": "180754459",
-          "title": "今日下上2700點，市場最恐慌的時候，風險報酬比反而更好了",
-          "summary": "鴻海（2317）股價回測半年線233元附近，收盤站回235.5元。外資近一季新增籌碼仍有約50萬張尚未換出，加上去年股災後成本約180元的部位，合計持有近百萬張。",
+          "id": "180786672",
+          "title": "美伊衝突撼動油市，中國庫存發威與台股重挫",
+          "summary": "受美伊衝突影響，中國動用原油庫存導致進口需求下降，迫使沙烏地阿美下修亞洲報價。中油上半年雖因低價庫存獲利，但6月單月虧損58億元，且上半年吸收油氣凍漲成本逾320億元。",
+          "stock_name": "台塑化",
+          "stock_code": "6505",
+          "time": "2026-07-16 02:06",
+          "stocks": [
+            "TWA00",
+            "6505",
+            "2330",
+            "0050"
+          ],
+          "comment_count": 0,
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786672"
+        },
+        {
+          "id": "180786667",
+          "title": "美晶片股重挫，南亞科第二季營收逆勢創高",
+          "summary": "南亞科（2408）公布財報，受惠產品組合優化，第2季毛利率達79.5%。6月合併營收293.88億元，月增6.21%、年增621.34%；第2季總營收825.49億元，季增68.16%。",
+          "stock_name": "南亞科",
+          "stock_code": "2408",
+          "time": "2026-07-16 02:04",
+          "stocks": [
+            "TWA00",
+            "2408",
+            "2330",
+            "0050"
+          ],
+          "comment_count": 0,
+          "like_count": 3,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180786667"
+        },
+        {
+          "id": "180786505",
+          "title": "AI引爆載板缺貨潮！半導體供應鏈全解析",
+          "summary": "AI與高效能運算需求帶動ABF載板缺貨，交期拉長至12個月，預期缺貨潮持續逾30個月。記憶體領域因AI資料中心需求，南亞科第二季毛利率升至79.5%。",
+          "stock_name": "台積電、南亞科、穎崴",
+          "stock_code": "2330、2408、6515",
+          "time": "2026-07-16 01:33",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "8046",
+            "2408"
+          ],
+          "comment_count": 0,
+          "like_count": 7,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786505"
+        },
+        {
+          "id": "180785152",
+          "title": "金像電擴建蘇州廠 斥資人民幣1.7億元向名碩電腦取得土地 經濟日報 記者尹慧中／...",
+          "summary": "PCB大廠金像電公告，子公司蘇州金像電子董事會決議斥資人民幣1.7億元，向名碩電腦取得土地與建物，總面積約16259坪土地及18181坪建物，主要目的為擴建蘇州廠。",
+          "stock_name": "金像電",
+          "stock_code": "2368",
+          "time": "2026-07-15 23:35",
+          "stocks": [
+            "2368"
+          ],
+          "comment_count": 2,
+          "like_count": 8,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180785152"
+        },
+        {
+          "id": "180783512",
+          "title": "晚安，大家🥸 今日簡單講一下，墨叔要早點休息清晨要起床看足球😅 最近台股走得很磨...",
+          "summary": "鴻海（2317）6月營收年增逾5成，工業富聯第2季獲利預告強勁。ASML第2季財報優於預期，全年營收展望上修，顯示AI硬體基礎建設需求持續。",
           "stock_name": "鴻海",
           "stock_code": "2317",
-          "time": "2026-07-14 21:44",
+          "time": "2026-07-15 21:55",
           "stocks": [
             "2317",
             "2330",
             "TWA00"
           ],
-          "comment_count": 49,
-          "like_count": 360,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180754459"
+          "comment_count": 51,
+          "like_count": 355,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180783512"
         },
         {
-          "id": "180751302",
-          "title": "長長的下影線們，看著全是深跌後的多方逆襲！",
-          "summary": "欣興（3037）近期股價跌破季線，MACD快線DIF值首度跌落0值下方，技術面轉弱，市場關注其是否向120日均線靠近。儘管欣興在ABF載板組合中線型相對較弱，但受惠於長期產業趨勢利多支撐，尚未出現大幅崩跌。",
-          "stock_name": "欣興",
-          "stock_code": "3037",
-          "time": "2026-07-14 19:08",
+          "id": "180778860",
+          "title": "除息後的第一天：真正的承接力量是誰？",
+          "summary": "英業達（2356）於7月15日進行除息，投信結束連續12日買超轉為賣超320張，外資雖小幅買超121張但買賣換手積極。自營商賣超1,944張，反映市場對美國即將公布的6月CPI數據持保守態度。",
+          "stock_name": "英業達",
+          "stock_code": "2356",
+          "time": "2026-07-15 17:47",
           "stocks": [
-            "4958",
-            "8046",
-            "3189",
-            "3037"
+            "2356"
           ],
-          "comment_count": 28,
-          "like_count": 206,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180751302"
+          "comment_count": 3,
+          "like_count": 17,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778860"
         },
         {
-          "id": "180744605",
-          "title": "股災重擊半導體！記憶體現分歧，台積電業績達標",
-          "summary": "台積電（2330）：記憶體產業因大廠擴產面臨供過於求風險，但韓國央行認為AI需求將延續。台積電6月合併營收4,426.8億元，年增67.87%，上半年營收年增35.61%。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-14 13:32",
+          "id": "180778738",
+          "title": "[00408A 操作日報] 經理人大舉建倉AI與半導體",
+          "summary": "主動式ETF經理人近期操作積極，新建倉聯發科、智邦、川湖、台燿、臻鼎-KY與南亞科等AI伺服器供應鏈。同時大幅加碼金像電，持股翻倍，並買進載板廠欣興，以及半導體相關的矽格與崇越，資金集中於半導體與伺服器零組件方向。",
+          "stock_name": "聯發科、金像電、欣興",
+          "stock_code": "2454, 2368, 3037",
+          "time": "2026-07-15 17:41",
+          "stocks": [
+            "00408A",
+            "2454",
+            "2345",
+            "2059",
+            "6274",
+            "4958",
+            "2408",
+            "2368",
+            "3037",
+            "6257",
+            "5434"
+          ],
+          "comment_count": 1,
+          "like_count": 43,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778738"
+        },
+        {
+          "id": "180776756",
+          "title": "英特爾18A良率飆至85% 傳獲AMD、輝達訂單 目標價喊上155美元 鉅亨網新...",
+          "summary": "英特爾（INTC）18A製程良率由上季65%提升至85%，縮小與台積電N2製程差距，並傳獲AMD、輝達、微軟等大廠設計訂單。此外，其EMIB-T封裝良率達98%，與台積電CoWoS技術相當。",
+          "stock_name": "英特爾",
+          "stock_code": "INTC",
+          "time": "2026-07-15 15:46",
           "stocks": [
             "TWA00",
             "2330",
-            "2408",
-            "6770"
+            "2303",
+            "00631L"
           ],
           "comment_count": 5,
-          "like_count": 135,
-          "collected_count": 6,
-          "url": "https://www.cmoney.tw/forum/article/180744605"
+          "like_count": 30,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180776756"
+        },
+        {
+          "id": "180776144",
+          "title": "明天積哥法說會，5月份有出售世界先進，將有百億入帳，財務貢獻632．02億元，半...",
+          "summary": "台積電（2330）將於7月16日召開法說會。公司於5月份出售世界先進持股，預計將有百億元現金入帳，並對財務產生632.02億元的貢獻，市場預期將反映在即將公布的半年報中。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-15 15:05",
+          "stocks": [
+            "2330"
+          ],
+          "comment_count": 7,
+          "like_count": 89,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180776144"
+        },
+        {
+          "id": "180770485",
+          "title": "個人體感是高階測試股越來越難做，前幾天2930小賠停損精測，今天旺矽我見紅就賣，...",
+          "summary": "精測（6510）與旺矽（6223）等高階測試股近期操作難度增加。投資人表示已將手上持有的高階測試相關個股全數出清，並轉向關注其他具備營運成長動能的標的進行操作。",
+          "stock_name": "精測、旺矽",
+          "stock_code": "6510, 6223",
+          "time": "2026-07-15 12:02",
+          "stocks": [
+            "6223",
+            "6510"
+          ],
+          "comment_count": 6,
+          "like_count": 19,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180770485"
         }
       ],
-      "kept_count_before_global_dedupe": 19,
-      "dedup_removed_count": 0
+      "kept_count_before_global_dedupe": 15,
+      "dedup_removed_count": 2
     },
     {
       "concept_id": "C50909",
@@ -590,33 +468,672 @@
       "category": "先進封裝",
       "note": "AI GPU 與 HBM 關鍵封裝技術",
       "source_url": "https://www.cmoney.tw/forum/concept/C50909",
-      "raw_count": 86,
-      "recent_count": 85,
-      "kept_count": 12,
+      "raw_count": 88,
+      "recent_count": 84,
+      "kept_count": 10,
       "news": [
         {
-          "id": "180765868",
-          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
-          "summary": "華邦電（2344）：受惠記憶體價格上漲趨勢，TrendForce報告指出SLC NAND供給吃緊，預估下半年合約價格大漲。法人分析華邦電與旺宏可直接受惠報價調升，毛利率與獲利將改善。",
-          "stock_name": "華邦電",
-          "stock_code": "2344",
-          "time": "2026-07-15 10:18",
+          "id": "180787365",
+          "title": "美聯儲與白宮關系引關注！華許：溝通頻繁，但利率由我獨立決定 07-16 03:2...",
+          "summary": "美聯儲主席華許於國會聽證強調美聯儲獨立性，並稱與川普政府及財政部長貝森特保持頻繁溝通，但利率決定將由其本人獨立作出。由於通膨已連續63個月高於2%目標，且聯邦公開市場委員會內部對年內利率路徑存在分歧，市場持續關注美聯儲政。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-16 04:41",
           "stocks": [
-            "2344",
-            "1560",
-            "3374",
-            "6451",
-            "5274"
+            "TWA00",
+            "2330",
+            "0050",
+            "2303",
+            "2317"
+          ],
+          "comment_count": 0,
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180787365"
+        },
+        {
+          "id": "180786008",
+          "title": "持續去槓桿",
+          "summary": "韓國SK海力士股價波動劇烈，顯示市場去槓桿過程持續。台股融資餘額處於歷史高檔，建議現階段避開高估值個股。在震盪整理期間，持有台積電與0050相對較為抗震。",
+          "stock_name": "台積電、0050",
+          "stock_code": "2330, 0050",
+          "time": "2026-07-16 00:37",
+          "stocks": [
+            "2330",
+            "0050"
+          ],
+          "comment_count": 0,
+          "like_count": 5,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180786008"
+        },
+        {
+          "id": "180784021",
+          "title": "ABF封裝遇到瓶頸，玻璃基板你現在是加碼還是觀望?",
+          "summary": "玻璃基板：因AI晶片面積擴大與高速傳輸需求，傳統ABF封裝面臨熱膨脹、翹曲與訊號延遲瓶頸。玻璃基板具備高穩定性與低介電損耗特性，能改善翹曲並降低功耗。",
+          "stock_name": "玻璃基板",
+          "stock_code": "8027",
+          "time": "2026-07-15 22:26",
+          "stocks": [
+            "8027"
+          ],
+          "comment_count": 0,
+          "like_count": 9,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180784021"
+        },
+        {
+          "id": "180783318",
+          "title": "ABF遇到瓶頸：因此開始改用： Glass（玻璃）取代ABF",
+          "summary": "欣興（8027）：隨著AI晶片尺寸增大，傳統ABF載板面臨熱膨脹、翹曲及訊號延遲等瓶頸。玻璃基板因具備低熱膨脹係數、介電損耗低及可縮短線路等特性，能提升大型封裝平整度與傳輸效率，並透過TGV雷射鑽孔技術實現高速互連，成為。",
+          "stock_name": "欣興",
+          "stock_code": "8027",
+          "time": "2026-07-15 21:45",
+          "stocks": [
+            "8027"
+          ],
+          "comment_count": 2,
+          "like_count": 9,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180783318"
+        },
+        {
+          "id": "180781540",
+          "title": "台股「體質質變」券24",
+          "summary": "外資透過跨月價差合約將空單轉移至8月，並利用現貨縮量軋空，將空單建倉成本墊高至46000點以上。台幣匯率貶值且外資現貨小幅賣超，顯示盤勢為內資主力拉抬。台積電法說會將至，外資持有高額空單部位，後續走勢仍需觀察。",
+          "stock_name": "台積電、聯發科",
+          "stock_code": "2330, 2454",
+          "time": "2026-07-15 20:09",
+          "stocks": [
+            "2330",
+            "TWA00",
+            "00685L",
+            "2454",
+            "0050"
           ],
           "comment_count": 8,
-          "like_count": 58,
+          "like_count": 74,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180781540"
+        },
+        {
+          "id": "180777446",
+          "title": "📊 詹姆士台股盤後解析｜2026/07/15",
+          "summary": "台股隨電子權值股回穩強勢反彈，資金回流AI半導體供應鏈。半導體設備與擴廠工程方面，漢唐、聖暉、辛耘等受惠先進製程產能擴充需求；封測端日月光投控受惠AI封測需求；",
+          "stock_name": "漢唐、日月光投控、南亞科",
+          "stock_code": "2404, 3711, 2408",
+          "time": "2026-07-15 16:37",
+          "stocks": [
+            "3006",
+            "5483",
+            "2404",
+            "5536",
+            "2467"
+          ],
+          "comment_count": 2,
+          "like_count": 16,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180777446"
+        },
+        {
+          "id": "180777197",
+          "title": "記憶體滿血復活 晶豪科、華邦電搶放煙火 哪些潛力股能衝一波?",
+          "summary": "晶豪科（3006）：受惠邊緣AI落地需求，6月營收年增328%。因海力士ADR暴漲帶動記憶體族群強彈，晶豪科具備低價庫存與技術壁壘優勢。同族群南亞科、華邦電、力積電、旺宏、鈺創及記憶體封測廠南茂、福懋科亦同步受市場關注。",
+          "stock_name": "晶豪科",
+          "stock_code": "3006",
+          "time": "2026-07-15 16:14",
+          "stocks": [
+            "3006",
+            "2344",
+            "2408",
+            "3374",
+            "8932"
+          ],
+          "comment_count": 0,
+          "like_count": 14,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765868"
+          "url": "https://www.cmoney.tw/forum/article/180777197"
+        },
+        {
+          "id": "180775431",
+          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
+          "summary": "紐約州簽署行政命令，禁止建造耗電量超過50MW的超大規模AI資料中心，引發市場對電力基礎設施的關注。SK海力士股價大漲帶動南韓半導體股走強，分析師看好AI記憶體需求，認為DRAM供給吃緊將支撐長線獲利，並降低獲利波動性。",
+          "stock_name": "台積電、士電、華城",
+          "stock_code": "2330, 1519, 1519",
+          "time": "2026-07-15 14:28",
+          "stocks": [
+            "2330",
+            "1519",
+            "3711",
+            "2408",
+            "6505"
+          ],
+          "comment_count": 25,
+          "like_count": 107,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180775431"
+        },
+        {
+          "id": "180759005",
+          "title": "（7/15）週三早安。6：58",
+          "summary": "大盤自高點回檔，季線乖離率收斂，建議尋找低位階績優股。台積電配合產業鏈如廠務工程、半導體耗材及關鍵設備具長線成長潛力。關注個股包括精材、日月光、亞翔、鴻勁、旺矽等。",
+          "stock_name": "台積電、精材、日月光",
+          "stock_code": "2330, 3374, 2311",
+          "time": "2026-07-15 06:58",
+          "stocks": [
+            "TWA00",
+            "2330"
+          ],
+          "comment_count": 19,
+          "like_count": 64,
+          "collected_count": 6,
+          "url": "https://www.cmoney.tw/forum/article/180759005"
+        },
+        {
+          "id": "180726554",
+          "title": "7月14日台股盤前：費半重挫、台指夜盤走弱，今天先別急著搶反",
+          "summary": "台積電營收表現強勁，但ADR受半導體賣壓影響走弱。外資台指期淨空單維持8萬口以上，顯示下檔風險未除。市場關注中東局勢與油價對通膨的影響，高本益比科技股面臨估值壓力。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-14 05:55",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "3374",
+            "6182",
+            "3211"
+          ],
+          "comment_count": 8,
+          "like_count": 83,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180726554"
+        }
+      ],
+      "kept_count_before_global_dedupe": 22,
+      "dedup_removed_count": 12
+    },
+    {
+      "concept_id": "C50914",
+      "concept_name": "HBM",
+      "category": "記憶體",
+      "note": "AI 伺服器核心記憶體規格",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50914",
+      "raw_count": 12,
+      "recent_count": 12,
+      "kept_count": 2,
+      "news": [
+        {
+          "id": "180782348",
+          "title": "至上趨勢分析，買進就對了",
+          "summary": "至上（8112）：預期第3季隨PC、AI伺服器及消費性電子拉貨，DRAM與NAND需求增溫；第4季因客戶年底出貨及新品上市備貨，IC通路商進入營收高峰，預估股價上看200元。",
+          "stock_name": "至上",
+          "stock_code": "8112",
+          "time": "2026-07-15 20:55",
+          "stocks": [
+            "8112"
+          ],
+          "comment_count": 0,
+          "like_count": 25,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180782348"
+        },
+        {
+          "id": "180777376",
+          "title": "賣在起漲點歷史重演？",
+          "summary": "至上（8112）近期股價衝高後回落，出現多根上影線。市場觀察其本益比為IC通路中較低者，但面臨散戶增加、大戶減少及借券增加等籌碼面壓力。公司近期辦理現金增資，認購價為66元。",
+          "stock_name": "至上",
+          "stock_code": "8112",
+          "time": "2026-07-15 16:32",
+          "stocks": [
+            "8112",
+            "3033",
+            "1504",
+            "6190",
+            "6282"
+          ],
+          "comment_count": 4,
+          "like_count": 19,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180777376"
+        }
+      ],
+      "kept_count_before_global_dedupe": 3,
+      "dedup_removed_count": 1
+    },
+    {
+      "concept_id": "C50880",
+      "concept_name": "HPC",
+      "category": "AI / 高效運算",
+      "note": "高效能運算，涵蓋 AI 伺服器與資料中心需求",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50880",
+      "raw_count": 75,
+      "recent_count": 75,
+      "kept_count": 8,
+      "news": [
+        {
+          "id": "180786241",
+          "title": "iPhone 新機成駭客目標！鴻海建造跨時區3地資安聯防",
+          "summary": "鴻海（2317）：鴻海資安長李維斌表示，鴻海生產全球46%的AI伺服器硬體平台，因iPhone新機發布前夕常遭駭客鎖定，公司面臨的惡意攻擊次數為亞太地區平均值的2倍以上，目前已建立跨時區的3地資安聯防機制以應對威脅。",
+          "stock_name": "鴻海",
+          "stock_code": "2317",
+          "time": "2026-07-16 00:56",
+          "stocks": [
+            "2317"
+          ],
+          "comment_count": 0,
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786241"
+        },
+        {
+          "id": "180785410",
+          "title": "夜盤你就它m的慢慢演吧，反正五萬點逃不掉看你怎麼洗耍猴戲給忠實戶撿便宜。 台積電...",
+          "summary": "台積電股價跌至1800元，市場關注是否為散戶恐慌拋售或有法人資金進場承接。目前台股處於震盪洗盤階段，外資操作策略被形容為利用國際局勢進行資本戰，市場對於後續指數表現與法人動向仍持觀望態度。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-15 23:53",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "2317",
+            "3711"
+          ],
+          "comment_count": 4,
+          "like_count": 18,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180785410"
+        },
+        {
+          "id": "180785163",
+          "title": "欣興、景碩 請重返榮耀！！",
+          "summary": "南電（8046）：載板三雄中，南電近期股價表現強勢，自6月30日的1185元一路攀升至1415元，接近目標價1500元。同族群的景碩目前處於處置期間，欣興則表現相對疲弱，股價僅剩6月30日水準的87%，投資人持續關注三雄。",
+          "stock_name": "南電",
+          "stock_code": "8046",
+          "time": "2026-07-15 23:36",
+          "stocks": [
+            "8046",
+            "3037",
+            "3189"
+          ],
+          "comment_count": 1,
+          "like_count": 20,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180785163"
+        },
+        {
+          "id": "180783300",
+          "title": "台北101 靈感～ 在114.12.27 預測臻鼎+群創+和大是2026潛力股，...",
+          "summary": "和大集團透過合資成立和大芯科技，正式跨入半導體後段測試供應鏈。和大芯已完成CoWoS先進封裝檢測設備改裝，聚焦分選機與溫度控制系統，預計9月於台北國際半導體展亮相。",
+          "stock_name": "和大、臻鼎-KY",
+          "stock_code": "1536, 4958",
+          "time": "2026-07-15 21:43",
+          "stocks": [
+            "1536",
+            "4958",
+            "3481",
+            "2317",
+            "4980"
+          ],
+          "comment_count": 23,
+          "like_count": 142,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180783300"
+        },
+        {
+          "id": "180781432",
+          "title": "07/15主動式ETF籌碼日報",
+          "summary": "根據主動式ETF籌碼日報，京元電子獲00981A大買6.9億元，位居全市場ETF買超排行第一名，共計買超2,183張。其他獲ETF買超個股包括台塑化、大成鋼、南亞科及南亞等，顯示特定產業鏈個股受ETF資金青睞。",
+          "stock_name": "京元電子",
+          "stock_code": "2449",
+          "time": "2026-07-15 20:04",
+          "stocks": [
+            "2408",
+            "3037",
+            "1303",
+            "2449",
+            "6505"
+          ],
+          "comment_count": 3,
+          "like_count": 26,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180781432"
+        },
+        {
+          "id": "180778751",
+          "title": "[00407A 操作日報] 集中火力加碼富世達與力旺",
+          "summary": "主動式ETF 00407A經理人近期調整持股，將資金集中於具備獨佔優勢的關鍵零組件與矽智財廠。其中，折疊機軸承廠富世達獲加碼55張，持股提升19.03%；矽智財大廠力旺獲加碼30張，持股增幅近17%。",
+          "stock_name": "富世達、力旺",
+          "stock_code": "6805, 3529",
+          "time": "2026-07-15 17:41",
+          "stocks": [
+            "00407A",
+            "6805",
+            "3529"
+          ],
+          "comment_count": 0,
+          "like_count": 28,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778751"
+        },
+        {
+          "id": "180778250",
+          "title": "外資八月鎖進將近兩萬口空單作空鴻海意志不減",
+          "summary": "鴻海（2317）：外資在八月合約持有近兩萬口空單，且有超過六萬張借券賣出餘額。預期外資將持續利用高頻率交易與借券賣出，在每日尾盤壓制股價於240元以下，建議長期股東避免使用融資，抱緊現貨以應對外資主力。",
+          "stock_name": "鴻海",
+          "stock_code": "2317",
+          "time": "2026-07-15 17:21",
+          "stocks": [
+            "2317"
+          ],
+          "comment_count": 36,
+          "like_count": 301,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778250"
+        },
+        {
+          "id": "180777727",
+          "title": "美林連賣14天後，今日終於反手買超了！",
+          "summary": "鴻海今日獲外資買超6,880張，其中美林結束連14日賣超轉為買超。觀察買賣分點，國泰證買超3,167張，疑似有代操行為。對比外資對台積電、聯發科等權值股的操作，外資在鴻海似有空翻多跡象，惟尾盤遭主力壓低股價。",
+          "stock_name": "鴻海",
+          "stock_code": "2317",
+          "time": "2026-07-15 16:46",
+          "stocks": [
+            "2317"
+          ],
+          "comment_count": 37,
+          "like_count": 214,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180777727"
+        }
+      ],
+      "kept_count_before_global_dedupe": 21,
+      "dedup_removed_count": 13
+    },
+    {
+      "concept_id": "C50912",
+      "concept_name": "AI PC",
+      "category": "AI 終端",
+      "note": "具備 NPU 的新一代個人電腦",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50912",
+      "raw_count": 64,
+      "recent_count": 64,
+      "kept_count": 4,
+      "news": [
+        {
+          "id": "180784678",
+          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
+          "summary": "南亞（1303）：摩根大通與統一投顧看好南亞切入T-glass與AI等級銅箔基板供應鏈，預估今明兩年EPS將創新高，目標價上看300元。",
+          "stock_name": "南亞",
+          "stock_code": "1303",
+          "time": "2026-07-15 23:00",
+          "stocks": [
+            "3260",
+            "8033",
+            "6873",
+            "1303",
+            "2408"
+          ],
+          "comment_count": 15,
+          "like_count": 107,
+          "collected_count": 8,
+          "url": "https://www.cmoney.tw/forum/article/180784678"
+        },
+        {
+          "id": "180783728",
+          "title": "記憶體族群大復活 把握「這天」前的黃金安全期",
+          "summary": "晶豪科（3006）6月營收年增328%，受惠邊緣AI需求，帶動記憶體族群反彈。因SK海力士ADR原股轉換受監管限制，7月29日前市場無實體套利賣壓，有利記憶體族群短期輪動。",
+          "stock_name": "晶豪科",
+          "stock_code": "3006",
+          "time": "2026-07-15 22:14",
+          "stocks": [
+            "3006",
+            "2408",
+            "2344",
+            "2337",
+            "5351"
+          ],
+          "comment_count": 0,
+          "like_count": 19,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180783728"
+        },
+        {
+          "id": "180782350",
+          "title": "800VDC-真正逼 54V 阿伯退休的，是國中物理😉",
+          "summary": "AI伺服器功率需求提升至MW等級，傳統54V供電架構面臨電流過大、銅排重量與散熱損耗等物理限制。產業轉向800VDC高壓直流架構，透過提升電壓降低電流，以減少銅材使用、降低電阻損耗並優化機櫃空間配置。",
+          "stock_name": "廣達、緯創、光寶科",
+          "stock_code": "2308, 2301, 6282",
+          "time": "2026-07-15 20:55",
+          "stocks": [
+            "2308",
+            "2301",
+            "6282"
+          ],
+          "comment_count": 5,
+          "like_count": 45,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782350"
+        },
+        {
+          "id": "180757636",
+          "title": "南亞科~到底值多少？我用最保守的方式算給大家看。",
+          "summary": "南亞科（2408）第二季EPS為14.66元，上半年累計EPS達23.07元。公司預期下半年DRAM價格持續走高，AI伺服器與高頻寬記憶體需求強勁。若以保守情境推估下半年EPS，全年獲利具備成長空間。",
+          "stock_name": "南亞科",
+          "stock_code": "2408",
+          "time": "2026-07-15 02:52",
+          "stocks": [
+            "2408"
+          ],
+          "comment_count": 9,
+          "like_count": 92,
+          "collected_count": 16,
+          "url": "https://www.cmoney.tw/forum/article/180757636"
+        }
+      ],
+      "kept_count_before_global_dedupe": 11,
+      "dedup_removed_count": 7
+    },
+    {
+      "concept_id": "C50920",
+      "concept_name": "矽智財IP",
+      "category": "半導體設計",
+      "note": "IC 設計基礎模組，受惠 ASIC 與 SoC 開發需求",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50920",
+      "raw_count": 29,
+      "recent_count": 28,
+      "kept_count": 3,
+      "news": [
+        {
+          "id": "180779145",
+          "title": "2026/07/15 00403A今日操作明細",
+          "summary": "主動式ETF（00403A）公布最新持股異動，單日建倉漢唐（2404）60張。加碼標的包括南亞（1303）900張、南電（8046）200張、台達電（2308）100張、致茂（2360）90張、貿聯-KY（3665）84。",
+          "stock_name": "漢唐、南亞、南電",
+          "stock_code": "2404、1303、8046",
+          "time": "2026-07-15 18:06",
+          "stocks": [
+            "00403A",
+            "2404",
+            "1303",
+            "8046",
+            "2308",
+            "2360",
+            "3665",
+            "5274",
+            "3529"
+          ],
+          "comment_count": 4,
+          "like_count": 55,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180779145"
+        },
+        {
+          "id": "180776522",
+          "title": "力旺這一季的法說會至關重要💪🧧🎉",
+          "summary": "力旺即將召開第二季法人說明會，市場關注焦點包括下半年權利金是否如預期放大，以及美國國防3奈米訂單是否已開始量產出貨。此外，投資人亦關注地緣政治局勢是否帶動國防相關訂單，以及成熟與先進製程代工價格雙漲對公司業績的具體貢獻。",
+          "stock_name": "力旺",
+          "stock_code": "3529",
+          "time": "2026-07-15 15:37",
+          "stocks": [
+            "3529"
+          ],
+          "comment_count": 6,
+          "like_count": 27,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180776522"
+        },
+        {
+          "id": "180759820",
+          "title": "GDR，有部分是沒有閉鎖期的喔~",
+          "summary": "世芯-KY（3661）：原文指出公司發行之全球存託憑證（GDR）中，有部分資金並無閉鎖期。作者提醒投資人應留意相關外來資金的操作，並建議散戶需理解套利機制，在已知定價的基礎下，市場資金可能存在頻繁的套利行為，投資人應保持。",
+          "stock_name": "世芯-KY",
+          "stock_code": "3661",
+          "time": "2026-07-15 08:03",
+          "stocks": [
+            "3661"
+          ],
+          "comment_count": 3,
+          "like_count": 20,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180759820"
+        }
+      ],
+      "kept_count_before_global_dedupe": 7,
+      "dedup_removed_count": 4
+    },
+    {
+      "concept_id": "C50916",
+      "concept_name": "FOPLP扇出型封裝",
+      "category": "先進封裝",
+      "note": "面板級扇出封裝，潛在降低先進封裝成本",
+      "source_url": "https://www.cmoney.tw/forum/concept/C50916",
+      "raw_count": 80,
+      "recent_count": 74,
+      "kept_count": 11,
+      "news": [
+        {
+          "id": "180785166",
+          "title": "日月光是下隻千金股？",
+          "summary": "日月光投控（3711）：日月光為全球半導體封測核心大廠，因應需求展開掃廠，預計2026年有15座新廠推進，資本支出上修至85億美元以上。公司預估先進封裝營收將從2025年的16億美元，大幅成長至2027年的67億美元。",
+          "stock_name": "日月光投控",
+          "stock_code": "3711",
+          "time": "2026-07-15 23:36",
+          "stocks": [
+            "3711"
+          ],
+          "comment_count": 0,
+          "like_count": 5,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180785166"
+        },
+        {
+          "id": "180781713",
+          "title": "TGV玻璃切割鑽孔設備 東捷 與工研院合作超高階玻璃鑽孔設備技術 已將準備量產 ...",
+          "summary": "東捷（8064）與工研院合作開發超高階玻璃鑽孔設備技術，目前該設備已準備進入量產階段。",
+          "stock_name": "東捷",
+          "stock_code": "8064",
+          "time": "2026-07-15 20:22",
+          "stocks": [
+            "8064"
+          ],
+          "comment_count": 5,
+          "like_count": 21,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180781713"
+        },
+        {
+          "id": "180781491",
+          "title": "07/15主動式ETF籌碼日報（金流版）",
+          "summary": "主動式ETF資金板塊轉移，封測雙雄京元電子（2449）、日月光投控（3711）及記憶體南亞科（2408）獲強力回補。反之，記憶體控制晶片廠群聯（8299）遭ETF大幅賣超，先進封裝設備廠竑騰、弘塑及台積電亦面臨換股套現賣。",
+          "stock_name": "京元電子、南亞科、群聯",
+          "stock_code": "2449, 2408, 8299",
+          "time": "2026-07-15 20:07",
+          "stocks": [
+            "2449",
+            "2408",
+            "3026",
+            "3665",
+            "3711"
+          ],
+          "comment_count": 1,
+          "like_count": 37,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180781491"
+        },
+        {
+          "id": "180781041",
+          "title": "看好群創，gogo",
+          "summary": "群創（3481）：台積電於2024下半年買下群創南科四廠，以擴充CoWoS先進封裝產能，此舉有助群創活化舊資產並減少折舊。此外，群創與台積電合作開發玻璃核心基板技術，藉由面板級封裝技術切入先進封裝領域。",
+          "stock_name": "群創",
+          "stock_code": "3481",
+          "time": "2026-07-15 19:47",
+          "stocks": [
+            "3481"
+          ],
+          "comment_count": 3,
+          "like_count": 61,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180781041"
+        },
+        {
+          "id": "180780671",
+          "title": "7/15日 一路追蹤00981A 直到空頭 第44篇",
+          "summary": "日月光（3711）、京元電（2449）、信驊（5274）：根據法人籌碼動態，日月光獲連續四日加碼，累積進場資金約19.3億元；京元電獲加碼2233張，金額約6.9億元；信驊獲加碼32張，金額約4.4億元。",
+          "stock_name": "日月光、京元電、信驊",
+          "stock_code": "3711, 2449, 5274",
+          "time": "2026-07-15 19:24",
+          "stocks": [
+            "3711",
+            "00981A",
+            "2449",
+            "5274"
+          ],
+          "comment_count": 13,
+          "like_count": 82,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180780671"
+        },
+        {
+          "id": "180779362",
+          "title": "00991A今天直接掃貨整條AI供應鏈！",
+          "summary": "主動式ETF 00991A大舉加碼AI供應鏈，包含國巨（2327）、南亞科（2408）、禾伸堂（3026）、貿聯-KY（3665）、日月光投控（3711）、欣興（3037）、南電（8046）、台燿（6274）、智邦（23。",
+          "stock_name": "國巨、南亞科、欣興",
+          "stock_code": "2327, 2408, 3037",
+          "time": "2026-07-15 18:21",
+          "stocks": [
+            "3026",
+            "2408",
+            "2327",
+            "3711",
+            "3037"
+          ],
+          "comment_count": 1,
+          "like_count": 66,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180779362"
+        },
+        {
+          "id": "180779100",
+          "title": "誰說AI結束了？00981A今天直接大買2,000多張",
+          "summary": "主動式ETF 00981A近期大舉回補AI供應鏈，其中京元電子（2449）獲買超逾2,200張，日月光投控（3711）與欣興（3037）亦為法人反覆加碼的核心標的，顯示資金持續往ABF載板、先進封裝及AI伺服器晶片管理等。",
+          "stock_name": "京元電子、日月光投控、欣興",
+          "stock_code": "2449, 3711, 3037",
+          "time": "2026-07-15 18:02",
+          "stocks": [
+            "2449",
+            "00981A",
+            "3037",
+            "5274",
+            "3711"
+          ],
+          "comment_count": 4,
+          "like_count": 54,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180779100"
         },
         {
           "id": "180765026",
           "title": "真正厲害的法人，不是永遠不犯錯，而是錯了就立刻買回！",
-          "summary": "日月光投控（3711）：法人先前曾調節持股，但隨產業趨勢與資金方向轉強，近期連續買超該股。顯示法人操作具備紀律與彈性，根據最新資訊重新調整部位，而非死抱錯誤看法。",
+          "summary": "日月光投控（3711）：法人近期操作顯示，儘管先前曾進行調節，但隨著產業趨勢與資金方向轉強，法人已連續買超日月光投控。此舉反映法人根據最新市場資訊調整部位，而非單純賭博，強調投資應具備紀律與彈性，並根據資金流向進行修正。",
           "stock_name": "日月光投控",
           "stock_code": "3711",
           "time": "2026-07-15 10:01",
@@ -627,880 +1144,67 @@
             "TWA00",
             "3711"
           ],
-          "comment_count": 6,
-          "like_count": 43,
-          "collected_count": 4,
-          "url": "https://www.cmoney.tw/forum/article/180765026"
-        },
-        {
-          "id": "180764138",
-          "title": "台股超跌反攻😋把握業績成長轉機股",
-          "summary": "貿聯-KY股價修正後指標背離，等待黃金交叉；川湖基本面加持，月線支撐7600元；普安受6月營收減少影響，等待成交量放大反攻；頎邦指標黃金交叉，挑戰壓力250元；",
-          "stock_name": "貿聯-KY、川湖、中砂",
-          "stock_code": "3665, 2059, 1560",
-          "time": "2026-07-15 09:47",
-          "stocks": [
-            "2495",
-            "3665",
-            "2059",
-            "1560",
-            "6147"
-          ],
-          "comment_count": 2,
-          "like_count": 16,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764138"
-        },
-        {
-          "id": "180763450",
-          "title": "台股超跌反攻😋把握業績成長轉機股",
-          "summary": "聯電（2303）受惠成熟製程與英特爾合作轉機，短線支撐156元。華通（2313）突破月線支撐235元，指標維持黃金交叉。欣興（3037）回季線洗盤完畢，短線支撐880元，目標挑戰1100元關卡。",
-          "stock_name": "聯電、華通、欣興",
-          "stock_code": "2303, 2313, 3037",
-          "time": "2026-07-15 09:37",
-          "stocks": [
-            "3260",
-            "8110",
-            "3037",
-            "2303",
-            "2313"
-          ],
-          "comment_count": 2,
-          "like_count": 27,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180763450"
-        },
-        {
-          "id": "180762930",
-          "title": "台股超跌反攻😋把握業績成長轉機股",
-          "summary": "日月投（3711）受台積電法說利多加持，月線支撐654元。南亞科（2408）記憶體族群轉強，短線支撐450元。泓德能源（6873）回測季線支撐87元，受惠政府推動儲能及下半年國外業務轉機，目標挑戰年線114元。",
-          "stock_name": "日月投、南亞科、泓德能源",
-          "stock_code": "3711, 2408, 6873",
-          "time": "2026-07-15 09:30",
-          "stocks": [
-            "6873",
-            "2408",
-            "8046",
-            "3711",
-            "2327"
-          ],
-          "comment_count": 1,
-          "like_count": 13,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180762930"
-        },
-        {
-          "id": "180762614",
-          "title": "3374 精材｜漲停再創歷史新高，多頭火力全開",
-          "summary": "精材（3374）：股價開高走高，強勢亮燈漲停並突破400元整數關卡，創下波段新高。技術面均線呈現多頭排列，MACD紅柱放大，顯示多頭動能強勁。市場資金積極搶進，後續需觀察量能變化及高檔籌碼穩定度。",
-          "stock_name": "精材",
-          "stock_code": "3374",
-          "time": "2026-07-15 09:25",
-          "stocks": [
-            "3374"
-          ],
           "comment_count": 8,
-          "like_count": 28,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180762614"
-        },
-        {
-          "id": "180760270",
-          "title": "當大廠不間斷擴廠擴產背後的投資商機，股價修正後是否又是下一波的契機，是否浪會比上...",
-          "summary": "穎崴（6515）：大廠持續擴廠擴產，產業趨勢明確。穎崴作為測試探針廠，為輝達與超微晶片出廠的關鍵供應商，隨產業需求成長，股價修正後被視為投資契機。",
-          "stock_name": "穎崴",
-          "stock_code": "6515",
-          "time": "2026-07-15 08:32",
-          "stocks": [
-            "7899",
-            "6515"
-          ],
-          "comment_count": 19,
-          "like_count": 107,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180760270"
-        },
-        {
-          "id": "180759884",
-          "title": "7/15 CPI低於預期記憶體反彈，IBM破線線",
-          "summary": "南亞科（2408）：市場聚焦CPI數據低於預期，科技股反彈。IBM因財報不佳重挫，影響IT支出預期。海力士暴力反彈帶動美光及南亞科走揚，輝達股價轉強，資安與光通訊族群亦受點火，市場殺戮氣氛降低。",
-          "stock_name": "海力士",
-          "stock_code": "2408",
-          "time": "2026-07-15 08:08",
-          "stocks": [
-            "2408",
-            "1303",
-            "6488",
-            "00981A",
-            "2330"
-          ],
-          "comment_count": 24,
-          "like_count": 179,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180759884"
-        },
-        {
-          "id": "180759714",
-          "title": "志聖財報創新高卻跌停",
-          "summary": "志聖（2467）第二季每股盈餘達4.1元，淨利季增37.3%、年增209.4%，上半年每股盈餘為7.16元。公司看好AI趨勢下半導體與PCB產業投資，預計半導體營收占比將維持在50%至60%，且HLC載板等先進PCB應用。",
-          "stock_name": "志聖",
-          "stock_code": "2467",
-          "time": "2026-07-15 07:53",
-          "stocks": [
-            "2467"
-          ],
-          "comment_count": 2,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759714"
-        },
-        {
-          "id": "180759466",
-          "title": "7月15日投資早報 川普取消了對賀姆茲海峽貨運收費20%的決定，紐約原油下跌到7...",
-          "summary": "台積電（2330）：美國6月CPI年增3.5%低於預期，緩解市場對聯準會升息擔憂，美股四大指數收漲。台指期夜盤反彈上漲225點，台積電ADR下跌0.28%。目前維持中性持股比例，將在行進間換股，買進看好的產業。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 07:38",
-          "stocks": [
-            "2330"
-          ],
-          "comment_count": 39,
-          "like_count": 957,
+          "like_count": 80,
           "collected_count": 7,
-          "url": "https://www.cmoney.tw/forum/article/180759466"
-        },
-        {
-          "id": "180759005",
-          "title": "（7/15）週三早安。6：58",
-          "summary": "台積電（2330）：大盤近期修正乖離率，建議尋找低位階高成長績優股。台積電以2445元為基準，估算漲跌三階段滿足點位，並關注廠務工程、先進製程供應鏈及AI相關產業鏈。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:58",
-          "stocks": [
-            "TWA00",
-            "2330"
-          ],
-          "comment_count": 15,
-          "like_count": 57,
-          "collected_count": 4,
-          "url": "https://www.cmoney.tw/forum/article/180759005"
-        },
-        {
-          "id": "180758674",
-          "title": "7月15日 五件財經大事搶先看 一、大摩推演台積電法說會三種情境 樂觀情況下看漲...",
-          "summary": "台積電（2330）：摩根士丹利推演法說會三情境，樂觀情況看漲5%。此外，川普政府扶植英特爾並施壓大廠採用其代工服務。工具機產業如上銀、程泰受惠AI與軍工需求，走出三年黑暗期。台塑集團宣布調薪4.5%，優於工會預期。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:14",
-          "stocks": [
-            "2330",
-            "2882",
-            "1301",
-            "2049",
-            "1583"
-          ],
-          "comment_count": 49,
-          "like_count": 101,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758674"
-        }
-      ],
-      "kept_count_before_global_dedupe": 22,
-      "dedup_removed_count": 10
-    },
-    {
-      "concept_id": "C50914",
-      "concept_name": "HBM",
-      "category": "記憶體",
-      "note": "AI 伺服器核心記憶體規格",
-      "source_url": "https://www.cmoney.tw/forum/concept/C50914",
-      "raw_count": 98,
-      "recent_count": 94,
-      "kept_count": 12,
-      "news": [
-        {
-          "id": "180764416",
-          "title": "仍是認為志聖不錯，但與德律比較，仍是德律更優一點，因股價低，且毛利率60%，都是...",
-          "summary": "德律（3030）毛利率達60%，股價已跌至半年線。依今明年EPS預估15元與18元計算，本益比分別為19.4倍與16.2倍。",
-          "stock_name": "德律",
-          "stock_code": "3030",
-          "time": "2026-07-15 09:51",
-          "stocks": [
-            "3030",
-            "2467",
-            "6640"
-          ],
-          "comment_count": 4,
-          "like_count": 8,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764416"
-        },
-        {
-          "id": "180763886",
-          "title": "還是要有業績爆發要有獲利爆發才是王道，旺宏漲停要15萬張",
-          "summary": "旺宏（2337）：原文指出下半年報價預計上漲 120% 至 170%，認為對公司獲利有顯著挹注，並提及市場對其目標價設定為 200 元。作者強調業績與獲利爆發才是股價表現的王道，並關注其是否能早盤觸及漲停板。",
-          "stock_name": "旺宏",
-          "stock_code": "2337",
-          "time": "2026-07-15 09:44",
-          "stocks": [
-            "2337",
-            "3035",
-            "3443",
-            "2454",
-            "3363"
-          ],
-          "comment_count": 0,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180763886"
-        },
-        {
-          "id": "180756215",
-          "title": "志聖不錯，但與德律比較，仍是德律更優點，因股價低，且毛利率60%，都是志聖難追上...",
-          "summary": "德律（3030）毛利率達60%，目前股價跌至半年線。以今明年EPS預估15元與18元計算，本益比分別為19.4倍與16.2倍。",
-          "stock_name": "德律",
-          "stock_code": "3030",
-          "time": "2026-07-14 23:30",
-          "stocks": [
-            "3030",
-            "2467",
-            "6640"
-          ],
-          "comment_count": 2,
-          "like_count": 21,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756215"
-        },
-        {
-          "id": "180756191",
-          "title": "台股繼續崩跌嘛？還是見轉折反彈後繼續跌～",
-          "summary": "南亞（1303）、台塑（1301）：受韓股熔斷及美伊戰爭導致原油飆漲影響，台股盤中一度大跌一千七百點，隨後開低走高。文中指出台股長均線基本面仍維持多頭，惟短線震盪劇烈，建議投資人謹慎操作融資。",
-          "stock_name": "南亞、台塑",
-          "stock_code": "1303, 1301",
-          "time": "2026-07-14 23:27",
-          "stocks": [
-            "1303",
-            "8150",
-            "6182",
-            "6239",
-            "1301"
-          ],
-          "comment_count": 1,
-          "like_count": 11,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756191"
-        },
-        {
-          "id": "180756146",
-          "title": "美光、AMD、都漲不少，明天力成沒超過5%都算太弱= =",
-          "summary": "力成（6239）：因美光與AMD股價近期漲幅顯著，市場預期力成股價應有連動表現，若隔日漲幅未超過百分之五，則被視為表現較為疲弱。",
-          "stock_name": "力成",
-          "stock_code": "6239",
-          "time": "2026-07-14 23:25",
-          "stocks": [
-            "6239"
-          ],
-          "comment_count": 1,
-          "like_count": 1,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756146"
-        },
-        {
-          "id": "180754821",
-          "title": "股王信驊（5274）一度重挫1220元，抱1張失血122萬",
-          "summary": "信驊（5274）受台股盤中重挫影響，股價一度下跌1220元，跌幅逾9.02%，最低報12300元。同日創意（3443）、世芯-KY（3661）、高力（8996）、雍智科技（6683）、台燿（6274）及竑騰（7751）等。",
-          "stock_name": "信驊",
-          "stock_code": "5274",
-          "time": "2026-07-14 22:07",
-          "stocks": [
-            "5274",
-            "3661",
-            "3443",
-            "6683",
-            "6274"
-          ],
-          "comment_count": 0,
-          "like_count": 9,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180754821"
-        },
-        {
-          "id": "180753061",
-          "title": "【結算】",
-          "summary": "外資期貨空單水位創歷史新高，主要作為權值股現貨避險之用。預期結算日前外資可能透過壓低權值股以利期貨獲利，導致創意（3443）、世芯-KY（3661）及力旺（3529）等個股面臨測試支撐壓力。",
-          "stock_name": "創意、世芯-KY、力旺",
-          "stock_code": "3443、3661、3529",
-          "time": "2026-07-14 20:39",
-          "stocks": [
-            "3443",
-            "3661",
-            "3529"
-          ],
-          "comment_count": 4,
-          "like_count": 40,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180753061"
-        },
-        {
-          "id": "180744875",
-          "title": "就當作 90元 以下 每天上演 除息吧！幫忙洗盤 ，昨天收87.5是用91.3除...",
-          "summary": "至上（8112）近期股價走勢受除息影響，若以昨日收盤價87.5元及今日收盤價85.4元計算，市場關注何時能填息至92.6元。儘管短線股價波動，但公司營收表現創下歷史新高，與目前股價呈現背離狀態。",
-          "stock_name": "至上",
-          "stock_code": "8112",
-          "time": "2026-07-14 13:42",
-          "stocks": [
-            "8112"
-          ],
-          "comment_count": 1,
-          "like_count": 15,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180744875"
-        },
-        {
-          "id": "180741625",
-          "title": "至上，型態而言，短線比較虛張聲勢，畢竟已經領跌了一個月，而今天假破半年線，更誇張...",
-          "summary": "至上（8112）近期股價領跌一個月，並出現假跌破半年線的情況。觀察季線89元以下，已呈現兩度KD背離，後續具備反彈空間。基本面表現優於部分高價股，建議投資人保持信心，避免恐慌性殺出。",
-          "stock_name": "至上",
-          "stock_code": "8112",
-          "time": "2026-07-14 12:31",
-          "stocks": [
-            "8112"
-          ],
-          "comment_count": 1,
-          "like_count": 22,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180741625"
-        },
-        {
-          "id": "180734493",
-          "title": "#世芯網路鐘響喊這波跌到2XXX #營收成長不如預期跌停鎖住 #出貨台看好宣傳中...",
-          "summary": "世芯-KY（3661）因營收成長不如預期，股價出現跌停鎖住之現象。市場對於該公司後續股價走勢看法分歧，有觀點認為此波跌勢可能持續至2XXX元價位，並提及利多出盡與籌碼面相關之市場傳聞。",
-          "stock_name": "世芯-KY",
-          "stock_code": "3661",
-          "time": "2026-07-14 10:17",
-          "stocks": [
-            "3661",
-            "3443",
-            "2454"
-          ],
-          "comment_count": 2,
-          "like_count": 10,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180734493"
-        },
-        {
-          "id": "180727956",
-          "title": "最近個股真的有點糟糕，每天開高走低上下洗刷震盪，只有矽晶圓族群一支獨秀在創高似乎...",
-          "summary": "矽晶圓族群近期因籌碼相對穩定，股價表現強勢創高。相較之下，記憶體與被動元件族群因融資餘額過高，籌碼面較為不安定，易受市場波動影響出現恐慌性賣壓。目前記憶體族群正處於洗盤沉澱階段，投資人需留意進場點。",
-          "stock_name": "中美晶",
-          "stock_code": "5483",
-          "time": "2026-07-14 08:11",
-          "stocks": [
-            "5483",
-            "6488",
-            "2337",
-            "8112",
-            "6770"
-          ],
-          "comment_count": 2,
-          "like_count": 19,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180727956"
-        },
-        {
-          "id": "180717682",
-          "title": "AI晶片荒成本失控，華爾街擬推「算力期貨」解套",
-          "summary": "因應AI晶片供不應求導致成本失控，華爾街擬推動「算力期貨」以解決企業對高效算力的需求。此趨勢顯示AI算力已成為新戰略資源，產品競爭正轉向為資源競爭，相關產業鏈如聯發科、世芯-KY、創意、智原及巨有科技等受到市場關注。",
-          "stock_name": "聯發科",
-          "stock_code": "2454",
-          "time": "2026-07-13 17:17",
-          "stocks": [
-            "2454",
-            "3661",
-            "3443",
-            "3035",
-            "8227"
-          ],
-          "comment_count": 0,
-          "like_count": 22,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180717682"
-        }
-      ],
-      "kept_count_before_global_dedupe": 15,
-      "dedup_removed_count": 3
-    },
-    {
-      "concept_id": "C50880",
-      "concept_name": "HPC",
-      "category": "AI / 高效運算",
-      "note": "高效能運算，涵蓋 AI 伺服器與資料中心需求",
-      "source_url": "https://www.cmoney.tw/forum/concept/C50880",
-      "raw_count": 84,
-      "recent_count": 83,
-      "kept_count": 4,
-      "news": [
-        {
-          "id": "180760231",
-          "title": "鴻海 2317 | 2026/7/15盤前資訊分享",
-          "summary": "鴻海（2317）6 月營收 8,217.63 億元，年增 52.11%，AI 伺服器與雲端網路為主要成長動能。技術面處於回測 20 週均線築底階段，籌碼面法人尚未重新吸籌，且融資餘額與借券賣出壓力增加。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-15 08:30",
-          "stocks": [
-            "2317"
-          ],
-          "comment_count": 0,
-          "like_count": 10,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180760231"
-        },
-        {
-          "id": "180759622",
-          "title": "26-07-15 股市反彈. *高手勿進,浪費您的時間. *文中內容或圖片,請勿...",
-          "summary": "IBM因業績不如預期且示警企業將資本支出轉向AI伺服器與記憶體等基礎設施，導致股價大跌。此舉反映企業持續加碼AI基礎建設，帶動美光、輝達等半導體與記憶體族群走揚。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 07:47",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "1810",
-            "8039",
-            "2630"
-          ],
-          "comment_count": 5,
-          "like_count": 49,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759622"
-        },
-        {
-          "id": "180759375",
-          "title": "劉揚偉首揭鴻海轉投資成敗！點名2大成功案例，也認了2大踩雷案",
-          "summary": "鴻海董事長劉揚偉說明投資策略，強調時機、團隊執行力及協同效益，並嚴守三年資本紀律。鴻海直接投資成功率約61%，間接投資成功率約54%。劉揚偉點名鴻華先進為造車成功案例，IC設計服務公司鴻晶科技預計今年掛牌。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-15 07:33",
-          "stocks": [
-            "2317",
-            "2201",
-            "2258"
-          ],
-          "comment_count": 0,
-          "like_count": 36,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759375"
-        },
-        {
-          "id": "180755946",
-          "title": "回到600剛好而已！",
-          "summary": "晶心科（6533）受惠 Meta 自研 AI 晶片 Iris 預計 9 月於台積電投產，6 月營收創歷史新高，推測為認列階段性授權金。",
-          "stock_name": "晶心科",
-          "stock_code": "6533",
-          "time": "2026-07-14 23:10",
-          "stocks": [
-            "6533"
-          ],
-          "comment_count": 0,
-          "like_count": 10,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180755946"
-        }
-      ],
-      "kept_count_before_global_dedupe": 22,
-      "dedup_removed_count": 18
-    },
-    {
-      "concept_id": "C50912",
-      "concept_name": "AI PC",
-      "category": "AI 終端",
-      "note": "具備 NPU 的新一代個人電腦",
-      "source_url": "https://www.cmoney.tw/forum/concept/C50912",
-      "raw_count": 62,
-      "recent_count": 62,
-      "kept_count": 7,
-      "news": [
-        {
-          "id": "180765151",
-          "title": "韓國及陸廠大幅擴產，已沒有影響了嗎？大戶買的時候，就沒影響了！ SK海力士已於2...",
-          "summary": "SK海力士於2026年中啟動史上最大規模中長期擴產計畫，預計在南韓投資1,100兆韓元，重點建構AI記憶體生產體系，並瞄準高頻寬記憶體（HBM）與先進封裝產能，以強化AI相關記憶體供應鏈。",
-          "stock_name": "SK海力士",
-          "stock_code": "2408",
-          "time": "2026-07-15 10:04",
-          "stocks": [
-            "2408",
-            "2344",
-            "2337",
-            "6770",
-            "3006"
-          ],
-          "comment_count": 6,
-          "like_count": 14,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765151"
-        },
-        {
-          "id": "180764197",
-          "title": "🥰盤中旺宏，群創友達，力積電，華邦電，南亞科，走勢",
-          "summary": "記憶體族群受韓股三星與海力士大漲帶動，台股記憶體個股如華邦電、力積電盤中一度飆漲停，南亞科與旺宏亦呈現大漲走勢。根據最新現貨報價，DDR5與DDR4現貨價格呈現微漲或持平，DDR3則為微漲。",
-          "stock_name": "南亞科、華邦電、旺宏",
-          "stock_code": "2408, 2344, 2337",
-          "time": "2026-07-15 09:48",
-          "stocks": [
-            "2344",
-            "3481",
-            "6770",
-            "2337",
-            "2408"
-          ],
-          "comment_count": 5,
-          "like_count": 29,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764197"
-        },
-        {
-          "id": "180759581",
-          "title": "🎯今日一句話總結",
-          "summary": "台股目前處於短均空頭排列下的修正期，台積電法說會將於7月16日舉行。市場關注台積電能否守住2,390至2,400元關卡，若能站回2,430元以上，有助帶動指數收復45,000點。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 07:44",
-          "stocks": [
-            "2330",
-            "TWA00",
-            "00685L",
-            "0050",
-            "00981A"
-          ],
-          "comment_count": 2,
-          "like_count": 23,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180759581"
-        },
-        {
-          "id": "180758584",
-          "title": "不要懷疑記憶的美好～重點是記憶中要有你的存在😇",
-          "summary": "華邦電（2344）與旺宏（2337）為SLC NAND晶片供應商。集邦科技報告指出，因高層數3D NAND占用產能及成熟製程擴產有限，SLC NAND供給緊俏，加上AI邊緣運算與車用等利基應用需求成長，預估下半年合約價將。",
-          "stock_name": "華邦電、旺宏",
-          "stock_code": "2344, 2337",
-          "time": "2026-07-15 05:55",
-          "stocks": [
-            "2408",
-            "2344",
-            "8299",
-            "2337",
-            "6770"
-          ],
-          "comment_count": 95,
-          "like_count": 330,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180758584"
-        },
-        {
-          "id": "180757636",
-          "title": "南亞科~到底值多少？我用最保守的方式算給大家看。",
-          "summary": "南亞科第二季EPS為14.66元，上半年累計EPS達23.38元。公司預期下半年DRAM價格持續走高，AI伺服器與高頻寬記憶體需求結構性改變。",
-          "stock_name": "南亞科",
-          "stock_code": "2408",
-          "time": "2026-07-15 02:52",
-          "stocks": [
-            "2408"
-          ],
-          "comment_count": 6,
-          "like_count": 62,
-          "collected_count": 9,
-          "url": "https://www.cmoney.tw/forum/article/180757636"
-        },
-        {
-          "id": "180754704",
-          "title": "鴻海股東要注意接下來兩週空頭大戶的極限施壓避免出局",
-          "summary": "鴻海主力大戶將空單轉倉至八月份，預期外資將持續壓制股價。若股東能守住未來兩週，待7月30日股利發放及8月5日營收公布，iPhone與AI機櫃需求增溫，外資空單可能成為推升股價的燃料。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-14 22:01",
-          "stocks": [
-            "2317"
-          ],
-          "comment_count": 35,
-          "like_count": 294,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180754704"
-        },
-        {
-          "id": "180753989",
-          "title": "Vera Rubin & Rubin Ultra",
-          "summary": "NVIDIA Vera Rubin平台已進入量產，合作夥伴包括鴻海、仁寶、戴爾等系統製造商。Rubin Ultra為進階旗艦版本，採用垂直插入設計與800V高電壓配電架構，以支援更高GPU密度與散熱需求，金仁寶集團已取得。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-14 21:21",
-          "stocks": [
-            "2324",
-            "2312",
-            "9105"
-          ],
-          "comment_count": 1,
-          "like_count": 18,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180753989"
-        }
-      ],
-      "kept_count_before_global_dedupe": 18,
-      "dedup_removed_count": 11
-    },
-    {
-      "concept_id": "C50920",
-      "concept_name": "矽智財IP",
-      "category": "半導體設計",
-      "note": "IC 設計基礎模組，受惠 ASIC 與 SoC 開發需求",
-      "source_url": "https://www.cmoney.tw/forum/concept/C50920",
-      "raw_count": 86,
-      "recent_count": 85,
-      "kept_count": 5,
-      "news": [
-        {
-          "id": "180766723",
-          "title": "法人真的很賊 什麼都可以亂預估 不如預期，下修 下半年爆衝，上修 怎麼樣都有題材...",
-          "summary": "世芯-KY（3661）：原文指出法人對於公司營收預估的調整方式存在疑慮。法人常因營收不如預期而下修，或因預期下半年爆衝而上修，但若全年營收總額相同，僅是營收認列時間點分布不同，法人對於預估的邏輯與題材解讀便會產生差異。",
-          "stock_name": "世芯-KY",
-          "stock_code": "3661",
-          "time": "2026-07-15 10:37",
-          "stocks": [
-            "3661"
-          ],
-          "comment_count": 2,
-          "like_count": 10,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180766723"
-        },
-        {
-          "id": "180755749",
-          "title": "最新的產業數據顯示，RISC-V 架構在全球晶片的市佔率已經突破 25%，正式與...",
-          "summary": "晶心科（6533）所屬的RISC-V架構在全球晶片市佔率突破25%。RISC-V具備極致客製化能力，能滿足AI時代演算法快速變動需求，且作為中立開源標準，在美中科技戰背景下具地緣政治避險優勢，加上進入門檻低，成為新創與邊。",
-          "stock_name": "晶心科",
-          "stock_code": "6533",
-          "time": "2026-07-14 22:55",
-          "stocks": [
-            "6533"
-          ],
-          "comment_count": 2,
-          "like_count": 12,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180755749"
-        },
-        {
-          "id": "180751572",
-          "title": "我真心懷疑智原的公司老闆把資金拿去炒子公司雅特力，母公司放爛子公司漲好幾倍了，這...",
-          "summary": "智原（3035）：發文者質疑智原公司經營層將資金投入子公司雅特力，導致母公司智原營運表現不佳，且子公司股價漲幅遠高於母公司，認為此舉對智原股東不公平。",
-          "stock_name": "智原",
-          "stock_code": "3035",
-          "time": "2026-07-14 19:17",
-          "stocks": [
-            "3035"
-          ],
-          "comment_count": 4,
-          "like_count": 17,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180751572"
-        },
-        {
-          "id": "180748997",
-          "title": "甩轎？",
-          "summary": "世芯-KY（3661）近期股價波動劇烈，市場解讀為主力甩轎行為。投資人維持買入理由不變，持續關注公司基本面與後續營收表現。",
-          "stock_name": "世芯-KY",
-          "stock_code": "3661",
-          "time": "2026-07-14 17:25",
-          "stocks": [
-            "3661"
-          ],
-          "comment_count": 19,
-          "like_count": 136,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180748997"
-        },
-        {
-          "id": "180744602",
-          "title": "７／１４日午盤以後，是借券放空賣出的還券買盤？？？！！！",
-          "summary": "晶心科（6533）於7月14日開高後隨大盤震盪拉回，在211至212元附近獲得支撐。午盤後隨大盤跌幅收斂，買盤積極進場，股價突破早盤225.5元高點，最高衝至228元。市場推測此波買氣可能為借券放空者的還券回補買盤。",
-          "stock_name": "晶心科",
-          "stock_code": "6533",
-          "time": "2026-07-14 13:32",
-          "stocks": [
-            "6533"
-          ],
-          "comment_count": 1,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180744602"
-        }
-      ],
-      "kept_count_before_global_dedupe": 12,
-      "dedup_removed_count": 7
-    },
-    {
-      "concept_id": "C50916",
-      "concept_name": "FOPLP扇出型封裝",
-      "category": "先進封裝",
-      "note": "面板級扇出封裝，潛在降低先進封裝成本",
-      "source_url": "https://www.cmoney.tw/forum/concept/C50916",
-      "raw_count": 96,
-      "recent_count": 93,
-      "kept_count": 9,
-      "news": [
-        {
-          "id": "180765532",
-          "title": "昨天洗掉很多大戶",
-          "summary": "群創（3481）：近期外資小幅買超3萬多張，市場關注大戶是否因國際情勢變化而回補持股。投資人先前買進該股主要看好其玻璃封裝技術發展，以及對未來股價表現的預期。",
-          "stock_name": "群創",
-          "stock_code": "3481",
-          "time": "2026-07-15 10:12",
-          "stocks": [
-            "3481"
-          ],
-          "comment_count": 3,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765532"
-        },
-        {
-          "id": "180764493",
-          "title": "先進封裝",
-          "summary": "東捷（8064）、日月光投控（3711）：原文指出看好台積電資本支出持續旺盛，預期將帶動先進封裝及相關設備產業發展。",
-          "stock_name": "東捷、日月光投控",
-          "stock_code": "8064, 3711",
-          "time": "2026-07-15 09:52",
-          "stocks": [
-            "8064",
-            "3711"
-          ],
-          "comment_count": 0,
-          "like_count": 6,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764493"
+          "url": "https://www.cmoney.tw/forum/article/180765026"
         },
         {
           "id": "180760568",
           "title": "群創 3481 | 2026/7/15 盤前資訊分享",
-          "summary": "群創（3481）：公司基本面雖有改善，但第二季獲利與現金流尚未公布，且目前 P/B 約 2.01 倍已高於同業，顯示市場對 FOPLP 與 CarUX 的成長預期已提前反映。",
+          "summary": "群創（3481）：公司2026年第一季毛利率14.43%、EPS 0.20元，6月營收年增17.25%。目前P/B約2.01倍，高於同業，顯示FOPLP與CarUX成長預期已提前反映。",
           "stock_name": "群創",
           "stock_code": "3481",
           "time": "2026-07-15 08:46",
           "stocks": [
             "3481"
           ],
-          "comment_count": 0,
-          "like_count": 16,
+          "comment_count": 1,
+          "like_count": 36,
           "collected_count": 0,
           "url": "https://www.cmoney.tw/forum/article/180760568"
         },
         {
-          "id": "180758290",
-          "title": "費半反彈、台指夜盤站回45000點、今天小心開高不是等於止穩",
-          "summary": "台股受美股 CPI 降溫激勵，科技股與半導體族群反彈，台指期夜盤重回 45,000 點。然而，台積電 ADR 表現相對謹慎，且外資在期貨市場仍有大量空方部位。",
-          "stock_name": "群創",
-          "stock_code": "3481",
-          "time": "2026-07-15 05:38",
+          "id": "180758569",
+          "title": "7/15 美股收盤重點：通膨降溫，AI股強力反彈！",
+          "summary": "美國6月CPI數據低於預期，通膨緩和跡象增強降息信心，資金回流科技股。記憶體股如美光（MU）上漲4.92%、海力士ADR大漲27.29%；AI晶片股輝達（NVDA）上漲4.06%、英特爾上漲4.50%。",
+          "stock_name": "輝達、美光",
+          "stock_code": "NVDA、MU",
+          "time": "2026-07-15 05:52",
           "stocks": [
-            "3481",
-            "2409",
-            "6182",
-            "6770",
-            "2344"
-          ],
-          "comment_count": 5,
-          "like_count": 81,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758290"
-        },
-        {
-          "id": "180754510",
-          "title": "季線127-128 止穩 還有機會 今天故意收在季線 故意的 還有機會上看170...",
-          "summary": "東捷（8064）：原文指出玻璃設備為COPOS產線必備，看好東捷實力，並提到股價在季線127至128元處止穩，未來有機會上看170元。",
-          "stock_name": "東捷",
-          "stock_code": "8064",
-          "time": "2026-07-14 21:47",
-          "stocks": [
-            "8064"
-          ],
-          "comment_count": 3,
-          "like_count": 11,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180754510"
-        },
-        {
-          "id": "180753504",
-          "title": "今天盤中一度快要殺到跌停，隨即可以看到外盤許多大單，我果斷在開會前按下跌停買進，...",
-          "summary": "群創近期股價一度殺至跌停，盤後數據顯示基北、大魔、高勝等外資券商在跌停附近大量買超，外資成本約在61.44元。分析指出主力透過洗盤測試支撐，但上方仍有壓力。",
-          "stock_name": "群創、蔚華科",
-          "stock_code": "3481, 3055",
-          "time": "2026-07-14 20:59",
-          "stocks": [
-            "3481"
-          ],
-          "comment_count": 8,
-          "like_count": 118,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180753504"
-        },
-        {
-          "id": "180749666",
-          "title": "今天00981A又加碼！你還在懷疑ABF嗎？",
-          "summary": "法人資金持續布局ABF載板與先進封裝產業，南電（8046）與日月光投控（3711）獲持續加碼。此外，台達電（2308）亦獲法人回補，顯示法人會依照評價與資金配置動態調整部位，並非僅單向操作特定個股。",
-          "stock_name": "南電、日月光投控、台達電",
-          "stock_code": "8046, 3711, 2308",
-          "time": "2026-07-14 17:50",
-          "stocks": [
-            "00981A",
+            "2330",
             "3711",
             "2308",
-            "3037",
-            "8046"
+            "2301",
+            "3707"
           ],
-          "comment_count": 9,
-          "like_count": 77,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180749666"
+          "comment_count": 0,
+          "like_count": 14,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180758569"
         },
         {
-          "id": "180729049",
-          "title": "還在懷疑ABF？00981A已經連續加碼，你還在等什麼！",
-          "summary": "欣興（3037）、日月光投控（3711）與南電（8046）近期獲法人持續加碼布局。法人看重的是AI伺服器、先進封裝及ABF載板未來幾年的產業需求，並非僅關注短期股價漲跌，顯示法人正於市場半信半疑之際進行籌碼配置。",
-          "stock_name": "欣興、日月光投控、南電",
-          "stock_code": "3037, 3711, 8046",
-          "time": "2026-07-14 09:02",
+          "id": "180758567",
+          "title": "7/14日 一路追蹤00981A 直到空頭 第43篇",
+          "summary": "法人籌碼動向顯示，近期加碼日月光（3711）約145張，三個交易日累積進場資金近16億元；南電（8046）加碼288張，三個交易日累計加碼約7.1億元；台達電（2308）加碼129張，累計約2.4億元。",
+          "stock_name": "日月光、南電、台達電",
+          "stock_code": "3711、8046、2308",
+          "time": "2026-07-15 05:51",
           "stocks": [
+            "2308",
             "00981A",
-            "3037",
             "3711",
-            "4958",
-            "8046"
+            "8046",
+            "6510"
           ],
-          "comment_count": 6,
-          "like_count": 53,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180729049"
-        },
-        {
-          "id": "180727789",
-          "title": "還會續跌嗎❤️稍後8點15分語音直播，先加入報團聽免費直播！",
-          "summary": "台積電（2330）公告2026年6月合併營收約4,426.8億元，月增6.2%、年增67.9%；上半年累計營收達2兆4,044.8億元，年增35.6%，單月與上半年營收皆創下歷史新高紀錄。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-14 07:57",
-          "stocks": [
-            "TWA00",
-            "1802",
-            "2327",
-            "3711",
-            "6285"
-          ],
-          "comment_count": 60,
-          "like_count": 374,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180727789"
+          "comment_count": 26,
+          "like_count": 101,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180758567"
         }
       ],
-      "kept_count_before_global_dedupe": 16,
-      "dedup_removed_count": 7
+      "kept_count_before_global_dedupe": 13,
+      "dedup_removed_count": 2
     },
     {
       "concept_id": "C50931",
@@ -1508,157 +1212,114 @@
       "category": "先進封裝",
       "note": "下一代高階封裝材料，與 AI 晶片載板升級有關",
       "source_url": "https://www.cmoney.tw/forum/concept/C50931",
-      "raw_count": 87,
-      "recent_count": 87,
-      "kept_count": 8,
+      "raw_count": 88,
+      "recent_count": 84,
+      "kept_count": 6,
       "news": [
         {
-          "id": "180766908",
-          "title": "最後想說的是 相信 FOPLP+TGV + COPOS 黃金三角 相信 GLW ...",
-          "summary": "市場觀點指出，未來產業發展重點在於FOPLP（面板級扇出型封裝）、TGV（玻璃通孔）及光耦合技術的結合。此外，玻璃基板技術與SpaceX衛星產業鏈亦被視為具備長期發展潛力的領域，相關技術與產業應用將持續受到市場關注。",
-          "stock_name": "智原、啟碁、台光電",
-          "stock_code": "3035, 6285, 2383",
-          "time": "2026-07-15 10:41",
+          "id": "180785796",
+          "title": "除了玻璃基板 蔚華科還有的WoW 先進 3D 封裝檢測",
+          "summary": "台積電（2330）正全面推進WoW先進3D封裝技術，利用混合鍵合製程將邏輯晶片與記憶體晶圓垂直黏合，以突破AI晶片記憶體牆瓶頸。",
+          "stock_name": "台積電、華邦電",
+          "stock_code": "2330, 2344",
+          "time": "2026-07-16 00:19",
           "stocks": [
-            "3491",
-            "6285",
-            "8027",
-            "6207",
-            "2464"
+            "3055"
           ],
           "comment_count": 0,
-          "like_count": 36,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180766908"
-        },
-        {
-          "id": "180759251",
-          "title": "德國人醒了！台灣投資人錢包趴了",
-          "summary": "德國政府出資9000萬歐元採購5萬架烏克蘭製造的無人機，搭載美國Auterion AI軟體，具備末端自主追蹤與抗干擾能力。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 07:24",
-          "stocks": [
-            "2330",
-            "TWA00",
-            "3481",
-            "6770",
-            "00685L"
-          ],
-          "comment_count": 20,
-          "like_count": 40,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180759251"
-        },
-        {
-          "id": "180759055",
-          "title": "各位同學早上好～ ～今天天氣還不錯～ 各位正在吃早餐～還是 準備在上班的途中？ ...",
-          "summary": "群創受台指期夜盤大漲激勵，預期開盤將出現正價差軋空行情。外資大摩與高盛近期於56至57元區間大量吸籌，且融資籌碼大幅清洗。技術面以60日均線46.78元為波段多方防守區，若守穩該區間，後續將受惠於先進封裝轉型利多。",
-          "stock_name": "群創",
-          "stock_code": "3481",
-          "time": "2026-07-15 07:05",
-          "stocks": [
-            "3481"
-          ],
-          "comment_count": 7,
-          "like_count": 51,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180759055"
-        },
-        {
-          "id": "180758735",
-          "title": "「7月15日台股——開盤前分析、推測」國際指數及各項重要連動",
-          "summary": "美股科技與半導體板塊反彈，費城半導體指數漲逾2.5%，美光與輝達強勢上漲，惟台積電ADR逆勢小幅收黑。台股雖受國際盤回穩激勵，但台指VIX指數仍居高不下，顯示市場內部避險情緒濃厚，法人買賣超動向與台積電法說前表現為後續觀。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 06:23",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2303",
-            "2344",
-            "3481"
-          ],
-          "comment_count": 18,
-          "like_count": 89,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758735"
-        },
-        {
-          "id": "180757792",
-          "title": "半導體廠積極擴產，封測設備與載板營收亮眼",
-          "summary": "均華（6640）公布第二季自結稅後淨利1.23億元，EPS為4.33元，上半年營收年增41.49%，先進封裝設備訂單能見度已排程至2027年。",
-          "stock_name": "均華、京元電子",
-          "stock_code": "6640、2449",
-          "time": "2026-07-15 03:34",
-          "stocks": [
-            "TWA00",
-            "3037",
-            "6640",
-            "2449"
-          ],
-          "comment_count": 0,
-          "like_count": 13,
+          "like_count": 16,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180757792"
+          "url": "https://www.cmoney.tw/forum/article/180785796"
         },
         {
-          "id": "180757153",
-          "title": "南電基本面轉好，但股價已嚴重提前反映盼同學會不攔截發文讓通行",
-          "summary": "南電（8046）雖有AI伺服器與ABF載板需求回升等利多，但目前本益比偏高，且近期融資餘額快速增加，主力籌碼出現賣超背離現象。",
-          "stock_name": "南電",
-          "stock_code": "8046",
-          "time": "2026-07-15 01:09",
+          "id": "180785476",
+          "title": "AI晶片變大隻 載板訂單肥滋滋?",
+          "summary": "南電（8046）、欣興（3037）、景碩（3189）：因GPU與ASIC朝向多晶粒、高層數封裝發展，ABF載板層數與面積需求翻倍，市場估計明年供需缺口將擴大至26%。",
+          "stock_name": "南電、欣興、景碩",
+          "stock_code": "8046, 3037, 3189",
+          "time": "2026-07-16 00:00",
           "stocks": [
             "8046",
-            "2327",
-            "3532",
-            "6488",
-            "TWA00"
+            "3037",
+            "3189",
+            "4958",
+            "2330"
           ],
           "comment_count": 1,
-          "like_count": 8,
+          "like_count": 9,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180757153"
+          "url": "https://www.cmoney.tw/forum/article/180785476"
         },
         {
-          "id": "180756445",
-          "title": "CPI數據與盤後解析",
-          "summary": "美國6月CPI數據低於預期，費城半導體指數大漲3.51%。台股個股方面，欣興遭外資賣超，盤中跌破布林下軌後拉回；中探針成交量放大，摩根大通反手買超；台達電盤中回踩布林下軌後止跌回升，外資出現激烈換手。",
-          "stock_name": "欣興、中探針、台達電",
-          "stock_code": "3037, 6217, 2308",
-          "time": "2026-07-14 23:48",
+          "id": "180785072",
+          "title": "【07/15 熱門股分析-力積電(6770)】",
+          "summary": "力積電（6770）：該股近期成交量達197,628張，外資買超54,266張，自營商買超2,604張，投信則賣超12張。儘管市場有估值被低估之說法，但因過去EPS波動劇烈，且投信持續出脫，技術面雖呈現多方訊號，但市場籌碼。",
+          "stock_name": "力積電",
+          "stock_code": "6770",
+          "time": "2026-07-15 23:30",
           "stocks": [
-            "3037",
-            "2308",
-            "6217"
+            "3481",
+            "2409",
+            "6770",
+            "2408",
+            "1303"
           ],
-          "comment_count": 2,
-          "like_count": 28,
+          "comment_count": 1,
+          "like_count": 11,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756445"
+          "url": "https://www.cmoney.tw/forum/article/180785072"
         },
         {
-          "id": "180753062",
-          "title": "7/15柴柴媽當沖關注口袋名單🐶",
-          "summary": "台勝科股價維持強勢多頭，回測5日線後反彈創歷史新高。精材技術面維持多方結構，法人籌碼轉強。南電回測5日線後反彈創收盤新高，投信持續買超。雙鍵跌破季線後強勢表態，重新站回所有均線之上。南亞科回測5日線後反彈，重新站回月線。",
-          "stock_name": "台勝科",
-          "stock_code": "3532",
-          "time": "2026-07-14 20:39",
+          "id": "180780781",
+          "title": "7/15 來關心台灣前五十大權值股： 國巨",
+          "summary": "國巨（2327）：目前為台灣前五十大權值股中表現較弱勢者，顯示該族群存在一定程度的套牢量。技術面上，股價跌至60日均線，市場預期將往20日均線進行技術性反彈。此外，被動元件族群中台勝科表現相對強勢創下新高。",
+          "stock_name": "國巨",
+          "stock_code": "2327",
+          "time": "2026-07-15 19:30",
           "stocks": [
             "3532",
-            "3374",
             "8046",
-            "4764",
-            "2408"
+            "2408",
+            "1303",
+            "2327"
           ],
-          "comment_count": 14,
-          "like_count": 50,
+          "comment_count": 26,
+          "like_count": 216,
           "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180753062"
+          "url": "https://www.cmoney.tw/forum/article/180780781"
+        },
+        {
+          "id": "180773969",
+          "title": "秦騙子的股票下不了車了不要進去當韭菜",
+          "summary": "蔚華科（3055）：市場對其營運狀況提出質疑，指出公司近年設備銷售進度緩慢，且目前本益比已達120倍。提醒投資人應審慎評估公司基本面與營運實績，避免因市場消息盲目投入，以免面臨高估值風險。",
+          "stock_name": "蔚華科",
+          "stock_code": "3055",
+          "time": "2026-07-15 13:27",
+          "stocks": [
+            "3055"
+          ],
+          "comment_count": 8,
+          "like_count": 2,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180773969"
+        },
+        {
+          "id": "180772929",
+          "title": "能見度達明年Q1 CoWoS設備代工+自製攀升助營運添柴火",
+          "summary": "雷科（6207）：受惠半導體設備需求強勁，訂單能見度達明年第一季。第四季起 CoWoS 設備將從純代理跨入 OEM 代工，並有探針卡清針機、TSV 設備陸續交貨。",
+          "stock_name": "雷科",
+          "stock_code": "6207",
+          "time": "2026-07-15 12:58",
+          "stocks": [
+            "6207"
+          ],
+          "comment_count": 3,
+          "like_count": 28,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180772929"
         }
       ],
-      "kept_count_before_global_dedupe": 17,
+      "kept_count_before_global_dedupe": 15,
       "dedup_removed_count": 9
     },
     {
@@ -1667,81 +1328,164 @@
       "category": "半導體",
       "note": "DRAM、NAND 與 AI 伺服器需求相關",
       "source_url": "https://www.cmoney.tw/forum/concept/C50913",
-      "raw_count": 75,
-      "recent_count": 75,
-      "kept_count": 4,
+      "raw_count": 73,
+      "recent_count": 72,
+      "kept_count": 9,
       "news": [
         {
-          "id": "180767035",
-          "title": "💰盤中焦點股💰 1.亞翔(6139)：6月營收年增近五成，H1寫同期新高，多方歡...",
-          "summary": "亞翔6月營收年增近五成，上半年寫同期新高。尖點6月及第二季營收創新高，正擴產消化訂單。力積電董事長看好成熟製程毛利率有望突破4成，激勵股價跳空漲停。",
-          "stock_name": "亞翔、尖點、力積電",
-          "stock_code": "6139, 8021, 6770",
-          "time": "2026-07-15 10:44",
+          "id": "180786791",
+          "title": "昨天早上吃油還不錯",
+          "summary": "南亞科主要產品為DDR5記憶體，其股價表現反映產業性質與市場需求，並非單純受行情波動影響。",
+          "stock_name": "南亞科",
+          "stock_code": "2408",
+          "time": "2026-07-16 02:39",
           "stocks": [
-            "6770",
-            "3006",
-            "2344",
-            "2313",
-            "6505"
-          ],
-          "comment_count": 15,
-          "like_count": 47,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180767035"
-        },
-        {
-          "id": "180766532",
-          "title": "7/15小摩發布華邦電研究報告",
-          "summary": "華邦電（2344）：摩根大通於7月15日發布最新研究報告，給予華邦電優於大盤的評等，並設定未來12個月目標價為360元。",
-          "stock_name": "華邦電",
-          "stock_code": "2344",
-          "time": "2026-07-15 10:32",
-          "stocks": [
+            "2408",
+            "1303",
+            "TWA00",
+            "2330",
             "2344"
           ],
-          "comment_count": 2,
+          "comment_count": 3,
           "like_count": 5,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180766532"
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786791"
         },
         {
-          "id": "180762887",
-          "title": "SLC NAND下半年恐漲120%至170%",
-          "summary": "華邦電（2344）：根據集邦諮詢研調報告，因大廠產能集中於HBM及高層數3D NAND，排擠成熟製程，導致SLC NAND面臨結構性短缺，預估下半年價格漲幅達120%至170%。",
-          "stock_name": "華邦電",
-          "stock_code": "2344",
-          "time": "2026-07-15 09:29",
+          "id": "180786009",
+          "title": "除權前後看法？",
+          "summary": "青雲上半年EPS約70元，除權後股本為5.5億元，EPS調整為47元。若以除權後股價250元計算，本益比約5倍。投資人可依據下半年獲利預估，推算5至7倍本益比下的合理股價區間，並關注明年配息能力。",
+          "stock_name": "青雲",
+          "stock_code": "5386",
+          "time": "2026-07-16 00:37",
           "stocks": [
-            "2344"
+            "5386"
           ],
           "comment_count": 1,
-          "like_count": 14,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180762887"
+          "like_count": 4,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180786009"
         },
         {
-          "id": "180762397",
-          "title": "逃命通道?",
-          "summary": "台積電（2330）：外資於7月14日現貨賣超518.93億元，台指期淨空單增加至83,390口。外資呈現現貨倒貨、期貨加空的偏空背離格局，市場對於後續反彈或回升走勢看法分歧。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-15 09:21",
+          "id": "180784641",
+          "title": "給台塑總管理處致上最敬禮。",
+          "summary": "台塑集團透過高度交互持股與交叉持股，產生外溢效應，使集團市值大幅成長。南亞科與南電等子公司受惠於AI需求與高階材料開發，業績顯著提升。",
+          "stock_name": "台塑集團",
+          "stock_code": "1303",
+          "time": "2026-07-15 22:56",
           "stocks": [
-            "2330",
             "2408",
-            "2317",
-            "2454",
-            "TWA00"
+            "1326",
+            "1605",
+            "2603",
+            "2337"
+          ],
+          "comment_count": 3,
+          "like_count": 58,
+          "collected_count": 7,
+          "url": "https://www.cmoney.tw/forum/article/180784641"
+        },
+        {
+          "id": "180783066",
+          "title": "又訂購機器設備了  還是ASML",
+          "summary": "旺宏（2337）近期持續擴充設備，於7月14日以33.32億元向台灣艾司摩爾訂購機器設備一套。此前於4月至5月間，亦陸續向東京電子、科林、科磊及應材等國際大廠訂購總金額達80.5億元之機器設備，顯示公司積極進行產能與技術。",
+          "stock_name": "旺宏",
+          "stock_code": "2337",
+          "time": "2026-07-15 21:34",
+          "stocks": [
+            "2337"
+          ],
+          "comment_count": 0,
+          "like_count": 26,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180783066"
+        },
+        {
+          "id": "180782979",
+          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
+          "summary": "華新科（2492）因最近6個營業日累積收盤價跌幅達36.43%，且起迄收盤價價差達120.5元，遭證交所列入處置股，自7月16日起至7月29日實施20分鐘撮合交易。",
+          "stock_name": "華新科",
+          "stock_code": "2492",
+          "time": "2026-07-15 21:28",
+          "stocks": [
+            "2303",
+            "2408",
+            "2313",
+            "1326",
+            "4916"
+          ],
+          "comment_count": 20,
+          "like_count": 108,
+          "collected_count": 3,
+          "url": "https://www.cmoney.tw/forum/article/180782979"
+        },
+        {
+          "id": "180782200",
+          "title": "威剛第一季營收261億，年增率163%，毛利率狂飆至55.7%，營業利益率更達4...",
+          "summary": "威剛（3260）公告第一季營收達261億元，年增率163%，毛利率提升至55.7%，營業利益率達47.05%，單季EPS為30.05元。市場預估全年EPS挑戰120元，目前本益比約4倍。",
+          "stock_name": "威剛",
+          "stock_code": "3260",
+          "time": "2026-07-15 20:46",
+          "stocks": [
+            "3260"
+          ],
+          "comment_count": 6,
+          "like_count": 30,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782200"
+        },
+        {
+          "id": "180781347",
+          "title": "ASML上修財測，AI風向球還沒結束，需求更多設備用搶的",
+          "summary": "南亞科（2408）已購入EUV設備，具備DDR4與DDR5產品線。受惠於TrendForce報價數據，DDR4 3200報價已達79.4，預計第三季續漲15%。",
+          "stock_name": "南亞科",
+          "stock_code": "2408",
+          "time": "2026-07-15 20:01",
+          "stocks": [
+            "2408"
           ],
           "comment_count": 2,
-          "like_count": 9,
+          "like_count": 18,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180762397"
+          "url": "https://www.cmoney.tw/forum/article/180781347"
+        },
+        {
+          "id": "180779165",
+          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
+          "summary": "威剛智聯與AWS合作，透過雲端運算與數位孿生技術，將機器人部署時間縮短三分之二。東元於日本展出機器人關節模組與電動載具動力系統。昇達科決議以17億元收購巨頻科技51%股權，預計8月完成交割以強化通訊產品組合。",
+          "stock_name": "威剛、東元、昇達科",
+          "stock_code": "3260, 1504, 3491",
+          "time": "2026-07-15 18:07",
+          "stocks": [
+            "3491",
+            "1504",
+            "3260",
+            "6196",
+            "2313"
+          ],
+          "comment_count": 21,
+          "like_count": 117,
+          "collected_count": 5,
+          "url": "https://www.cmoney.tw/forum/article/180779165"
+        },
+        {
+          "id": "180777344",
+          "title": "沒有被吃文，再幫你多打一劑雞血！ 下面的圖ㄧ，是2026年Q1的庫存組合，製成品...",
+          "summary": "群聯（8299）2026年第一季財報顯示，製成品庫存約6.2億元，其餘多為原料。公司採取保守財務策略，提列約10.3億元之存貨損失，若排除此項提列，該季EPS將增加5元。此外，公司亦持續投入KV快取技術研發。",
+          "stock_name": "群聯",
+          "stock_code": "8299",
+          "time": "2026-07-15 16:28",
+          "stocks": [
+            "8299"
+          ],
+          "comment_count": 3,
+          "like_count": 99,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180777344"
         }
       ],
-      "kept_count_before_global_dedupe": 14,
-      "dedup_removed_count": 10
+      "kept_count_before_global_dedupe": 16,
+      "dedup_removed_count": 7
     },
     {
       "concept_id": "C50800",
@@ -1749,146 +1493,27 @@
       "category": "AI 伺服器",
       "note": "AI 伺服器功耗提升，帶動散熱規格升級",
       "source_url": "https://www.cmoney.tw/forum/concept/C50800",
-      "raw_count": 98,
-      "recent_count": 97,
-      "kept_count": 7,
+      "raw_count": 17,
+      "recent_count": 17,
+      "kept_count": 1,
       "news": [
         {
-          "id": "180766614",
-          "title": "相關：乙盛-KY【時報-台北電】乙盛-KY(5243)7月15日10時受邀參加福...",
-          "summary": "乙盛-KY（5243）於7月15日上午10時受邀參加福邦證券舉辦之鴻海暨轉投資企業主題系列座談會，會中將說明公司營運概況，地點位於政大公企中心。",
-          "stock_name": "乙盛-KY",
-          "stock_code": "5243",
-          "time": "2026-07-15 10:34",
+          "id": "180778160",
+          "title": "5 月獲利非常強 已公告數字： * 5 月營收：158.71 億元 * 稅前淨利...",
+          "summary": "奇鋐公告5月營收158.71億元，稅後淨利31.52億元，EPS為8.03元。對照去年同期，營收成長60.6%，稅後淨利成長132.3%，EPS成長129.4%。",
+          "stock_name": "奇鋐",
+          "stock_code": "3017",
+          "time": "2026-07-15 17:14",
           "stocks": [
-            "2354"
+            "3017"
           ],
-          "comment_count": 0,
-          "like_count": 3,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180766614"
-        },
-        {
-          "id": "180765970",
-          "title": "散熱加油！",
-          "summary": "一詮（2486）連續四個月營收成長，1至6月年成長率約25%，第一季EPS為0.29元。協禧（3071）亦連續四個月營收成長，1至6月年成長率約35%，第一季受業外匯兌損失影響，EPS為0.15元。",
-          "stock_name": "一詮、協禧",
-          "stock_code": "2486, 3071",
-          "time": "2026-07-15 10:20",
-          "stocks": [
-            "3071",
-            "2486",
-            "3017",
-            "3324",
-            "8996"
-          ],
-          "comment_count": 0,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765970"
-        },
-        {
-          "id": "180754930",
-          "title": "07/14 主動式ETF共識｜152檔加碼瘋狂抄底，禾伸堂重挫遭大買",
-          "summary": "禾伸堂（3026）股價重挫 9.94% 逼近跌停，卻獲 4 家基金經理人同步加碼，單日持倉暴增 17.04%。此外，南電（8046）獲 7 家基金加碼，持倉變動率達 6.55%，聯發科（2454）雖跌 4.31% 仍獲。",
-          "stock_name": "禾伸堂",
-          "stock_code": "3026",
-          "time": "2026-07-14 22:11",
-          "stocks": [
-            "00981A",
-            "3026",
-            "8046",
-            "2454",
-            "3037",
-            "3711",
-            "6223",
-            "2383",
-            "6488",
-            "6531",
-            "2345",
-            "3017",
-            "2308",
-            "2327",
-            "1303"
-          ],
-          "comment_count": 1,
-          "like_count": 14,
+          "comment_count": 10,
+          "like_count": 63,
           "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180754930"
-        },
-        {
-          "id": "180749514",
-          "title": "[00992A 操作日報] 盤勢震盪，經理人新建倉被動元件",
-          "summary": "主動式ETF 00992A於盤勢回檔時，新建倉被動元件廠禾伸堂（3026）共459張，權重提升近1%。同時，經理人針對高價電子與熱門題材股進行調節，減碼測試介面大廠穎崴（6515）21張，並微幅調節散熱指標股奇鋐（301。",
-          "stock_name": "禾伸堂、穎崴、奇鋐",
-          "stock_code": "3026, 6515, 3017",
-          "time": "2026-07-14 17:41",
-          "stocks": [
-            "00992A",
-            "3026",
-            "6515",
-            "3017",
-            "7751"
-          ],
-          "comment_count": 0,
-          "like_count": 25,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180749514"
-        },
-        {
-          "id": "180749086",
-          "title": "7/14 00992A 第三家接禾伸堂的刀",
-          "summary": "禾伸堂（3026）因被動元件族群修正，連續兩日收盤貼近跌停。群益投信旗下 ETF 新進場買入 459 張，成為繼復華與富邦投信後，第三家進場接刀的投信。",
-          "stock_name": "禾伸堂",
-          "stock_code": "3026",
-          "time": "2026-07-14 17:28",
-          "stocks": [
-            "00992A",
-            "6515",
-            "3017",
-            "7751"
-          ],
-          "comment_count": 1,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180749086"
-        },
-        {
-          "id": "180736188",
-          "title": "6月營收大增，表示機器人挹注已見成效！！！趁大盤慌亂時買！！！",
-          "summary": "鴻準（2354）公告6月營收大增，原文指出該營收成長顯示機器人業務挹注已見成效。",
-          "stock_name": "鴻準",
-          "stock_code": "2354",
-          "time": "2026-07-14 10:38",
-          "stocks": [
-            "2354"
-          ],
-          "comment_count": 3,
-          "like_count": 7,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180736188"
-        },
-        {
-          "id": "180732983",
-          "title": "股王不好，台股不會好",
-          "summary": "原文指出股王股價已下修30%，認為千金股應跟進下修，並提到奇鋐（3017）與健策（3653）股價已達標，其餘未下修者應持續修正。",
-          "stock_name": "奇鋐、健策",
-          "stock_code": "3017, 3653",
-          "time": "2026-07-14 09:56",
-          "stocks": [
-            "5274",
-            "3017",
-            "3653",
-            "2330",
-            "2317"
-          ],
-          "comment_count": 17,
-          "like_count": 191,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180732983"
+          "url": "https://www.cmoney.tw/forum/article/180778160"
         }
       ],
-      "kept_count_before_global_dedupe": 8,
+      "kept_count_before_global_dedupe": 2,
       "dedup_removed_count": 1
     },
     {
@@ -1897,138 +1522,32 @@
       "category": "AI 伺服器",
       "note": "資料中心高速傳輸需求提升",
       "source_url": "https://www.cmoney.tw/forum/concept/C50911",
-      "raw_count": 81,
-      "recent_count": 79,
-      "kept_count": 7,
+      "raw_count": 42,
+      "recent_count": 39,
+      "kept_count": 1,
       "news": [
         {
-          "id": "180766351",
-          "title": "源傑成績好意外嗎 每支掛牌前帳馬都很漂亮 開始交易後就校正回歸 還有他開放交易後...",
-          "summary": "聯鈞（3450）近期營收成長主要受惠於源傑與捷敏的貢獻，但對EPS的實際挹注程度仍待觀察。隨著源傑掛牌，市場可能將聯鈞重新定位為封測廠，進而影響其本益比評價。",
-          "stock_name": "聯鈞",
-          "stock_code": "3450",
-          "time": "2026-07-15 10:28",
+          "id": "180780097",
+          "title": "晶豪科、力積電、華邦電籌碼面深度分析：記憶體多頭下，法人在想什麼？ 大家好，最近...",
+          "summary": "晶豪科、力積電、華邦電受惠DRAM記憶體缺貨漲價循環。晶豪科上半年營收年增242.62%，外資持股約31.57%。力積電具記憶體與邏輯製程雙引擎，但外資近期連續賣超且融資餘額偏高。華邦電法人買賣超波動劇烈，市場看法分歧。",
+          "stock_name": "晶豪科、力積電、華邦電",
+          "stock_code": "3006, 6770, 2344",
+          "time": "2026-07-15 19:00",
           "stocks": [
-            "3450",
-            "4977",
-            "3163",
-            "4979",
-            "3081"
+            "3363",
+            "3006",
+            "6770",
+            "2344",
+            "1303"
           ],
-          "comment_count": 1,
-          "like_count": 1,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180766351"
-        },
-        {
-          "id": "180764845",
-          "title": "無論封裝型態與傳輸媒介的技術路線怎麼爭鳴，「磷化銦（InP）」作為下一代高頻、高...",
-          "summary": "磷化銦（InP）作為下一代高頻高速光電轉換核心材料，在光通訊技術路線中具戰略地位。無論是1.6T時代的可插拔模組、LPO/LRO技術，或是矽光子CPO架構，皆需依賴磷化銦雷射器作為發光核心。",
-          "stock_name": "全新",
-          "stock_code": "2455",
-          "time": "2026-07-15 09:58",
-          "stocks": [
-            "2455"
-          ],
-          "comment_count": 0,
-          "like_count": 8,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180764845"
-        },
-        {
-          "id": "180761214",
-          "title": "迎接明天台積法說，法說之後那些造假言論都會消失什麼搶單延遲都是假的，迎接7月營收...",
-          "summary": "上詮（3363）：貼文指出台積電法說會即將召開，預期法說會後關於搶單延遲等市場傳言將會消失，並看好公司七月營收表現，預期將呈現月月增長的趨勢。",
-          "stock_name": "上詮",
-          "stock_code": "3363",
-          "time": "2026-07-15 09:05",
-          "stocks": [
-            "3363"
-          ],
-          "comment_count": 1,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180761214"
-        },
-        {
-          "id": "180754304",
-          "title": "投信不要跑喔",
-          "summary": "聯亞（3081）：貼文提及聯亞過去股價曾飆漲至三千元以上，並指出投信法人在當時的股價表現中扮演了幕後推手的角色，呼籲投資人對該公司應保持信心。",
-          "stock_name": "聯亞",
-          "stock_code": "3081",
-          "time": "2026-07-14 21:38",
-          "stocks": [
-            "3081"
-          ],
-          "comment_count": 0,
-          "like_count": 23,
+          "comment_count": 4,
+          "like_count": 53,
           "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180754304"
-        },
-        {
-          "id": "180749908",
-          "title": "2026/07/14 00403A今日操作明細",
-          "summary": "00403A 持股日報顯示，經理人操作明細包含建倉大立光 30 張，加碼南亞 500 張、南電 110 張、環球晶 98 張及信驊 15 張，並刪除華星光 1 張持股。",
-          "stock_name": "大立光、南亞、南電、環球晶、信驊、華星光",
-          "stock_code": "3008、1303、8046、6488、5274、4979",
-          "time": "2026-07-14 18:05",
-          "stocks": [
-            "00403A",
-            "3008",
-            "1303",
-            "8046",
-            "6488",
-            "5274",
-            "4979"
-          ],
-          "comment_count": 2,
-          "like_count": 59,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180749908"
-        },
-        {
-          "id": "180749485",
-          "title": "[00403A 操作日報] 經理人逢低建倉大立光與信驊",
-          "summary": "主動式ETF 00403A經理人近期進行持股調整，全新建倉光學鏡頭廠大立光（3008）30張，並大幅加碼IC設計廠信驊（5274）持股比例達30.30%。",
-          "stock_name": "大立光",
-          "stock_code": "3008",
-          "time": "2026-07-14 17:40",
-          "stocks": [
-            "00403A",
-            "3008",
-            "5274",
-            "8046",
-            "6488",
-            "1303",
-            "4979"
-          ],
-          "comment_count": 1,
-          "like_count": 38,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180749485"
-        },
-        {
-          "id": "180729082",
-          "title": "你還在猜下一波主流？00991A根本沒有猶豫",
-          "summary": "00991A近期操作顯示，法人並未撤出AI產業，而是進行族群內資金配置調整。該基金加碼台積電（2330）300張、智邦（2345）40張、台光電（2383）40張、川湖（2059）30張及旺矽（6223）20張，同時減碼。",
-          "stock_name": "台積電、智邦、台光電",
-          "stock_code": "2330, 2345, 2383",
-          "time": "2026-07-14 09:02",
-          "stocks": [
-            "2330",
-            "00991A",
-            "2345",
-            "2383",
-            "2059"
-          ],
-          "comment_count": 3,
-          "like_count": 44,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180729082"
+          "url": "https://www.cmoney.tw/forum/article/180780097"
         }
       ],
-      "kept_count_before_global_dedupe": 10,
-      "dedup_removed_count": 3
+      "kept_count_before_global_dedupe": 2,
+      "dedup_removed_count": 1
     },
     {
       "concept_id": "C50918",
@@ -2036,152 +1555,117 @@
       "category": "AI 伺服器",
       "note": "備援電池模組，受惠資料中心電力備援需求",
       "source_url": "https://www.cmoney.tw/forum/concept/C50918",
-      "raw_count": 93,
-      "recent_count": 88,
-      "kept_count": 9,
+      "raw_count": 34,
+      "recent_count": 32,
+      "kept_count": 7,
       "news": [
+        {
+          "id": "180783841",
+          "title": "台達拓展業務很用心按讚",
+          "summary": "台達電（2308）：董事長鄭平於第一季法說會宣示公司首要目標為營收持續成長及獲利不下滑。市場關注即將於7月30日召開的第二季法說會，並期待公司能公布毛利率達36%以上之營運表現。",
+          "stock_name": "台達電",
+          "stock_code": "2308",
+          "time": "2026-07-15 22:18",
+          "stocks": [
+            "2308"
+          ],
+          "comment_count": 0,
+          "like_count": 30,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180783841"
+        },
+        {
+          "id": "180781215",
+          "title": "好股自然會發光！",
+          "summary": "尖點（8021）：6月營收年增90%續創歷史新高，受惠於下半年產能擴建計畫，營運展望正向。此外，金居（8358）將於本週五進行除息，每股配發2元現金股利，目前股價處於長線超跌位置。",
+          "stock_name": "尖點",
+          "stock_code": "8021",
+          "time": "2026-07-15 19:57",
+          "stocks": [
+            "6147",
+            "2344",
+            "8021",
+            "8358",
+            "4931"
+          ],
+          "comment_count": 1,
+          "like_count": 23,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180781215"
+        },
+        {
+          "id": "180777192",
+          "title": "自結營收及損益（稅後EPS1.46）",
+          "summary": "健和興（3003）公告115年6月份自結營收為5.99億元，較去年同期4.40億元成長。單月稅前損益為1.09億元，稅後損益為7,751萬元，單月稅後EPS為0.47元。",
+          "stock_name": "健和興",
+          "stock_code": "3003",
+          "time": "2026-07-15 16:14",
+          "stocks": [
+            "3003"
+          ],
+          "comment_count": 3,
+          "like_count": 9,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180777192"
+        },
+        {
+          "id": "180775699",
+          "title": "7 月選股清單： 14 檔明年獲利亮眼之星",
+          "summary": "台達電（2308）：台股上市櫃公司6月營收合計達5.65兆元，年增44.4%創歷史新高，顯示AI動能強勁。7月選股清單篩選出14檔營收成長率優於平均，且具備2027年獲利延續性之企業，其中包括台達電、台積電及台光電等標的。",
+          "stock_name": "台達電",
+          "stock_code": "2308",
+          "time": "2026-07-15 14:43",
+          "stocks": [
+            "TWA00",
+            "2308",
+            "2383",
+            "2330"
+          ],
+          "comment_count": 0,
+          "like_count": 57,
+          "collected_count": 3,
+          "url": "https://www.cmoney.tw/forum/article/180775699"
+        },
         {
           "id": "180760320",
           "title": "法人維持「買進」評等主要立基於三大理由。",
-          "summary": "光寶科宣布投資9.19億美元於德州設廠，深化北美AI與能源布局。法人重申「買進」評等，目標價240元。理由包括6月營收年增37%，Power Rack產品線於第2季出貨，且800V產品預計第4季放量，評價水位具吸引力。",
+          "summary": "光寶科（2301）宣布投資9.19億美元於美國德州麥金尼市設廠，深化北美AI基礎設施布局。法人指出，公司6月營收月增7.5%、年增37%，第2季營收符合預期。",
           "stock_name": "光寶科",
           "stock_code": "2301",
           "time": "2026-07-15 08:35",
           "stocks": [
             "2301"
           ],
-          "comment_count": 0,
-          "like_count": 7,
-          "collected_count": 1,
+          "comment_count": 1,
+          "like_count": 13,
+          "collected_count": 2,
           "url": "https://www.cmoney.tw/forum/article/180760320"
         },
         {
-          "id": "180760289",
-          "title": "中國信託基金經理人看好：半導體、高階PCB與CCL、光通訊",
-          "summary": "法人指出，AI產業趨勢未變，供應鏈在高效能運算與先進製程具優勢。台積電預估2026年美元營收成長近30%，資本支出創新高。建議聚焦半導體、高階PCB與CCL、光通訊等AI核心受惠族群，並採取逢回布局策略。",
-          "stock_name": "台積電、台達電、台光電",
-          "stock_code": "2330, 2308, 2383",
-          "time": "2026-07-15 08:33",
+          "id": "180751946",
+          "title": "金寶法說會解析影片",
+          "summary": "金寶首季EPS為0.35元，毛利率提升至6.87%。儘管受客戶轉為客供料及淡季影響導致營收衰退，但獲利結構改善。公司正推動ODM轉型，跨足高階伺服器機櫃、多軌衛星及量子電腦控制系統，並與康舒合作搶攻AI伺服器電源與充電樁。",
+          "stock_name": "金寶",
+          "stock_code": "2312",
+          "time": "2026-07-14 19:46",
           "stocks": [
-            "2368",
-            "2383",
-            "2308",
-            "2059",
-            "6274"
+            "2312",
+            "2324",
+            "6282",
+            "2317",
+            "4938"
           ],
           "comment_count": 0,
-          "like_count": 11,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180760289"
-        },
-        {
-          "id": "180760150",
-          "title": "一家 6月合併營收： 達 34.23 億元（月增 16.43%、年增 28.28...",
-          "summary": "一家公告6月合併營收達34.23億元，月增16.43%、年增28.28%，創歷年單月次高。第二季營收95.15億元，季增10.89%、年增29.64%，寫下歷年單季次高紀錄。",
-          "stock_name": "一家",
-          "stock_code": "6282",
-          "time": "2026-07-15 08:25",
-          "stocks": [
-            "6282"
-          ],
-          "comment_count": 3,
-          "like_count": 16,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180760150"
-        },
-        {
-          "id": "180758692",
-          "title": "光寶科砸重金拓展AI商機",
-          "summary": "光寶科（2301）於台北國際電腦展展示液冷式Power shelf設計，並與美系雲端服務供應商合作。法人預期HVDC電源櫃將於2026年下半年出貨，2027年相關平台滲透率有望達10%至20%。",
-          "stock_name": "光寶科",
-          "stock_code": "2301",
-          "time": "2026-07-15 06:17",
-          "stocks": [
-            "2301"
-          ],
-          "comment_count": 2,
-          "like_count": 8,
+          "like_count": 6,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758692"
-        },
-        {
-          "id": "180754427",
-          "title": "台股這幾天的洗盤確實非常殘酷，把前陣子營收開牌的漲幅吐了不少回去。但越是這種大悲...",
-          "summary": "臻鼎-KY（4958）公告6月營收創同期新高。台燿（6274）作為AI材料股，近期股價回測季線支撐。台達電（2308）在1,850元關卡附近築底。華邦電（2344）於160至165元區間呈現橫盤止跌訊號。",
-          "stock_name": "臻鼎-KY、台燿、台達電",
-          "stock_code": "4958, 6274, 2308",
-          "time": "2026-07-14 21:42",
-          "stocks": [
-            "4958",
-            "8358",
-            "8021",
-            "2308",
-            "2344"
-          ],
-          "comment_count": 0,
-          "like_count": 54,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180754427"
-        },
-        {
-          "id": "180754039",
-          "title": "融資打死不退😶 股價高檔震盪 🐢目前股價狠甩兔子茂達，比新普 健鼎貴 順達今年E...",
-          "summary": "順達（3211）目前股價高檔震盪，法人預期明年EPS可達20元以上，但市場對此看法分歧。順達今年EPS表現不如新普與健鼎，且5月曾傳出日本廠商測試不順導致掉單的謠言。",
-          "stock_name": "順達",
-          "stock_code": "3211",
-          "time": "2026-07-14 21:26",
-          "stocks": [
-            "3211"
-          ],
-          "comment_count": 2,
-          "like_count": 20,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180754039"
-        },
-        {
-          "id": "180752618",
-          "title": "07/14主動式ETF籌碼日報（金流版）",
-          "summary": "主動式ETF資金近期出現板塊轉移，買盤集中於ABF載板（南電、欣興）、矽晶圓（環球晶）及被動元件（禾伸堂）等族群，並加碼電信與金融等防禦型標的。",
-          "stock_name": "南電、環球晶、欣興",
-          "stock_code": "8046, 6488, 3037",
-          "time": "2026-07-14 20:18",
-          "stocks": [
-            "8046",
-            "3037",
-            "6488",
-            "3026",
-            "2308"
-          ],
-          "comment_count": 3,
-          "like_count": 30,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180752618"
-        },
-        {
-          "id": "180747500",
-          "title": "你再丟 我再撿 富貴險中求🧧",
-          "summary": "中環（2323）公告6月營收6.39億元，年增38.84%，今年1至6月累計營收39.56億元，年增16.06%。全漢（6282）則被視為輝達概念股，主攻AI邊緣運算相關的大瓦數電源供應器。",
-          "stock_name": "中環、全漢",
-          "stock_code": "2323, 6282",
-          "time": "2026-07-14 16:08",
-          "stocks": [
-            "2349",
-            "3576",
-            "2323",
-            "3015",
-            "5521"
-          ],
-          "comment_count": 7,
-          "like_count": 32,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180747500"
+          "url": "https://www.cmoney.tw/forum/article/180751946"
         },
         {
           "id": "180747336",
           "title": "7788 📈📈",
-          "summary": "松川單月獲利逾1元且營收續創高。東研信超為台達電供應鏈，專注於HVDC檢測業務，目前訂單已滿至年底，營收呈現成長趨勢，適合低檔佈局。",
-          "stock_name": "松川、東研信超",
-          "stock_code": "7788, 6840",
+          "summary": "東研信超為HVDC檢測股，目前訂單已滿至年底，主要客戶包含台達電。公司營收呈現逐步成長趨勢，目前處於低檔佈局階段。",
+          "stock_name": "東研信超",
+          "stock_code": "6840",
           "time": "2026-07-14 15:53",
           "stocks": [
             "7788",
@@ -2191,13 +1675,13 @@
             "TWA00"
           ],
           "comment_count": 3,
-          "like_count": 21,
+          "like_count": 24,
           "collected_count": 2,
           "url": "https://www.cmoney.tw/forum/article/180747336"
         }
       ],
-      "kept_count_before_global_dedupe": 13,
-      "dedup_removed_count": 4
+      "kept_count_before_global_dedupe": 9,
+      "dedup_removed_count": 2
     },
     {
       "concept_id": "C50852",
@@ -2205,68 +1689,125 @@
       "category": "半導體材料",
       "note": "高階晶片封裝關鍵基板",
       "source_url": "https://www.cmoney.tw/forum/concept/C50852",
-      "raw_count": 74,
-      "recent_count": 72,
-      "kept_count": 3,
+      "raw_count": 47,
+      "recent_count": 45,
+      "kept_count": 6,
       "news": [
         {
-          "id": "180754899",
-          "title": "千軍殺破多空界，低頭只為再騰翔",
-          "summary": "泰鼎-KY（4927）於7月14日召開法說會，主力產品涵蓋家用、汽車及電腦相關。當日股價出現戲劇性走勢，盤中一度下探36.95元後拉回至40.10元，融資餘額大減，且出現MACD指標底背離訊號。",
+          "id": "180784930",
+          "title": "若問心安何處在，洗盤過後見真龍。",
+          "summary": "泰鼎-KY近期股價於40至42元區間震盪。籌碼面上，借券賣出餘額近2.4萬張，剩餘可借券空間有限，具備潛在空單回補壓力。技術面上，5日均線扣抵值將進入低檔，若股價能守穩40元並溫和補量，有助於扭轉短線均線走勢。",
           "stock_name": "泰鼎-KY",
           "stock_code": "4927",
-          "time": "2026-07-14 22:10",
+          "time": "2026-07-15 23:18",
           "stocks": [
             "4927",
             "4958",
             "TWA00"
           ],
-          "comment_count": 21,
-          "like_count": 159,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180754899"
+          "comment_count": 5,
+          "like_count": 58,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180784930"
         },
         {
-          "id": "180752638",
-          "title": "07/14主動式ETF籌碼日報",
-          "summary": "根據主動式ETF籌碼日報，多檔ETF同步加碼南電、欣興、環球晶、南亞及禾伸堂。其中南電獲七檔ETF同買，欣興獲五檔同買，環球晶、南亞與禾伸堂則各有四檔ETF進場。",
-          "stock_name": "南電、欣興、環球晶",
-          "stock_code": "8046, 3037, 6488",
-          "time": "2026-07-14 20:21",
+          "id": "180783558",
+          "title": "今晚公布的6月生產者物價指數（PPI）全面低於市場預期： 📉 PPI月增率 -0...",
+          "summary": "6月生產者物價指數（PPI）全面低於市場預期，PPI月增率為-0.3%，核心PPI年增率為4.7%。數據顯示上游通膨壓力降溫速度快於預期，此結果將影響市場對聯準會後續降息的評估，並可能牽動美股、債券殖利率及美元走勢，進而。",
+          "stock_name": "台積電、南電",
+          "stock_code": "2330, 8046",
+          "time": "2026-07-15 21:58",
           "stocks": [
-            "3026",
-            "1303",
-            "6488",
-            "3037",
+            "TWA00",
+            "2303",
+            "2313",
+            "8383",
             "8046"
           ],
-          "comment_count": 3,
-          "like_count": 30,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180752638"
+          "comment_count": 4,
+          "like_count": 15,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180783558"
         },
         {
-          "id": "180750137",
-          "title": "還在懷疑ABF？00991A根本一路加碼，你到底要等什麼！",
-          "summary": "法人資金近期持續加碼ABF載板族群，包括欣興（3037）與南電（8046）皆頻繁出現在加碼名單中。此外，南亞科（2408）、旺矽（6223）與鴻勁（7769）等AI半導體設備與測試供應鏈成員，亦獲法人資金布局，顯示資金持。",
-          "stock_name": "南亞科、欣興、南電",
-          "stock_code": "2408, 3037, 8046",
-          "time": "2026-07-14 18:19",
+          "id": "180782846",
+          "title": "【臻鼎-KY(4958)盤後解析】外資主力聯手倒貨，高檔爆量收黑 今天股價在高檔...",
+          "summary": "臻鼎-KY（4958）：該公司為PCB龍頭，受惠於AI伺服器與ABF載板需求。15日股價收在618元，下跌1.75%，成交量達5.7萬張。籌碼面顯示外資賣超9,539張、主力賣超7,282張，投信買超444張。",
+          "stock_name": "臻鼎-KY",
+          "stock_code": "4958",
+          "time": "2026-07-15 21:17",
+          "stocks": [
+            "4958"
+          ],
+          "comment_count": 2,
+          "like_count": 9,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782846"
+        },
+        {
+          "id": "180779804",
+          "title": "2026/07/15 00991A今日操作明細",
+          "summary": "國巨（2327）、南亞科（2408）與欣興（3037）等個股，於2026年7月15日獲主動式ETF 00991A進行加碼操作，其中國巨與南亞科各加碼300張，欣興加碼150張，顯示法人資金持續布局相關產業鏈。",
+          "stock_name": "國巨、南亞科、欣興",
+          "stock_code": "2327, 2408, 3037",
+          "time": "2026-07-15 18:40",
           "stocks": [
             "00991A",
-            "3037",
+            "2327",
             "2408",
-            "6223",
+            "3026",
+            "3665",
+            "3711",
+            "3037",
+            "2345",
+            "6274",
             "8046"
           ],
-          "comment_count": 5,
-          "like_count": 72,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180750137"
+          "comment_count": 0,
+          "like_count": 79,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180779804"
+        },
+        {
+          "id": "180779271",
+          "title": "🏮0715盤後筆記🏮",
+          "summary": "台積電法說前夕，市場關注矽光子與資本支出指引。盤勢觀察顯示籌碼有利多方，但量能不足。操作上建議關注指標股精材（3374），或選擇離前高有距離的個股。另因看好封測產業，已買入福懋科（8131）。",
+          "stock_name": "南電、精材、福懋科",
+          "stock_code": "8046, 3374, 8131",
+          "time": "2026-07-15 18:17",
+          "stocks": [
+            "8046",
+            "6538",
+            "8131",
+            "2404",
+            "3374"
+          ],
+          "comment_count": 3,
+          "like_count": 17,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180779271"
+        },
+        {
+          "id": "180758262",
+          "title": "AI需求噴發！台積電領銜，載板與測試廠急擴產",
+          "summary": "AI需求推升半導體產業鏈，台積電（2330）為先進製程核心。京元電子（2449）因應AI伺服器與HPC訂單，斥資450億元赴美建廠。",
+          "stock_name": "台積電、京元電子、欣興",
+          "stock_code": "2330, 2449, 3037",
+          "time": "2026-07-15 05:33",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "2449",
+            "3037"
+          ],
+          "comment_count": 0,
+          "like_count": 13,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180758262"
         }
       ],
-      "kept_count_before_global_dedupe": 12,
-      "dedup_removed_count": 9
+      "kept_count_before_global_dedupe": 16,
+      "dedup_removed_count": 10
     },
     {
       "concept_id": "C50851",
@@ -2274,115 +1815,88 @@
       "category": "電子零組件",
       "note": "AI 伺服器、網通與車用電子需求帶動",
       "source_url": "https://www.cmoney.tw/forum/concept/C50851",
-      "raw_count": 81,
+      "raw_count": 82,
       "recent_count": 81,
-      "kept_count": 6,
+      "kept_count": 5,
       "news": [
         {
-          "id": "180763771",
-          "title": "有量就有希望 恭喜漲停",
-          "summary": "華通（2313）：股價正式突破20日均線，且為MACD翻紅的第一天。若交易量能維持，後續股價表現可期，短線操作建議若未跌破5日均線可持續持有。",
+          "id": "180783331",
+          "title": "博智的可轉債二與可轉債三預計明天會通過，如果不需要補件的話可能明天傍晚就會有消息...",
+          "summary": "博智（8155）的可轉債二與可轉債三發行案，預計於明日通過審核，若無需補件，最快將於明日傍晚公告相關消息。",
+          "stock_name": "博智",
+          "stock_code": "8155",
+          "time": "2026-07-15 21:45",
+          "stocks": [
+            "8155"
+          ],
+          "comment_count": 1,
+          "like_count": 11,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180783331"
+        },
+        {
+          "id": "180777044",
+          "title": "【世界王私藏筆記】華通Vol. 62 ：不以物喜，不以己悲",
+          "summary": "華通(2313)積極布局AI與衛星產品，AI方面以800G及1.6T光模塊為主，並投入mSAP產能；衛星板則隨SpaceX星艦試飛進程，V3衛星板需求迫切，且華通具高市占率與技術護城河。",
           "stock_name": "華通",
           "stock_code": "2313",
-          "time": "2026-07-15 09:42",
+          "time": "2026-07-15 16:04",
           "stocks": [
             "2313"
           ],
-          "comment_count": 0,
-          "like_count": 21,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180763771"
+          "comment_count": 5,
+          "like_count": 66,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180777044"
         },
         {
-          "id": "180759946",
-          "title": "工商時報晨訊",
-          "summary": "聯電矽光子產品首批量產出貨；力積電看好成熟製程，目標明年毛利率達4成；台表科投入逾7億元擴大越南產能；穎崴加速擴產；檢測雙雄受惠需求爆發，下半年接單動能旺；長廣受惠載板廠裝機，第四季業績進補；東陽第二季獲利寫同期次高；",
-          "stock_name": "聯電",
-          "stock_code": "2303",
-          "time": "2026-07-15 08:13",
+          "id": "180776419",
+          "title": "可能有人看衰，但仔細研究公司未來會發現前途無可限量， 明天產能全開這是開頭， 多...",
+          "summary": "燿華（2367）：公司產能全開，主要生產高階載板、衛星及車用產品，毛利可調性高。預計明年傳統PCB以外的產品占比將提升至40%至50%，除營收成長外，毛利亦將大幅增長。",
+          "stock_name": "燿華",
+          "stock_code": "2367",
+          "time": "2026-07-15 15:26",
           "stocks": [
-            "TWA00",
-            "2303",
-            "6770",
-            "6278",
-            "6182"
+            "2367"
           ],
-          "comment_count": 3,
-          "like_count": 30,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759946"
-        },
-        {
-          "id": "180758610",
-          "title": "南電 vs 南亞科🔥明天誰會先噴？留言猜看看你的答案👇📈",
-          "summary": "南電（8046）：受大盤下跌影響回測，隨後反彈創歷史收盤新高，若開盤價位不在1320附近且大盤上漲，可考慮入場做多，目標價設於1330附近。",
-          "stock_name": "南電",
-          "stock_code": "8046",
-          "time": "2026-07-15 06:02",
-          "stocks": [
-            "8046",
-            "2408"
-          ],
-          "comment_count": 1,
+          "comment_count": 2,
           "like_count": 17,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758610"
+          "url": "https://www.cmoney.tw/forum/article/180776419"
         },
         {
-          "id": "180757844",
-          "title": "市場對低軌衛星類股的利空討論，和股價漲多回檔也一段時間了！最近似乎沒有其他新的故...",
-          "summary": "華通(2313)已結束現金增資認股，並有申購抽籤。昇達科(3491)因獲利率下滑且股價跌破半年線，於2026年7月15日暫停交易，等待發布重大訊息。",
-          "stock_name": "華通、昇達科",
-          "stock_code": "2313, 3491",
-          "time": "2026-07-15 03:49",
+          "id": "180776162",
+          "title": "未來看似美好，但可能不如想像那般",
+          "summary": "燿華（2367）：明年泰國廠產能全開加上中國廠Msap產值挹注，樂觀預估月營收最多增加6億元。然而，若對比過往巔峰時期的營收與毛利表現，目前水準可能尚未超越，但股價已反映至過去高點的兩倍。",
+          "stock_name": "燿華",
+          "stock_code": "2367",
+          "time": "2026-07-15 15:06",
           "stocks": [
-            "3491",
+            "2367"
+          ],
+          "comment_count": 0,
+          "like_count": 7,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180776162"
+        },
+        {
+          "id": "180769977",
+          "title": "焦點股》華通：搶攻光模塊大單！ 投信進場狂掃貨急拉漲停 2026/07/15 0...",
+          "summary": "華通（2313）積極卡位AI光模塊市場，因擅長mSAP製造且取得關鍵雷射鑽孔機優先採購權，正為800G與1.6T光模塊訂單做準備。",
+          "stock_name": "華通",
+          "stock_code": "2313",
+          "time": "2026-07-15 11:49",
+          "stocks": [
             "2313"
           ],
           "comment_count": 1,
-          "like_count": 23,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180757844"
-        },
-        {
-          "id": "180757112",
-          "title": "⭐️迎接亞洲最大生技展7/16-7/19開始佈局生技股 ⭐️無人機立院高度重視準...",
-          "summary": "大江（8436）推出口服GLP-1獨家臺灣專利減重健康食品，預計將顛覆減重市場。生合（1295）則推出多種功能性益生菌，包含增肌減脂及寵物專用益生菌，並已獲得多項美國大獎與專利認證。",
-          "stock_name": "大江、生合",
-          "stock_code": "8436、1295",
-          "time": "2026-07-15 01:06",
-          "stocks": [
-            "3023",
-            "6173",
-            "3374",
-            "6191",
-            "4583"
-          ],
-          "comment_count": 0,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180757112"
-        },
-        {
-          "id": "180756279",
-          "title": "1.避免文章屏蔽，會減少發文 整體PCB皆遭重擊，非僅健鼎大跌，因此並非公司營運...",
-          "summary": "健鼎近期股價隨整體PCB族群下跌，公司表示EMS拉貨力道減弱，主因零組件缺貨及消費電子疲弱。預期第三季傳統旺季營收可維持，目前觀察技術面能否站上季線，法人在下殺過程中未大量出脫，籌碼尚稱穩定。",
-          "stock_name": "健鼎",
-          "stock_code": "3044",
-          "time": "2026-07-14 23:36",
-          "stocks": [
-            "3044",
-            "6138",
-            "5371"
-          ],
-          "comment_count": 0,
           "like_count": 28,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756279"
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180769977"
         }
       ],
-      "kept_count_before_global_dedupe": 14,
-      "dedup_removed_count": 8
+      "kept_count_before_global_dedupe": 12,
+      "dedup_removed_count": 7
     },
     {
       "concept_id": "C50864",
@@ -2390,22 +1904,22 @@
       "category": "電子材料",
       "note": "高速傳輸帶動高階材料需求",
       "source_url": "https://www.cmoney.tw/forum/concept/C50864",
-      "raw_count": 25,
-      "recent_count": 22,
+      "raw_count": 5,
+      "recent_count": 5,
       "kept_count": 1,
       "news": [
         {
           "id": "180758852",
           "title": "光譜訂單大增，銅價上漲",
-          "summary": "光譜（5381）總經理謝炳輝表示，目前在手訂單達30億元，能見度至2027年下半年。因應銅價上漲，產品報價已調漲約10%。",
+          "summary": "光譜（5381）總經理謝炳輝表示，目前在手訂單達30億元，能見度至2027年下半年。因應銅價上漲，產品報價已調漲約10%。公司持續出貨給台電及非台電客戶，重電市場需求強勁。",
           "stock_name": "光譜",
           "stock_code": "5381",
           "time": "2026-07-15 06:38",
           "stocks": [
             "5381"
           ],
-          "comment_count": 1,
-          "like_count": 4,
+          "comment_count": 2,
+          "like_count": 7,
           "collected_count": 0,
           "url": "https://www.cmoney.tw/forum/article/180758852"
         }
@@ -2419,285 +1933,62 @@
       "category": "電子材料",
       "note": "PCB 上游材料，與高速運算平台升級有關",
       "source_url": "https://www.cmoney.tw/forum/concept/C50866",
-      "raw_count": 94,
-      "recent_count": 90,
-      "kept_count": 15,
+      "raw_count": 45,
+      "recent_count": 42,
+      "kept_count": 3,
       "news": [
         {
-          "id": "180766953",
-          "title": "恭喜台塑艦隊~44",
-          "summary": "台塑集團宣布加薪4.5%。南亞（1303）今日量能控制溫和放大，市場關注集團相關個股表現。",
-          "stock_name": "台塑",
-          "stock_code": "1301",
-          "time": "2026-07-15 10:42",
+          "id": "180784610",
+          "title": "7/16 當沖，先看這三檔 ✍️個人研究，勿 All in",
+          "summary": "世禾為台積電供應鏈且適逢除息首日，若快速填息易吸引短線資金；頎邦屬封測族群，受惠AI封裝需求且籌碼偏多；台虹則因PCB與高速材料具AI題材支撐，若電子資金輪動有望成為補漲股。投資人需留意台積電法說會對相關族群之影響。",
+          "stock_name": "世禾、頎邦、台虹",
+          "stock_code": "3551, 6147, 8039",
+          "time": "2026-07-15 22:53",
           "stocks": [
-            "2408",
-            "1303",
-            "8046",
-            "1301",
-            "1326"
-          ],
-          "comment_count": 6,
-          "like_count": 10,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180766953"
-        },
-        {
-          "id": "180760279",
-          "title": "台股唯一最受惠摺疊機題材",
-          "summary": "台虹（8039）因摺疊機即將量產，被市場視為台股中受惠於摺疊機題材的相關個股。",
-          "stock_name": "台虹",
-          "stock_code": "8039",
-          "time": "2026-07-15 08:32",
-          "stocks": [
+            "3551",
+            "6147",
             "8039"
           ],
-          "comment_count": 1,
-          "like_count": 4,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180760279"
-        },
-        {
-          "id": "180760228",
-          "title": "史上首次！ 烏海上無人機送戰鬥機器人搶灘登陸攻擊",
-          "summary": "烏克蘭第123獨立國土防衛旅於黑海戰場進行跨領域無人載具協同作戰，成功利用海上無人平台運送配備機槍的地面機器人至敵方岸邊，並完成火力突擊任務。此舉被描述為全球首次實戰任務，開啟現代無人協同兩棲作戰的新紀元。",
-          "stock_name": "無人機/機器人概念",
-          "stock_code": "TWA00",
-          "time": "2026-07-15 08:29",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2603",
-            "6505",
-            "1301"
-          ],
-          "comment_count": 0,
+          "comment_count": 4,
           "like_count": 13,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180760228"
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180784610"
         },
         {
-          "id": "180760106",
-          "title": "7/15每日精選當沖多空撐壓",
-          "summary": "南亞科（2408）記憶體市況止穩，投信近期連續買超，建議可偏多操作。中美晶（5483）獲外資與投信同步買超，建議拉回時偏多操作。聯茂（6213）外資轉為買超且月線有支撐，建議偏多操作。",
-          "stock_name": "南亞科",
-          "stock_code": "2408",
-          "time": "2026-07-15 08:23",
+          "id": "180781664",
+          "title": "分享給抱波段的朋友",
+          "summary": "台虹（8039）：投資人表示儘管短線可能出現回檔，但仍持續看好台虹的後續發展。主要看好的應用領域包括蘋果摺疊機、AI眼鏡以及無布技術等相關產業趨勢。",
+          "stock_name": "台虹",
+          "stock_code": "8039",
+          "time": "2026-07-15 20:17",
           "stocks": [
-            "5483",
-            "2408",
-            "6213",
-            "3105",
-            "5439"
-          ],
-          "comment_count": 3,
-          "like_count": 21,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180760106"
-        },
-        {
-          "id": "180759362",
-          "title": "新聞重點摘要： 昨日盤面仍有部分族群逆勢抗跌，受惠油價走高與市場看好第二季營運改...",
-          "summary": "台塑四寶受惠油價走高與第二季營運改善預期，股價表現亮眼，台塑與南亞大漲逾5%，台塑化漲近5%。矽晶圓族群獲買盤青睞，台勝科攻上漲停，中美晶大漲逾9%。記憶體股方面，南亞科逆勢大漲近6%。",
-          "stock_name": "台塑、南亞、台勝科",
-          "stock_code": "1301, 1303, 3532",
-          "time": "2026-07-15 07:33",
-          "stocks": [
-            "1301",
-            "1303",
-            "3532",
-            "5483",
-            "6488"
-          ],
-          "comment_count": 1,
-          "like_count": 10,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759362"
-        },
-        {
-          "id": "180759166",
-          "title": "六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟",
-          "summary": "聯電（2303）矽光子產品已首批量產出貨。此外，半導體通路商擎亞（8096）接獲美系ODM廠長期大單，供應AI伺服器機櫃記憶體，預計今年貢獻逾200億元業績，第3季可望放量。",
-          "stock_name": "聯電",
-          "stock_code": "2303",
-          "time": "2026-07-15 07:16",
-          "stocks": [
-            "2303",
-            "8096",
-            "6770",
-            "1301",
-            "6873"
-          ],
-          "comment_count": 19,
-          "like_count": 108,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180759166"
-        },
-        {
-          "id": "180759104",
-          "title": "不要再當我是「塑膠」",
-          "summary": "台塑（1301）積極轉型，其擁有的PEEK材料專利應用廣泛，涵蓋航空、低軌衛星、汽車、機器人、醫療器材及半導體設備等領域。目前台塑集團轉型已有成效，且股價基期相對較低，獲利表現正逐步跟上。",
-          "stock_name": "台塑",
-          "stock_code": "1301",
-          "time": "2026-07-15 07:11",
-          "stocks": [
-            "1301",
-            "1326",
-            "6505",
-            "3532",
-            "1303"
-          ],
-          "comment_count": 2,
-          "like_count": 38,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759104"
-        },
-        {
-          "id": "180758976",
-          "title": "川普主張 重算授權動武60天期限 通知國會重啟對伊朗戰爭",
-          "summary": "美國總統川普通知國會，美國已於7月7日重啟對伊朗戰爭，並主張此舉符合《戰爭權力法》，將重新計算總統未經國會授權動武的60日期限。國會兩黨議員對此法律依據提出質疑，路透民調顯示近8成美國民眾認為戰爭將持續一段時間。",
-          "stock_name": "台積電、長榮海、台塑化、台塑",
-          "stock_code": "2330, 2603, 6505, 1301",
-          "time": "2026-07-15 06:53",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2603",
-            "6505",
-            "1301"
-          ],
-          "comment_count": 0,
-          "like_count": 15,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758976"
-        },
-        {
-          "id": "180758956",
-          "title": "這海峽過路費一次噴3千萬！全球航道大洗牌 台灣海峽身價也曝光",
-          "summary": "美國宣布將重新封鎖荷莫茲海峽並強徵過路費，衝擊全球海上貿易規則。人工運河如巴拿馬運河與蘇伊士運河均有收費權，單次通行費高達數十萬美元。",
-          "stock_name": "航運/地緣政治",
-          "stock_code": "2603",
-          "time": "2026-07-15 06:49",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2603",
-            "1301",
-            "6505"
-          ],
-          "comment_count": 3,
-          "like_count": 20,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758956"
-        },
-        {
-          "id": "180758926",
-          "title": "川普嗆炸伊朗核設施 油價狂飆",
-          "summary": "川普揚言摧毀伊朗核設施並收取海峽保護費，美伊衝突升溫導致國際油價勁揚，西德州期油與布蘭特期油分別創下6月中旬以來新高。美軍已對伊朗發動新一波攻擊，並恢復封鎖進出伊朗港口的海上交通，市場擔憂美伊戰事恐演變為長期衝突。",
-          "stock_name": "台積電、長榮海、台塑、台塑化",
-          "stock_code": "2330, 2603, 1301, 6505",
-          "time": "2026-07-15 06:45",
-          "stocks": [
-            "TWA00",
-            "2330",
-            "2603",
-            "1301",
-            "6505"
+            "8039"
           ],
           "comment_count": 0,
           "like_count": 14,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758926"
+          "url": "https://www.cmoney.tw/forum/article/180781664"
         },
         {
-          "id": "180755637",
-          "title": "1.6/25蘇福曾提過,台塑(單獨)擁有台勝科29.06%..(沒另外三寶的份)...",
-          "summary": "台塑（1301）持有台勝科29.06%股權，受惠於母以子貴的投資效益。今年上半年台塑EPS已超越台化，且台塑集團內部交叉持股具備互拉效應。建議持有者續抱，並看好台塑下半年表現。",
-          "stock_name": "台塑",
-          "stock_code": "1301",
-          "time": "2026-07-14 22:46",
+          "id": "180768203",
+          "title": "真台塑四寶火車頭！南亞驚見「3字頭」目標價 法人EPS再上修",
+          "summary": "南亞（1303）跨足電子材料領域已見成效，成為台塑四寶中的獲利火車頭。法人圈最新報告指出，預估今明兩年每股盈餘均可望大賺超過一個股本，並將其目標價調升至300元。",
+          "stock_name": "南亞",
+          "stock_code": "1303",
+          "time": "2026-07-15 11:10",
           "stocks": [
-            "1301"
-          ],
-          "comment_count": 23,
-          "like_count": 96,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180755637"
-        },
-        {
-          "id": "180751880",
-          "title": "【台燿(6274)盤後解析】跌停鎖死，連三黑K線警訊 今日出現黑三兵、高檔長黑，...",
-          "summary": "台燿（6274）：公司為台灣前三大銅箔基板廠，受惠AI伺服器與高階網通需求。近期股價連續三日收黑並跌破週線與月線，成交量放大呈現價跌量增，技術指標KD低檔死亡交叉，MACD綠柱擴大，目前短中期均線結構轉弱，後續需觀察季線。",
-          "stock_name": "台燿",
-          "stock_code": "6274",
-          "time": "2026-07-14 19:41",
-          "stocks": [
-            "6274"
-          ],
-          "comment_count": 0,
-          "like_count": 6,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180751880"
-        },
-        {
-          "id": "180750171",
-          "title": "持股穩不穩，先看這四大訊號",
-          "summary": "國巨（2327）近期受投信賣壓影響股價修正，技術面接近6/9多方缺口與季線。建議投資人觀察投信是否連續買超或股價止穩，操作上可採分批布局策略，不宜一次投入過多資金。",
-          "stock_name": "國巨",
-          "stock_code": "2327",
-          "time": "2026-07-14 18:22",
-          "stocks": [
-            "6488",
-            "1301",
-            "2327",
             "1303",
-            "2330"
-          ],
-          "comment_count": 4,
-          "like_count": 66,
-          "collected_count": 5,
-          "url": "https://www.cmoney.tw/forum/article/180750171"
-        },
-        {
-          "id": "180748880",
-          "title": "台股盤中重挫千點，跌停家數僅10家？（2026.07.14）",
-          "summary": "旭然（8455）：受惠於半導體、記憶體與AI載板客戶擴產需求，旭然6月營收月增10%、年增14%，第二季營收呈現年、季雙增。",
-          "stock_name": "旭然",
-          "stock_code": "8455",
-          "time": "2026-07-14 17:16",
-          "stocks": [
-            "8383",
-            "6488",
-            "TWA00",
-            "2330",
-            "8039"
-          ],
-          "comment_count": 1,
-          "like_count": 8,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180748880"
-        },
-        {
-          "id": "180718925",
-          "title": "別只盯霍爾木茲！油市真正麻煩浮現：全球煉油能力正在被打穿",
-          "summary": "烏克蘭持續攻擊俄羅斯煉油廠，導致全球煉油產能受損，俄羅斯柴油出口受限，推升全球燃料價格。全球約10%煉油產能處於停產狀態，使「3-2-1裂解價差」升至每桶約60美元的歷史新高。",
-          "stock_name": "台塑化、南亞、台化、台塑",
-          "stock_code": "6505, 1326, 1301, 1303",
-          "time": "2026-07-13 18:23",
-          "stocks": [
-            "6505",
-            "1326",
-            "1312",
             "1301",
-            "1303"
+            "1326",
+            "6505"
           ],
-          "comment_count": 19,
-          "like_count": 64,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180718925"
+          "comment_count": 6,
+          "like_count": 3,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180768203"
         }
       ],
-      "kept_count_before_global_dedupe": 18,
+      "kept_count_before_global_dedupe": 6,
       "dedup_removed_count": 3
     },
     {
@@ -2706,24 +1997,24 @@
       "category": "電子材料",
       "note": "PCB 與電池材料供應鏈",
       "source_url": "https://www.cmoney.tw/forum/concept/C50865",
-      "raw_count": 34,
-      "recent_count": 34,
+      "raw_count": 10,
+      "recent_count": 10,
       "kept_count": 1,
       "news": [
         {
-          "id": "180755668",
-          "title": "借券賣來到新高 空單力道超強 看來 真的可能回350",
-          "summary": "居哥（8358）：原文指出該公司借券賣出餘額來到新高，顯示市場空單力道強勁，並推測股價可能回測至350元價位。",
-          "stock_name": "居哥",
-          "stock_code": "8358",
-          "time": "2026-07-14 22:49",
+          "id": "180781055",
+          "title": "榮科2026年7月營收年增100%以上",
+          "summary": "榮科公告2026年7月營收，年增率達100%以上。",
+          "stock_name": "榮科",
+          "stock_code": "4989",
+          "time": "2026-07-15 19:48",
           "stocks": [
-            "8358"
+            "4989"
           ],
-          "comment_count": 0,
-          "like_count": 0,
+          "comment_count": 2,
+          "like_count": 4,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180755668"
+          "url": "https://www.cmoney.tw/forum/article/180781055"
         }
       ],
       "kept_count_before_global_dedupe": 2,
@@ -2737,71 +2028,167 @@
       "source_url": "https://www.cmoney.tw/forum/concept/C50873",
       "raw_count": 93,
       "recent_count": 92,
-      "kept_count": 4,
+      "kept_count": 9,
       "news": [
         {
-          "id": "180761230",
-          "title": "不看好的趕快賣吧 這個位階的強茂已經不合理了 其他功率比較沒辦法賺到這一次的功率...",
-          "summary": "強茂（2481）：公司具備自有產能，針對近期功率半導體漲價趨勢，公司已明確說明營運狀況。建議投資人若不看好可選擇賣出，無需持有浮動籌碼。",
-          "stock_name": "強茂",
-          "stock_code": "2481",
-          "time": "2026-07-15 09:06",
+          "id": "180786204",
+          "title": "紐約州長叫停了紐約州所有正在建設的數據中心！川普剛剛表達不滿",
+          "summary": "紐約州長霍楚簽署行政命令，禁止建造耗電量超過50MW的超大規模資料中心，成為全美首個實施此類禁令的州。此舉旨在緩解電網承載壓力與電費飆升問題，川普對此表達不滿，認為將阻礙美國在科技領域的競爭力。",
+          "stock_name": "台積電、鴻海",
+          "stock_code": "2330",
+          "time": "2026-07-16 00:48",
           "stocks": [
-            "2481"
+            "TWA00",
+            "2330",
+            "2317",
+            "2454",
+            "2382"
           ],
-          "comment_count": 4,
-          "like_count": 8,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180761230"
+          "comment_count": 2,
+          "like_count": 21,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180786204"
         },
         {
-          "id": "180759964",
-          "title": "美股報報",
-          "summary": "美國6月通膨率3.5%低於預期，美股四大指數收紅，費半大漲逾2%。個股方面，輝達與美光股價回神，台積電ADR盤後翻紅，聯電ADR大漲約1.62%。",
+          "id": "180784415",
+          "title": "強勢回歸",
+          "summary": "聯電受颱風休市影響，處置股票出關日期順延。技術面上，聯電股價帶量跳空突破下降趨勢線，並站上所有均線。目前聯電ADR大漲約3.4%並收復關鍵價位，市場預期股價走勢將延續至7月29日法說會。",
           "stock_name": "聯電",
           "stock_code": "2303",
-          "time": "2026-07-15 08:14",
+          "time": "2026-07-15 22:45",
           "stocks": [
             "2303"
           ],
-          "comment_count": 5,
-          "like_count": 13,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759964"
+          "comment_count": 6,
+          "like_count": 56,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180784415"
         },
         {
-          "id": "180758909",
-          "title": "聯電 2303 | 2026/7/15盤前資訊分享",
-          "summary": "聯電2026年第一季EPS為1.29元，毛利率29.2%，6月營收年增22.85%。目前股價本益比約38倍，技術面呈現破線後反彈，短線支撐為140至145元，壓力區間在154至163元。",
-          "stock_name": "聯電",
-          "stock_code": "2303",
-          "time": "2026-07-15 06:44",
+          "id": "180783853",
+          "title": "今天大漲800多點，昨日選出標的還是有翻綠，但是只敢短短空",
+          "summary": "台虹（8039）：作者分享當沖盤前分析紀錄，並列出頎邦、亞電、力積電、華邦電、威健、福裕等標的作為短空觀察。策略上建議觀察美股走勢、記憶體個股表現及台積電法說會內容，並提醒若大盤續強需小心操作，同時提及電力供應狀況可能影。",
+          "stock_name": "台虹",
+          "stock_code": "8039",
+          "time": "2026-07-15 22:19",
           "stocks": [
+            "6770",
+            "2344",
+            "5483",
+            "8150",
             "2303"
           ],
           "comment_count": 0,
-          "like_count": 21,
+          "like_count": 17,
           "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180758909"
+          "url": "https://www.cmoney.tw/forum/article/180783853"
         },
         {
-          "id": "180758268",
-          "title": "市場總喜歡把股價當成唯一的答案。 當中美晶在昨天突破2022年的高點，環球晶在之...",
-          "summary": "朋程已從車用整流二極體廠商轉型為高功率半導體模組供應商，布局SiC功率元件、高功率模組及HVDC客製化模組，並切入AI伺服器電源、儲能及工業電源等領域。",
-          "stock_name": "朋程、中美晶、環球晶",
-          "stock_code": "8255, 5483, 6488",
-          "time": "2026-07-15 05:35",
+          "id": "180782844",
+          "title": "持續加碼",
+          "summary": "茂矽（2342）：股價重新站回48元附近，顯示先前44元附近的支撐有效。外資與三大法人今日轉為小幅買超，外盤略大於內盤，顯示主動追價買盤稍占優勢。",
+          "stock_name": "茂矽",
+          "stock_code": "2342",
+          "time": "2026-07-15 21:17",
           "stocks": [
+            "2342"
+          ],
+          "comment_count": 0,
+          "like_count": 3,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782844"
+        },
+        {
+          "id": "180782581",
+          "title": "美軍攻伊朗水廠、穀倉還沒完 傳川普計畫大規模毀滅攻勢",
+          "summary": "台積電（2330）：美國與伊朗軍事衝突升溫，美軍對伊朗發動多波打擊，目標包含水廠、穀倉、橋梁及發電廠。川普計畫對伊朗發動更大規模毀滅性攻勢，迫使伊朗重回談判桌，地緣政治風險升高，市場關注對能源及科技產業之影響。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-15 21:05",
+          "stocks": [
+            "TWA00",
+            "2330",
+            "2603",
+            "6505",
+            "1301"
+          ],
+          "comment_count": 5,
+          "like_count": 27,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180782581"
+        },
+        {
+          "id": "180781121",
+          "title": "明天聯電價位看法",
+          "summary": "聯電（2303）：聯電處置期間高檔區間壓力點為171.5元，若帶量突破則看175元，站穩後挑戰前波高點185.5元。短線支撐點設於160元。因颱風假處置順延，預計週五恢復正常交易，市場關注出關後的股價表現。",
+          "stock_name": "聯電",
+          "stock_code": "2303",
+          "time": "2026-07-15 19:54",
+          "stocks": [
+            "2303"
+          ],
+          "comment_count": 3,
+          "like_count": 57,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180781121"
+        },
+        {
+          "id": "180776819",
+          "title": "【中美晶連三天強勢！多空雙巴後再鎖漲停 劇本是不是拿錯了？】",
+          "summary": "中美晶（5483）：股價連續三個交易日強勢，並於今日攻上漲停。從持股結構分析，中美晶持有環球晶約46.64%股權，目前股價相較持股傳導價仍有折價空間。",
+          "stock_name": "中美晶",
+          "stock_code": "5483",
+          "time": "2026-07-15 15:49",
+          "stocks": [
+            "5483",
+            "6488",
+            "4772",
+            "8086",
             "8255"
           ],
-          "comment_count": 6,
-          "like_count": 29,
+          "comment_count": 13,
+          "like_count": 103,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180776819"
+        },
+        {
+          "id": "180759735",
+          "title": "今日注意科技股反彈",
+          "summary": "台積電（2330）：美股大型科技股多數上漲，存儲概念股表現強勁，SK海力士、閃迪、英偉達及美光漲幅顯著。OpenAI計劃推出首款家用智能音箱，預計2027年開售，但面臨蘋果訴訟可能導致延期。",
+          "stock_name": "台積電",
+          "stock_code": "2330",
+          "time": "2026-07-15 07:55",
+          "stocks": [
+            "TWA00",
+            "2330"
+          ],
+          "comment_count": 14,
+          "like_count": 122,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758268"
+          "url": "https://www.cmoney.tw/forum/article/180759735"
+        },
+        {
+          "id": "180759008",
+          "title": "2026.7.15日【艦長日誌】⚓",
+          "summary": "中央研究院經濟研究所發布2026年台灣經濟預測，將全年經濟成長率上修至10.16％。財政部公布上半年總稅收達2.5兆元，年增81.5％，其中證交稅上半年達3336億元，已超越去年全年總額。",
+          "stock_name": "",
+          "stock_code": "",
+          "time": "2026-07-15 06:59",
+          "stocks": [
+            "TWB33",
+            "2330",
+            "2317",
+            "3711",
+            "2887"
+          ],
+          "comment_count": 20,
+          "like_count": 132,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180759008"
         }
       ],
-      "kept_count_before_global_dedupe": 22,
-      "dedup_removed_count": 18
+      "kept_count_before_global_dedupe": 23,
+      "dedup_removed_count": 14
     },
     {
       "concept_id": "C50530",
@@ -2809,44 +2196,133 @@
       "category": "半導體材料",
       "note": "半導體上游基礎材料",
       "source_url": "https://www.cmoney.tw/forum/concept/C50530",
-      "raw_count": 84,
-      "recent_count": 82,
-      "kept_count": 4,
+      "raw_count": 53,
+      "recent_count": 51,
+      "kept_count": 8,
       "news": [
         {
-          "id": "180759764",
-          "title": "中美晶靠環球晶逆勢走揚",
-          "summary": "中美晶（5483）因子公司環球晶（6488）與美光簽訂10年長約，提供長期穩定合作氛圍，兩者股價逆勢走揚。環球晶為全球前三大半導體矽晶圓廠，在AI與半導體需求提升背景下，市場對其前景具信心。",
-          "stock_name": "中美晶、環球晶",
-          "stock_code": "5483, 6488",
-          "time": "2026-07-15 07:58",
-          "stocks": [
-            "5483"
-          ],
-          "comment_count": 0,
-          "like_count": 2,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759764"
-        },
-        {
-          "id": "180759630",
-          "title": "200？300？400？",
-          "summary": "合晶2026年第一季EPS為0元，法人估全年EPS約1至2元。公司法說會指出2026年折舊費用預估年增10%至20%，2027年將進一步暴增30%至40%，龐大折舊費用恐在產能放量初期吞噬高階產品帶來的毛利，對財報構成考。",
+          "id": "180786504",
+          "title": "齁6182合晶控盤意圖越來越明顯～明天漲不漲停我只是來喊爽的",
+          "summary": "合晶（6182）：盤中出現明顯守盤跡象，跌至175元附近即有買盤拉回。籌碼面顯示181至182元區間存在壓力，若明日未觸發注意條件，將可解除「10日6次注意」之處置條件，後續走勢仍需觀察控盤意圖。",
           "stock_name": "合晶",
           "stock_code": "6182",
-          "time": "2026-07-15 07:48",
+          "time": "2026-07-16 01:32",
           "stocks": [
             "6182"
           ],
-          "comment_count": 5,
+          "comment_count": 0,
           "like_count": 10,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759630"
+          "url": "https://www.cmoney.tw/forum/article/180786504"
+        },
+        {
+          "id": "180784958",
+          "title": "紐約州暫停大型項目許可",
+          "summary": "中美晶（5483）：紐約州宣布暫停一年內大型AI資料中心許可，雖短期可能受影響，但全球建置AI資料中心需求未減，僅為延長需求時間與產生新需求，長線產業趨勢並未改變。",
+          "stock_name": "中美晶",
+          "stock_code": "5483",
+          "time": "2026-07-15 23:20",
+          "stocks": [
+            "TWA00",
+            "5289",
+            "8299",
+            "5483",
+            "6488"
+          ],
+          "comment_count": 3,
+          "like_count": 12,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180784958"
+        },
+        {
+          "id": "180780715",
+          "title": "哲哲愛股，會員績效",
+          "summary": "聯發科（2454）：投資人分享參與投顧會員操作績效，指出自四月中旬起全力做多，期間聯發科多次漲停，該投資人於該檔股票獲利約233萬餘元。",
+          "stock_name": "聯發科",
+          "stock_code": "2454",
+          "time": "2026-07-15 19:26",
+          "stocks": [
+            "2454",
+            "6488",
+            "3374",
+            "2377",
+            "6196"
+          ],
+          "comment_count": 11,
+          "like_count": 30,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180780715"
+        },
+        {
+          "id": "180778065",
+          "title": "7/15 中美晶籌碼逐筆買賣分析",
+          "summary": "中美晶（5483）：7月15日籌碼分析顯示，外資買盤較前一日降溫，全日成交量約7.4萬張，其中278元價位成交量最大，由摩根大通與摩根士丹利等外資承接。",
+          "stock_name": "中美晶",
+          "stock_code": "5483",
+          "time": "2026-07-15 17:06",
+          "stocks": [
+            "5483"
+          ],
+          "comment_count": 2,
+          "like_count": 37,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778065"
+        },
+        {
+          "id": "180776951",
+          "title": "矽晶圓 漲幅現在才要開始 是不是應該要抱緊",
+          "summary": "環球晶（6488）受惠AI晶片與先進封裝帶動12吋產能需求，客戶涵蓋台積電、美光等大廠。台勝科（3532）法說指出12吋出貨因記憶體需求成長，8吋則受AI伺服器推動。",
+          "stock_name": "環球晶、台勝科、合晶",
+          "stock_code": "6488, 3532, 6182",
+          "time": "2026-07-15 15:58",
+          "stocks": [
+            "3532",
+            "6488",
+            "6182"
+          ],
+          "comment_count": 1,
+          "like_count": 35,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180776951"
+        },
+        {
+          "id": "180774752",
+          "title": "既然控盤就是要重置10日6次注意 昨天沒注意，今天沒注意、明天再沒注意 就斷10...",
+          "summary": "合晶（6182）：文章分析個股處置條件，指出若連續6日漲幅達25%將列入注意股，並提及盤中股價在181至182元區間出現大單壓盤現象。",
+          "stock_name": "合晶",
+          "stock_code": "6182",
+          "time": "2026-07-15 13:50",
+          "stocks": [
+            "6182"
+          ],
+          "comment_count": 12,
+          "like_count": 126,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180774752"
+        },
+        {
+          "id": "180760106",
+          "title": "7/15每日精選當沖多空撐壓",
+          "summary": "南亞科（2408）因記憶體市況止穩且獲投信連買，建議偏多操作。中美晶（5483）獲外資與投信同步買進，建議拉回偏多操作。聯茂（6213）則因外資轉買且月線收腳，同樣建議偏多操作。以上為針對個股籌碼與技術面之觀察。",
+          "stock_name": "南亞科、中美晶、聯茂",
+          "stock_code": "2408, 5483, 6213",
+          "time": "2026-07-15 08:23",
+          "stocks": [
+            "5483",
+            "2408",
+            "6213",
+            "3105",
+            "5439"
+          ],
+          "comment_count": 3,
+          "like_count": 23,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180760106"
         },
         {
           "id": "180750503",
           "title": "晚上好！#追蹤肥大賺大錢 近期韓股弱勢，美股修正，韓股確實槓桿太大，脆上看很多韓...",
-          "summary": "百容近期股價受大盤走勢影響，出現連續跌停。針對市場對出貨與割韭菜的討論，公司表示目前跌勢無量，且半導體業務下半年出貨順暢，建議投資人應設定好停損停利點，理性看待投資，等待盤整後的反攻機會。",
+          "summary": "百容（2483）近期股價下跌主要受大盤盤勢影響，且呈現無量下跌狀態。觀察6月26日之兩萬多張成交量若能守住，後續應無須過度擔憂。公司半導體業務預計下半年出貨順暢，目前建議可進行盤整整理，等待多頭反攻機會。",
           "stock_name": "百容",
           "stock_code": "2483",
           "time": "2026-07-14 18:45",
@@ -2857,32 +2333,14 @@
             "2330",
             "6488"
           ],
-          "comment_count": 11,
-          "like_count": 111,
+          "comment_count": 13,
+          "like_count": 117,
           "collected_count": 0,
           "url": "https://www.cmoney.tw/forum/article/180750503"
-        },
-        {
-          "id": "180750314",
-          "title": "幾天沒發文了，來廢話一下吧⛑️ 1301 朝目標前進 6907 還好當初沒被洗出...",
-          "summary": "台塑（1301）目前正朝設定目標前進。另外，文中提及持續看好雙鴻（6907）的後續表現，並指出中美晶（5483）股價已創下新高。此外，投資人於今日買進雷虎（7714），主要看好其未來在無人機市場的發展潛力。",
-          "stock_name": "台塑",
-          "stock_code": "1301",
-          "time": "2026-07-14 18:37",
-          "stocks": [
-            "1301",
-            "6907",
-            "7714",
-            "5483"
-          ],
-          "comment_count": 12,
-          "like_count": 68,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180750314"
         }
       ],
-      "kept_count_before_global_dedupe": 11,
-      "dedup_removed_count": 7
+      "kept_count_before_global_dedupe": 10,
+      "dedup_removed_count": 2
     },
     {
       "concept_id": "C50862",
@@ -2890,79 +2348,29 @@
       "category": "AI 伺服器 / 電力",
       "note": "AI 伺服器功耗增加，推升高瓦數 PSU 需求",
       "source_url": "https://www.cmoney.tw/forum/concept/C50862",
-      "raw_count": 97,
-      "recent_count": 88,
-      "kept_count": 4,
+      "raw_count": 30,
+      "recent_count": 29,
+      "kept_count": 1,
       "news": [
         {
-          "id": "180756003",
-          "title": "開心，開心，開心",
-          "summary": "系微（5309）股價近期接近私募價55元。文中提到大廠敢認購私募並綁約三年，顯示其研究評估應有一定基礎，建議投資人若擔心大盤波動，可於開盤時觀察50至55元區間的股價表現。",
-          "stock_name": "系微",
-          "stock_code": "5309",
-          "time": "2026-07-14 23:13",
+          "id": "180777165",
+          "title": "群益證(6005)今天持穩.所以我沒有再加碼. 近幾個交易日.價跌時.我共買回4...",
+          "summary": "群光(2385)近期實施庫藏股，雖然體量較小對股價助漲效果有限，但公司派透過庫藏股確認100元為特惠價，提供了一定的價格支撐與參考。投資人表示將視股價下跌情況，持續進行買入操作。",
+          "stock_name": "群光",
+          "stock_code": "2385",
+          "time": "2026-07-15 16:12",
           "stocks": [
-            "5309"
+            "6005",
+            "2385"
           ],
-          "comment_count": 0,
-          "like_count": 16,
+          "comment_count": 3,
+          "like_count": 25,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180756003"
-        },
-        {
-          "id": "180750725",
-          "title": "[00981A 操作日報] 趁震盪低接南電與台達電",
-          "summary": "主動式ETF 00981A近期因盤勢震盪績效承壓，經理人操作以微調部位為主。今日加碼南電288張、台達電129張及日月光投控145張，顯示資金偏向佈局ABF載板、電源供應與封測等大型電子股，同時減碼精測62張。",
-          "stock_name": "南電、台達電",
-          "stock_code": "8046、2308",
-          "time": "2026-07-14 18:50",
-          "stocks": [
-            "00981A",
-            "8046",
-            "2308",
-            "3711",
-            "6510"
-          ],
-          "comment_count": 0,
-          "like_count": 28,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180750725"
-        },
-        {
-          "id": "180744934",
-          "title": "AI 時代來臨，台灣電力系統正迎來新的挑戰",
-          "summary": "盛達（3027）：AI算力推升用電需求，加上太陽光電擴大白天供電，台灣電力系統面臨夜間調度挑戰。根據114年度全國電力資源供需報告，夜尖峰負載成長速度已超過整體用電成長。",
-          "stock_name": "盛達",
-          "stock_code": "3027",
-          "time": "2026-07-14 13:45",
-          "stocks": [
-            "3027",
-            "5483",
-            "6488"
-          ],
-          "comment_count": 2,
-          "like_count": 1,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180744934"
-        },
-        {
-          "id": "180719972",
-          "title": "從16X修正到140以下了，可以進場了嗎",
-          "summary": "博智（8109）：股價從160元以上修正至140元以下，市場關注是否可進場佈局，並討論第二季每股盈餘（EPS）是否有機會突破2.8元之可能性。",
-          "stock_name": "博智",
-          "stock_code": "8109",
-          "time": "2026-07-13 19:33",
-          "stocks": [
-            "8109"
-          ],
-          "comment_count": 2,
-          "like_count": 1,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180719972"
+          "url": "https://www.cmoney.tw/forum/article/180777165"
         }
       ],
-      "kept_count_before_global_dedupe": 16,
-      "dedup_removed_count": 12
+      "kept_count_before_global_dedupe": 9,
+      "dedup_removed_count": 8
     },
     {
       "concept_id": "C50861",
@@ -2970,123 +2378,94 @@
       "category": "電力設備",
       "note": "資料中心、電網升級與電力基建需求",
       "source_url": "https://www.cmoney.tw/forum/concept/C50861",
-      "raw_count": 95,
-      "recent_count": 89,
-      "kept_count": 6,
+      "raw_count": 24,
+      "recent_count": 24,
+      "kept_count": 5,
       "news": [
         {
-          "id": "180762128",
-          "title": "訂單400億好意思，整天低檔頓化的破公司",
-          "summary": "中興電（1513）目前在手訂單金額達400億元。",
-          "stock_name": "中興電",
-          "stock_code": "1513",
-          "time": "2026-07-15 09:18",
+          "id": "180782891",
+          "title": "漲一倍，看明年",
+          "summary": "宏齊（6168）：2026年6月營收為2.04億元，年增6.73%。未來將布局聯電集團CPO晶片光電封裝領域，股價表現將視未來營收成長帶動的估值修復而定。",
+          "stock_name": "宏齊",
+          "stock_code": "6168",
+          "time": "2026-07-15 21:22",
           "stocks": [
-            "1513"
+            "6168",
+            "6156"
+          ],
+          "comment_count": 1,
+          "like_count": 7,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782891"
+        },
+        {
+          "id": "180782464",
+          "title": "亞力趨勢分析，買進。",
+          "summary": "亞力（1514）：營運具季節性，第一季為淡季，第二季營收升溫，第三季受惠台電強韌電網、半導體建廠、AI資料中心及公共工程出貨增加，進入傳統旺季，第四季則為全年高峰，多項大型工程進入驗收與營收認列階段。",
+          "stock_name": "亞力",
+          "stock_code": "1514",
+          "time": "2026-07-15 21:01",
+          "stocks": [
+            "1514"
+          ],
+          "comment_count": 7,
+          "like_count": 12,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180782464"
+        },
+        {
+          "id": "180777336",
+          "title": "Q2獲利創15個月新高 上半年EPS 3.19元",
+          "summary": "敦吉（2459）：第二季稅後淨利1.85億元，每股純益1.78元，創歷年同期新高。上半年每股純益3.19元。製造事業群為獲利引擎，音圈馬達銷售成長逾41%，貢獻集團約7成獲利。",
+          "stock_name": "敦吉",
+          "stock_code": "2459",
+          "time": "2026-07-15 16:27",
+          "stocks": [
+            "2459"
           ],
           "comment_count": 2,
-          "like_count": 5,
+          "like_count": 12,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180762128"
+          "url": "https://www.cmoney.tw/forum/article/180777336"
         },
         {
-          "id": "180754275",
-          "title": "法人一日賣超金額排行榜",
-          "summary": "台積電（2330）遭法人賣超 200 億元，股價小跌；世芯-KY（3661）因高估值遭法人大賣 25.83 億元，股價重挫近跌停。封測族群如京元電子、日月光投控及南茂同步遭調節。",
-          "stock_name": "台積電、世芯-KY、南電",
-          "stock_code": "2330, 3661, 8046",
-          "time": "2026-07-14 21:37",
+          "id": "180769566",
+          "title": "技股 ⭐️無人機立院高度重視準備通過預算 長壽秘訣在於平常的保健，大江(8436...",
+          "summary": "大江（8436）推出口服GLP-1獨家臺灣專利減重健康食品，生合（1295）則推出多種功能性益生菌，包含增肌減脂及寵物益生菌產品，兩家公司產品皆獲得多項美國大獎與專利認證。",
+          "stock_name": "大江",
+          "stock_code": "8436",
+          "time": "2026-07-15 11:40",
           "stocks": [
-            "2330",
             "2308",
-            "2449",
-            "3661",
-            "3037"
-          ],
-          "comment_count": 3,
-          "like_count": 10,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180754275"
-        },
-        {
-          "id": "180750074",
-          "title": "【國安基金第9次護盤，大賺99億元！】",
-          "summary": "國安基金公布第九次護盤成果，自 2025 年 4 月 9 日進場至 2026 年 5 月 6 日全數出清，投入資金 122.5 億元，處分利益 98.6 億元，加計現金股利後淨利達 99.32 億元，投資報酬率為 81。",
-          "stock_name": "台積電、鴻海、聯發科",
-          "stock_code": "2330, 2317, 2454",
-          "time": "2026-07-14 18:13",
-          "stocks": [
-            "2330",
-            "2317",
-            "2454",
-            "2882",
-            "2308"
+            "3532",
+            "1326",
+            "2383",
+            "1101"
           ],
           "comment_count": 1,
-          "like_count": 14,
+          "like_count": 6,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180750074"
+          "url": "https://www.cmoney.tw/forum/article/180769566"
         },
         {
-          "id": "180749927",
-          "title": "2026/07/14 00981A今日操作明細",
-          "summary": "南電（8046）、日月光投控（3711）與台達電（2308）於2026年7月14日獲主動式ETF加碼，其中南電增加288張、日月光投控增加145張、台達電增加129張，另精測（6510）則遭減碼62張。",
-          "stock_name": "南電、日月光投控、台達電",
-          "stock_code": "8046, 3711, 2308",
-          "time": "2026-07-14 18:07",
+          "id": "180727668",
+          "title": "重電業用案場認列營收，單月看會失真",
+          "summary": "士電（1503）第二季營收創同期新高，公司預估全年營收獲利雙位數成長，北美市場成長30%，AI訂單占北美約三成。華城（1519）第二季營收亦為同期次高，下半年展望優於上半年。",
+          "stock_name": "士電",
+          "stock_code": "1503",
+          "time": "2026-07-14 07:48",
           "stocks": [
-            "00981A",
-            "8046",
-            "3711",
-            "2308",
-            "6510"
+            "1503",
+            "1519"
           ],
-          "comment_count": 0,
-          "like_count": 48,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180749927"
-        },
-        {
-          "id": "180748872",
-          "title": "7/14 00407A 49檔全買的真相",
-          "summary": "主動式 ETF 00407A 出現 49 檔持股同步買進的異動，合計買入約 15.6 億元。分析顯示此為 ETF 收到新申購資金後，經理人按原有比例進行配置的機械動作，並非主動選股決定。",
-          "stock_name": "台積電、聯發科、台達電",
-          "stock_code": "2330, 2454, 2308",
-          "time": "2026-07-14 17:15",
-          "stocks": [
-            "00407A",
-            "2330",
-            "2454",
-            "2308",
-            "3037"
-          ],
-          "comment_count": 0,
-          "like_count": 23,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180748872"
-        },
-        {
-          "id": "180736774",
-          "title": "可寧衛跟台塑都有作發電??可寧衛營收有上來但股價不漲....搞笑囉!!! 轉載：...",
-          "summary": "可寧衛在低碳能源布局方面，高雄彌陀70MW漁電共生案廠已掛表運轉一年多，另有70MW持續推進；桃園大園SRF廠發電裝置容量約47MW。",
-          "stock_name": "可寧衛、台塑",
-          "stock_code": "8422, 1301",
-          "time": "2026-07-14 10:49",
-          "stocks": [
-            "1301",
-            "8422",
-            "1519",
-            "1514",
-            "1513"
-          ],
-          "comment_count": 1,
-          "like_count": 15,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180736774"
+          "comment_count": 2,
+          "like_count": 35,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180727668"
         }
       ],
-      "kept_count_before_global_dedupe": 18,
-      "dedup_removed_count": 12
+      "kept_count_before_global_dedupe": 10,
+      "dedup_removed_count": 5
     },
     {
       "concept_id": "C50863",
@@ -3094,108 +2473,32 @@
       "category": "電子零組件",
       "note": "AI 伺服器、車用與高速傳輸需求相關",
       "source_url": "https://www.cmoney.tw/forum/concept/C50863",
-      "raw_count": 96,
-      "recent_count": 90,
-      "kept_count": 6,
+      "raw_count": 73,
+      "recent_count": 71,
+      "kept_count": 1,
       "news": [
         {
-          "id": "180765835",
-          "title": "麗豐  誠信經營  善待投資人",
-          "summary": "麗豐-KY（4137）：該公司被歸類為生技股，經營手法採取誠信經營原則，並願意給予投資人豐厚的現金股息，以善待投資人。",
-          "stock_name": "麗豐-KY",
-          "stock_code": "4137",
-          "time": "2026-07-15 10:18",
+          "id": "180778120",
+          "title": "外資賣壓收斂 自營商、投信推升三大法人買超逾200億元 海力士股價暴漲逾12%，...",
+          "summary": "力積電（6770）法說宣布7月DRAM投片價格調漲45%，激勵股價漲停，華邦電（2344）同步亮燈。台積電（2330）收漲20元，聯電受惠英特爾合作題材攻上漲停。",
+          "stock_name": "力積電、華邦電、台積電",
+          "stock_code": "6770, 2344, 2330",
+          "time": "2026-07-15 17:11",
           "stocks": [
-            "4137",
-            "TWA00",
             "2330",
+            "6770",
+            "2344",
+            "2303",
             "2317"
           ],
-          "comment_count": 1,
-          "like_count": 2,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180765835"
-        },
-        {
-          "id": "180763929",
-          "title": "輝達 轉向的話，嘉基是否有機會 cpo方案暫緩 將改採 NPO 目前CPO仍面臨...",
-          "summary": "嘉基（6715）針對次世代AI伺服器開發NPC與NPO共用光電互連平台。由於CPO方案面臨晶片整合、光纖對準及測試維護等技術挑戰，Google、Amazon及Meta等雲端服務供應商現階段傾向優先導入近封裝光學（NPO）。",
-          "stock_name": "嘉基",
-          "stock_code": "6715",
-          "time": "2026-07-15 09:44",
-          "stocks": [
-            "6715"
-          ],
-          "comment_count": 0,
-          "like_count": 1,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180763929"
-        },
-        {
-          "id": "180758774",
-          "title": "貿聯營收創新高，擴張觸頂？",
-          "summary": "貿聯-KY（3665）6月營收85.18億元創單月新高，上半年累計營收年增34%。公司預計本季台南、馬來西亞及越南廠區將有新產線投入，法人看好下半年營收與毛利率。",
-          "stock_name": "貿聯-KY",
-          "stock_code": "3665",
-          "time": "2026-07-15 06:29",
-          "stocks": [
-            "3665"
-          ],
-          "comment_count": 0,
-          "like_count": 3,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758774"
-        },
-        {
-          "id": "180757550",
-          "title": "站不上400、離200很近的鴻海",
-          "summary": "鴻海（2317）：作者認為鴻海股價在跌破季線後走勢轉弱，並指出南亞科與群創的成交金額已超越鴻海，顯示主力資金動向。文中主張鴻海營收表現無法有效支撐股價，認為市場對其目標價的預期過高，並預測股價可能面臨修正壓力，建議投資人。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-15 02:45",
-          "stocks": [
-            "2317",
-            "1303",
-            "2408"
-          ],
-          "comment_count": 8,
-          "like_count": 12,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180757550"
-        },
-        {
-          "id": "180748884",
-          "title": "外資壓制鴻海股價下探230元被反軋至235.50收盤",
-          "summary": "鴻海（2317）近期遭外資透過現貨賣超與期貨轉倉操作壓低股價，盤中一度下探至230.5元，隨後獲投信與自營商買盤支撐，終場拉回至235.5元。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-14 17:16",
-          "stocks": [
-            "2317"
-          ],
-          "comment_count": 28,
-          "like_count": 279,
-          "collected_count": 2,
-          "url": "https://www.cmoney.tw/forum/article/180748884"
-        },
-        {
-          "id": "180723686",
-          "title": "非工業富聯和工業富聯來預估Q2財報(AI)",
-          "summary": "鴻海（2317）2026年第一季非工業富聯營業利益率降至1.541%，主因AI伺服器占比提升稀釋獲利、電動車事業處於投資期，以及半導體與機器人等新事業投入費用。",
-          "stock_name": "鴻海",
-          "stock_code": "2317",
-          "time": "2026-07-13 22:52",
-          "stocks": [
-            "2317"
-          ],
-          "comment_count": 3,
-          "like_count": 59,
-          "collected_count": 3,
-          "url": "https://www.cmoney.tw/forum/article/180723686"
+          "comment_count": 32,
+          "like_count": 96,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180778120"
         }
       ],
-      "kept_count_before_global_dedupe": 13,
-      "dedup_removed_count": 7
+      "kept_count_before_global_dedupe": 16,
+      "dedup_removed_count": 15
     },
     {
       "concept_id": "C50710",
@@ -3203,136 +2506,180 @@
       "category": "通訊",
       "note": "低軌衛星通訊與地面設備供應鏈",
       "source_url": "https://www.cmoney.tw/forum/concept/C50710",
-      "raw_count": 97,
-      "recent_count": 97,
-      "kept_count": 8,
+      "raw_count": 95,
+      "recent_count": 92,
+      "kept_count": 11,
       "news": [
         {
-          "id": "180766420",
-          "title": "我老婆昨天跌想賣我說絕對不能賣。 AI資料中心與衛星結合：SpaceX 與輝達皆...",
-          "summary": "昇達科（3491）：SpaceX與輝達強調未來衛星通訊需極大頻寬以支援AI與機器人運算，昇達科提供的地面與衛星高頻傳輸通道，被視為建構太空AI高速公路的關鍵元件。",
+          "id": "180786043",
+          "title": "昇達科併購巨頻 深化低軌衛星、毫米波通訊布局 https://money.udn...",
+          "summary": "昇達科（3491）：昇達科宣布併購巨頻，此舉旨在深化公司在低軌衛星及毫米波通訊領域的技術與市場布局。",
           "stock_name": "昇達科",
           "stock_code": "3491",
-          "time": "2026-07-15 10:30",
+          "time": "2026-07-16 00:38",
           "stocks": [
             "3491"
           ],
-          "comment_count": 2,
-          "like_count": 42,
+          "comment_count": 0,
+          "like_count": 6,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180766420"
+          "url": "https://www.cmoney.tw/forum/article/180786043"
         },
         {
-          "id": "180765140",
-          "title": "如果今天停止交易與這有關也不意外，昇達科（3491）成功打入SpaceX、AST...",
-          "summary": "昇達科（3491）成功打入SpaceX、AST SpaceMobile及Amazon等全球三大低軌衛星營運商供應鏈，成為衛星直連手機商機的核心受惠廠。",
+          "id": "180784653",
+          "title": "昇達科砸17億取得巨頻科技逾5成股權 8月完成交割，如何解讀",
+          "summary": "昇達科宣布斥資不超過17億元，取得高頻高速連接器廠巨頻科技逾51%股權，預計8月完成交割。此併購案具戰略意義，將昇達科業務從低軌衛星擴展至AI資料中心高速傳輸領域，提供元件加連接方案的一站式服務。",
           "stock_name": "昇達科",
           "stock_code": "3491",
-          "time": "2026-07-15 10:04",
+          "time": "2026-07-15 22:57",
+          "stocks": [
+            "3491",
+            "TWA00"
+          ],
+          "comment_count": 1,
+          "like_count": 28,
+          "collected_count": 4,
+          "url": "https://www.cmoney.tw/forum/article/180784653"
+        },
+        {
+          "id": "180780795",
+          "title": "什麼叫做公允價值 從財報可以整理出： 年度 持有巨頻科技公允價值 112年底 約...",
+          "summary": "昇達科（3491）財報顯示，其持有巨頻科技的公允價值自112年底的1.08億元，逐年成長至115年第一季的2.63億元，增幅超過140%。",
+          "stock_name": "昇達科",
+          "stock_code": "3491",
+          "time": "2026-07-15 19:32",
           "stocks": [
             "3491"
           ],
           "comment_count": 5,
-          "like_count": 29,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180765140"
+          "like_count": 72,
+          "collected_count": 3,
+          "url": "https://www.cmoney.tw/forum/article/180780795"
         },
         {
-          "id": "180763982",
-          "title": "昇達科也有低軌衛星與星間雷射通訊，萊德光電-KY此次急拉主因在於市場持續聚焦低軌...",
-          "summary": "昇達科（3491）具備低軌衛星與星間雷射通訊技術，萊德光電-KY因市場聚焦低軌衛星與星間雷射通訊（ISL）題材而股價急拉。",
+          "id": "180780709",
+          "title": "依據昇達科的公告內容巨頻資本額約1.6億元，去年營收約6億元，巨頻科技的股東包含...",
+          "summary": "昇達科（3491）：公司公告投資巨頻科技，該公司資本額約1.6億元，去年營收約6億元，股東包含信邦及美國射頻連接器製造商等。",
           "stock_name": "昇達科",
           "stock_code": "3491",
-          "time": "2026-07-15 09:45",
+          "time": "2026-07-15 19:26",
           "stocks": [
             "3491"
           ],
           "comment_count": 2,
-          "like_count": 25,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180763982"
+          "like_count": 62,
+          "collected_count": 3,
+          "url": "https://www.cmoney.tw/forum/article/180780709"
         },
         {
-          "id": "180759759",
-          "title": "本月7月20日，米德蘭發展公司董事會將審議與昇達科客戶AST SpaceMobi...",
-          "summary": "昇達科（3491）：客戶AST SpaceMobile公司將於7月20日由米德蘭發展公司董事會審議經濟發展協議，該公司計畫在米德蘭航太港商業園區擴大衛星製造規模。",
+          "id": "180780227",
+          "title": "昇達科（UMT）與諾基亞（Nokia）在無線網路領域的合作核心，在於高頻微波、毫...",
+          "summary": "昇達科長期為諾基亞供應基站所需的微波、毫米波及射頻零組件，並應用於5G/6G無線回傳網路。昇達科憑藉超高頻元件設計優勢，成為諾基亞6G研發供應鏈關鍵一環。",
           "stock_name": "昇達科",
           "stock_code": "3491",
-          "time": "2026-07-15 07:57",
+          "time": "2026-07-15 19:06",
+          "stocks": [
+            "3491"
+          ],
+          "comment_count": 0,
+          "like_count": 39,
+          "collected_count": 2,
+          "url": "https://www.cmoney.tw/forum/article/180780227"
+        },
+        {
+          "id": "180779928",
+          "title": "昇達科客諾基亞攜手輝達推出AI原生RAN平台 預計2028年能將頻譜效率提升逾1...",
+          "summary": "諾基亞宣布推出商用AI原生無線接取網路（AI-native RAN）平台，結合自家anyRAN軟體與輝達Aerial AI-RAN平台，透過AI即時調度頻譜與運算資源。",
+          "stock_name": "昇達科",
+          "stock_code": "3491",
+          "time": "2026-07-15 18:51",
+          "stocks": [
+            "3491"
+          ],
+          "comment_count": 2,
+          "like_count": 27,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180779928"
+        },
+        {
+          "id": "180779024",
+          "title": "【金包銀之華通：強勢漲停，主力這是要反轉頹勢",
+          "summary": "華通股價收在248.0元，大漲22.5元並鎖定漲停，成交量增加19%。技術面上，長紅K線突破均線壓制，MACD指標呈現黃金交叉，顯示多頭動能凝聚。",
+          "stock_name": "華通",
+          "stock_code": "2313",
+          "time": "2026-07-15 17:57",
+          "stocks": [
+            "2313"
+          ],
+          "comment_count": 0,
+          "like_count": 21,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180779024"
+        },
+        {
+          "id": "180777852",
+          "title": "收購案看起來是強強聯手，但不知道對營收與EPS的影響，因為巨頻科技非上市公司，相...",
+          "summary": "昇達科（3491）收購巨頻科技案雖被視為強強聯手，但因巨頻科技為非上市公司，相關營收、毛利率與EPS等財務資訊不明。市場關注該併購案對昇達科未來財報與財測的具體影響，若巨頻科技財務健全且具獲利能力，將能發揮綜效，反之則可。",
+          "stock_name": "昇達科",
+          "stock_code": "3491",
+          "time": "2026-07-15 16:52",
+          "stocks": [
+            "3491"
+          ],
+          "comment_count": 5,
+          "like_count": 56,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180777852"
+        },
+        {
+          "id": "180777706",
+          "title": "昇達科砸17億併購巨頻科技　搶攻高頻高速市場",
+          "summary": "昇達科（3491）宣布投入不超過17億元，取得高頻高速互連產品廠「巨頻科技」過半股權，預計8月完成交割。巨頻科技專注於RF、微波及毫米波連接方案，應用於資料中心、衛星及半導體領域。",
+          "stock_name": "昇達科",
+          "stock_code": "3491",
+          "time": "2026-07-15 16:44",
           "stocks": [
             "3491"
           ],
           "comment_count": 3,
-          "like_count": 29,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759759"
-        },
-        {
-          "id": "180759718",
-          "title": "墨西哥最大的超低成本航空公司Volaris宣布，將在其航班上部署Starlink...",
-          "summary": "墨西哥航空公司Volaris宣布將於航班部署Starlink星鏈服務，該公司隸屬於Indigo Partners集團，該集團旗下Frontier、Wizz Air、JetSMART及宿霧太平洋航空等航空公司，均計畫在超過。",
-          "stock_name": "昇達科",
-          "stock_code": "3491",
-          "time": "2026-07-15 07:53",
-          "stocks": [
-            "3491"
-          ],
-          "comment_count": 2,
-          "like_count": 18,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180759718"
-        },
-        {
-          "id": "180759663",
-          "title": "昇達科基本面火熱突停牌 今開重大訊息記者會",
-          "summary": "昇達科（3491）因有重大訊息待公布，經櫃買中心同意，股票自今日起暫停交易，並將於下午召開記者會說明。該公司主要從事微波及毫米波高頻通訊元件，隨低軌衛星建置加速，衛星產品已成主要成長引擎，2026年第一季營收占比達80%。",
-          "stock_name": "昇達科",
-          "stock_code": "3491",
-          "time": "2026-07-15 07:50",
-          "stocks": [
-            "3491"
-          ],
-          "comment_count": 4,
-          "like_count": 32,
+          "like_count": 73,
           "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180759663"
+          "url": "https://www.cmoney.tw/forum/article/180777706"
         },
         {
-          "id": "180755614",
-          "title": "明天不開盤，只好來猜猜 很多投資人看到「停牌＋重大訊息」就會聯想到大利多，但實際...",
-          "summary": "昇達科（3491）宣布停牌並將發布重大訊息。市場分析指出，停牌目的為避免資訊不對稱，不代表利多或利空。觀察近期籌碼面，花旗環球、麥格理及大和國泰等法人買超後未見賣出，且外資借券賣出餘額減少，顯示空單回補跡象。",
+          "id": "180777677",
+          "title": "昇達科砸17億取得巨頻科技逾5成股權 擬8月完成交割",
+          "summary": "昇達科（3491）召開重大訊息記者會，宣布董事會決議取得巨頻科技股權，交易金額不超過17億元，預計8月完成交割後持股將超過51%。巨頻科技主要開發高頻高速互連產品，應用涵蓋資料中心、航太衛星及半導體。",
           "stock_name": "昇達科",
           "stock_code": "3491",
-          "time": "2026-07-14 22:45",
+          "time": "2026-07-15 16:43",
           "stocks": [
             "3491"
           ],
-          "comment_count": 11,
-          "like_count": 88,
-          "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180755614"
+          "comment_count": 5,
+          "like_count": 22,
+          "collected_count": 1,
+          "url": "https://www.cmoney.tw/forum/article/180777677"
         },
         {
-          "id": "180753877",
-          "title": "啤酒頭眼睛剛雷射，台股今天先替大家做了一場1726點視力測驗",
-          "summary": "台股盤中一度重挫1726點，最低來到43654點，隨後低檔買盤進場，終場下跌642點，留下一根長達1083點的下影線。台積電收在2420元，下跌20元。",
-          "stock_name": "台積電",
-          "stock_code": "2330",
-          "time": "2026-07-14 21:14",
+          "id": "180775926",
+          "title": "Starlink來台法規解套 中華電：爭取合資獨家代理",
+          "summary": "中華電信董事長簡志誠表示，針對Starlink來台，中華電爭取與其成立合資子公司並取得台灣獨家代理權，但最終取決於對方意願。",
+          "stock_name": "中華電",
+          "stock_code": "2412",
+          "time": "2026-07-15 14:51",
           "stocks": [
             "TWA00",
-            "8383",
-            "1303",
-            "3481",
-            "2330"
+            "2412",
+            "3491"
           ],
-          "comment_count": 18,
-          "like_count": 117,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180753877"
+          "comment_count": 0,
+          "like_count": 3,
+          "collected_count": 0,
+          "url": "https://www.cmoney.tw/forum/article/180775926"
         }
       ],
-      "kept_count_before_global_dedupe": 18,
+      "kept_count_before_global_dedupe": 21,
       "dedup_removed_count": 10
     },
     {
@@ -3342,65 +2689,46 @@
       "note": "EV、車用半導體、電池與電力系統相關",
       "source_url": "https://www.cmoney.tw/forum/concept/C50500",
       "raw_count": 95,
-      "recent_count": 95,
-      "kept_count": 3,
+      "recent_count": 91,
+      "kept_count": 2,
       "news": [
         {
-          "id": "180764746",
-          "title": "新同學空檔可研究😍😍😍😍😍 🚀🚀 雙暴衝！營收全面點火， 轉機列車正式加速！ 🔥...",
-          "summary": "上亞科技（6130）6月營收1,779萬元，年增70.87%，上半年累計年增13.48%，受惠加工收入增加，業務涵蓋光學鍍膜、AI感測及綠能醫療。",
-          "stock_name": "上亞科技、和詮科技",
-          "stock_code": "6130、6673",
-          "time": "2026-07-15 09:57",
+          "id": "180781950",
+          "title": "0715股市全威盤後選股",
+          "summary": "根據2026年7月15日盤後數據，外資與投信同步買超華通（2313）、台塑化（6505）、愛普*（6531）、華邦電（2344）及啟碁（6285）。",
+          "stock_name": "華通、台塑化、愛普*",
+          "stock_code": "2313、6505、6531",
+          "time": "2026-07-15 20:36",
           "stocks": [
-            "6130",
-            "6673",
-            "1515",
-            "6509",
-            "4503"
+            "TWA00",
+            "6505",
+            "6531",
+            "2313",
+            "2344"
           ],
-          "comment_count": 0,
-          "like_count": 10,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180764746"
+          "comment_count": 21,
+          "like_count": 64,
+          "collected_count": 3,
+          "url": "https://www.cmoney.tw/forum/article/180781950"
         },
         {
-          "id": "180759338",
-          "title": "今年中橡虧損金額會非常大肯定創歷史新高，買賣要三思，套牢者要思考怎么辦，趁反彈要...",
-          "summary": "中橡今年虧損金額預計將創歷史新高。建議投資人買賣需三思，套牢者應思考處置方式，可考慮趁反彈賣出，或耐心持有等待單壁奈米碳管產品大量生產。",
-          "stock_name": "中橡",
-          "stock_code": "2104",
-          "time": "2026-07-15 07:31",
+          "id": "180771082",
+          "title": "目前看營收不準！通路業務有瘦身 ！電信業務政府打詐鎖卡！只能期待新業務導入！",
+          "summary": "統振（6170）：公司指出目前營收數據參考性受限，主因通路業務進行瘦身調整，且電信業務受到政府打詐政策影響，導致鎖卡情況發生。目前營運展望主要期待新業務導入，以改善現有業務面臨的挑戰。",
+          "stock_name": "統振",
+          "stock_code": "6170",
+          "time": "2026-07-15 12:19",
           "stocks": [
-            "2104"
+            "6170"
           ],
-          "comment_count": 4,
-          "like_count": 13,
-          "collected_count": 1,
-          "url": "https://www.cmoney.tw/forum/article/180759338"
-        },
-        {
-          "id": "180758704",
-          "title": "報告：台灣居烏克蘭第三大電池供應國，打入無人機市場",
-          "summary": "台灣已成為烏克蘭第三大電池供應國，每月供應約500至700萬顆無人機電池。雷虎（8033）在FPV與軍用無人機布局直接，短線題材敏感度高；中碳（1723）具備高矽碳負極材料技術，屬上游材料端；",
-          "stock_name": "雷虎",
-          "stock_code": "8033",
-          "time": "2026-07-15 06:19",
-          "stocks": [
-            "8033",
-            "3625",
-            "1723",
-            "2634",
-            "5371"
-          ],
-          "comment_count": 0,
-          "like_count": 20,
+          "comment_count": 1,
+          "like_count": 3,
           "collected_count": 0,
-          "url": "https://www.cmoney.tw/forum/article/180758704"
+          "url": "https://www.cmoney.tw/forum/article/180771082"
         }
       ],
-      "kept_count_before_global_dedupe": 16,
-      "dedup_removed_count": 13
+      "kept_count_before_global_dedupe": 17,
+      "dedup_removed_count": 15
     }
   ]
 }

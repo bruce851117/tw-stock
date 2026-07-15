@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-15 11:58:42",
+  "updated_at": "2026-07-16 05:19:13",
   "episodes": {
     "675": {
       "episode": 675,
@@ -451,16 +451,78 @@
       "content_length": 2244,
       "summarized_at": "2026-07-15 11:58:24",
       "model": "gemini-3.1-flash-lite"
+    },
+    "679": {
+      "episode": 679,
+      "title": "股癌筆記EP679 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-679/",
+      "published_at": "2026-07-16 00:56:28",
+      "modified_at": "2026-07-16 00:58:04",
+      "summary": "本集探討AI應用已達甜蜜點，開始重視成本效益而非盲目追求模型更新。市場方面，韓國股市因高槓桿導致劇烈去槓桿，影響亞洲股市，台股則因券商風控提早拆彈。台股目前處於資金面影響的震盪期，融資水位仍高，熱門股回檔幅度大。策略上，面對強勢股回檔，不建議盲目追逐，應視為區間盤操作，減碼型態轉弱個股，並關注財報季中IDM廠對功率元件的展望，以及矽晶圓、載板等籌碼相對純的族群。",
+      "key_points": [
+        "AI應用進入成本優化階段，過度追求精確會導致Token成本過高。",
+        "韓國市場因高槓桿導致被迫平倉，引發亞洲股市連鎖反應，台股因券商風控提早拆彈。",
+        "台股目前融資水位仍高，熱門股回檔幅度大，操作上建議視為區間盤，汰弱留強，不宜盲目追逐強勢股。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI應用",
+          "summary": "已達甜蜜點，邊際效益遞減，目前重點轉向成本控制（Cost down）。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "韓國股市",
+          "summary": "因高槓桿導致劇烈去槓桿，成為資金面影響亞洲股市的關鍵。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "台股熱門族群",
+          "summary": "矽晶圓、載板籌碼相對純，但過去修正明顯；功率元件回檔大，待IDM財報確認展望。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "法說會展望預期良好，是盤勢不穩時的避風港。"
+        },
+        {
+          "name": "勝宏科",
+          "code": "6581",
+          "reason": "傳聞材料有問題，訂單轉向台系。"
+        },
+        {
+          "name": "力積電",
+          "code": "6770",
+          "reason": "提及功率封裝處於緊繃狀態。"
+        },
+        {
+          "name": "精材",
+          "code": "3374",
+          "reason": "IC後段封測供不應求，股價表態。"
+        }
+      ],
+      "risk_notes": [
+        "融資水位仍高，若反彈無力且跌破季線，需提早減碼。",
+        "熱門股回檔時籌碼凌亂，短期內反彈不易。",
+        "估值過高的個股，若營收財報未達預期，估值乘數恐難以回升。"
+      ],
+      "personal_trade_note": "不會將資金全數切入強勢股，視為區間盤操作。手上型態壞掉、形成大頭部的個股會減碼，準備買入新標的。若反彈無力再破底，會先砍掉加碼單認賠；若大盤從季線往下灌，會提早增加現金部位。",
+      "content_hash": "08d218e334354a74158f9998580138d2a54e7dded902bcb5c4cfa99535393fc3",
+      "content_length": 2328,
+      "summarized_at": "2026-07-16 05:19:12",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    679,
     678,
     677,
     676,
-    675,
-    674
+    675
   ],
   "model": "gemini-3.1-flash-lite"
 }
