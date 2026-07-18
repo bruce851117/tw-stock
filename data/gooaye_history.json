@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-18 05:27:05",
+  "updated_at": "2026-07-19 05:14:34",
   "episodes": {
     "675": {
       "episode": 675,
@@ -513,16 +513,64 @@
       "content_length": 2328,
       "summarized_at": "2026-07-16 05:19:12",
       "model": "gemini-3.1-flash-lite"
+    },
+    "680": {
+      "episode": 680,
+      "title": "股癌筆記EP680 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-680/",
+      "published_at": "2026-07-19 00:23:45",
+      "modified_at": "2026-07-19 00:23:51",
+      "summary": "本集重點在於市場進入防守階段的策略調整。台股大盤跌破季線，中小股與高Beta股修正劇烈，市場出現不理性殺盤。台積電法說會內容正面，CAPEX上調且營收展望佳，但股價仍受大盤情緒影響。作者認為在無法識別強勢族群時，應轉向指數型工具（如台指期、0050）進行防守與抄底，避免過度追求個股動能。同時強調長期投資需具備耐性，並提醒投資人應理性看待回檔，避免在市場恐慌時過度操作。",
+      "key_points": [
+        "市場進入防守模式，大盤跌破季線，建議減少積極進攻，轉向指數型工具如台指期或0050。",
+        "台積電法說會表現優異，CAPEX上調至60-64B，營收目標上修至40%，但受市場情緒影響股價震盪。",
+        "高Beta股與中小股修正幅度大，估值修正期間波動劇烈，建議往業績股方向配置。",
+        "長期投資的核心在於耐性，市場回檔是為了後續的獲利空間，不應在恐慌中過度持有現金而錯失長期向上趨勢。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台積電與半導體",
+          "summary": "法說會簡報與QA表現極佳，CAPEX與營收展望均上修，但股價受大盤不理性殺盤影響。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "市場盤勢",
+          "summary": "大盤跌破季線，進入防守階段，中小股與高Beta股修正壓力大，市場情緒轉趨保守。",
+          "sentiment": "negative"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "法說會CAPEX與營收展望上修，但股價受大盤影響下跌。"
+        },
+        {
+          "name": "0050",
+          "code": "0050",
+          "reason": "作者建議作為防守與抄底加碼的指數型工具。"
+        }
+      ],
+      "risk_notes": [
+        "大盤跌破季線且季線斜率若轉平，後續可能面臨更大修正。",
+        "高Beta股在估值修正期間可能出現劇烈跌幅。",
+        "市場出現不理性殺盤，即便基本面良好的公司也可能受波及。"
+      ],
+      "personal_trade_note": "作者持有超過一半部位為台積電，因大盤跌破季線且回檔超過15%，已進入防守模式，不再積極進攻強勢族群，轉而利用台指期或0050進行防守與抄底。",
+      "content_hash": "eab743b0653016bf2d5bbe32535ed0eac1d92f770c2c0011831904073fd415b9",
+      "content_length": 2247,
+      "summarized_at": "2026-07-19 05:14:33",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    680,
     679,
     678,
     677,
-    676,
-    675
+    676
   ],
   "model": "gemini-3.1-flash-lite"
 }
