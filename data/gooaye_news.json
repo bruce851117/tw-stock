@@ -2,9 +2,83 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-07-22 05:19:07",
+  "updated_at": "2026-07-23 05:19:13",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 681,
+      "title": "股癌筆記EP681 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-681/",
+      "published_at": "2026-07-23 00:19:09",
+      "modified_at": "2026-07-23 00:19:16",
+      "time": "2026-07-23 00:19:09",
+      "summary": "本集節目重點在於台股市場的震盪與操作心態。作者強調投資不應影響生活，並提醒投資人應反思為何在多頭市場中反而賠錢或斷頭。市場方面，台股反彈至季線面臨套牢賣壓，目前視為警戒階段，建議觀察個股型態，若無法持續進攻則可能落隊。供應鏈部分，被動元件與AI相關硬體（如AMD、英特爾、ASIC）預期營收將好轉，但需留意股價型態是否跌壞。大資金策略傾向於在下跌時投入指數或台積電，待回穩後再配置其他標的。此外，AMD的AI布局與CPU換代需求（如SP7平台）是後續關注焦點，市場正觀察其在硬體與軟體整合上對輝達的競爭力。",
+      "key_points": [
+        "投資應避免過度槓桿與情緒化操作，以免影響生活品質。",
+        "台股反彈至季線為關鍵警戒區，需觀察個股型態是否能持續進攻，避免追高。",
+        "市場大資金策略多為先投入指數或台積電避險，待回穩後再轉向其他標的。",
+        "AMD在AI領域的布局（如SP7平台、CPU換代）及與微軟等大廠的合作是市場關注重點。",
+        "CPU換代帶來的技術難度提升與ASP增加，有助於相關供應鏈公司體質改善。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股市場操作",
+          "summary": "目前處於反彈至季線的警戒階段，市場型態分歧，建議以區間盤視之，並關注個股型態是否轉好。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "AI供應鏈",
+          "summary": "預期營收將陸續開出，但股價表現取決於型態，老AI族群因本益比低而受資金青睞。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "AMD AI布局",
+          "summary": "透過高CP值硬體挑戰輝達，並受惠於CPU換代需求，市場關注其與各大雲端服務商的合作進展。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "大資金在下跌時的避險與資金停泊標的。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "發表SP7平台CPU，並在AI硬體領域與輝達競爭。"
+        },
+        {
+          "name": "英特爾",
+          "code": "",
+          "reason": "下一代CPU產品預計年底或明年初推出，面臨AMD市占率競爭。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "市場指標，其Cuda護城河正受到AMD硬體整合能力的挑戰。"
+        },
+        {
+          "name": "Google",
+          "code": "",
+          "reason": "財報表現中立，其TPU推論加速晶片（Frozen V2）值得觀察。"
+        },
+        {
+          "name": "微軟",
+          "code": "",
+          "reason": "AMD的重要客戶，部署大量Helios機櫃進行模型推論。"
+        }
+      ],
+      "risk_notes": [
+        "若反彈無法持續進攻，型態跌壞的股票可能成為下一波落隊標的。",
+        "中小櫃買指數表現較弱，資金有從中小股轉向大型股的趨勢。",
+        "CPU供應鏈面臨晶圓代工產能與記憶體供應瓶頸，可能影響營收認列速度。",
+        "高估值個股若基本面無法支撐，容易面臨修正壓力。"
+      ],
+      "personal_trade_note": "作者提到過去曾喜歡開超大槓桿，但因回檔時壓力過大，已調整操作策略，目前傾向於在下跌時將資金投入指數或台積電，待回穩後再進行配置。",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-07-23 05:19:12"
+    },
     {
       "episode": 680,
       "title": "股癌筆記EP680 - 社工日常socialworkerdaily",
@@ -232,57 +306,6 @@
       "personal_trade_note": "作者表示自己最大的槓桿約為2.5倍（融資開滿），在新一代股民中屬於保守派。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-07-15 11:58:28"
-    },
-    {
-      "episode": 676,
-      "title": "股癌筆記EP676 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-676/",
-      "published_at": "2026-07-04 22:35:40",
-      "modified_at": "2026-07-04 22:35:49",
-      "time": "2026-07-04 22:35:40",
-      "summary": "本集節目重點在於市場盤勢與產業趨勢。盤勢方面，市場經歷修正後，資金重新凝聚，強勢族群如被動元件、功率元件與封測端有望帶動大盤創高。產業上，功率元件因AI需求強勁出現缺貨與漲價，具備產能優勢或敢於搶料的廠商將受惠。封測族群因AI需求排擠效應，報價有顯著漲幅。此外，Meta投入Neocloud建置，意在將舊型算力出租以持續擴大投資，顯示科技巨頭在AI領域的積極佈局。",
-      "key_points": [
-        "市場經歷修正後，資金重新凝聚，強勢族群如被動元件、功率元件與封測端有望帶動大盤創高。",
-        "功率元件因AI應用需求強勁，出現缺貨與漲價情形，具備產能優勢或敢於搶料的廠商將受惠。",
-        "封測族群受惠於AI需求帶來的排擠效應，報價有顯著漲幅，轉型故事受市場關注。",
-        "Meta投入Neocloud建置，將舊型算力出租以持續擴大AI投資，顯示科技巨頭積極佈局。"
-      ],
-      "market_topics": [
-        {
-          "topic": "功率元件",
-          "summary": "因AI應用需求強勁，出現缺貨與漲價，具備產能優勢或敢於搶料的廠商將受惠。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "封測族群",
-          "summary": "受惠於AI需求帶來的排擠效應，報價有顯著漲幅，轉型故事受市場關注。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "被動元件",
-          "summary": "籌碼洗淨後，有望成為帶動市場的強勢族群。",
-          "sentiment": "positive"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "Meta",
-          "code": "",
-          "reason": "投入Neocloud建置，將舊型算力出租以持續擴大AI投資。"
-        },
-        {
-          "name": "輝達",
-          "code": "",
-          "reason": "提到產業好但需觀察市場資金與法人動向。"
-        }
-      ],
-      "risk_notes": [
-        "強勢股在盤面震盪時容易面臨賣壓，追漲停可能被修理。",
-        "投資需觀察市場資金與法人動向，產業好不代表股價一定會漲。"
-      ],
-      "personal_trade_note": "",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-07-15 11:58:32"
     }
   ]
 }
