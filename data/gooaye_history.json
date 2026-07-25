@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-25 05:18:13",
+  "updated_at": "2026-07-26 05:15:42",
   "episodes": {
     "675": {
       "episode": 675,
@@ -636,16 +636,89 @@
       "content_length": 2827,
       "summarized_at": "2026-07-23 05:19:12",
       "model": "gemini-3.1-flash-lite"
+    },
+    "682": {
+      "episode": 682,
+      "title": "股癌筆記EP682 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-682/",
+      "published_at": "2026-07-25 18:52:18",
+      "modified_at": "2026-07-25 18:52:23",
+      "summary": "本集節目討論當前市場環境如同魂系遊戲般艱難，標普500雖在高位，但費城半導體指數（SOX）與櫃買市場跌幅顯著。市場出現財報好壞皆被殺的現象，估值修正明顯，部分設備股與PCB板材股估值已降至低位。AI產業進入過渡期，雖然Google雲端業務證實AI可獲利，但高昂的訓練與推論成本對現金流造成壓力。記憶體方面，預期Q4至明年Q1價格漲幅將收斂。面對市場震盪，建議降低槓桿、保留現金並減少交易頻率，等待型態轉好。",
+      "key_points": [
+        "市場目前處於高難度震盪期，財報表現優異的公司仍可能面臨股價修正。",
+        "AI產業面臨高昂的運算成本與供應鏈通膨壓力，正處於過渡期。",
+        "記憶體價格漲幅預期將在Q4至明年Q1收斂，價格可能趨於持平。",
+        "面對市場破底風險，建議採取保守策略，降低槓桿並騰出現金，等待均線型態轉好。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI產業",
+          "summary": "AI模型訓練與推論成本高昂，Google雲端業務雖證實AI可獲利，但短期內高成本對現金流造成壓力。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "記憶體",
+          "summary": "預期今年Q4至明年Q1漲幅收斂至10%以內，隨後價格可能持平。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "功率半導體",
+          "summary": "隨400V至800V時代發展，高階產能轉向高伏特數產品，產業發展長期看好，但股價受市場情緒影響波動。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Google",
+          "code": "",
+          "reason": "雲端業務獲得巨大成功，證實AI可獲利，但需投入大量成本。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "作者持有的概念股，雖有正報酬但無法抵銷整體部位虧損。"
+        },
+        {
+          "name": "特斯拉",
+          "code": "",
+          "reason": "投入Physical AI，市場因擔憂高昂投入成本而導致股價崩跌。"
+        },
+        {
+          "name": "德州儀器",
+          "code": "",
+          "reason": "財報釋出正向訊號，產業全面復甦且有漲價情形，但股價仍下跌。"
+        },
+        {
+          "name": "Meta",
+          "code": "",
+          "reason": "提及過去投入AR時，市場因擔憂而導致股價崩跌的案例。"
+        },
+        {
+          "name": "Nichicon",
+          "code": "",
+          "reason": "被動元件廠，預計九月漲價。"
+        }
+      ],
+      "risk_notes": [
+        "市場若持續破底或加速下跌，需特別小心。",
+        "財報表現良好仍可能被市場懲罰，顯示市場情緒極度保守。",
+        "若無強勁反彈，市場可能陷入盤整，賣壓沉重。"
+      ],
+      "personal_trade_note": "作者目前部位虧損已達兩成多，若虧損擴大至25%至30%將採取更保守作法。目前策略為降低槓桿、騰出現金、降低交易頻率，等待型態轉好、站回主要均線後再操作。",
+      "content_hash": "01516fd5f40c8dcb34ce62fdcf5bd0d0a5f0e05d8f9309309be1029ece4df58b",
+      "content_length": 2266,
+      "summarized_at": "2026-07-26 05:15:41",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    682,
     681,
     680,
     679,
-    678,
-    677
+    678
   ],
   "model": "gemini-3.1-flash-lite"
 }
