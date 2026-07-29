@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-07-29 05:18:40",
+  "updated_at": "2026-07-30 05:19:36",
   "episodes": {
     "675": {
       "episode": 675,
@@ -709,16 +709,96 @@
       "content_length": 2266,
       "summarized_at": "2026-07-26 05:15:41",
       "model": "gemini-3.1-flash-lite"
+    },
+    "683": {
+      "episode": 683,
+      "title": "股癌筆記EP683 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-683/",
+      "published_at": "2026-07-29 23:59:07",
+      "modified_at": "2026-07-30 00:10:40",
+      "summary": "本集探討近期市場劇烈回檔，作者認為這波跌幅雖大，但因許多投資人仍有獲利回吐，未見恐慌性殺盤。市場出現許多估值修正後的標的，但因型態破壞且均線壓力大，短期難以V型反轉。作者強調槓桿控制的重要性，並分析記憶體族群重挫可能隱含的市場訊息。此外，討論了CPU與GPU未來可能趨向1:1配置的趨勢，以及對中國研發DUV曝光機的看法，認為即便技術突破，仍面臨美國制裁與產能無法外溢的限制。",
+      "key_points": [
+        "市場回檔劇烈，但因許多投資人仍有獲利回吐，尚未出現恐慌性殺盤，需觀察後續是否出現爆量認輸的訊號。",
+        "目前市場出現許多估值修正後的標的，但因型態破壞且上方均線壓力重，預期需要時間盤整恢復信心，難以直接V轉。",
+        "強調槓桿控制的重要性，若投資部位影響生活，代表槓桿過大；建議在極端波動下應避免過度槓桿。",
+        "分析CPU與GPU未來可能趨向1:1配置，傳統伺服器CPU需求仍有表現空間。",
+        "中國研發DUV曝光機雖可透過犧牲良率土法煉鋼，但受限於美國制裁，產能恐難以對外輸出。"
+      ],
+      "market_topics": [
+        {
+          "topic": "市場回檔與估值修正",
+          "summary": "市場經歷嚴重回檔，許多個股估值已大幅修正，但因型態破壞，短期面臨解套賣壓，需盤整等待信心恢復。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "CPU與GPU趨勢",
+          "summary": "預期未來CPU與GPU配置將趨向1:1，傳統伺服器CPU需求仍被市場低估。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "中國DUV曝光機",
+          "summary": "中國透過犧牲良率土法煉鋼研發DUV，但受限於美國制裁，生產力難以影響全球市場。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "作者將大部位資金挪至台積電避難，並討論其估值與市場資金流向。"
+        },
+        {
+          "name": "0050",
+          "code": "0050",
+          "reason": "提到許多投資人仍有獲利回吐，0050表現仍為正報酬。"
+        },
+        {
+          "name": "三星",
+          "code": "",
+          "reason": "記憶體核心震央，其PE與PBR修正引發市場對隱含訊息的擔憂。"
+        },
+        {
+          "name": "SK海力士",
+          "code": "",
+          "reason": "記憶體核心震央，其估值修正引發市場對隱含訊息的擔憂。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "提到其Helios架構與CPU/GPU配置趨勢。"
+        },
+        {
+          "name": "Intel",
+          "code": "",
+          "reason": "提到在傳統伺服器CPU領域仍有表現空間。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "與台積電並列為核心主軸，討論其估值對齊問題。"
+        }
+      ],
+      "risk_notes": [
+        "市場若持續耗損而未出現恐慌性殺盤，恐導致跌勢不止。",
+        "記憶體族群重挫可能隱含市場未知的負面訊息。",
+        "若中小熱門股反彈，資金可能從台積電撤出，導致台積電成為提款機。",
+        "便宜的股票不代表不會變得更便宜。"
+      ],
+      "personal_trade_note": "作者目前槓桿控制在1.3倍以下，將大部位資金挪至台積電與台指期避難，若市場再出現人道走廊，考慮將部位塞入台指期或持有現金。",
+      "content_hash": "2ebeeed44ad8898866ec165e80d3d49724472f27fabd99eca430ab516e6da80a",
+      "content_length": 2146,
+      "summarized_at": "2026-07-30 05:19:35",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    683,
     682,
     681,
     680,
-    679,
-    678
+    679
   ],
   "model": "gemini-3.1-flash-lite"
 }
