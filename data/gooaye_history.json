@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-01 05:21:52",
+  "updated_at": "2026-08-02 05:16:17",
   "episodes": {
     "675": {
       "episode": 675,
@@ -789,16 +789,74 @@
       "content_length": 2146,
       "summarized_at": "2026-07-30 05:19:35",
       "model": "gemini-3.1-flash-lite"
+    },
+    "684": {
+      "episode": 684,
+      "title": "股癌筆記EP684 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-684/",
+      "published_at": "2026-08-01 18:02:16",
+      "modified_at": "2026-08-01 18:10:06",
+      "summary": "本集探討近期台股經歷史詩級大反彈後的市場觀察，分析此次崩跌主因源於流動性緊縮與槓桿去化，特別是與Leopold Aschenbrenner相關的基金爆倉事件，類似2021年Archegos事件。節目中亦討論了台股處置制度對流動性的負面影響，認為該制度在市場波動時反而加劇了中小型股的超跌。此外，作者分享了對教育與投資心態的看法，強調投資應以改善生活為目的，並提醒投資人需關注流動性風險。",
+      "key_points": [
+        "台股經歷劇烈震盪後出現史詩級反彈，市場正處於降槓桿與流動性釋放後的復甦階段。",
+        "近期市場崩跌核心與Situational Awareness基金爆倉有關，該事件引發避險基金動能部位與散戶槓桿的連鎖反應。",
+        "批評現行台股處置政策，認為其在市場波動時抽走流動性，導致中小型股出現不合理的超跌，主張廢除利大於弊。",
+        "強調投資人隨著資產規模擴大，應更重視流動性管理，而非僅關注短線波動。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股流動性與處置政策",
+          "summary": "認為處置股政策在市場降溫時會抽走流動性，導致中小型股超跌，建議應進行改革或廢除。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "AI相關基金爆倉事件",
+          "summary": "分析Situational Awareness基金爆倉對市場造成的連鎖影響，並指出這是流動性緊縮下的典型獲利回吐。",
+          "sentiment": "negative"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "週五給出良好展望並上修預測。"
+        },
+        {
+          "name": "力積電",
+          "code": "6770",
+          "reason": "提及黃崇仁相關個股的市場影響力。"
+        },
+        {
+          "name": "愛普*",
+          "code": "6531",
+          "reason": "提及黃崇仁相關個股的市場影響力。"
+        },
+        {
+          "name": "Anthropic",
+          "code": "",
+          "reason": "Situational Awareness基金主要持有的AI標的。"
+        }
+      ],
+      "risk_notes": [
+        "市場循環中，AI板塊未來仍可能面臨真正的修正。",
+        "台股單一標的部位若超過一千萬，在遇到處置鎖單時會面臨極大的流動性風險。",
+        "投資人若在價格看不懂的情況下死命追高，將面臨無法預期的虧損風險。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "962cbca7a204c8d00927544cdc6e6d869daeb193c6dab97ec659ec5a834d43c2",
+      "content_length": 2667,
+      "summarized_at": "2026-08-02 05:16:16",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    684,
     683,
     682,
     681,
-    680,
-    679
+    680
   ],
   "model": "gemini-3.1-flash-lite"
 }

@@ -2,9 +2,66 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-08-01 05:21:52",
+  "updated_at": "2026-08-02 05:16:17",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 684,
+      "title": "股癌筆記EP684 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-684/",
+      "published_at": "2026-08-01 18:02:16",
+      "modified_at": "2026-08-01 18:10:06",
+      "time": "2026-08-01 18:02:16",
+      "summary": "本集探討近期台股經歷史詩級大反彈後的市場觀察，分析此次崩跌主因源於流動性緊縮與槓桿去化，特別是與Leopold Aschenbrenner相關的基金爆倉事件，類似2021年Archegos事件。節目中亦討論了台股處置制度對流動性的負面影響，認為該制度在市場波動時反而加劇了中小型股的超跌。此外，作者分享了對教育與投資心態的看法，強調投資應以改善生活為目的，並提醒投資人需關注流動性風險。",
+      "key_points": [
+        "台股經歷劇烈震盪後出現史詩級反彈，市場正處於降槓桿與流動性釋放後的復甦階段。",
+        "近期市場崩跌核心與Situational Awareness基金爆倉有關，該事件引發避險基金動能部位與散戶槓桿的連鎖反應。",
+        "批評現行台股處置政策，認為其在市場波動時抽走流動性，導致中小型股出現不合理的超跌，主張廢除利大於弊。",
+        "強調投資人隨著資產規模擴大，應更重視流動性管理，而非僅關注短線波動。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股流動性與處置政策",
+          "summary": "認為處置股政策在市場降溫時會抽走流動性，導致中小型股超跌，建議應進行改革或廢除。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "AI相關基金爆倉事件",
+          "summary": "分析Situational Awareness基金爆倉對市場造成的連鎖影響，並指出這是流動性緊縮下的典型獲利回吐。",
+          "sentiment": "negative"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "週五給出良好展望並上修預測。"
+        },
+        {
+          "name": "力積電",
+          "code": "6770",
+          "reason": "提及黃崇仁相關個股的市場影響力。"
+        },
+        {
+          "name": "愛普*",
+          "code": "6531",
+          "reason": "提及黃崇仁相關個股的市場影響力。"
+        },
+        {
+          "name": "Anthropic",
+          "code": "",
+          "reason": "Situational Awareness基金主要持有的AI標的。"
+        }
+      ],
+      "risk_notes": [
+        "市場循環中，AI板塊未來仍可能面臨真正的修正。",
+        "台股單一標的部位若超過一千萬，在遇到處置鎖單時會面臨極大的流動性風險。",
+        "投資人若在價格看不懂的情況下死命追高，將面臨無法預期的虧損風險。"
+      ],
+      "personal_trade_note": "",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-08-02 05:16:16"
+    },
     {
       "episode": 683,
       "title": "股癌筆記EP683 - 社工日常socialworkerdaily",
@@ -276,67 +333,6 @@
       "personal_trade_note": "作者持有超過一半部位為台積電，因大盤跌破季線且回檔超過15%，已進入防守模式，不再積極進攻強勢族群，轉而利用台指期或0050進行防守與抄底。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-07-19 05:14:33"
-    },
-    {
-      "episode": 679,
-      "title": "股癌筆記EP679 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-679/",
-      "published_at": "2026-07-16 00:56:28",
-      "modified_at": "2026-07-16 00:58:04",
-      "time": "2026-07-16 00:56:28",
-      "summary": "本集探討AI應用已達甜蜜點，開始重視成本效益而非盲目追求模型更新。市場方面，韓國股市因高槓桿導致劇烈去槓桿，影響亞洲股市，台股則因券商風控提早拆彈。台股目前處於資金面影響的震盪期，融資水位仍高，熱門股回檔幅度大。策略上，面對強勢股回檔，不建議盲目追逐，應視為區間盤操作，減碼型態轉弱個股，並關注財報季中IDM廠對功率元件的展望，以及矽晶圓、載板等籌碼相對純的族群。",
-      "key_points": [
-        "AI應用進入成本優化階段，過度追求精確會導致Token成本過高。",
-        "韓國市場因高槓桿導致被迫平倉，引發亞洲股市連鎖反應，台股因券商風控提早拆彈。",
-        "台股目前融資水位仍高，熱門股回檔幅度大，操作上建議視為區間盤，汰弱留強，不宜盲目追逐強勢股。"
-      ],
-      "market_topics": [
-        {
-          "topic": "AI應用",
-          "summary": "已達甜蜜點，邊際效益遞減，目前重點轉向成本控制（Cost down）。",
-          "sentiment": "neutral"
-        },
-        {
-          "topic": "韓國股市",
-          "summary": "因高槓桿導致劇烈去槓桿，成為資金面影響亞洲股市的關鍵。",
-          "sentiment": "negative"
-        },
-        {
-          "topic": "台股熱門族群",
-          "summary": "矽晶圓、載板籌碼相對純，但過去修正明顯；功率元件回檔大，待IDM財報確認展望。",
-          "sentiment": "neutral"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "台積電",
-          "code": "2330",
-          "reason": "法說會展望預期良好，是盤勢不穩時的避風港。"
-        },
-        {
-          "name": "勝宏科",
-          "code": "6581",
-          "reason": "傳聞材料有問題，訂單轉向台系。"
-        },
-        {
-          "name": "力積電",
-          "code": "6770",
-          "reason": "提及功率封裝處於緊繃狀態。"
-        },
-        {
-          "name": "精材",
-          "code": "3374",
-          "reason": "IC後段封測供不應求，股價表態。"
-        }
-      ],
-      "risk_notes": [
-        "融資水位仍高，若反彈無力且跌破季線，需提早減碼。",
-        "熱門股回檔時籌碼凌亂，短期內反彈不易。",
-        "估值過高的個股，若營收財報未達預期，估值乘數恐難以回升。"
-      ],
-      "personal_trade_note": "不會將資金全數切入強勢股，視為區間盤操作。手上型態壞掉、形成大頭部的個股會減碼，準備買入新標的。若反彈無力再破底，會先砍掉加碼單認賠；若大盤從季線往下灌，會提早增加現金部位。",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-07-16 05:19:12"
     }
   ]
 }
