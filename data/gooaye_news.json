@@ -2,9 +2,84 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-08-05 05:20:27",
+  "updated_at": "2026-08-06 05:20:00",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 685,
+      "title": "股癌筆記EP685 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-685/",
+      "published_at": "2026-08-06 00:10:16",
+      "modified_at": "2026-08-06 00:10:21",
+      "time": "2026-08-06 00:10:16",
+      "summary": "本集重點在於市場經歷絕世大反彈後的觀察。台股在經歷融資大減、爆倉事件釐清後，市場情緒轉變，即便有零星利空消息，市場仍展現強勁支撐。作者認為抄底不需追求最低點，分批買入較為合理，且市場不一定會出現傳統的W底，V轉機率增加。針對產業面，HBM降規與TPU遞延被視為成本考量或小事，不影響長線藍圖；光通訊產業雖有地緣政治風險，但目前影響有限。此外，PLTR財報表現亮眼，市場願意給予高估值，顯示市場對AI相關軟體與高估值標的仍具信心。",
+      "key_points": [
+        "市場經歷爆倉與降槓桿後，情緒轉向樂觀，反彈力道強勁，不一定會有傳統的第二隻腳（W底）。",
+        "HBM降規屬於成本考量，不影響長線發展；TPU遞延非重大事件。",
+        "光通訊產業雖面臨地緣政治風險，但目前影響有限，且該族群領跑顯示市場對高估值標的接受度高。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股反彈",
+          "summary": "市場在確認爆倉事件與融資大減後，情緒轉變，指數與中小股皆有表現，市場對利空消息反應鈍化。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "AI硬體與軟體",
+          "summary": "HBM降規與TPU遞延不影響長線藍圖；PLTR財報亮眼，市場願意給予高估值，顯示AI相關標的仍受青睞。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "市場反彈指標，上週五曾漲停。"
+        },
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "提到其Roadmap與博通類似，遞延非大事。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "提到其Roadmap與聯發科類似，遞延非大事。"
+        },
+        {
+          "name": "中際旭創",
+          "code": "",
+          "reason": "光通訊產業代表，出貨給美國多使用海外工廠。"
+        },
+        {
+          "name": "輝達",
+          "code": "NVDA",
+          "reason": "提到其與Google在光通訊元件的競爭。"
+        },
+        {
+          "name": "Google",
+          "code": "GOOGL",
+          "reason": "提到其與輝達在光通訊元件的競爭。"
+        },
+        {
+          "name": "Palantir",
+          "code": "PLTR",
+          "reason": "財報表現好，股價跳升，市場願意反應其高估值。"
+        },
+        {
+          "name": "微軟",
+          "code": "MSFT",
+          "reason": "財報開出後股價上漲，確認市場情緒轉變。"
+        }
+      ],
+      "risk_notes": [
+        "光通訊元件若發生中美互相封殺反制，需留意供應鏈影響。",
+        "軟體公司毛利受AI token成本擠壓，需觀察是否能維持高估值。"
+      ],
+      "personal_trade_note": "作者表示目前將資金放在指數中，因為不想有太多壓力，但認為中小股便宜的東西很多。目前帳面虧損從最低的-30%收斂至-16%。",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-08-06 05:19:59"
+    },
     {
       "episode": 684,
       "title": "股癌筆記EP684 - 社工日常socialworkerdaily",
@@ -286,53 +361,6 @@
       "personal_trade_note": "作者提到過去曾喜歡開超大槓桿，但因回檔時壓力過大，已調整操作策略，目前傾向於在下跌時將資金投入指數或台積電，待回穩後再進行配置。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-07-23 05:19:12"
-    },
-    {
-      "episode": 680,
-      "title": "股癌筆記EP680 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-680/",
-      "published_at": "2026-07-19 00:23:45",
-      "modified_at": "2026-07-19 00:23:51",
-      "time": "2026-07-19 00:23:45",
-      "summary": "本集重點在於市場進入防守階段的策略調整。台股大盤跌破季線，中小股與高Beta股修正劇烈，市場出現不理性殺盤。台積電法說會內容正面，CAPEX上調且營收展望佳，但股價仍受大盤情緒影響。作者認為在無法識別強勢族群時，應轉向指數型工具（如台指期、0050）進行防守與抄底，避免過度追求個股動能。同時強調長期投資需具備耐性，並提醒投資人應理性看待回檔，避免在市場恐慌時過度操作。",
-      "key_points": [
-        "市場進入防守模式，大盤跌破季線，建議減少積極進攻，轉向指數型工具如台指期或0050。",
-        "台積電法說會表現優異，CAPEX上調至60-64B，營收目標上修至40%，但受市場情緒影響股價震盪。",
-        "高Beta股與中小股修正幅度大，估值修正期間波動劇烈，建議往業績股方向配置。",
-        "長期投資的核心在於耐性，市場回檔是為了後續的獲利空間，不應在恐慌中過度持有現金而錯失長期向上趨勢。"
-      ],
-      "market_topics": [
-        {
-          "topic": "台積電與半導體",
-          "summary": "法說會簡報與QA表現極佳，CAPEX與營收展望均上修，但股價受大盤不理性殺盤影響。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "市場盤勢",
-          "summary": "大盤跌破季線，進入防守階段，中小股與高Beta股修正壓力大，市場情緒轉趨保守。",
-          "sentiment": "negative"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "台積電",
-          "code": "2330",
-          "reason": "法說會CAPEX與營收展望上修，但股價受大盤影響下跌。"
-        },
-        {
-          "name": "0050",
-          "code": "0050",
-          "reason": "作者建議作為防守與抄底加碼的指數型工具。"
-        }
-      ],
-      "risk_notes": [
-        "大盤跌破季線且季線斜率若轉平，後續可能面臨更大修正。",
-        "高Beta股在估值修正期間可能出現劇烈跌幅。",
-        "市場出現不理性殺盤，即便基本面良好的公司也可能受波及。"
-      ],
-      "personal_trade_note": "作者持有超過一半部位為台積電，因大盤跌破季線且回檔超過15%，已進入防守模式，不再積極進攻強勢族群，轉而利用台指期或0050進行防守與抄底。",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-07-19 05:14:33"
     }
   ]
 }

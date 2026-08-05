@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-05 05:20:27",
+  "updated_at": "2026-08-06 05:20:00",
   "episodes": {
     "675": {
       "episode": 675,
@@ -847,16 +847,92 @@
       "content_length": 2667,
       "summarized_at": "2026-08-02 05:16:16",
       "model": "gemini-3.1-flash-lite"
+    },
+    "685": {
+      "episode": 685,
+      "title": "股癌筆記EP685 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-685/",
+      "published_at": "2026-08-06 00:10:16",
+      "modified_at": "2026-08-06 00:10:21",
+      "summary": "本集重點在於市場經歷絕世大反彈後的觀察。台股在經歷融資大減、爆倉事件釐清後，市場情緒轉變，即便有零星利空消息，市場仍展現強勁支撐。作者認為抄底不需追求最低點，分批買入較為合理，且市場不一定會出現傳統的W底，V轉機率增加。針對產業面，HBM降規與TPU遞延被視為成本考量或小事，不影響長線藍圖；光通訊產業雖有地緣政治風險，但目前影響有限。此外，PLTR財報表現亮眼，市場願意給予高估值，顯示市場對AI相關軟體與高估值標的仍具信心。",
+      "key_points": [
+        "市場經歷爆倉與降槓桿後，情緒轉向樂觀，反彈力道強勁，不一定會有傳統的第二隻腳（W底）。",
+        "HBM降規屬於成本考量，不影響長線發展；TPU遞延非重大事件。",
+        "光通訊產業雖面臨地緣政治風險，但目前影響有限，且該族群領跑顯示市場對高估值標的接受度高。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股反彈",
+          "summary": "市場在確認爆倉事件與融資大減後，情緒轉變，指數與中小股皆有表現，市場對利空消息反應鈍化。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "AI硬體與軟體",
+          "summary": "HBM降規與TPU遞延不影響長線藍圖；PLTR財報亮眼，市場願意給予高估值，顯示AI相關標的仍受青睞。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "市場反彈指標，上週五曾漲停。"
+        },
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "提到其Roadmap與博通類似，遞延非大事。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "提到其Roadmap與聯發科類似，遞延非大事。"
+        },
+        {
+          "name": "中際旭創",
+          "code": "",
+          "reason": "光通訊產業代表，出貨給美國多使用海外工廠。"
+        },
+        {
+          "name": "輝達",
+          "code": "NVDA",
+          "reason": "提到其與Google在光通訊元件的競爭。"
+        },
+        {
+          "name": "Google",
+          "code": "GOOGL",
+          "reason": "提到其與輝達在光通訊元件的競爭。"
+        },
+        {
+          "name": "Palantir",
+          "code": "PLTR",
+          "reason": "財報表現好，股價跳升，市場願意反應其高估值。"
+        },
+        {
+          "name": "微軟",
+          "code": "MSFT",
+          "reason": "財報開出後股價上漲，確認市場情緒轉變。"
+        }
+      ],
+      "risk_notes": [
+        "光通訊元件若發生中美互相封殺反制，需留意供應鏈影響。",
+        "軟體公司毛利受AI token成本擠壓，需觀察是否能維持高估值。"
+      ],
+      "personal_trade_note": "作者表示目前將資金放在指數中，因為不想有太多壓力，但認為中小股便宜的東西很多。目前帳面虧損從最低的-30%收斂至-16%。",
+      "content_hash": "cf63de09b705b1d93d1c70a3690d52b4fc5babb845d2c7f80154a983b74d359b",
+      "content_length": 2375,
+      "summarized_at": "2026-08-06 05:19:59",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    685,
     684,
     683,
     682,
-    681,
-    680
+    681
   ],
   "model": "gemini-3.1-flash-lite"
 }
