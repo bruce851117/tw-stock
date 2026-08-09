@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-09 05:15:09",
+  "updated_at": "2026-08-10 05:16:29",
   "episodes": {
     "675": {
       "episode": 675,
@@ -923,16 +923,83 @@
       "content_length": 2375,
       "summarized_at": "2026-08-06 05:19:59",
       "model": "gemini-3.1-flash-lite"
+    },
+    "686": {
+      "episode": 686,
+      "title": "股癌筆記EP686 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-686/",
+      "published_at": "2026-08-09 22:41:50",
+      "modified_at": "2026-08-09 22:41:56",
+      "summary": "本集節目討論台股在拉回季線後的盤勢，認為崩盤機率偏低，目前市場處於洗籌階段。作者強調進入家庭後，風險控管與保本的重要性大於追求極致報酬，建議可透過股債配置或多空對沖來降低波動。市場資金近期回流軟體股（如PLTR、Cloudflare），光通訊與散熱族群展現轉強跡象，呈現輪動格局。此外，提到光通訊上游材料磷化銦基板仍有缺料狀況，若能攻克歷史新高，有望成為新主流。最後提醒投資人，極度動能的族群需小心補跌風險，並強調在市場大崩盤前通常會先有明顯的漲勢。",
+      "key_points": [
+        "台股拉回季線後進入橫盤整理，崩盤機率偏低，未來兩週是關鍵觀察期。",
+        "投資策略應從追求資本報酬轉向重視風險控管，透過股債配置或多空對沖降低Drawdown。",
+        "市場資金輪動明顯，光通訊與散熱族群轉強，後續可觀察被動元件與功率元件是否接棒。"
+      ],
+      "market_topics": [
+        {
+          "topic": "光通訊",
+          "summary": "市場需求良好，上游材料磷化銦基板仍缺料，若能突破歷史新高，有望成為新一波主流。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "功率與電力元件",
+          "summary": "受惠於AI功耗提升，BBU用量與規格需求增加，ASP顯著成長，相關公司受光寶科表現帶動。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "美股軟體股",
+          "summary": "資金願意湧入高估值軟體股，如PLTR與Cloudflare表現強勢。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Palantir",
+          "code": "PLTR",
+          "reason": "美股軟體股資金回流，表現強勢"
+        },
+        {
+          "name": "Cloudflare",
+          "code": "NET",
+          "reason": "美股軟體股資金回流，表現強勢"
+        },
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "作者調整部位持有標的"
+        },
+        {
+          "name": "台達電",
+          "code": "2308",
+          "reason": "公司基本面強大，但目前資金不在該標的，線型表現不佳"
+        },
+        {
+          "name": "光寶科",
+          "code": "2301",
+          "reason": "財報後股價噴出，可能提振電力相關公司"
+        }
+      ],
+      "risk_notes": [
+        "若基本面尚未改變即出現劇烈殺盤，需警惕未來基本面轉差時的跌幅可能更大。",
+        "極度動能的族群在修正時容易出現補跌，需特別小心。",
+        "七月修正期間，頻繁切換部位至避風港反而可能受到更多傷害。"
+      ],
+      "personal_trade_note": "作者近期調整投資組合，包含持有台積電、切換台指期，並強調目前採取避險或股債配置以降低資產波動，不再單純追求極致資本報酬。",
+      "content_hash": "f5fb72ddc23535da1468eb05f49ba75c8a7ee7f3348f4f6fa7e5af8d20397988",
+      "content_length": 1668,
+      "summarized_at": "2026-08-10 05:16:28",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    686,
     685,
     684,
     683,
-    682,
-    681
+    682
   ],
   "model": "gemini-3.1-flash-lite"
 }
