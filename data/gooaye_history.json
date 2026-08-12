@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-12 05:25:14",
+  "updated_at": "2026-08-13 05:20:17",
   "episodes": {
     "675": {
       "episode": 675,
@@ -990,16 +990,64 @@
       "content_length": 1668,
       "summarized_at": "2026-08-10 05:16:28",
       "model": "gemini-3.1-flash-lite"
+    },
+    "687": {
+      "episode": 687,
+      "title": "股癌筆記EP687 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-687/",
+      "published_at": "2026-08-13 00:29:57",
+      "modified_at": "2026-08-13 00:51:36",
+      "summary": "本集節目探討了近期台股盤面與國際科技巨頭的動態。針對台股，提到處置股規則改變導致市場出現掛假單現象，資金仍在尋找方向。盤面出現利多出貨的震盪情形，但整體族群型態逐漸轉好。針對Google，分析其高層人事異動與策略轉向，認為Google可能正轉型為數位時代的基礎設施提供者（如雲端租賃），這與波克夏投資Google的邏輯相符，市場對此類轉型可能給予正面評價。此外，作者分享了個人對AI供應鏈的布局觀點，偏好具備明確成長前景的標的。",
+      "key_points": [
+        "處置股規則改變後，市場出現掛假單頻率增加的現象，散戶需留意交易策略。",
+        "盤面出現利多不漲甚至出貨的震盪，但多數族群型態逐漸轉好，對後市相對樂觀。",
+        "Google人事異動與策略轉向，可能意味著其正轉型為雲端基礎設施提供者，市場對此類重資產轉型可能給予正面評價。",
+        "投資布局偏好2026、2027年能見度高的標的，避開過於擁擠或開花結果時間過晚的族群。"
+      ],
+      "market_topics": [
+        {
+          "topic": "處置股規則",
+          "summary": "規則改變導致市場出現掛假單現象，資金正在尋找因應方向。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "AI供應鏈與盤面",
+          "summary": "盤面出現利多出貨的震盪，但族群型態逐漸轉好，整體相對樂觀。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "Google策略轉型",
+          "summary": "Google人事變動與資源投入雲端，可能轉型為數位基礎設施提供者，符合波克夏投資邏輯。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "世芯-KY",
+          "code": "3661",
+          "reason": "原文提及AWS概念股，營收超乎預期但未漲停，引發市場對利多出貨的討論。"
+        }
+      ],
+      "risk_notes": [
+        "處置股規則改變後，市場掛假單頻率增加，交易需謹慎。",
+        "盤面若持續出現利多出貨，可能導致行情轉為區間震盪。",
+        "前緣AI模型競爭激烈，若無法封禁中國競爭對手，成果恐遭瓜分。"
+      ],
+      "personal_trade_note": "近期操作降低了指數部位，轉而布局個股。目前持有設備、光通訊、AI Power、散熱等族群，已撤出老AI標的，並避開PCB與載板等擁擠族群。投資選擇偏向2026、2027年有成績的標的。",
+      "content_hash": "7f7584b19eefbb753835a388a030c701cbc8e0ebc95b7af82bb881bf6b5ed523",
+      "content_length": 2353,
+      "summarized_at": "2026-08-13 05:20:16",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    687,
     686,
     685,
     684,
-    683,
-    682
+    683
   ],
   "model": "gemini-3.1-flash-lite"
 }
