@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-16 05:14:06",
+  "updated_at": "2026-08-17 05:19:49",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1038,16 +1038,80 @@
       "content_length": 2353,
       "summarized_at": "2026-08-13 05:20:16",
       "model": "gemini-3.1-flash-lite"
+    },
+    "688": {
+      "episode": 688,
+      "title": "股癌筆記EP688 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-688/",
+      "published_at": "2026-08-16 12:50:35",
+      "modified_at": "2026-08-16 12:50:44",
+      "summary": "本集重點涵蓋市場籌碼與產業趨勢。在籌碼面，討論了SpaceX與Cerebras股票解禁後的市場反應，強調流動性增加對長期股價的正面意義。在產業面，深入分析了資料中心從低壓轉向800V架構的必要性，主因是伺服器功耗提升導致低壓大電流架構面臨線纜、連接器及空間限制。文中整理了800V架構演進的三個階段，包括初期受惠的PSU、連接器、BBU，以及後續轉向集中式整流器、SiC、GaN與重電系統的趨勢。此外，提醒投資人應區分AI產業與消費電子的成長邏輯差異，並強調法人資金回補對底部形成的關鍵作用。",
+      "key_points": [
+        "股票解禁初期雖有賣壓，但長期來看流動性增加有助於價格發現與市場共識。",
+        "伺服器功耗提升迫使架構轉向800V，以解決低壓大電流帶來的線纜、連接器及空間瓶頸。",
+        "800V架構演進分為三個階段，分別受惠於電源供應器、連接器、BBU、功率半導體及重電設施。",
+        "AI產業與消費電子的成長邏輯不同，前者具備持續漲價能力，後者則易受價格破壞影響。",
+        "市場底部通常由大量法人資金回補形成，散戶難以單獨推動。"
+      ],
+      "market_topics": [
+        {
+          "topic": "股票解禁與流動性",
+          "summary": "解禁初期雖有賣壓，但釋出流動性有助於市場形成共識，長期對股價影響有限。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "資料中心800V架構",
+          "summary": "因應伺服器功耗提升，架構轉向800V可降低安培數，減少線纜與連接器負擔，並優化機櫃空間。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "功率半導體",
+          "summary": "SiC與GaN需求強勁，尤其是GaN的缺貨程度超乎預期。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "SpaceX",
+          "code": "",
+          "reason": "討論股票解禁後的市場流動性與股價表現。"
+        },
+        {
+          "name": "Cerebras",
+          "code": "",
+          "reason": "討論其晶片架構、與AMD合作以及股票解禁議題。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "與Cerebras合作開發解構式推論架構。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "提及CPX產品與市場競爭。"
+        }
+      ],
+      "risk_notes": [
+        "Cerebras有大量股票即將釋出，需觀察其對股價的影響。",
+        "800V架構演進的第三階段（2028-2030年）目前尚早，相關受惠對象仍需長期觀察。",
+        "若市場底部被跌破，可能代表下方支撐不足，需警惕風險。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "a34895f10b4cf81594fd1f56fdc67f4d2bba7c614ad78220145f3c43807c2741",
+      "content_length": 2603,
+      "summarized_at": "2026-08-17 05:19:48",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    688,
     687,
     686,
     685,
-    684,
-    683
+    684
   ],
   "model": "gemini-3.1-flash-lite"
 }

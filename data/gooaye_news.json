@@ -2,9 +2,72 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-08-16 05:14:06",
+  "updated_at": "2026-08-17 05:19:49",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 688,
+      "title": "股癌筆記EP688 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-688/",
+      "published_at": "2026-08-16 12:50:35",
+      "modified_at": "2026-08-16 12:50:44",
+      "time": "2026-08-16 12:50:35",
+      "summary": "本集重點涵蓋市場籌碼與產業趨勢。在籌碼面，討論了SpaceX與Cerebras股票解禁後的市場反應，強調流動性增加對長期股價的正面意義。在產業面，深入分析了資料中心從低壓轉向800V架構的必要性，主因是伺服器功耗提升導致低壓大電流架構面臨線纜、連接器及空間限制。文中整理了800V架構演進的三個階段，包括初期受惠的PSU、連接器、BBU，以及後續轉向集中式整流器、SiC、GaN與重電系統的趨勢。此外，提醒投資人應區分AI產業與消費電子的成長邏輯差異，並強調法人資金回補對底部形成的關鍵作用。",
+      "key_points": [
+        "股票解禁初期雖有賣壓，但長期來看流動性增加有助於價格發現與市場共識。",
+        "伺服器功耗提升迫使架構轉向800V，以解決低壓大電流帶來的線纜、連接器及空間瓶頸。",
+        "800V架構演進分為三個階段，分別受惠於電源供應器、連接器、BBU、功率半導體及重電設施。",
+        "AI產業與消費電子的成長邏輯不同，前者具備持續漲價能力，後者則易受價格破壞影響。",
+        "市場底部通常由大量法人資金回補形成，散戶難以單獨推動。"
+      ],
+      "market_topics": [
+        {
+          "topic": "股票解禁與流動性",
+          "summary": "解禁初期雖有賣壓，但釋出流動性有助於市場形成共識，長期對股價影響有限。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "資料中心800V架構",
+          "summary": "因應伺服器功耗提升，架構轉向800V可降低安培數，減少線纜與連接器負擔，並優化機櫃空間。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "功率半導體",
+          "summary": "SiC與GaN需求強勁，尤其是GaN的缺貨程度超乎預期。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "SpaceX",
+          "code": "",
+          "reason": "討論股票解禁後的市場流動性與股價表現。"
+        },
+        {
+          "name": "Cerebras",
+          "code": "",
+          "reason": "討論其晶片架構、與AMD合作以及股票解禁議題。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "與Cerebras合作開發解構式推論架構。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "提及CPX產品與市場競爭。"
+        }
+      ],
+      "risk_notes": [
+        "Cerebras有大量股票即將釋出，需觀察其對股價的影響。",
+        "800V架構演進的第三階段（2028-2030年）目前尚早，相關受惠對象仍需長期觀察。",
+        "若市場底部被跌破，可能代表下方支撐不足，需警惕風險。"
+      ],
+      "personal_trade_note": "",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-08-17 05:19:48"
+    },
     {
       "episode": 687,
       "title": "股癌筆記EP687 - 社工日常socialworkerdaily",
@@ -249,85 +312,6 @@
       "personal_trade_note": "",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-08-02 05:16:16"
-    },
-    {
-      "episode": 683,
-      "title": "股癌筆記EP683 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-683/",
-      "published_at": "2026-07-29 23:59:07",
-      "modified_at": "2026-07-30 00:10:40",
-      "time": "2026-07-29 23:59:07",
-      "summary": "本集探討近期市場劇烈回檔，作者認為這波跌幅雖大，但因許多投資人仍有獲利回吐，未見恐慌性殺盤。市場出現許多估值修正後的標的，但因型態破壞且均線壓力大，短期難以V型反轉。作者強調槓桿控制的重要性，並分析記憶體族群重挫可能隱含的市場訊息。此外，討論了CPU與GPU未來可能趨向1:1配置的趨勢，以及對中國研發DUV曝光機的看法，認為即便技術突破，仍面臨美國制裁與產能無法外溢的限制。",
-      "key_points": [
-        "市場回檔劇烈，但因許多投資人仍有獲利回吐，尚未出現恐慌性殺盤，需觀察後續是否出現爆量認輸的訊號。",
-        "目前市場出現許多估值修正後的標的，但因型態破壞且上方均線壓力重，預期需要時間盤整恢復信心，難以直接V轉。",
-        "強調槓桿控制的重要性，若投資部位影響生活，代表槓桿過大；建議在極端波動下應避免過度槓桿。",
-        "分析CPU與GPU未來可能趨向1:1配置，傳統伺服器CPU需求仍有表現空間。",
-        "中國研發DUV曝光機雖可透過犧牲良率土法煉鋼，但受限於美國制裁，產能恐難以對外輸出。"
-      ],
-      "market_topics": [
-        {
-          "topic": "市場回檔與估值修正",
-          "summary": "市場經歷嚴重回檔，許多個股估值已大幅修正，但因型態破壞，短期面臨解套賣壓，需盤整等待信心恢復。",
-          "sentiment": "negative"
-        },
-        {
-          "topic": "CPU與GPU趨勢",
-          "summary": "預期未來CPU與GPU配置將趨向1:1，傳統伺服器CPU需求仍被市場低估。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "中國DUV曝光機",
-          "summary": "中國透過犧牲良率土法煉鋼研發DUV，但受限於美國制裁，生產力難以影響全球市場。",
-          "sentiment": "neutral"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "台積電",
-          "code": "2330",
-          "reason": "作者將大部位資金挪至台積電避難，並討論其估值與市場資金流向。"
-        },
-        {
-          "name": "0050",
-          "code": "0050",
-          "reason": "提到許多投資人仍有獲利回吐，0050表現仍為正報酬。"
-        },
-        {
-          "name": "三星",
-          "code": "",
-          "reason": "記憶體核心震央，其PE與PBR修正引發市場對隱含訊息的擔憂。"
-        },
-        {
-          "name": "SK海力士",
-          "code": "",
-          "reason": "記憶體核心震央，其估值修正引發市場對隱含訊息的擔憂。"
-        },
-        {
-          "name": "AMD",
-          "code": "",
-          "reason": "提到其Helios架構與CPU/GPU配置趨勢。"
-        },
-        {
-          "name": "Intel",
-          "code": "",
-          "reason": "提到在傳統伺服器CPU領域仍有表現空間。"
-        },
-        {
-          "name": "輝達",
-          "code": "",
-          "reason": "與台積電並列為核心主軸，討論其估值對齊問題。"
-        }
-      ],
-      "risk_notes": [
-        "市場若持續耗損而未出現恐慌性殺盤，恐導致跌勢不止。",
-        "記憶體族群重挫可能隱含市場未知的負面訊息。",
-        "若中小熱門股反彈，資金可能從台積電撤出，導致台積電成為提款機。",
-        "便宜的股票不代表不會變得更便宜。"
-      ],
-      "personal_trade_note": "作者目前槓桿控制在1.3倍以下，將大部位資金挪至台積電與台指期避難，若市場再出現人道走廊，考慮將部位塞入台指期或持有現金。",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-07-30 05:19:35"
     }
   ]
 }
