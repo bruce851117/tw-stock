@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-19 05:26:13",
+  "updated_at": "2026-08-20 05:43:17",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1102,16 +1102,60 @@
       "content_length": 2603,
       "summarized_at": "2026-08-17 05:19:48",
       "model": "gemini-3.1-flash-lite"
+    },
+    "689": {
+      "episode": 689,
+      "title": "股癌筆記EP689 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-689/",
+      "published_at": "2026-08-19 23:04:29",
+      "modified_at": "2026-08-19 23:04:36",
+      "summary": "本集探討科技股近期回檔後的市場表現，指出儘管有AI支出隱憂等「鬼故事」，但許多股票已收復失土，顯示市場韌性。重點在於識別泡沫與資產增長，並強調「回吐程度」作為風險控管指標。產業方面，記憶體族群被視為市場最缺且展望最明確的指標，若其股價乘數無法提升，將影響其他元件表現。此外，晶圓後段封測（OSAT）作為重大瓶頸，其股價走勢亦是關鍵觀察點。若上述兩者休息，市場可能轉向關注具備無形資產與附加價值的族群。整體而言，只要回檔未惡化並開始橫盤震盪，反而是尋找機會的時機。",
+      "key_points": [
+        "科技股回檔後反彈迅速，顯示市場對AI支出隱憂的「鬼故事」反應有限，許多股票已回到前高。",
+        "投資人應關注「回吐程度」，若績效大幅回吐應提高警覺，並觀察原物料報價是否止漲，作為初步警覺訊號。",
+        "記憶體族群是市場最缺且展望最明確的指標，其股價乘數表現將影響整體元件市場的評價。",
+        "晶圓後段封測（OSAT）為目前重大瓶頸，若相關個股股價無法持續推升，瓶頸交易可能暫時休息。",
+        "若缺貨漲價題材休息，市場可能回歸關注具備無形資產與附加價值的族群。"
+      ],
+      "market_topics": [
+        {
+          "topic": "科技股與AI支出",
+          "summary": "市場對AI隱藏債務與槓桿的擔憂尚未引發立即性爆炸，目前市場表現顯示對此類負面敘事買單程度有限。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "記憶體族群",
+          "summary": "市場最缺且展望最明確的元件，其股價乘數是衡量其他元件評價的關鍵基準。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "晶圓後段封測（OSAT）",
+          "summary": "目前產業重大瓶頸，解決方式多為包下產能或買設備委託代工，其股價走勢為瓶頸交易的觀察指標。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [],
+      "risk_notes": [
+        "需留意AI債務是否被層層打包成投資商品，若擴散至一般大眾投資領域，可能預示泡沫破裂風險。",
+        "若記憶體族群股價乘數無法拉升，將削弱其他元件獲得高評價的說服力。",
+        "若回檔出現加速往下撞或破底，需重新評估市場風險。",
+        "應警惕原物料報價若從上漲轉為穩住或下跌，可能是派對結束的初步訊號。"
+      ],
+      "personal_trade_note": "因今年績效表現良好，即便回檔三成仍願意留在市場等待；若本年度績效僅賺20~30%且被回檔全部打掉，則會考慮先休息。",
+      "content_hash": "24793a6016f7a2c72c4aae5d6f4c638e98ab0acaedac7689f8d981f9206875d6",
+      "content_length": 2407,
+      "summarized_at": "2026-08-20 05:43:16",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    689,
     688,
     687,
     686,
-    685,
-    684
+    685
   ],
   "model": "gemini-3.1-flash-lite"
 }
