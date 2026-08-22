@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-22 05:19:32",
+  "updated_at": "2026-08-23 05:14:34",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1146,16 +1146,82 @@
       "content_length": 2407,
       "summarized_at": "2026-08-20 05:43:16",
       "model": "gemini-3.1-flash-lite"
+    },
+    "690": {
+      "episode": 690,
+      "title": "股癌筆記EP690 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-690/",
+      "published_at": "2026-08-23 01:05:54",
+      "modified_at": "2026-08-23 01:06:03",
+      "summary": "本集節目討論市場盤勢與半導體產業動態。目前台股盤勢呈現緩步墊高，雖不如四、五月時的FOMO行情，但整體表現不錯，市場參與者多在互相算計。在半導體方面，重點關注Marvell與Google的客製化半導體合作協議，Google展現往COT（Customer Own Tooling）模式發展的決心，將晶片設計與關鍵料件採購掌握在自己手中。此舉對博通（Broadcom）而言可能構成利空，因市場原先對其與聯發科的合作想像空間被壓縮，但Google為維持產能仍需與設計夥伴保持密切關係，IC設計業者仍有機會受惠於Google開案量的增加。",
+      "key_points": [
+        "台股盤勢呈現緩步墊高，雖有震盪但整體表現不錯，市場氛圍較四、五月冷靜，不再是單純追漲就能獲利的FOMO盤。",
+        "Marvell與Google達成客製化半導體協議，Google將TPU生態系周邊晶片交由Marvell合作，並透過權證讓Google成為Marvell股東。",
+        "Google傾向轉向COT（Customer Own Tooling）模式以節省成本，這對過去採取Turnkey模式的博通可能造成利空，但IC設計夥伴仍可受惠於Google持續增加的開案需求。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股盤勢",
+          "summary": "盤勢呈現緩步墊高，市場參與者互相算計，不再是單純追漲的FOMO行情。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "客製化半導體（ASIC）",
+          "summary": "Google與Marvell合作，顯示Google轉向COT模式的決心，對晶片設計服務業者帶來結構性變化。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Marvell",
+          "code": "MRVL",
+          "reason": "與Google達成客製化半導體商業協議，合作範圍涵蓋TPU生態系周邊晶片。"
+        },
+        {
+          "name": "Google",
+          "code": "GOOG",
+          "reason": "與Marvell合作，展現往COT模式發展的決心，並成為Marvell股東。"
+        },
+        {
+          "name": "世芯-KY",
+          "code": "3661",
+          "reason": "客戶趨勢往COT方向走，對其有利。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "因Google轉向COT模式，市場對其與Google的合作想像空間被壓縮，視為利空。"
+        },
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "市場原先預期Google晶片案會給博通與聯發科，現因Marvell加入而使想像空間被壓縮。"
+        },
+        {
+          "name": "AMD",
+          "code": "AMD",
+          "reason": "與Marvell一同進入Google供應鏈，壓縮市場對博通與聯發科的想像空間。"
+        }
+      ],
+      "risk_notes": [
+        "市場常會過度反應單一利空，需注意IC設計業者雖然面臨客戶轉向COT的毛利壓縮風險，但仍可能受惠於開案量的增加。",
+        "追逐漲停或強勢股在目前的盤勢下容易被洗出場，建議關注盤勢墊高的節奏。"
+      ],
+      "personal_trade_note": "不會賣超級好解決，就用十日線出場就好。",
+      "content_hash": "acd897569e55e7bcf9d3d923a25e3334eccb0b25c619fbdcfe87452e5d975726",
+      "content_length": 2661,
+      "summarized_at": "2026-08-23 05:14:33",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    690,
     689,
     688,
     687,
-    686,
-    685
+    686
   ],
   "model": "gemini-3.1-flash-lite"
 }
