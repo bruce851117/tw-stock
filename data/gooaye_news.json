@@ -2,9 +2,44 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-08-26 05:17:54",
+  "updated_at": "2026-08-27 05:14:13",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 691,
+      "title": "股癌筆記EP691 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-691/",
+      "published_at": "2026-08-26 21:49:51",
+      "modified_at": "2026-08-26 21:49:57",
+      "time": "2026-08-26 21:49:51",
+      "summary": "本集節目主要探討AI對工作與市場分析的影響。主持人認為AI並未如預期般減少工時，反而因競爭加劇與工具普及，使整體工作量增加。在投資決策上，AI已成為輔助工具，用於快速閱讀財報與分析產業關鍵數字。主持人分享現行投資流程：先透過量價觀察族群，再利用AI進行速覽與研究，並結合社群媒體（如X、FB）判斷市場擁擠程度與資訊落差，最後在確認資訊優於市場共識後進行突破買進。此外，節目也強調社群媒體在獲取即時資訊上的效益大於單純依賴AI模型。",
+      "key_points": [
+        "AI並未降低工作時數，反而因競爭者增加與工具普及，導致整體工時變長。",
+        "社群媒體（X、FB）在獲取即時資訊與市場情緒方面，效益優於單純使用AI模型。",
+        "投資流程建議：量價觀察族群 -> AI速覽研究 -> 社群判斷擁擠度 -> 確保資訊落差 -> 突破買進。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI工具應用",
+          "summary": "AI適合用於快速閱讀財報與分析產業關鍵數字，但需注意模型可能存在過度自信的風險。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "市場資訊獲取",
+          "summary": "社群媒體是獲取資訊的重要來源，應與AI工具相輔相成，以建立資訊優勢。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [],
+      "risk_notes": [
+        "AI模型可能存在認為自己永遠正確的風險。",
+        "過度依賴AI可能導致與市場共識趨同，需確保資訊與估值優於分析師或社群。",
+        "市場擁擠程度過高時需謹慎評估。"
+      ],
+      "personal_trade_note": "",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-08-27 05:14:12"
+    },
     {
       "episode": 690,
       "title": "股癌筆記EP690 - 社工日常socialworkerdaily",
@@ -222,72 +257,6 @@
       "personal_trade_note": "近期操作降低了指數部位，轉而布局個股。目前持有設備、光通訊、AI Power、散熱等族群，已撤出老AI標的，並避開PCB與載板等擁擠族群。投資選擇偏向2026、2027年有成績的標的。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-08-13 05:20:16"
-    },
-    {
-      "episode": 686,
-      "title": "股癌筆記EP686 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-686/",
-      "published_at": "2026-08-09 22:41:50",
-      "modified_at": "2026-08-09 22:41:56",
-      "time": "2026-08-09 22:41:50",
-      "summary": "本集節目討論台股在拉回季線後的盤勢，認為崩盤機率偏低，目前市場處於洗籌階段。作者強調進入家庭後，風險控管與保本的重要性大於追求極致報酬，建議可透過股債配置或多空對沖來降低波動。市場資金近期回流軟體股（如PLTR、Cloudflare），光通訊與散熱族群展現轉強跡象，呈現輪動格局。此外，提到光通訊上游材料磷化銦基板仍有缺料狀況，若能攻克歷史新高，有望成為新主流。最後提醒投資人，極度動能的族群需小心補跌風險，並強調在市場大崩盤前通常會先有明顯的漲勢。",
-      "key_points": [
-        "台股拉回季線後進入橫盤整理，崩盤機率偏低，未來兩週是關鍵觀察期。",
-        "投資策略應從追求資本報酬轉向重視風險控管，透過股債配置或多空對沖降低Drawdown。",
-        "市場資金輪動明顯，光通訊與散熱族群轉強，後續可觀察被動元件與功率元件是否接棒。"
-      ],
-      "market_topics": [
-        {
-          "topic": "光通訊",
-          "summary": "市場需求良好，上游材料磷化銦基板仍缺料，若能突破歷史新高，有望成為新一波主流。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "功率與電力元件",
-          "summary": "受惠於AI功耗提升，BBU用量與規格需求增加，ASP顯著成長，相關公司受光寶科表現帶動。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "美股軟體股",
-          "summary": "資金願意湧入高估值軟體股，如PLTR與Cloudflare表現強勢。",
-          "sentiment": "positive"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "Palantir",
-          "code": "PLTR",
-          "reason": "美股軟體股資金回流，表現強勢"
-        },
-        {
-          "name": "Cloudflare",
-          "code": "NET",
-          "reason": "美股軟體股資金回流，表現強勢"
-        },
-        {
-          "name": "台積電",
-          "code": "2330",
-          "reason": "作者調整部位持有標的"
-        },
-        {
-          "name": "台達電",
-          "code": "2308",
-          "reason": "公司基本面強大，但目前資金不在該標的，線型表現不佳"
-        },
-        {
-          "name": "光寶科",
-          "code": "2301",
-          "reason": "財報後股價噴出，可能提振電力相關公司"
-        }
-      ],
-      "risk_notes": [
-        "若基本面尚未改變即出現劇烈殺盤，需警惕未來基本面轉差時的跌幅可能更大。",
-        "極度動能的族群在修正時容易出現補跌，需特別小心。",
-        "七月修正期間，頻繁切換部位至避風港反而可能受到更多傷害。"
-      ],
-      "personal_trade_note": "作者近期調整投資組合，包含持有台積電、切換台指期，並強調目前採取避險或股債配置以降低資產波動，不再單純追求極致資本報酬。",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-08-10 05:16:28"
     }
   ]
 }
