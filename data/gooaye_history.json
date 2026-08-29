@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-08-29 05:16:20",
+  "updated_at": "2026-08-30 05:11:12",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1248,16 +1248,86 @@
       "content_length": 1155,
       "summarized_at": "2026-08-27 05:14:12",
       "model": "gemini-3.1-flash-lite"
+    },
+    "692": {
+      "episode": 692,
+      "title": "股癌筆記EP692 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-692/",
+      "published_at": "2026-08-29 21:32:15",
+      "modified_at": "2026-08-29 21:32:48",
+      "summary": "本集節目重點在於AI產業的動態與輝達（NVIDIA）的市場地位。市場震盪後具備發展多頭的條件。重點討論了Anthropic與Salesforce的合作，強調擁有數據的企業在AI時代具備優勢。Marvell因XPU與光通訊業務上修財務預期，帶動光通訊族群表現。針對OpenAI的Jalapeño晶片對輝達的挑戰，分析認為輝達在訓練領域仍具優勢，且擁有強大的供應鏈管理與採購地位。輝達電話會議指出CPU與光通訊業務正向，且GPU在開源模型與前緣模型商的需求下，長期競爭優勢依然穩固。若GPU與ASIC同時搶料，將有利於台股光通訊、板材及伺服器零組件等相關供應鏈。",
+      "key_points": [
+        "市場震盪後具備發展下一波多頭的條件，數據表現良好。",
+        "Salesforce與Anthropic合作，顯示擁有企業數據的平台在AI應用層具有關鍵價值。",
+        "Marvell上修財務預期，光通訊與XPU業務成為強大成長動能。",
+        "輝達在AI訓練領域仍具主導地位，且擁有強大的供應鏈管理與產能採購優勢。",
+        "GPU與ASIC同時搶料的趨勢，將持續支撐台股光通訊、板材與伺服器零組件等供應鏈表現。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI與雲端服務",
+          "summary": "Anthropic與Salesforce合作，Salesforce掌握企業數據與法遵優勢，Anthropic提供模型，雙方在應用層競爭與合作並存。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "光通訊與半導體",
+          "summary": "Marvell上修財測，光通訊互聯交換晶片需求強勁，帶動相關概念股表現。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "輝達與AI晶片競爭",
+          "summary": "面對ASIC競爭，輝達在訓練領域仍具優勢，且透過強大供應鏈管理與採購地位維持市佔率。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Salesforce",
+          "code": "",
+          "reason": "與Anthropic合作，掌握大量企業數據。"
+        },
+        {
+          "name": "Anthropic",
+          "code": "",
+          "reason": "與Salesforce合作，提供AI模型。"
+        },
+        {
+          "name": "Marvell",
+          "code": "",
+          "reason": "上修財務預期，XPU與光通訊業務強勁。"
+        },
+        {
+          "name": "輝達 (NVIDIA)",
+          "code": "",
+          "reason": "AI晶片龍頭，在訓練領域具優勢，供應鏈管理能力強。"
+        },
+        {
+          "name": "Google",
+          "code": "",
+          "reason": "Marvell的XPU客戶。"
+        }
+      ],
+      "risk_notes": [
+        "企業對於將數據交給新興AI公司的信任度問題。",
+        "輝達若遇到晶片出貨卡關，可能影響短期營收。",
+        "供應鏈管理能力不足的廠商，可能在產品迭代中被淘汰。",
+        "最缺貨的環節在於載板。"
+      ],
+      "personal_trade_note": "作者提到曾有操作時做出韭菜行為，但隔天標的開燈，記錄情緒反轉的體驗。",
+      "content_hash": "4ab1399f947c539c1cd2181fd6aa460eea93e57e3f008bc877f72d8f29bdb774",
+      "content_length": 2395,
+      "summarized_at": "2026-08-30 05:11:11",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    692,
     691,
     690,
     689,
-    688,
-    687
+    688
   ],
   "model": "gemini-3.1-flash-lite"
 }
