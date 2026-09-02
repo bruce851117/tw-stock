@@ -2,9 +2,81 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-09-02 05:16:25",
+  "updated_at": "2026-09-03 05:16:49",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 693,
+      "title": "股癌筆記EP693 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-693/",
+      "published_at": "2026-09-02 22:50:10",
+      "modified_at": "2026-09-02 22:56:11",
+      "time": "2026-09-02 22:50:10",
+      "summary": "本集重點聚焦於聯發科發行可轉債（ECB）獲輝達與Google認購的產業影響。輝達透過此舉深化與聯發科在客製化XPU及AI平台的合作，並試圖透過提供整體解決方案（如NVLink Fusion、MGX ETL rack）來綁定客戶，轉型為萬能雜貨店。此外，輝達推出的NVHBM特規記憶體，旨在提升頻寬與降低功耗。市場競爭方面，輝達積極佈局ASIC領域，意圖挑戰博通的市場地位。儘管市場擔憂市佔率變化，但整體AI市場規模持續擴大，ASIC出貨量預期將持續成長。台股盤勢維持震盪，光通訊族群表現強勢。",
+      "key_points": [
+        "聯發科發行35億美元ECB，獲輝達與Google認購，旨在深化策略合作與XPU開發。",
+        "輝達轉型提供整體解決方案，透過NVLink Fusion與MGX架構綁定客戶，並推出NVHBM特規記憶體以提升效能。",
+        "輝達積極佈局ASIC領域，市場競爭加劇，但整體AI市場TAM（總潛在市場）持續擴大，產業長期趨勢向上。",
+        "台股盤勢維持震盪，光通訊族群表現強勢，建議投資人避免過度追逐動能操作。"
+      ],
+      "market_topics": [
+        {
+          "topic": "聯發科ECB與AI合作",
+          "summary": "聯發科發行ECB獲輝達與Google認購，深化客製化XPU合作，輝達藉此綁定AI平台生態系。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "ASIC市場競爭",
+          "summary": "輝達積極佈局ASIC領域挑戰博通，市場雖擔憂市佔率，但整體產業規模持續擴大。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "台股維持震盪，光通訊族群強勢，建議抱持長線思維，避免頻繁動能操作。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "發行ECB獲輝達與Google認購，深化AI與XPU合作。"
+        },
+        {
+          "name": "輝達",
+          "code": "NVDA",
+          "reason": "投資聯發科ECB，推出NVHBM，積極佈局ASIC與整體解決方案。"
+        },
+        {
+          "name": "Google",
+          "code": "GOOGL",
+          "reason": "認購聯發科ECB，其ICI互聯與OCS為輝達競爭對手。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "輝達在ASIC領域的競爭對手。"
+        },
+        {
+          "name": "世芯-KY",
+          "code": "3661",
+          "reason": "被視為輝達佈局ASIC領域納入麾下的玩家之一。"
+        },
+        {
+          "name": "邁威爾",
+          "code": "MRVL",
+          "reason": "被視為輝達佈局ASIC領域納入麾下的玩家之一。"
+        }
+      ],
+      "risk_notes": [
+        "美股波動劇烈，單日跌幅可能過大，需嚴格執行部位風控。",
+        "市場對於ASIC競爭格局的擔憂可能導致法人短線拋售，需留意股價波動。",
+        "需持續觀察NVLink Fusion XPU的後續客戶與Tape out時間點。"
+      ],
+      "personal_trade_note": "美股部位會設定上限（約總部位三成），越漲越減碼以進行風控；台股因有跌停機制且流動性佳，較願意拉高單一部位比重。",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-09-03 05:16:48"
+    },
     {
       "episode": 692,
       "title": "股癌筆記EP692 - 社工日常socialworkerdaily",
@@ -216,69 +288,6 @@
       "personal_trade_note": "因今年績效表現良好，即便回檔三成仍願意留在市場等待；若本年度績效僅賺20~30%且被回檔全部打掉，則會考慮先休息。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-08-20 05:43:16"
-    },
-    {
-      "episode": 688,
-      "title": "股癌筆記EP688 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-688/",
-      "published_at": "2026-08-16 12:50:35",
-      "modified_at": "2026-08-16 12:50:44",
-      "time": "2026-08-16 12:50:35",
-      "summary": "本集重點涵蓋市場籌碼與產業趨勢。在籌碼面，討論了SpaceX與Cerebras股票解禁後的市場反應，強調流動性增加對長期股價的正面意義。在產業面，深入分析了資料中心從低壓轉向800V架構的必要性，主因是伺服器功耗提升導致低壓大電流架構面臨線纜、連接器及空間限制。文中整理了800V架構演進的三個階段，包括初期受惠的PSU、連接器、BBU，以及後續轉向集中式整流器、SiC、GaN與重電系統的趨勢。此外，提醒投資人應區分AI產業與消費電子的成長邏輯差異，並強調法人資金回補對底部形成的關鍵作用。",
-      "key_points": [
-        "股票解禁初期雖有賣壓，但長期來看流動性增加有助於價格發現與市場共識。",
-        "伺服器功耗提升迫使架構轉向800V，以解決低壓大電流帶來的線纜、連接器及空間瓶頸。",
-        "800V架構演進分為三個階段，分別受惠於電源供應器、連接器、BBU、功率半導體及重電設施。",
-        "AI產業與消費電子的成長邏輯不同，前者具備持續漲價能力，後者則易受價格破壞影響。",
-        "市場底部通常由大量法人資金回補形成，散戶難以單獨推動。"
-      ],
-      "market_topics": [
-        {
-          "topic": "股票解禁與流動性",
-          "summary": "解禁初期雖有賣壓，但釋出流動性有助於市場形成共識，長期對股價影響有限。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "資料中心800V架構",
-          "summary": "因應伺服器功耗提升，架構轉向800V可降低安培數，減少線纜與連接器負擔，並優化機櫃空間。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "功率半導體",
-          "summary": "SiC與GaN需求強勁，尤其是GaN的缺貨程度超乎預期。",
-          "sentiment": "positive"
-        }
-      ],
-      "mentioned_stocks": [
-        {
-          "name": "SpaceX",
-          "code": "",
-          "reason": "討論股票解禁後的市場流動性與股價表現。"
-        },
-        {
-          "name": "Cerebras",
-          "code": "",
-          "reason": "討論其晶片架構、與AMD合作以及股票解禁議題。"
-        },
-        {
-          "name": "AMD",
-          "code": "",
-          "reason": "與Cerebras合作開發解構式推論架構。"
-        },
-        {
-          "name": "輝達",
-          "code": "",
-          "reason": "提及CPX產品與市場競爭。"
-        }
-      ],
-      "risk_notes": [
-        "Cerebras有大量股票即將釋出，需觀察其對股價的影響。",
-        "800V架構演進的第三階段（2028-2030年）目前尚早，相關受惠對象仍需長期觀察。",
-        "若市場底部被跌破，可能代表下方支撐不足，需警惕風險。"
-      ],
-      "personal_trade_note": "",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-08-17 05:19:48"
     }
   ]
 }

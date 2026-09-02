@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-02 05:16:25",
+  "updated_at": "2026-09-03 05:16:49",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1318,16 +1318,89 @@
       "content_length": 2395,
       "summarized_at": "2026-08-30 05:11:11",
       "model": "gemini-3.1-flash-lite"
+    },
+    "693": {
+      "episode": 693,
+      "title": "股癌筆記EP693 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-693/",
+      "published_at": "2026-09-02 22:50:10",
+      "modified_at": "2026-09-02 22:56:11",
+      "summary": "本集重點聚焦於聯發科發行可轉債（ECB）獲輝達與Google認購的產業影響。輝達透過此舉深化與聯發科在客製化XPU及AI平台的合作，並試圖透過提供整體解決方案（如NVLink Fusion、MGX ETL rack）來綁定客戶，轉型為萬能雜貨店。此外，輝達推出的NVHBM特規記憶體，旨在提升頻寬與降低功耗。市場競爭方面，輝達積極佈局ASIC領域，意圖挑戰博通的市場地位。儘管市場擔憂市佔率變化，但整體AI市場規模持續擴大，ASIC出貨量預期將持續成長。台股盤勢維持震盪，光通訊族群表現強勢。",
+      "key_points": [
+        "聯發科發行35億美元ECB，獲輝達與Google認購，旨在深化策略合作與XPU開發。",
+        "輝達轉型提供整體解決方案，透過NVLink Fusion與MGX架構綁定客戶，並推出NVHBM特規記憶體以提升效能。",
+        "輝達積極佈局ASIC領域，市場競爭加劇，但整體AI市場TAM（總潛在市場）持續擴大，產業長期趨勢向上。",
+        "台股盤勢維持震盪，光通訊族群表現強勢，建議投資人避免過度追逐動能操作。"
+      ],
+      "market_topics": [
+        {
+          "topic": "聯發科ECB與AI合作",
+          "summary": "聯發科發行ECB獲輝達與Google認購，深化客製化XPU合作，輝達藉此綁定AI平台生態系。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "ASIC市場競爭",
+          "summary": "輝達積極佈局ASIC領域挑戰博通，市場雖擔憂市佔率，但整體產業規模持續擴大。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "台股維持震盪，光通訊族群強勢，建議抱持長線思維，避免頻繁動能操作。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "發行ECB獲輝達與Google認購，深化AI與XPU合作。"
+        },
+        {
+          "name": "輝達",
+          "code": "NVDA",
+          "reason": "投資聯發科ECB，推出NVHBM，積極佈局ASIC與整體解決方案。"
+        },
+        {
+          "name": "Google",
+          "code": "GOOGL",
+          "reason": "認購聯發科ECB，其ICI互聯與OCS為輝達競爭對手。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "輝達在ASIC領域的競爭對手。"
+        },
+        {
+          "name": "世芯-KY",
+          "code": "3661",
+          "reason": "被視為輝達佈局ASIC領域納入麾下的玩家之一。"
+        },
+        {
+          "name": "邁威爾",
+          "code": "MRVL",
+          "reason": "被視為輝達佈局ASIC領域納入麾下的玩家之一。"
+        }
+      ],
+      "risk_notes": [
+        "美股波動劇烈，單日跌幅可能過大，需嚴格執行部位風控。",
+        "市場對於ASIC競爭格局的擔憂可能導致法人短線拋售，需留意股價波動。",
+        "需持續觀察NVLink Fusion XPU的後續客戶與Tape out時間點。"
+      ],
+      "personal_trade_note": "美股部位會設定上限（約總部位三成），越漲越減碼以進行風控；台股因有跌停機制且流動性佳，較願意拉高單一部位比重。",
+      "content_hash": "614a83d347b25b0d0ca2adfde6b9dd1bff285988686946cc9342df1f8f9b9a99",
+      "content_length": 2361,
+      "summarized_at": "2026-09-03 05:16:48",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    693,
     692,
     691,
     690,
-    689,
-    688
+    689
   ],
   "model": "gemini-3.1-flash-lite"
 }
