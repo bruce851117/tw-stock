@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-09 05:17:24",
+  "updated_at": "2026-09-10 05:30:59",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1470,16 +1470,79 @@
       "content_length": 2482,
       "summarized_at": "2026-09-06 05:13:43",
       "model": "gemini-3.1-flash-lite"
+    },
+    "695": {
+      "episode": 695,
+      "title": "股癌筆記EP695 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-695/",
+      "published_at": "2026-09-09 23:01:50",
+      "modified_at": "2026-09-09 23:01:56",
+      "summary": "本集重點聚焦於AI基礎設施的投資回報與市場現況。Google Cloud在會議中釋出強勁訊號，AI伺服器回收期不到兩年，自研晶片TPU甚至僅需一年，這解釋了雲端大廠為何持續加大硬體採購力道。AI模型領域競爭激烈，模型半衰期縮短，API費用持續收斂，算力正逐漸大宗商品化。作者分析模型商、雲端服務商與供應鏈的風險結構，認為目前模式仍可持續，但需留意未來供需平衡打破後的潛在風險。台股盤勢方面，目前維持震盪，搶快者易受挫，建議等待大盤創高後的表態。",
+      "key_points": [
+        "Google Cloud數據顯示AI伺服器回收期不到兩年，自研晶片TPU回收期僅需一年，促使雲端大廠持續擴大硬體投資。",
+        "AI模型迭代速度極快，半衰期僅兩三個月，API費用收斂，算力逐漸大宗商品化，高CP值硬體更具吸引力。",
+        "模型商、雲端服務商與供應鏈構成目前的AI產業循環，短期內仍具底氣，但需警惕未來供需平衡改變可能引發的連鎖反應。",
+        "台股盤勢處於震盪整理，市場缺乏明確表態，建議投資人避免過度搶快。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI伺服器與硬體",
+          "summary": "回收期極短（不到兩年，自研晶片僅一年），驅動雲端大廠持續加大採購力道。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "AI模型產業",
+          "summary": "模型迭代快、半衰期短，API費用收斂，算力趨向大宗商品化。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "維持震盪，搶快者易被教訓，等待大盤創高後的表態。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Google",
+          "code": "",
+          "reason": "雲端服務供應商，AI伺服器與自研晶片TPU需求強勁。"
+        },
+        {
+          "name": "SpaceX",
+          "code": "",
+          "reason": "提及與特斯拉出租AI伺服器，驗證回本速度快。"
+        },
+        {
+          "name": "特斯拉",
+          "code": "",
+          "reason": "提及與SpaceX出租AI伺服器，驗證回本速度快。"
+        },
+        {
+          "name": "OpenAI",
+          "code": "",
+          "reason": "AI模型開發商，近期推出Astra模型受到市場好評。"
+        }
+      ],
+      "risk_notes": [
+        "AI模型商若無法持續吸引外部資本或消費者採用率下滑，可能打破雲端商的投資回本規劃，導致財務指引惡化。",
+        "模型商轉型為水電業者（基礎設施提供者）後，估值乘數可能下調。",
+        "台股目前處於震盪期，缺乏明確突破訊號。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "3452cc744b14a6d26bf4097588adcecc9de71a239f6e7b8757c70fd264684a22",
+      "content_length": 1805,
+      "summarized_at": "2026-09-10 05:30:58",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    695,
     694,
     693,
     692,
-    691,
-    690
+    691
   ],
   "model": "gemini-3.1-flash-lite"
 }
