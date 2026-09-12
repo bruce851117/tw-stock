@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-12 05:10:38",
+  "updated_at": "2026-09-13 05:09:59",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1533,16 +1533,74 @@
       "content_length": 1805,
       "summarized_at": "2026-09-10 05:30:58",
       "model": "gemini-3.1-flash-lite"
+    },
+    "696": {
+      "episode": 696,
+      "title": "股癌筆記EP696 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-696/",
+      "published_at": "2026-09-12 21:55:49",
+      "modified_at": "2026-09-12 21:58:56",
+      "summary": "本集節目討論近期台股盤面信心不足，出現鎖漲停卻隔日出貨的現象，呼籲市場應回歸正常成長邏輯。蘋果發表會方面，看好新機銷量，認為其UI/UX與軟硬整合具優勢，但指出蘋果供應鏈利潤常遭壓縮，且需留意中國消費降級影響。針對甲骨文，分析其透過客戶預付與供應商融資的財務模式，並提到AI基礎建設已進入地方政治角力階段，電力與許可成為關鍵瓶頸。此外，針對AI模型發展，認為未來可能形成雙頭壟斷或特化模型，而非單一贏家。",
+      "key_points": [
+        "台股盤面信心薄弱，出現利多不漲及鎖漲停後隔日出貨的猥瑣操作，不利市場長期發展。",
+        "蘋果新機定價具競爭力，看好銷量超乎預期，但供應鏈廠商利潤易受蘋果壓制，且需觀察中國市場消費降級風險。",
+        "AI基礎建設面臨電力與許可等地方政治瓶頸，且甲骨文的融資模式在承平時期可行，但需留意需求是否有虛胖風險。",
+        "AI模型市場未來可能走向雙頭壟斷或針對特定領域的特化模型，而非單一贏家。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股盤面信心",
+          "summary": "市場出現鎖漲停後隔日出貨的投機行為，導致信任感降低，不利於正常經濟成長與市場生態。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "蘋果供應鏈",
+          "summary": "蘋果透過強大垂直整合與通路優勢壓低供應商利潤，供應鏈廠商生存空間受限。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "AI基礎建設",
+          "summary": "進入地方政治階段，電力與許可成為關鍵瓶頸，且需關注民主黨政策對資料中心建置的影響。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "新日興",
+          "code": "3376",
+          "reason": "蘋果折疊手機鉸鏈供應商，雖有技術但毛利恐遭蘋果壓制。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "甲骨文供應商融資模式中涉及的設備商。"
+        },
+        {
+          "name": "甲骨文",
+          "code": "",
+          "reason": "透過BYOH模式與供應商融資擴張，上修全年財測。"
+        }
+      ],
+      "risk_notes": [
+        "中國消費降級對蘋果手機銷量的影響。",
+        "AI基礎建設面臨電力短缺與地方政治許可的阻礙。",
+        "甲骨文透過融資模式擴張，若市場反轉，需求可能存在虛胖風險。"
+      ],
+      "personal_trade_note": "主持人表示對iPhone duo非常感興趣，會第一時間入手；個人不會想去看消費性電子題材，認為成長性打不贏AI。",
+      "content_hash": "3080cd15c27a0f8ee7cbda7bddacc87449bdcc312e75cb03a2d0131c743665c2",
+      "content_length": 2548,
+      "summarized_at": "2026-09-13 05:09:58",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    696,
     695,
     694,
     693,
-    692,
-    691
+    692
   ],
   "model": "gemini-3.1-flash-lite"
 }

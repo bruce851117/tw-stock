@@ -2,9 +2,66 @@
   "source_name": "股癌筆記",
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
-  "updated_at": "2026-09-12 05:10:38",
+  "updated_at": "2026-09-13 05:09:59",
   "article_count": 5,
   "articles": [
+    {
+      "episode": 696,
+      "title": "股癌筆記EP696 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-696/",
+      "published_at": "2026-09-12 21:55:49",
+      "modified_at": "2026-09-12 21:58:56",
+      "time": "2026-09-12 21:55:49",
+      "summary": "本集節目討論近期台股盤面信心不足，出現鎖漲停卻隔日出貨的現象，呼籲市場應回歸正常成長邏輯。蘋果發表會方面，看好新機銷量，認為其UI/UX與軟硬整合具優勢，但指出蘋果供應鏈利潤常遭壓縮，且需留意中國消費降級影響。針對甲骨文，分析其透過客戶預付與供應商融資的財務模式，並提到AI基礎建設已進入地方政治角力階段，電力與許可成為關鍵瓶頸。此外，針對AI模型發展，認為未來可能形成雙頭壟斷或特化模型，而非單一贏家。",
+      "key_points": [
+        "台股盤面信心薄弱，出現利多不漲及鎖漲停後隔日出貨的猥瑣操作，不利市場長期發展。",
+        "蘋果新機定價具競爭力，看好銷量超乎預期，但供應鏈廠商利潤易受蘋果壓制，且需觀察中國市場消費降級風險。",
+        "AI基礎建設面臨電力與許可等地方政治瓶頸，且甲骨文的融資模式在承平時期可行，但需留意需求是否有虛胖風險。",
+        "AI模型市場未來可能走向雙頭壟斷或針對特定領域的特化模型，而非單一贏家。"
+      ],
+      "market_topics": [
+        {
+          "topic": "台股盤面信心",
+          "summary": "市場出現鎖漲停後隔日出貨的投機行為，導致信任感降低，不利於正常經濟成長與市場生態。",
+          "sentiment": "negative"
+        },
+        {
+          "topic": "蘋果供應鏈",
+          "summary": "蘋果透過強大垂直整合與通路優勢壓低供應商利潤，供應鏈廠商生存空間受限。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "AI基礎建設",
+          "summary": "進入地方政治階段，電力與許可成為關鍵瓶頸，且需關注民主黨政策對資料中心建置的影響。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "新日興",
+          "code": "3376",
+          "reason": "蘋果折疊手機鉸鏈供應商，雖有技術但毛利恐遭蘋果壓制。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "甲骨文供應商融資模式中涉及的設備商。"
+        },
+        {
+          "name": "甲骨文",
+          "code": "",
+          "reason": "透過BYOH模式與供應商融資擴張，上修全年財測。"
+        }
+      ],
+      "risk_notes": [
+        "中國消費降級對蘋果手機銷量的影響。",
+        "AI基礎建設面臨電力短缺與地方政治許可的阻礙。",
+        "甲骨文透過融資模式擴張，若市場反轉，需求可能存在虛胖風險。"
+      ],
+      "personal_trade_note": "主持人表示對iPhone duo非常感興趣，會第一時間入手；個人不會想去看消費性電子題材，認為成長性打不贏AI。",
+      "model": "gemini-3.1-flash-lite",
+      "summarized_at": "2026-09-13 05:09:58"
+    },
     {
       "episode": 695,
       "title": "股癌筆記EP695 - 社工日常socialworkerdaily",
@@ -285,41 +342,6 @@
       "personal_trade_note": "作者提到曾有操作時做出韭菜行為，但隔天標的開燈，記錄情緒反轉的體驗。",
       "model": "gemini-3.1-flash-lite",
       "summarized_at": "2026-08-30 05:11:11"
-    },
-    {
-      "episode": 691,
-      "title": "股癌筆記EP691 - 社工日常socialworkerdaily",
-      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-691/",
-      "published_at": "2026-08-26 21:49:51",
-      "modified_at": "2026-08-26 21:49:57",
-      "time": "2026-08-26 21:49:51",
-      "summary": "本集節目主要探討AI對工作與市場分析的影響。主持人認為AI並未如預期般減少工時，反而因競爭加劇與工具普及，使整體工作量增加。在投資決策上，AI已成為輔助工具，用於快速閱讀財報與分析產業關鍵數字。主持人分享現行投資流程：先透過量價觀察族群，再利用AI進行速覽與研究，並結合社群媒體（如X、FB）判斷市場擁擠程度與資訊落差，最後在確認資訊優於市場共識後進行突破買進。此外，節目也強調社群媒體在獲取即時資訊上的效益大於單純依賴AI模型。",
-      "key_points": [
-        "AI並未降低工作時數，反而因競爭者增加與工具普及，導致整體工時變長。",
-        "社群媒體（X、FB）在獲取即時資訊與市場情緒方面，效益優於單純使用AI模型。",
-        "投資流程建議：量價觀察族群 -> AI速覽研究 -> 社群判斷擁擠度 -> 確保資訊落差 -> 突破買進。"
-      ],
-      "market_topics": [
-        {
-          "topic": "AI工具應用",
-          "summary": "AI適合用於快速閱讀財報與分析產業關鍵數字，但需注意模型可能存在過度自信的風險。",
-          "sentiment": "positive"
-        },
-        {
-          "topic": "市場資訊獲取",
-          "summary": "社群媒體是獲取資訊的重要來源，應與AI工具相輔相成，以建立資訊優勢。",
-          "sentiment": "positive"
-        }
-      ],
-      "mentioned_stocks": [],
-      "risk_notes": [
-        "AI模型可能存在認為自己永遠正確的風險。",
-        "過度依賴AI可能導致與市場共識趨同，需確保資訊與估值優於分析師或社群。",
-        "市場擁擠程度過高時需謹慎評估。"
-      ],
-      "personal_trade_note": "",
-      "model": "gemini-3.1-flash-lite",
-      "summarized_at": "2026-08-27 05:14:12"
     }
   ]
 }
