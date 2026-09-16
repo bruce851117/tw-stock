@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-16 05:23:37",
+  "updated_at": "2026-09-17 05:14:21",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1591,16 +1591,57 @@
       "content_length": 2548,
       "summarized_at": "2026-09-13 05:09:58",
       "model": "gemini-3.1-flash-lite"
+    },
+    "697": {
+      "episode": 697,
+      "title": "股癌筆記EP697 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-697/",
+      "published_at": "2026-09-16 22:30:51",
+      "modified_at": "2026-09-16 22:30:57",
+      "summary": "本集重點在於分析AI產業監管議題對市場的影響。針對Anthropic執行長Dario Amodei發文呼籲加強AI監管，並獲得Sam Altman與馬斯克附和，市場反應劇烈。分析認為，這些領先者推動監管並非單純出於人文關懷，而是意圖透過提高作業成本與設定遊戲規則，將後進競爭者排擠出市場。此外，監管流程（如第三方評估、可解釋性掃描、危險能力測試等）反而可能導致算力需求進一步增加，因此不認為硬體需求會因此減緩或停滯。台股近期維持低波動，市場關注抽籤資金釋出後的活水效應。",
+      "key_points": [
+        "AI領先企業推動監管，目的在於透過提高門檻與設定規則，排擠後進競爭者，並非單純為了人類文明安全。",
+        "監管流程（如第三方評估、危險能力測試等）將大幅增加算力需求，預期硬體需求不會因監管而減緩。",
+        "台股近期處於低波動狀態，市場期待抽籤資金釋出後能帶來活水。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI產業監管",
+          "summary": "領先者推動監管以提高競爭門檻，但監管流程反而會消耗更多算力，對硬體需求有利。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "維持低波動，關注抽籤資金釋出後的市場活水效應。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "CrowdStrike",
+          "code": "",
+          "reason": "因AI監管與資安需求，其方案可能被應用於模型監控，股價逆勢上漲。"
+        }
+      ],
+      "risk_notes": [
+        "AI產業監管政策的具體落實方式與對各公司的實際影響。",
+        "台股目前處於低波動狀態，市場動能尚待觀察。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "6c86640bec9d22d19335d469d4910082c39d4104283f2940c14c7bcee99dad4b",
+      "content_length": 2110,
+      "summarized_at": "2026-09-17 05:14:20",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    697,
     696,
     695,
     694,
-    693,
-    692
+    693
   ],
   "model": "gemini-3.1-flash-lite"
 }
