@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-19 05:22:21",
+  "updated_at": "2026-09-20 05:10:51",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1632,16 +1632,69 @@
       "content_length": 2110,
       "summarized_at": "2026-09-17 05:14:20",
       "model": "gemini-3.1-flash-lite"
+    },
+    "698": {
+      "episode": 698,
+      "title": "股癌筆記EP698 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-698/",
+      "published_at": "2026-09-19 16:28:41",
+      "modified_at": "2026-09-19 16:28:48",
+      "summary": "本集節目重點討論半導體產業動態與市場盤勢。針對AMD傳出因台積電漲價而計畫轉嫁成本的消息，分析指出輝達因採取整包銷售模式，即便未直接宣布漲價，下游仍會面臨成本壓力，且記憶體漲幅在整體環節中更為顯著。此外，探討AI伺服器供應鏈的技術替代方案，包括記憶體容量調整、板材規格變化及CPO技術對訊號傳輸的影響。針對近期盤勢，觀察到大盤雖處於新高附近，但市場出現轉空聲音，且動能交易者表現疲弱，強調市場缺乏連續性為常態，建議投資人應釐清聚焦短期交易或長期趨勢。",
+      "key_points": [
+        "AMD傳出因台積電漲價10%而計畫轉嫁成本，但需釐清漲價產品線與消息真偽。",
+        "輝達採取整包銷售模式，下游廠商仍會感受到成本壓力，且記憶體漲幅在供應鏈中影響顯著。",
+        "AI伺服器供應鏈面臨技術調整，如記憶體容量與板材規格的變動，但長線科技進步仍將推動材料升級。",
+        "近期台股盤勢呈現大盤墊高但動能交易者表現不佳的現象，市場缺乏連續性為常態。"
+      ],
+      "market_topics": [
+        {
+          "topic": "半導體與AI伺服器供應鏈",
+          "summary": "討論台積電漲價對AMD及整體供應鏈的影響，以及AI伺服器在記憶體、板材與傳輸技術上的潛在替代方案與長線趨勢。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "觀察到大盤在新高附近震盪，市場存在轉空聲音，且動能交易者淨值表現不佳，強調市場缺乏連續性。",
+          "sentiment": "neutral"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "台積電",
+          "code": "2330",
+          "reason": "晶圓代工廠，傳出對客戶漲價10%的消息。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "傳出因晶圓代工漲價而計畫轉嫁成本。"
+        },
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "AI伺服器龍頭，採取整包銷售模式。"
+        }
+      ],
+      "risk_notes": [
+        "AI伺服器供應鏈若因成本考量採用低階板材，可能影響高速訊號傳輸效能。",
+        "市場缺乏連續性，動能交易者面臨淨值回檔風險。",
+        "半導體漲價消息若屬實，可能對下游廠商毛利率造成壓力。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "a5b294c1d4f16b13d57271b04c011b1ebb1d54aad385be6c10515558a80c43a7",
+      "content_length": 1821,
+      "summarized_at": "2026-09-20 05:10:50",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    698,
     697,
     696,
     695,
-    694,
-    693
+    694
   ],
   "model": "gemini-3.1-flash-lite"
 }
