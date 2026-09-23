@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-23 05:17:20",
+  "updated_at": "2026-09-24 05:28:38",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1685,16 +1685,62 @@
       "content_length": 1821,
       "summarized_at": "2026-09-20 05:10:50",
       "model": "gemini-3.1-flash-lite"
+    },
+    "699": {
+      "episode": 699,
+      "title": "股癌筆記EP699 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-699/",
+      "published_at": "2026-09-24 00:06:23",
+      "modified_at": "2026-09-24 00:14:53",
+      "summary": "本集探討近期市場盤勢，儘管加權指數與納斯達克指數創新高，市場仍出現轉空與摸頭情緒。盤面結構有所改善，過去弱勢族群開始好轉，光通訊族群表現強勢。在AI與Agentic時代，CPU需求備受關注，市場對於CPU與GPU的配比出現討論，但需注意過度樂觀的預估。此外，DSP（數位訊號處理器）預計將漲價15-20%，主要受惠於交換器規格升級需求，儘管未來有CPO技術挑戰，但短期內DSP仍具備缺貨與漲價題材，相關供應鏈值得關注。",
+      "key_points": [
+        "市場出現轉空與摸頭情緒，但盤面結構改善，弱勢族群開始回升。",
+        "Agentic時代下CPU需求增加，市場出現CPU與GPU配比的討論，需留意FOMO情緒。",
+        "DSP預計漲價15-20%，受惠於交換器規格升級（400G、800G至1.6T），相關供應鏈如MRVL與台系廠商值得關注。"
+      ],
+      "market_topics": [
+        {
+          "topic": "盤勢分析",
+          "summary": "指數創新高但市場情緒轉空，盤面結構改善，弱勢族群開始好轉。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "CPU與AI運算",
+          "summary": "Agentic時代CPU需求提升，市場對CPU與GPU配比有熱烈討論，需警惕過度樂觀的FOMO情緒。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "DSP產業",
+          "summary": "受惠交換器規格升級，DSP預計漲價15-20%，短期具缺貨題材。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "Marvell",
+          "code": "MRVL",
+          "reason": "DSP漲價題材受惠股。"
+        }
+      ],
+      "risk_notes": [
+        "市場出現FOMO情緒，對於CPU需求與配比的預估可能過於樂觀。",
+        "CPO技術發展可能對DSP需求造成長期威脅，需持續觀察技術演進速度。"
+      ],
+      "personal_trade_note": "",
+      "content_hash": "1eef4ab4c89103de5e68655f174a4a16e2e47713ddcb05bf016e8005744a92ea",
+      "content_length": 1540,
+      "summarized_at": "2026-09-24 05:28:37",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
   "latest_episodes": [
+    699,
     698,
     697,
     696,
-    695,
-    694
+    695
   ],
   "model": "gemini-3.1-flash-lite"
 }
