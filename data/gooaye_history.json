@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-09-30 05:18:22",
+  "updated_at": "2026-10-01 05:16:22",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1731,16 +1731,139 @@
       "content_length": 1540,
       "summarized_at": "2026-09-24 05:28:37",
       "model": "gemini-3.1-flash-lite"
+    },
+    "701": {
+      "episode": 701,
+      "title": "股癌筆記EP701 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-701/",
+      "published_at": "2026-10-01 00:49:56",
+      "modified_at": "2026-10-01 00:52:12",
+      "summary": "本集回顧第三季台股走勢，經歷七月大幅回檔後，九月已修復高點。市場焦點在於AI晶片需求外溢效應，帶動小型IC設計公司受惠，並討論AI輔助IC設計對營運槓桿的提升。此外，針對台積電可能赴德州設廠的傳聞進行分析，認為德州基礎設施完善，相關廠務與材料概念股具潛力。整體盤勢呈現健康緩步墊高，建議投資人嚴守停損，並關注個別公司與題材，無需過度擔憂總經環境。",
+      "key_points": [
+        "台股七月經歷大幅回檔，但九月已快速修復高點，盤勢呈現健康緩步墊高。",
+        "AI晶片需求強勁，導致大廠產能滿載，訂單外溢至小型IC設計公司，且AI工具提升了小型IC設計公司的研發效率與營運槓桿。",
+        "台積電赴德州設廠傳聞合理，因當地水電與化工基礎設施充足，相關廠務、設廠與材料概念股值得關注。",
+        "市場氣氛轉佳，但延續性仍待觀察，建議操作上嚴守停損，跟隨波段趨勢，避免追高。"
+      ],
+      "market_topics": [
+        {
+          "topic": "小型IC設計",
+          "summary": "受惠於AI晶片大廠產能滿載，訂單外溢，且透過AI輔助設計提升研發效率，具備更高營運槓桿。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "台積電德州設廠概念股",
+          "summary": "若設廠成真，德州基礎設施完善，相關廠務、設廠、材料供應鏈將受惠。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "接獲大量TPU訂單，產能滿載後會將部分訂單外溢給其他IC設計公司。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "美股持倉標的，經歷回檔後已修復高點。"
+        }
+      ],
+      "risk_notes": [
+        "公債利率維持高檔，可能造成總體經濟波折。",
+        "市場氣氛雖轉好，但行情延續性仍待驗證。",
+        "若AI產品不夠成熟，可能面臨公眾檢視的負面評價風險。"
+      ],
+      "personal_trade_note": "七月回檔時槓桿約1.1~1.3，因信心缺失曾減碼停利。八、九月轉換持股至光通訊、小型IC、銅纜概念股、衛星題材及深度價值股（明年預估本益比約10倍）。",
+      "content_hash": "0db649df56cdb1ac84e2036c56b619478108db34927832d00aee66f8d0b0cfb3",
+      "content_length": 2223,
+      "summarized_at": "2026-10-01 05:16:13",
+      "model": "gemini-3.1-flash-lite"
+    },
+    "700": {
+      "episode": 700,
+      "title": "股癌筆記EP700 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-700/",
+      "published_at": "2026-09-28 14:34:25",
+      "modified_at": "2026-09-28 14:34:31",
+      "summary": "本集節目討論市場盤勢與Meta Connect 2026發表會。盤勢方面，富台期指表現向上，連假前雖有賣壓，但市場氣氛逐漸回溫。重點聚焦Meta發表的Muse Charm裝置，探討其作為AI硬體與手機競爭的可能性，並分析Meta欲擺脫Apple與Google作業系統抽稅與隱私限制的策略。此外，針對聽眾持股進行分析，涵蓋功率元件、光通訊、表後供電及半導體設備等領域，並分享了調整操作策略的心得，建議在多頭型態下嘗試買綠不追高。",
+      "key_points": [
+        "連假前市場賣壓屬正常現象，節後氣氛有回溫跡象。",
+        "Meta Connect 2026發表的Muse Charm被視為有趣的AI裝置嘗試，但面臨手機作為強大競品的挑戰，且Meta需克服大眾對其隱私保護的不信任感。",
+        "Meta致力於擺脫Apple與Google的作業系統生態，以避免被抽稅與受限於隱私政策。",
+        "操作策略調整：在多頭型態下，嘗試改變過去追高買紅的習慣，改為挑選好股池並在回檔時買綠。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI硬體裝置",
+          "summary": "Meta推出的Muse Charm等裝置試圖切入市場，但需與手機競爭，且面臨用戶對Meta隱私信任度不足的挑戰。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "台股盤勢",
+          "summary": "連假前出現賣壓，但市場氣氛逐漸好轉，富台期指表現相對正面。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "英飛凌",
+          "code": "IFX",
+          "reason": "功率元件領域的重要公司，雖然近期走勢較牛皮。"
+        },
+        {
+          "name": "Google",
+          "code": "",
+          "reason": "持股配置之一，認為沒有問題。"
+        },
+        {
+          "name": "Lumentum",
+          "code": "",
+          "reason": "光通訊領域配置。"
+        },
+        {
+          "name": "Coherent",
+          "code": "",
+          "reason": "光通訊領域配置。"
+        },
+        {
+          "name": "Bloom Energy",
+          "code": "",
+          "reason": "表後供電題材，與伺服器中心敘事相關。"
+        },
+        {
+          "name": "康寧",
+          "code": "",
+          "reason": "玻璃產業，具備光學相關特性。"
+        },
+        {
+          "name": "Teradyne",
+          "code": "",
+          "reason": "半導體測試機台。"
+        },
+        {
+          "name": "AMD",
+          "code": "",
+          "reason": "持股配置之一。"
+        }
+      ],
+      "risk_notes": [
+        "大眾對Meta的隱私保護信任度較低，可能影響新裝置的普及。",
+        "AI硬體裝置面臨手機作為強大競品的挑戰，滲透率提升難度高。",
+        "連假後市場仍存在變數。"
+      ],
+      "personal_trade_note": "近期調整操作方式，在多頭型態下，從過去習慣的「買紅追強」改為「買綠不追高」，並強調挑選好股池的重要性。",
+      "content_hash": "4a3514a9d6ad1e87264420af95a99e6c07063feb81c735a186bb2ead8c48ec02",
+      "content_length": 1981,
+      "summarized_at": "2026-10-01 05:16:21",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
-  "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-600-to-700/",
+  "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-700-to-800/",
   "latest_episodes": [
-    699,
-    698,
-    697,
-    696,
-    695
+    701,
+    700
   ],
   "model": "gemini-3.1-flash-lite"
 }
