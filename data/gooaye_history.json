@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-10-03 05:12:50",
+  "updated_at": "2026-10-04 05:23:03",
   "episodes": {
     "675": {
       "episode": 675,
@@ -1857,11 +1857,85 @@
       "content_length": 1981,
       "summarized_at": "2026-10-01 05:16:21",
       "model": "gemini-3.1-flash-lite"
+    },
+    "702": {
+      "episode": 702,
+      "title": "股癌筆記EP702 - 社工日常socialworkerdaily",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-702/",
+      "published_at": "2026-10-03 23:18:44",
+      "modified_at": "2026-10-03 23:18:51",
+      "summary": "本集重點聚焦於市場盤勢與科技產業動態。市場方面，台股與美股表現強勁，建議投資人順勢而為，勿過早猜測轉空。產業方面，聯發科因AI運算成本高昂而限縮員工使用額度，反映企業在AI投資上的成本控管壓力，這也暗示供應鏈對AI的想像不宜過度樂觀。此外，討論摩根士丹利關於光收發模組的禁令傳聞，分析指出美國意在掌握高毛利的DSP、Drive與TIA等核心技術，而將低毛利的機構件與組裝外包，此舉反而有利於台系供應鏈的轉單效應。同時，被動元件與功率元件族群因AI需求帶動漲價預期，成為近期市場焦點。",
+      "key_points": [
+        "市場整體表現強勁，建議觀察均線變化，勿過早預設空頭立場。",
+        "聯發科限縮AI使用額度，顯示企業在AI算力成本控管上的壓力，提醒市場對供應鏈成長速度應保持理性。",
+        "光收發模組禁令傳聞分析：美國傾向掌握高毛利核心技術（DSP、Drive、TIA），將低毛利組裝與機構件外包，有利台系廠商。",
+        "被動元件與功率元件族群受AI需求帶動，出現漲價與補漲訊號。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI算力成本",
+          "summary": "企業如聯發科因AI運算支出龐大，開始進行成本控管與優化，顯示AI應用進入成本敏感階段。",
+          "sentiment": "neutral"
+        },
+        {
+          "topic": "光收發模組",
+          "summary": "受美國禁令傳聞影響，市場關注DSP、Drive等核心技術的供應鏈重組，台系廠商有望受惠於轉單效應。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "被動元件與功率元件",
+          "summary": "受AI相關需求帶動，市場預期未來幾季將持續漲價，族群出現全面轉強訊號。",
+          "sentiment": "positive"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "聯發科",
+          "code": "2454",
+          "reason": "因AI運算成本高昂，採取限縮員工使用額度等成本控管措施。"
+        },
+        {
+          "name": "達發",
+          "code": "6526",
+          "reason": "台系DSP廠商，目前鎖定400G規格，可能受惠於中國去美化趨勢。"
+        },
+        {
+          "name": "Broadcom (AVGO)",
+          "code": "",
+          "reason": "先進光模組產品供應商。"
+        },
+        {
+          "name": "Marvell (MRVL)",
+          "code": "",
+          "reason": "先進光模組產品供應商。"
+        },
+        {
+          "name": "Lumentum (LITE)",
+          "code": "",
+          "reason": "光模組雷射供應商。"
+        },
+        {
+          "name": "Coherent (COHR)",
+          "code": "",
+          "reason": "光模組雷射供應商。"
+        }
+      ],
+      "risk_notes": [
+        "若大盤均線轉下，需重新評估市場多頭趨勢。",
+        "企業對AI算力成本的控管可能影響供應鏈的擴張預期。",
+        "光收發模組相關禁令若進一步擴大，可能對供應鏈造成不確定性。"
+      ],
+      "personal_trade_note": "作者表示目前持股以光通訊相關為主，近期未進行頻繁換股操作。",
+      "content_hash": "f7f5363c541d681ef51a939d07888632346f75f9e3a7ff20984e1a573ac393c5",
+      "content_length": 1963,
+      "summarized_at": "2026-10-04 05:23:02",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-700-to-800/",
   "latest_episodes": [
+    702,
     701,
     700
   ],
