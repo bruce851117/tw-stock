@@ -1,6 +1,6 @@
 {
   "source_name": "股癌筆記",
-  "updated_at": "2026-10-14 05:12:47",
+  "updated_at": "2026-10-15 05:11:37",
   "episodes": {
     "675": {
       "episode": 675,
@@ -2038,16 +2038,68 @@
       "content_length": 4417,
       "summarized_at": "2026-10-11 05:09:53",
       "model": "gemini-3.1-flash-lite"
+    },
+    "705": {
+      "episode": 705,
+      "title": "股癌筆記EP705 - 社工日常",
+      "url": "https://socialworkerdaily.com/notes-of-gooaye-ep-705/",
+      "published_at": "2026-10-14 22:29:16",
+      "modified_at": "2026-10-14 22:29:27",
+      "summary": "本集節目討論市場盤勢與AI產業應用。主持人認為目前盤勢相對簡單，建議採取反動能策略，避開法人與交易室過度擁擠的熱門股，轉向關注T2、T3類股。針對AI投資，強調AI已具備實際產出價值，能有效提升個人學習與研究效率。此外，市場傳聞年底將出現輝達與衛星公司合作的解決方案，涉及含鹵材料與高溫高壓技術規格。在個股方面，提到博通以明年EPS推算本益比僅約十倍，具備供不應求與漲價題材。",
+      "key_points": [
+        "採取反動能策略，避開人多的熱門股，關注T2、T3類股表現。",
+        "AI已具備實質產出價值，能協助快速掌握產業概況，提升研究效率。",
+        "傳聞年底將有輝達與衛星公司合作的解決方案，涉及特殊板材規格。"
+      ],
+      "market_topics": [
+        {
+          "topic": "AI產業",
+          "summary": "AI已能產出價值，促使企業增加預算，並能有效提升個人研究與防守範圍。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "衛星通訊",
+          "summary": "傳聞年底將有輝達合作解決方案，需關注含鹵材料與耐高溫高壓技術。",
+          "sentiment": "positive"
+        },
+        {
+          "topic": "記憶體",
+          "summary": "雖為缺貨漲價題材，但股價表現弱勢，市場可能轉向產出價值的交易。",
+          "sentiment": "negative"
+        }
+      ],
+      "mentioned_stocks": [
+        {
+          "name": "輝達",
+          "code": "",
+          "reason": "傳聞年底將與衛星公司合作推出解決方案。"
+        },
+        {
+          "name": "博通",
+          "code": "AVGO",
+          "reason": "以明年EPS推算本益比約十倍，具供不應求與漲價題材。"
+        }
+      ],
+      "risk_notes": [
+        "熱門小型設備股因法人與交易室過度擁擠，開利多反而上漲困難。",
+        "記憶體族群若持續無法帶出股價表現，市場資金可能發生板塊輪動。",
+        "AI投資人若不了解產業產出價值，易受短期市場波動影響。"
+      ],
+      "personal_trade_note": "主持人提到將SPCX部位壓至總部位的兩成；並記錄操作博通（AVGO）。",
+      "content_hash": "bb960a96177fe101ef07acdb15588676af9e3f8002252dc94357786f7bc32422",
+      "content_length": 2365,
+      "summarized_at": "2026-10-15 05:11:36",
+      "model": "gemini-3.1-flash-lite"
     }
   },
   "source_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/",
   "latest_range_url": "https://socialworkerdaily.com/index/invest/notes-of-gooaye/ep-700-to-800/",
   "latest_episodes": [
+    705,
     704,
     703,
     702,
-    701,
-    700
+    701
   ],
   "model": "gemini-3.1-flash-lite"
 }
